@@ -20,6 +20,8 @@
       <section id="stories">
         <!-- Add your success stories section content here -->
       </section>
+
+    <Footer />
     </div>
   </div>
 </template>
@@ -28,12 +30,14 @@
 // Import components here
 import Navbar from './components/Navbar.vue';
 import Hero from './components/Hero.vue';
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'LandingPage',
   components: { //Add components here
     Navbar, 
     Hero, 
+    Footer,
   },
 };
 </script>
