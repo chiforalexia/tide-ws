@@ -40,5 +40,5 @@ export default {
 
 <style>
 /* Global styles */
-@import './assets/styles/style.css'; /* Adjust the path as needed */
+/* @import './assets/styles/style.css';  Adjust the path as needed */
 </style>
