@@ -1,0 +1,6 @@
+/* src/assets/styles/tailwind.css */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
