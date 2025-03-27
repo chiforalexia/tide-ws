@@ -23,6 +23,11 @@
         <!-- Add your success stories section content here -->
       </section>
 
+      <section>
+        <!-- Photoscroll element -->
+        <Photoscroll />
+      </section>
+
     <Footer />
     </div>
   </div>
@@ -32,6 +37,7 @@
 // Import components here
 import Navbar from './components/Navbar.vue';
 import Hero from './components/Hero.vue';
+import Photoscroll from './components/Photoscroll.vue';
 import Footer from './components/Footer.vue'
 import ImageGrid from './components/ImageGrid.vue';
 
@@ -40,6 +46,7 @@ export default {
   components: { //Add components here
     Navbar, 
     Hero, 
+    Photoscroll,
     Footer,
     ImageGrid,
   },
