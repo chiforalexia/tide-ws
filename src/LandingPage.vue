@@ -13,6 +13,8 @@
         <!-- Add your process section content here -->
       </section>
 
+      <ImageGrid />
+
       <section id="features">
         <!-- Add your features section content here -->
       </section>
@@ -31,6 +33,7 @@
 import Navbar from './components/Navbar.vue';
 import Hero from './components/Hero.vue';
 import Footer from './components/Footer.vue'
+import ImageGrid from './components/ImageGrid.vue';
 
 export default {
   name: 'LandingPage',
@@ -38,6 +41,7 @@ export default {
     Navbar, 
     Hero, 
     Footer,
+    ImageGrid,
   },
 };
 </script>
