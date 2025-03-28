@@ -20,7 +20,7 @@
       </section>
 
       <section id="stories">
-        <!-- Add your success stories section content here -->
+        <SuccessStories />
       </section>
 
     <Footer />
@@ -34,6 +34,7 @@ import Navbar from './components/Navbar.vue';
 import Hero from './components/Hero.vue';
 import Footer from './components/Footer.vue'
 import ImageGrid from './components/ImageGrid.vue';
+import SuccessStories from './components/SuccessStories.vue'
 
 export default {
   name: 'LandingPage',
@@ -42,6 +43,7 @@ export default {
     Hero, 
     Footer,
     ImageGrid,
+    SuccessStories,
   },
 };
 </script>
