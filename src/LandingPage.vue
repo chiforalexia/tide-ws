@@ -18,12 +18,14 @@
         <!-- Add your process section content here -->
       </section>
 
+      <ImageGrid />
+
       <section id="features">
         <!-- Add your features section content here -->
       </section>
 
       <section id="stories">
-        <!-- Add your success stories section content here -->
+        <SuccessStories />
       </section>
 
       <section>
@@ -43,6 +45,9 @@ import Hero from './components/Hero.vue';
 import Photoscroll from './components/Photoscroll.vue';
 import Footer from './components/Footer.vue';
 import WaveAnimation from './components/WaveAnimation.vue';
+import ImageGrid from './components/ImageGrid.vue';
+import SuccessStories from './components/SuccessStories.vue'
+
 
 export default {
   name: 'LandingPage',
@@ -52,6 +57,9 @@ export default {
     Photoscroll,
     Footer,
     WaveAnimation,
+    ImageGrid,
+    SuccessStories,
+
   },
 };
 </script>
