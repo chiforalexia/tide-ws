@@ -3,13 +3,14 @@ import { ref, onMounted } from 'vue';
 
 // The text to animate
 const text = "FOR YOUR COFFEE, TEA, CEREAL, SMOOTHIES, PROTEIN SHAKES, LUNCHBOX, AND MORE... THE BEST TECH SOLUTIONS ";
-const repeatedText = text.repeat(3);
+const repeatedText = text.repeat(33);
+
 const startOffset = ref(0);
 
-// Animation logic for scrolling text
+// Smooth infinite animation
 onMounted(() => {
   const animate = () => {
-    startOffset.value = (startOffset.value - 0.2) % 100;
+    startOffset.value = (startOffset.value - 0.25) % 100;
     requestAnimationFrame(animate);
   };
   animate();
@@ -20,22 +21,12 @@ onMounted(() => {
   <div class="wave-wrapper">
     <svg class="wave-svg" viewBox="0 0 1200 250" preserveAspectRatio="xMidYMid meet">
       <defs>
-        <!-- Main wave path for text -->
         <path id="wave-path" d="M0,100 C200,50 400,150 600,100 S1000,50 1200,100" />
-        
-        <!-- Top evenly wide blue wave background -->
-        <path id="road-path" 
-          d="M0,100 C200,50 400,150 600,100 S1000,50 1200,100 L1200,250 L0,250 Z" />
-
-        <!-- Bottom white wave (moved slightly more up) -->
-        <path id="lower-road-path" 
-          d="M0,123 C200,73 400,173 600,123 S1000,73 1200,123 L1200,250 L0,250 Z" />
+        <path id="road-path" d="M0,100 C200,50 400,150 600,100 S1000,50 1200,100 L1200,250 L0,250 Z" />
+        <path id="lower-road-path" d="M0,123 C200,73 400,173 600,123 S1000,73 1200,123 L1200,250 L0,250 Z" />
       </defs>
 
-      <!-- Main blue wave background -->
       <use href="#road-path" class="road-bg" />
-
-      <!-- Bottom white wave -->
       <use href="#lower-road-path" class="road-white" />
 
       <!-- Animated text moving along the wave path -->
@@ -49,10 +40,15 @@ onMounted(() => {
 </template>
 
 <style scoped>
+
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Outline&family=Bungee+Tint&display=swap');
+
 .wave-wrapper {
   position: relative;
   width: 100%;
   height: 250px;
+  overflow: hidden;
 }
 
 .wave-svg {
@@ -61,7 +57,7 @@ onMounted(() => {
 }
 
 .road-bg {
-  fill: #0000FF;
+  fill: #b4d4f5;
 }
 
 .road-white {
@@ -69,17 +65,15 @@ onMounted(() => {
 }
 
 .wave-text {
-  font-family: 'Bungee Tint', sans-serif;
-  fill: #eb6025;
+  font-family: 'Bungee', sans-serif;
+  fill: #ffffff;
   font-size: 16px;
   font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
-.wave-svg path {
-  stroke-width: 1;
-}
 </style>
+
 
 
 
