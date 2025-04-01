@@ -70,7 +70,7 @@ onMounted(() => {
 
 .wave-text {
   font-family: 'Bungee Tint', sans-serif;
-  fill: #eb6025;
+  fill:rgb(247, 245, 244);
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 1px;

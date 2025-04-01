@@ -19,7 +19,9 @@
   
         <!-- Buttons -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 transition-all duration-700 opacity-100 translate-y-0 delay-300">
-          <button class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-full">Explore Roadmap</button>
+          <router-link to="/roadmap" class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-full">
+              Explore Roadmap
+          </router-link>
           <button class="border-blue-600 text-blue-600 hover:bg-blue-50 py-3 px-8 rounded-full border-2">See Success Stories</button>
         </div>
   
@@ -40,6 +42,7 @@
   export default {
     name: 'Hero',
   };
+
   </script>
   
   <style scoped>

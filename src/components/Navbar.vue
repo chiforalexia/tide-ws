@@ -11,7 +11,7 @@
         <div class="flex items-center justify-between">
           <div class="flex items-center">
             <!-- Logo Section -->
-            <a href="/" class="flex items-center space-x-2">
+            <router-link to="/" class="flex items-center space-x-2">
               <img
                 src="/SURF_fc-01.jpg"
                 alt="SURF Logo"
@@ -20,7 +20,7 @@
               <span class="font-display font-semibold text-xl">
                 Roadmap
               </span>
-            </a>
+            </router-link>
           </div>
   
           <!-- Desktop Navigation -->
