@@ -7,7 +7,7 @@
     <div class="min-h-screen">
       <!-- Hero Section-->
       <Hero />
-      
+
       <!-- Wave Animation -->
       <div class="wave-container">
         <WaveAnimation />
@@ -16,6 +16,7 @@
       <!-- Other sections -->
       <section id="process">
         <!-- Add your process section content here -->
+        <ImplementationPhases />
       </section>
 
       <ImageGrid />
@@ -47,6 +48,7 @@ import Footer from './components/Footer.vue';
 import WaveAnimation from './components/WaveAnimation.vue';
 import ImageGrid from './components/ImageGrid.vue';
 import SuccessStories from './components/SuccessStories.vue'
+import ImplementationPhases from './components/ImplementationPhases.vue';
 
 
 export default {
@@ -59,6 +61,7 @@ export default {
     WaveAnimation,
     ImageGrid,
     SuccessStories,
+    ImplementationPhases,
 
   },
 };
