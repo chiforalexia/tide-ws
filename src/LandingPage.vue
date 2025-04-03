@@ -33,6 +33,12 @@
         <Photoscroll />
       </section>
 
+      <section>
+        <!-- Roadmap element (needs to be moved to different page later) -->
+         <RoadmapTemplate />
+      </section>
+      
+
       <Footer />
     </div>
   </div>
@@ -47,6 +53,7 @@ import Footer from './components/Footer.vue';
 import WaveAnimation from './components/WaveAnimation.vue';
 import ImageGrid from './components/ImageGrid.vue';
 import SuccessStories from './components/SuccessStories.vue'
+import RoadmapTemplate from './components/Roadmap-template.vue';
 
 
 export default {
@@ -59,7 +66,7 @@ export default {
     WaveAnimation,
     ImageGrid,
     SuccessStories,
-
+    RoadmapTemplate,
   },
 };
 </script>
@@ -71,7 +78,7 @@ export default {
 .wave-container {
   position: relative;
   width: 100%;
-  margin: -2rem 0; /* Negative margin to remove gaps */
+  margin: -2rem 0;
   z-index: 1;
 }
 </style>
