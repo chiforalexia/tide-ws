@@ -15,7 +15,7 @@ const sections = ref<Section[]>([
   {
     id: 1,
     title: 'Artificial Intelligence',
-    description: 'Artificial Intelligence (AI) and, more specifically, Machine Learning (ML) have taken off in recent years.',
+    description: 'Artificial Intelligence (AI) and, more specifically, Machine Learning (ML) continue to evolve, leading to both groundbreaking achievements and ethical concerns.',
     image: '/public/tile_AI.png',
     subChapters: [
       'Machine Learning',
@@ -23,6 +23,20 @@ const sections = ref<Section[]>([
       'Natural Language Processing',
       'Computer Vision',
       'Robotics'
+    ],
+    keyTrends: [
+      'Frankenmodels & Modular AI',
+      'Efficient AI Systems',
+      'New Data Access Methods',
+      'Trustworthy AI',
+      'Accessible AI Computing'
+    ],
+    dutchTechnologies: [
+      'TU Delft AI Labs',
+      'Philips Healthcare AI',
+      'ING AI Solutions',
+      'TNO AI Research',
+      'Amsterdam AI Hub'
     ],
     hovered: false
   },
@@ -38,6 +52,20 @@ const sections = ref<Section[]>([
       'Green Computing',
       'Distributed Systems'
     ],
+    keyTrends: [
+      'Quantum Integration',
+      'Sustainable Computing',
+      'Edge Computing',
+      'AI Accelerators',
+      'Neuromorphic Computing'
+    ],
+    dutchTechnologies: [
+      'SURF Supercomputing',
+      'Dutch National Supercomputer',
+      'Amsterdam Data Hub',
+      'Green IT Amsterdam',
+      'Delft Quantum Computing'
+    ],
     hovered: false
   },
   {
@@ -51,6 +79,20 @@ const sections = ref<Section[]>([
       'Quantum Sensing',
       'Quantum Networks',
       'Quantum Algorithms'
+    ],
+    keyTrends: [
+      'Error Correction',
+      'Quantum Supremacy',
+      'Quantum Internet',
+      'Quantum Software',
+      'Quantum-Safe Security'
+    ],
+    dutchTechnologies: [
+      'QuTech Delft',
+      'Quantum Delta NL',
+      'QphoX',
+      'Orange Quantum Systems',
+      'Quantum.Amsterdam'
     ],
     hovered: false
   },
@@ -66,6 +108,20 @@ const sections = ref<Section[]>([
       'Smart Sensors',
       'Edge Security'
     ],
+    keyTrends: [
+      '5G Integration',
+      'Edge AI/ML',
+      'IoT Platforms',
+      'Smart Cities',
+      'Edge Orchestration'
+    ],
+    dutchTechnologies: [
+      'SURF Edge Lab',
+      'KPN Edge Cloud',
+      'Dutch Edge Forum',
+      'Smart Industry NL',
+      'EdgeLab Amsterdam'
+    ],
     hovered: false
   },
   {
@@ -80,6 +136,20 @@ const sections = ref<Section[]>([
       'Network Protocols',
       'Network Architecture'
     ],
+    keyTrends: [
+      '6G Research',
+      'Network Slicing',
+      'Zero Trust Security',
+      'Open RAN',
+      'Network AI'
+    ],
+    dutchTechnologies: [
+      'KPN Networks',
+      'TNO Telecom',
+      'Dutch Optics Centre',
+      'SURFnet',
+      'Amsterdam Internet Exchange'
+    ],
     hovered: false
   },
   {
@@ -93,6 +163,20 @@ const sections = ref<Section[]>([
       'Mixed Reality',
       'Immersive Technologies',
       'XR Applications'
+    ],
+    keyTrends: [
+      'Metaverse',
+      'Digital Twins',
+      'Haptic Feedback',
+      'Social VR',
+      'Enterprise AR'
+    ],
+    dutchTechnologies: [
+      'TNO XR Lab',
+      'Dutch VR Days',
+      'XR Base Amsterdam',
+      'VirtualDutch',
+      'AR/VR Next'
     ],
     hovered: false
   }
@@ -207,12 +291,12 @@ const setHovered = (section: Section, value: boolean) => {
     </div>
 
     <!-- Expanded section with background tiles visible -->
-    <div v-if="activeSection" class="fixed inset-0 z-50 flex items-center justify-center">
+    <div v-if="activeSection" class="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8">
       <!-- Semi-transparent overlay -->
       <div class="absolute inset-0 bg-black/20 backdrop-blur-sm" @click.self="closeSection"></div>
 
       <!-- Content container with top gap -->
-        <div class="relative w-full h-screen max-h-[75vh] mx-4 md:mx-8 bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col mt-12 md:mt-16">
+      <div class="relative w-full max-w-6xl bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col" style="max-height: calc(100vh - 8rem);">
 
         <!-- Close button -->
         <button 
@@ -222,7 +306,6 @@ const setHovered = (section: Section, value: boolean) => {
           <X class="w-6 h-6" />
         </button>
 
-        <!-- Scrollable content -->
         <div 
           ref="scrollContainer" 
           class="flex-1 flex overflow-x-auto snap-x snap-mandatory hide-scrollbar"
@@ -231,36 +314,90 @@ const setHovered = (section: Section, value: boolean) => {
           <div 
             v-for="section in sections" 
             :key="section.id"
-            class="min-w-full w-full flex-shrink-0 snap-center flex items-start justify-center p-4 md:p-8 overflow-y-auto"
+            class="min-w-full w-full flex-shrink-0 snap-center flex items-start justify-center p-6 md:p-10"
           >
-            <div class="max-w-5xl w-full space-y-6 pt-1">
-              <div class="text-center">
-                <h2 class="text-4xl font-bold text-gray-800">{{ section.title }}</h2>
+            <div class="max-w-6xl w-full space-y-8 overflow-y-auto" style="max-height: calc(100vh - 8rem);">
+              <!-- Header with larger image -->
+              <div class="flex items-start gap-8">
+                <div class="flex-1">
+                  <h2 class="text-5xl font-bold text-gray-800 mb-6">{{ section.title }}</h2>
+                  <p class="text-gray-600 text-xl leading-relaxed">{{ section.description }}</p>
+                </div>
+                <img 
+                  :src="section.image" 
+                  :alt="section.title"
+                  class="w-48 h-48 object-cover rounded-xl shadow-lg"
+                />
               </div>
-              <img 
-                :src="section.image" 
-                :alt="section.title"
-                class="w-full h-[90px] md:h-[120px] object-cover rounded-xl shadow-lg"
-              />
-              <div class="space-y-6 pb-20">
-                <p class="text-gray-600 text-lg leading-relaxed">{{ section.description }}</p>
-                <ul class="space-y-3">
-                  <li 
-                    v-for="(subChapter, idx) in section.subChapters" 
-                    :key="idx"
-                    class="flex items-center text-gray-700 text-lg"
-                  >
-                    <div class="w-2 h-2 rounded-full bg-blue-500 mr-3"></div>
-                    {{ subChapter }}
-                  </li>
-                </ul>
+
+              <!-- Main content grid -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Left column with subchapters -->
+                <div class="md:col-span-2 space-y-6">
+                  <!-- Subchapters Box -->
+                  <div class="bg-gray-50 rounded-xl p-8 shadow-sm">
+                    <div class="flex items-center gap-3 mb-6">
+                      <Cpu class="w-6 h-6 text-blue-500" />
+                      <h3 class="text-2xl font-semibold text-gray-800">Subchapters</h3>
+                    </div>
+                    <ul class="space-y-4">
+                      <li 
+                        v-for="(subChapter, idx) in section.subChapters" 
+                        :key="idx"
+                        class="flex items-center text-gray-700 text-lg"
+                      >
+                        <div class="w-2 h-2 rounded-full bg-blue-500 mr-4"></div>
+                        {{ subChapter }}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Right column with Key Trends and Dutch Technologies -->
+                <div class="space-y-6">
+                  <!-- Key Trends Box -->
+                  <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+                    <div class="flex items-center gap-2 mb-4">
+                      <Lightbulb class="w-5 h-5 text-orange-500" />
+                      <h3 class="text-xl font-semibold text-gray-800">Key Trends</h3>
+                    </div>
+                    <ul class="space-y-3">
+                      <li 
+                        v-for="(trend, idx) in section.keyTrends" 
+                        :key="idx"
+                        class="flex items-center text-gray-700"
+                      >
+                        <div class="w-2 h-2 rounded-full bg-orange-500 mr-3"></div>
+                        {{ trend }}
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Dutch Technologies Box -->
+                  <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+                    <div class="flex items-center gap-2 mb-4">
+                      <Flag class="w-5 h-5 text-green-500" />
+                      <h3 class="text-xl font-semibold text-gray-800">Dutch Technologies</h3>
+                    </div>
+                    <ul class="space-y-3">
+                      <li 
+                        v-for="(tech, idx) in section.dutchTechnologies" 
+                        :key="idx"
+                        class="flex items-center text-gray-700"
+                      >
+                        <div class="w-2 h-2 rounded-full bg-green-500 mr-3"></div>
+                        {{ tech }}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Navigation and progress -->
-        <div class="absolute bottom-4 right-4 flex items-center gap-4 bg-white rounded-full p-2 shadow-lg">
+        <div class="absolute bottom-4 right-4 flex items-center gap-4 bg-white rounded-full p-0.5 shadow-lg">
           <button 
             @click="scroll('left')"
             class="p-2 hover:bg-gray-100 rounded-full text-gray-600 hover:text-gray-800 disabled:opacity-50"
@@ -269,7 +406,7 @@ const setHovered = (section: Section, value: boolean) => {
             <ChevronLeft class="w-5 h-5" />
           </button>
           <!-- progress bar -->
-          <div class="w-14 md:w-14 h-2 bg-white rounded-full overflow-hidden">
+          <div class="w-20 md:w-24 h-1.5 bg-white rounded-full overflow-hidden">
             <div 
               class="h-full bg-blue-500 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 animate-pulse transition-all duration-300"
               :style="{ width: `${progress}%` }"
@@ -277,7 +414,7 @@ const setHovered = (section: Section, value: boolean) => {
           </div>
           <button 
             @click="scroll('right')"
-            class="p-2 hover:bg-gray-100 rounded-full text-gray-600 hover:text-gray-800 disabled:opacity-50"
+            class="p-1 hover:bg-gray-100 rounded-full text-gray-600 hover:text-gray-800 disabled:opacity-50"
             :disabled="progress >= 100"
           >
             <ChevronRight class="w-5 h-5" />
