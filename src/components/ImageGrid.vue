@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, nextTick } from 'vue'
-import { X, ChevronLeft, ChevronRight } from 'lucide-vue-next'
+
 
 interface Section {
   id: number
