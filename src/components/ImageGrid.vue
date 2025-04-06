@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref, nextTick } from 'vue'
 
-
 interface Section {
   id: number
   title: string
@@ -236,6 +235,27 @@ const setHovered = (section: Section, value: boolean) => {
 
 <template>
   <section id="technologies" class="py-24">
+
+    <div class="container mx-auto px-4 mb-12">
+      <!-- Title section -->
+      <div class="text-center">
+        <!-- Badge -->
+        <div class="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm mb-4">
+          Technologies
+        </div>
+
+        <!-- Main title -->
+        <h2 class="text-3xl md:text-4xl font-bold mb-2">
+          Explore the Future of Technology
+        </h2>
+
+        <!-- Subtitle -->
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          From AI to Quantum and beyond, explore how emerging technologies are shaping the future of research and innovation in the Netherlands.
+        </p>
+      </div>
+    </div>
+
     <div class="min-h-[90vh] flex items-center justify-center">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
@@ -269,7 +289,7 @@ const setHovered = (section: Section, value: boolean) => {
             >
               <!-- Content -->
               <div class="px-6 py-4">
-                <h3 class="text-white text-xl md:text-2xl font-bold mb-5">{{ section.title }}</h3>
+                <h3 class="text-white text-xl md:text-2xl font-bold mb-7">{{ section.title }}</h3>
                 <!-- Subtitle and description - only visible on hover -->
                 <div 
                   class="overflow-hidden transition-all duration-300"
@@ -303,7 +323,8 @@ const setHovered = (section: Section, value: boolean) => {
           @click="closeSection" 
           class="absolute top-4 left-4 p-2 hover:bg-gray-100 rounded-full text-gray-600 hover:text-gray-800 z-50"
         >
-          <X class="w-6 h-6" />
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
         </button>
 
         <div 
@@ -403,7 +424,9 @@ const setHovered = (section: Section, value: boolean) => {
             class="p-2 hover:bg-gray-100 rounded-full text-gray-600 hover:text-gray-800 disabled:opacity-50"
             :disabled="progress <= 0"
           >
-            <ChevronLeft class="w-5 h-5" />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" /></svg>
+
           </button>
           <!-- progress bar -->
           <div class="w-20 md:w-24 h-1.5 bg-white rounded-full overflow-hidden">
@@ -417,7 +440,9 @@ const setHovered = (section: Section, value: boolean) => {
             class="p-1 hover:bg-gray-100 rounded-full text-gray-600 hover:text-gray-800 disabled:opacity-50"
             :disabled="progress >= 100"
           >
-            <ChevronRight class="w-5 h-5" />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
+
           </button>
         </div>
       </div>

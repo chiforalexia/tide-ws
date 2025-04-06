@@ -3,20 +3,11 @@
     <!-- Hero Section-->
     <Hero />
     
-    <!-- Wave Animation -->
-    <div class="wave-container">
-    <WaveAnimation />
-    </div>
-
     <!-- Other sections -->
 
       <!-- Report Chapters -->
       <section id="chapters">
       <ImageGrid />
-      </section>
-
-      <section id="features">
-      <!-- Add your features section content here -->
       </section>
 
       <!-- Success Stories -->
@@ -25,7 +16,7 @@
       </section>
 
       <!-- Something menu -->
-      <section>
+      <section id="photoscroll">
       <Photoscroll />
       </section>
 
@@ -36,7 +27,7 @@
 // Import components here
 import Hero from '../components/Hero.vue';
 import Photoscroll from '../components/Photoscroll.vue';
-import WaveAnimation from '../components/WaveAnimation.vue';
+//import WaveAnimation from '../components/WaveAnimation.vue';
 import ImageGrid from '../components/ImageGrid.vue';
 import SuccessStories from '../components/SuccessStories.vue'
 
@@ -45,7 +36,7 @@ export default {
   components: { //Add components here
     Hero, 
     Photoscroll,
-    WaveAnimation,
+    //WaveAnimation,
     ImageGrid,
     SuccessStories,
 

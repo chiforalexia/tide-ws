@@ -1,6 +1,7 @@
 <template>
     <div>
       <!-- Navbar Component -->
+        <Navbar />
   
       <!-- Main Content Section -->
       <div class="min-h-screen">
@@ -13,7 +14,9 @@
         <section id="features">
           <!-- Add your features section content here -->
         </section>
-  
+        
+
+        <Footer/>
     
       </div>
     </div>
@@ -23,6 +26,7 @@
   // Import components here
   import Navbar from '../components/Navbar.vue';
   import Footer from '../components/Footer.vue';
+
  
   
   export default {

@@ -2,32 +2,51 @@
 const photos = [
   {
     id: 1,
-    src: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
+    src: './public/tile_AC.png',
     title: 'Landscape Valley',
-    link: 'https://example.com/photo1'
   },
   {
     id: 2,
-    src: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e',
+    src: './public/tile_AI.png',
     title: 'Mountain Forest',
-    link: 'https://example.com/photo2'
   },
   {
     id: 3,
-    src: 'https://images.unsplash.com/photo-1426604966848-d7adac402bff',
+    src: './public/tile_Edge.png',
     title: 'Peaceful Lake',
-    link: 'https://example.com/photo3'
   },
   {
     id: 4,
-    src: 'https://images.unsplash.com/photo-1472214103451-9374bd1c798e',
+    src: './public/tile_Network.png',
     title: 'Autumn Colors',
-    link: 'https://example.com/photo4'
   }
 ];
 </script>
 
 <template>
+
+
+<div class="container mx-auto px-4 mb-10">
+      <!-- Title section -->
+      <div class="text-center">
+        <!-- Badge -->
+        <div class="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm mb-4">
+          Technologies
+        </div>
+
+        <!-- Main title -->
+        <h2 class="text-3xl md:text-4xl font-bold mb-2">
+          Explore the Future of Technology
+        </h2>
+
+        <!-- Subtitle -->
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          From AI to Quantum and beyond, explore how emerging technologies are shaping the future of research and innovation in the Netherlands.
+        </p>
+      </div>
+    </div>
+
+  <!-- Photo gallery section -->
   <section class="photo-gallery">
     <div class="photos-container">
       <div
@@ -59,7 +78,7 @@ const photos = [
   gap: 1rem;
   width: 100%;
   aspect-ratio: 16/9;
-  max-height: 80vh;
+  max-height: 60vh;
 }
 
 .photo-item {
