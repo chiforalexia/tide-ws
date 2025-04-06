@@ -1,156 +1,6 @@
-<template>
-  <section id="technologies" class="py-24">
-    <div class="min-h-[90vh] flex items-center justify-center">
-      <div class="container mx-auto px-4">
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
-          <div
-            v-for="section in sections"
-            :key="section.id"
-            @click="openSection(section)"
-            class="relative group overflow-hidden rounded-lg h-48 md:h-56 cursor-pointer"
-            @mouseenter="setHovered(section, true)"
-            @mouseleave="setHovered(section, false)"
-          >
-            <!-- Image with overlay -->
-            <div class="relative h-full">
-              <img 
-                :src="section.image" 
-                :alt="section.title"
-                class="w-full h-full object-cover transition-transform duration-300"
-                :class="{ 'scale-110': section.hovered }"
-              />
-              <!-- Black overlay -->
-              <div 
-                class="absolute inset-0 bg-black transition-opacity duration-300"
-                :class="section.hovered ? 'opacity-70' : 'opacity-50'"
-              ></div>
-            </div>
-
-            <!-- Content block that slides up -->
-            <div 
-              class="absolute inset-x-0 bottom-0 transform transition-all duration-300"
-              :class="section.hovered ? 'translate-y-0' : 'translate-y-8'"
-            >
-              <!-- Content -->
-              <div class="px-6 py-4">
-                <h3 class="text-white text-xl md:text-2xl font-bold mb-5">{{ section.title }}</h3>
-                <!-- Subtitle and description - only visible on hover -->
-                <div 
-                  class="overflow-hidden transition-all duration-300"
-                  :class="section.hovered ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'"
-                >
-                  <p class="text-white text-sm mb-4">{{ section.description }}</p>
-                  <div class="text-right">
-                    <button class="px-2 py-2 border-2 border-white text-white rounded-full bg-transparent hover:bg-white hover:text-black transition-colors duration-300"
-                    >
-                    Learn More
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Expanded section with background tiles visible -->
-    <div v-if="activeSection" class="fixed inset-0 z-50 flex items-center justify-center">
-      <!-- Darker semi-transparent overlay -->
-      <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" @click.self="closeSection"></div>
-
-      <!-- Content container (larger height and slightly lifted up) -->
-      <div class="relative w-full mx-10 md:mx-25 bg-white rounded-2xl shadow-2xl overflow-y-auto flex flex-col mt-2 ">
-
-        <!-- Close button -->
-        <button 
-          @click="closeSection" 
-          class="absolute top-4 left-4 p-2 hover:bg-gray-100 rounded-full text-gray-600 hover:text-gray-800 z-50"
-        >
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
-
-        </button>
-
-        <!-- Scrollable horizontal content inside frame -->
-        <div 
-          ref="scrollContainer" 
-          class="flex-1 flex overflow-x-auto snap-x snap-mandatory hide-scrollbar"
-          @scroll="updateProgress"
-        >
-          <div 
-            v-for="section in sections" 
-            :key="section.id"
-            class="min-w-full w-full flex-shrink-0 snap-center flex flex-col"
-          >
-            <!-- Banner with title -->
-            <div 
-              class="relative h-1/4 md:h-1/3 bg-cover bg-center flex items-center justify-center"
-              :style="`background-image: url('${section.image}')`"
-            >
-              <div class="bg-black/50 w-full h-full absolute inset-0 z-0"></div>
-              <h2 class="relative z-10 text-white text-4xl md:text-5xl font-bold text-center px-4">
-                {{ section.title }}
-              </h2>
-            </div>
-
-            <!-- Scrollable vertical content area -->
-            <div class="flex-1 p-6 md:p-10 overflow-y-auto bg-white">
-              <p class="text-gray-700 text-lg leading-relaxed mb-6">
-                {{ section.description }}
-              </p>
-              <ul class="space-y-3">
-                <li 
-                  v-for="(subChapter, idx) in section.subChapters" 
-                  :key="idx"
-                  class="flex items-center text-gray-700 text-base md:text-lg"
-                >
-                  <div class="w-2 h-2 rounded-full bg-blue-500 mr-3"></div>
-                  {{ subChapter }}
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Navigation and progress bar -->
-        <div class="sticky bottom-4 right-4 flex items-center gap-4 bg-white rounded-full p-2 shadow-lg self-end mr-4">
-          <button 
-            @click="scroll('left')"
-            class="p-2 hover:bg-gray-100 rounded-full text-gray-600 hover:text-gray-800 disabled:opacity-50"
-            :disabled="progress <= 0"
-          >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-           <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" /></svg>
-
-          </button>
-
-          <div class="w-14 md:w-14 h-2 bg-white rounded-full overflow-hidden">
-            <div 
-              class="h-full bg-blue-500 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 animate-pulse transition-all duration-300"
-              :style="{ width: `${progress}%` }"
-            ></div>
-          </div>
-
-          <button 
-            @click="scroll('right')"
-            class="p-2 hover:bg-gray-100 rounded-full text-gray-600 hover:text-gray-800 disabled:opacity-50"
-            :disabled="progress >= 100"
-          >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
-
-          </button>
-        </div>
-      </div>
-    </div>
-
-  </section>
-</template>
-
 <script setup lang="ts">
 import { ref, nextTick } from 'vue'
-
+import { X, ChevronLeft, ChevronRight } from 'lucide-vue-next'
 
 interface Section {
   id: number
@@ -172,10 +22,7 @@ const sections = ref<Section[]>([
       'Neural Networks',
       'Natural Language Processing',
       'Computer Vision',
-      'Robotics',
-      'something',
-      'something',
-      'something'
+      'Robotics'
     ],
     hovered: false
   },
@@ -190,7 +37,6 @@ const sections = ref<Section[]>([
       'Data Centers',
       'Green Computing',
       'Distributed Systems'
-      
     ],
     hovered: false
   },
@@ -303,6 +149,144 @@ const setHovered = (section: Section, value: boolean) => {
   section.hovered = value
 }
 </script>
+
+<template>
+  <section id="technologies" class="py-24">
+    <div class="min-h-[90vh] flex items-center justify-center">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div
+            v-for="section in sections"
+            :key="section.id"
+            @click="openSection(section)"
+            class="relative group overflow-hidden rounded-lg h-48 md:h-56 cursor-pointer"
+            @mouseenter="setHovered(section, true)"
+            @mouseleave="setHovered(section, false)"
+          >
+            <!-- Image with overlay -->
+            <div class="relative h-full">
+              <img 
+                :src="section.image" 
+                :alt="section.title"
+                class="w-full h-full object-cover transition-transform duration-300"
+                :class="{ 'scale-110': section.hovered }"
+              />
+              <!-- Black overlay -->
+              <div 
+                class="absolute inset-0 bg-black transition-opacity duration-300"
+                :class="section.hovered ? 'opacity-70' : 'opacity-50'"
+              ></div>
+            </div>
+
+            <!-- Content block that slides up -->
+            <div 
+              class="absolute inset-x-0 bottom-0 transform transition-all duration-300"
+              :class="section.hovered ? 'translate-y-0' : 'translate-y-8'"
+            >
+              <!-- Content -->
+              <div class="px-6 py-4">
+                <h3 class="text-white text-xl md:text-2xl font-bold mb-5">{{ section.title }}</h3>
+                <!-- Subtitle and description - only visible on hover -->
+                <div 
+                  class="overflow-hidden transition-all duration-300"
+                  :class="section.hovered ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'"
+                >
+                  <p class="text-white text-sm mb-4">{{ section.description }}</p>
+                  <div class="text-right">
+                    <button class="px-2 py-2 border-2 border-white text-white rounded-full bg-transparent hover:bg-white hover:text-black transition-colors duration-300"
+                    >
+                    Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Expanded section with background tiles visible -->
+    <div v-if="activeSection" class="fixed inset-0 z-50 flex items-center justify-center">
+      <!-- Semi-transparent overlay -->
+      <div class="absolute inset-0 bg-black/20 backdrop-blur-sm" @click.self="closeSection"></div>
+
+      <!-- Content container with top gap -->
+        <div class="relative w-full h-screen max-h-[75vh] mx-4 md:mx-8 bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col mt-12 md:mt-16">
+
+        <!-- Close button -->
+        <button 
+          @click="closeSection" 
+          class="absolute top-4 left-4 p-2 hover:bg-gray-100 rounded-full text-gray-600 hover:text-gray-800 z-50"
+        >
+          <X class="w-6 h-6" />
+        </button>
+
+        <!-- Scrollable content -->
+        <div 
+          ref="scrollContainer" 
+          class="flex-1 flex overflow-x-auto snap-x snap-mandatory hide-scrollbar"
+          @scroll="updateProgress"
+        >
+          <div 
+            v-for="section in sections" 
+            :key="section.id"
+            class="min-w-full w-full flex-shrink-0 snap-center flex items-start justify-center p-4 md:p-8 overflow-y-auto"
+          >
+            <div class="max-w-5xl w-full space-y-6 pt-1">
+              <div class="text-center">
+                <h2 class="text-4xl font-bold text-gray-800">{{ section.title }}</h2>
+              </div>
+              <img 
+                :src="section.image" 
+                :alt="section.title"
+                class="w-full h-[90px] md:h-[120px] object-cover rounded-xl shadow-lg"
+              />
+              <div class="space-y-6 pb-20">
+                <p class="text-gray-600 text-lg leading-relaxed">{{ section.description }}</p>
+                <ul class="space-y-3">
+                  <li 
+                    v-for="(subChapter, idx) in section.subChapters" 
+                    :key="idx"
+                    class="flex items-center text-gray-700 text-lg"
+                  >
+                    <div class="w-2 h-2 rounded-full bg-blue-500 mr-3"></div>
+                    {{ subChapter }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation and progress -->
+        <div class="absolute bottom-4 right-4 flex items-center gap-4 bg-white rounded-full p-2 shadow-lg">
+          <button 
+            @click="scroll('left')"
+            class="p-2 hover:bg-gray-100 rounded-full text-gray-600 hover:text-gray-800 disabled:opacity-50"
+            :disabled="progress <= 0"
+          >
+            <ChevronLeft class="w-5 h-5" />
+          </button>
+          <!-- progress bar -->
+          <div class="w-14 md:w-14 h-2 bg-white rounded-full overflow-hidden">
+            <div 
+              class="h-full bg-blue-500 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 animate-pulse transition-all duration-300"
+              :style="{ width: `${progress}%` }"
+            ></div>
+          </div>
+          <button 
+            @click="scroll('right')"
+            class="p-2 hover:bg-gray-100 rounded-full text-gray-600 hover:text-gray-800 disabled:opacity-50"
+            :disabled="progress >= 100"
+          >
+            <ChevronRight class="w-5 h-5" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
 
 <style scoped>
 .hide-scrollbar {
