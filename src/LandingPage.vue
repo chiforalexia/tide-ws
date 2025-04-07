@@ -8,9 +8,16 @@
       <!-- Hero Section-->
       <Hero />
 
+
+      <!-- Wave Animation -->
+      <div class="wave-container">
+        <WaveAnimation />
+      </div>
+
       <!-- Other sections -->
       <section id="process">
         <!-- Add your process section content here -->
+        <ImplementationPhases />
       </section>
 
       <ImageGrid />
@@ -34,6 +41,9 @@ import Navbar from './components/Navbar.vue';
 import Hero from './components/Hero.vue';
 import Footer from './components/Footer.vue'
 import ImageGrid from './components/ImageGrid.vue';
+import SuccessStories from './components/SuccessStories.vue'
+import ImplementationPhases from './components/ImplementationPhases.vue';
+
 
 export default {
   name: 'LandingPage',
@@ -42,6 +52,8 @@ export default {
     Hero, 
     Footer,
     ImageGrid,
+    SuccessStories,
+    ImplementationPhases,
   },
 };
 </script>
