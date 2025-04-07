@@ -12,8 +12,8 @@
   
         <section id="features">
           <!-- Add your features section content here -->
+           <Template />
         </section>
-            
       </div>
     </div>
   </template>
@@ -23,6 +23,7 @@
   import Navbar from '../components/Navbar.vue';
   import Footer from '../components/Footer.vue';
   import ImplementationPhases from '../components/ImplementationPhases.vue'
+  import Template from '../components/Template.vue';
 
  
   
@@ -32,6 +33,7 @@
       Navbar,
       Footer,
       ImplementationPhases,
+      Template,
 
     },
   };
