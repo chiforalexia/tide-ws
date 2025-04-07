@@ -1,23 +1,7 @@
-<script setup>
-import { ref, onMounted } from 'vue';
 
-// The text to animate
-const text = "FOR YOUR COFFEE, TEA, CEREAL, SMOOTHIES, PROTEIN SHAKES, LUNCHBOX, AND MORE... THE BEST TECH SOLUTIONS ";
-const repeatedText = text.repeat(3);
-const startOffset = ref(0);
-
-// Animation logic for scrolling text
-onMounted(() => {
-  const animate = () => {
-    startOffset.value = (startOffset.value - 0.2) % 100;
-    requestAnimationFrame(animate);
-  };
-  animate();
-});
-</script>
-
+<!---->
 <template>
-  <div class="wave-wrapper">
+  <div class="wave-wrapper absolute bottom-0 left-0 w-full z-0">
     <svg class="wave-svg" viewBox="0 0 1200 250" preserveAspectRatio="xMidYMid meet">
       <defs>
         <!-- Main wave path for text -->
@@ -48,16 +32,38 @@ onMounted(() => {
   </div>
 </template>
 
+<script setup>
+import { ref, onMounted } from 'vue';
+
+// The text to animate
+const text = "FOR YOUR COFFEE, TEA, CEREAL, SMOOTHIES, PROTEIN SHAKES, LUNCHBOX, AND MORE... THE BEST TECH SOLUTIONS ";
+const repeatedText = text.repeat(3);
+const startOffset = ref(0);
+
+// Animation logic for scrolling text
+onMounted(() => {
+  const animate = () => {
+    startOffset.value = (startOffset.value - 0.2) % 100;
+    requestAnimationFrame(animate);
+  };
+  animate();
+});
+</script>
+
 <style scoped>
 .wave-wrapper {
-  position: relative;
+  position: absolute;
+  bottom: -50px;  /* Adjust this value as needed */
+  left: 0;
   width: 100%;
-  height: 250px;
+  height: 200px;  /* Height of the wave */
+  z-index: 0;  /* Ensure it's behind the hero content */
 }
 
 .wave-svg {
   width: 100%;
   height: 100%;
+  transform: rotate(10deg); /* Optional: Tilt the wave */
 }
 
 .road-bg {
@@ -70,7 +76,7 @@ onMounted(() => {
 
 .wave-text {
   font-family: 'Bungee Tint', sans-serif;
-  fill: #eb6025;
+  fill: rgb(255, 255, 255);
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 1px;
@@ -80,29 +86,3 @@ onMounted(() => {
   stroke-width: 1;
 }
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

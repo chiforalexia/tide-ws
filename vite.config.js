@@ -9,9 +9,12 @@ export default defineConfig({
   css: {
     postcss: {
       plugins: [
-        tailwindcss, // Add TailwindCSS with the updated import
-        autoprefixer, // Add Autoprefixer
+        tailwindcss, // TailwindCSS
+        autoprefixer, // Auto-prefixes CSS for browser compatibility
       ],
     },
   },
+  server: {
+    historyApiFallback: true // Ensures Vue Router history mode works properly
+  }
 });
