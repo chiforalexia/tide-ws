@@ -5,7 +5,7 @@
       <div class="min-h-screen">
   
         <!-- sections -->
-        <section id="process">
+        <section id="process" class="pt-40">
           <!-- Add your process section content here -->
            <ImplementationPhases />
         </section>
