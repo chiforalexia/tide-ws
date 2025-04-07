@@ -4,11 +4,13 @@ import App from './index.vue';  // Main component to mount
 import { createRouter, createWebHistory } from 'vue-router';  // Import Vue Router
 import RoadmapPage from './pages/RoadmapPage.vue';  // Import other pages
 import LandingPage from './pages/LandingPage.vue';
+import SuccessStoriesPage from './pages/SuccessStoriesPage.vue';
 
 // Define the routes
 const routes = [
   { path: '/', component: LandingPage },  // Landing page route
   { path: '/roadmap', component: RoadmapPage },  // Roadmap page route
+  { path: '/success-stories', component: SuccessStoriesPage} // Success stories page route
 ];
 
 // Create the router instance
