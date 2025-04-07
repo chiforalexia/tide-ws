@@ -16,7 +16,7 @@ const routes = [
 // Create the router instance
 const router = createRouter({
   history: createWebHistory(),  // Use HTML5 history mode for clean URLs (no # in the URL)
-  routes,  // Set the defined 
+  routes,  // Set the defined routes
 
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
