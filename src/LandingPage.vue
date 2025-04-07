@@ -30,7 +30,18 @@
         <!-- Add your success stories section content here -->
       </section>
 
-    <Footer />
+      <section>
+        <!-- Roadmap element (needs to be moved to different page later) -->
+         <RoadmapTemplate />
+      </section>
+
+      <section>
+        <!-- Embedding of Template-->
+         <Template />
+      </section>
+      
+
+      <Footer />
     </div>
   </div>
 </template>
@@ -42,8 +53,10 @@ import Hero from './components/Hero.vue';
 import Footer from './components/Footer.vue'
 import ImageGrid from './components/ImageGrid.vue';
 import SuccessStories from './components/SuccessStories.vue'
-import ImplementationPhases from './components/ImplementationPhases.vue';
 
+import RoadmapTemplate from './components/Roadmap-template.vue';
+import Template from './components/Template.vue';
+import ImplementationPhases from './components/ImplementationPhases.vue';
 
 export default {
   name: 'LandingPage',
@@ -53,6 +66,8 @@ export default {
     Footer,
     ImageGrid,
     SuccessStories,
+    RoadmapTemplate,
+    Template,
     ImplementationPhases,
   },
 };
@@ -65,3 +80,10 @@ export default {
 
 
 
+.wave-container {
+  position: relative;
+  width: 100%;
+  margin: -2rem 0;
+  z-index: 1;
+}
+</style>

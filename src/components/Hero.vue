@@ -18,7 +18,10 @@
         <router-link to="/roadmap" class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-full">
             Explore Roadmap
         </router-link>
-        <button class="border-blue-600 text-blue-600 hover:bg-blue-50 py-3 px-8 rounded-full border-2">See Success Stories</button>
+        <router-link to="/success-stories" class="border-blue-600 text-blue-600 hover:bg-blue-50 py-3 px-8 rounded-full border-2">
+          See Success Stories
+        </router-link>
+        <!-- <button class="">See Success Stories</button> -->
       </div>
 
 
