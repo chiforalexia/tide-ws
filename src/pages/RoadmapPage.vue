@@ -32,6 +32,8 @@
   export default {
     name: 'RoadmapPage',
     components: { //Add components here
+      Navbar,
+      Footer,
 
 
     },
