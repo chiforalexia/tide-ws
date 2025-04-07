@@ -7,7 +7,8 @@
     <div class="min-h-screen">
       <!-- Hero Section-->
       <Hero />
-      
+
+
       <!-- Wave Animation -->
       <div class="wave-container">
         <WaveAnimation />
@@ -16,6 +17,7 @@
       <!-- Other sections -->
       <section id="process">
         <!-- Add your process section content here -->
+        <ImplementationPhases />
       </section>
 
       <ImageGrid />
@@ -25,12 +27,7 @@
       </section>
 
       <section id="stories">
-        <SuccessStories />
-      </section>
-
-      <section>
-        <!-- Photoscroll element -->
-        <Photoscroll />
+        <!-- Add your success stories section content here -->
       </section>
 
       <section>
@@ -53,27 +50,25 @@
 // Import components here
 import Navbar from './components/Navbar.vue';
 import Hero from './components/Hero.vue';
-import Photoscroll from './components/Photoscroll.vue';
-import Footer from './components/Footer.vue';
-import WaveAnimation from './components/WaveAnimation.vue';
+import Footer from './components/Footer.vue'
 import ImageGrid from './components/ImageGrid.vue';
 import SuccessStories from './components/SuccessStories.vue'
+
 import RoadmapTemplate from './components/Roadmap-template.vue';
 import Template from './components/Template.vue';
-
+import ImplementationPhases from './components/ImplementationPhases.vue';
 
 export default {
   name: 'LandingPage',
   components: { //Add components here
     Navbar, 
     Hero, 
-    Photoscroll,
     Footer,
-    WaveAnimation,
     ImageGrid,
     SuccessStories,
     RoadmapTemplate,
     Template,
+    ImplementationPhases,
   },
 };
 </script>
@@ -81,6 +76,9 @@ export default {
 <style>
 /* Global styles */
 /* @import './assets/styles/style.css';  Adjust the path as needed */
+</style>
+
+
 
 .wave-container {
   position: relative;
