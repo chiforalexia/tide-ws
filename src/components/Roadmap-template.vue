@@ -495,4 +495,5 @@ const getDurationQuarters = (startDate, endDate) => {
 .legend-dot.planned {
   background-color: #9CA3AF;
 }
+
 </style>

@@ -37,6 +37,11 @@
         <!-- Roadmap element (needs to be moved to different page later) -->
          <RoadmapTemplate />
       </section>
+
+      <section>
+        <!-- Embedding of Template-->
+         <Template />
+      </section>
       
 
       <Footer />
@@ -54,6 +59,7 @@ import WaveAnimation from './components/WaveAnimation.vue';
 import ImageGrid from './components/ImageGrid.vue';
 import SuccessStories from './components/SuccessStories.vue'
 import RoadmapTemplate from './components/Roadmap-template.vue';
+import Template from './components/Template.vue';
 
 
 export default {
@@ -67,6 +73,7 @@ export default {
     ImageGrid,
     SuccessStories,
     RoadmapTemplate,
+    Template,
   },
 };
 </script>
