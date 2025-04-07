@@ -10,13 +10,31 @@ import SuccessStoriesPage from './pages/SuccessStoriesPage.vue';
 const routes = [
   { path: '/', component: LandingPage },  // Landing page route
   { path: '/roadmap', component: RoadmapPage },  // Roadmap page route
-  { path: '/success-stories', component: SuccessStoriesPage} // Success stories page route
+  { path: '/success-stories', component: SuccessStoriesPage } // Success stories page route
 ];
 
 // Create the router instance
 const router = createRouter({
   history: createWebHistory(),  // Use HTML5 history mode for clean URLs (no # in the URL)
-  routes,  // Set the defined routes
+  routes,  // Set the defined 
+
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else if (to.hash) {
+      return new Promise((resolve) => {
+        // Wait until the DOM is ready
+        setTimeout(() => {
+          resolve({
+            el: to.hash,
+            behavior: 'smooth', // optional
+          })
+        }, 300) // delay may need tweaking
+      });
+    } else {
+      return { top: 0 }
+    }
+  }
 });
 
 // Create the app and use the router

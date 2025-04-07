@@ -19,7 +19,7 @@
                 </p>
                 <div class="flex items-center gap-4 mt-4">
                     <!-- LinkedIn -->
-                    <a href="#" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/company/206815/" aria-label="LinkedIn">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-600 hover:text-blue-700"
                             fill="currentColor" viewBox="0 0 24 24">
                             <path
@@ -28,7 +28,7 @@
                     </a>
 
                     <!-- YouTube -->
-                    <a href="#" aria-label="YouTube">
+                    <a href="https://www.youtube.com/user/StichtingSURF" aria-label="YouTube">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-600 hover:text-red-600"
                             viewBox="0 0 24 24" fill="currentColor">
                             <path
@@ -37,7 +37,7 @@
                     </a>
 
                     <!-- Mastodon -->
-                    <a href="#" aria-label="Mastodon">
+                    <a href="https://social.edu.nl/@surf" aria-label="Mastodon">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-600 hover:text-indigo-500"
                             viewBox="0 0 24 24" fill="currentColor">
                             <path
@@ -89,8 +89,8 @@
             <div>
                 <h4 class="text-gray-900 font-semibold mb-4">Quick Links</h4>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-blue-600">Knowledge Hub</a></li>
-                    <li><a href="#" class="hover:text-blue-600">Success Stories</a></li>
+                    <li><router-link to="/roadmap" class="hover:text-blue-600">Knowledge Hub</router-link></li>
+                    <li><router-link to="/success-stories" class="hover:text-blue-600">Success Stories</router-link></li>
                     <li><a href="#" class="hover:text-blue-600">Community Portal</a></li>
                 </ul>
             </div>
