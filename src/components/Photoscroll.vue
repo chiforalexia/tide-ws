@@ -3,22 +3,22 @@ const photos = [
   {
     id: 1,
     src: './public/tile_AC.png',
-    title: 'Landscape Valley',
+    title: 'Advanced Computing',
   },
   {
     id: 2,
     src: './public/tile_AI.png',
-    title: 'Mountain Forest',
+    title: 'Artificial Intelligence',
   },
   {
     id: 3,
     src: './public/tile_Edge.png',
-    title: 'Peaceful Lake',
+    title: 'Edge',
   },
   {
     id: 4,
     src: './public/tile_Network.png',
-    title: 'Autumn Colors',
+    title: 'Network',
   }
 ];
 </script>

@@ -73,15 +73,15 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
-// The text to animate
-const text = "FOR YOUR COFFEE, TEA, CEREAL, SMOOTHIES, PROTEIN SHAKES, LUNCHBOX, AND MORE... THE BEST TECH SOLUTIONS ";
-const repeatedText = text.repeat(3);
+const text = "FROM REPORT TO REALITY—STEP INTO THE FUTURE OF TECH • ";
+const repeatCount = 48; 
+const repeatedText = text.repeat(repeatCount);
+
 const startOffset = ref(0);
 
-// Animation logic for scrolling text
 onMounted(() => {
   const animate = () => {
-    startOffset.value = (startOffset.value - 0.2) % 100;
+    startOffset.value = (startOffset.value - 0.12) % 100;
     requestAnimationFrame(animate);
   };
   animate();
