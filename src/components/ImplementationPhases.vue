@@ -1,11 +1,11 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue';
 
 const activePhase = ref(0);
 const touchStart = ref(null);
 const sectionRef = ref(null);
 
-const handleTouchStart = (e) => {
+const handleTouchStart = (e: TouchEvent) => {
     touchStart.value = e.touches[0].clientX;
 };
 
@@ -16,7 +16,7 @@ const scrollToPhaseTop = () => {
     }
 };
 
-const handleTouchEnd = (e) => {
+const handleTouchEnd = (e: TouchEvent) => {
     if (!touchStart.value) return;
 
     const touchEnd = e.changedTouches[0].clientX;
@@ -32,6 +32,11 @@ const handleTouchEnd = (e) => {
     }
 
     touchStart.value = null;
+};
+
+const handlePhaseSelected = (index: number) => {
+    activePhase.value = index;
+    scrollToPhaseTop();
 };
 
 const phases = [
@@ -59,7 +64,8 @@ const phases = [
             'Start with a thorough current state assessment to identify gaps and opportunities.',
             'Align implementation goals with broader institutional strategic objectives for better buy-in.'
         ],
-        prerequisites: ['None']
+        prerequisites: ['None'],
+        color: 'bg-green-50'
     },
     {
         title: 'Stakeholder Engagement',
@@ -85,7 +91,8 @@ const phases = [
             'Engage stakeholders early and often throughout the process',
             'Document all feedback and decisions for future reference'
         ],
-        prerequisites: ['Phase 1 completion']
+        prerequisites: ['Phase 1 completion'],
+        color: 'bg-green-50'
     },
     {
         title: 'Pilot Implementation',
@@ -111,7 +118,8 @@ const phases = [
             'Choose a diverse pilot group for comprehensive feedback',
             'Document all issues and resolutions during the pilot'
         ],
-        prerequisites: ['Phase 2 completion']
+        prerequisites: ['Phase 2 completion'],
+        color: 'bg-blue-50'
     },
     {
         title: 'Full Deployment',
@@ -137,7 +145,8 @@ const phases = [
             'Plan for phased rollout to manage risk',
             'Ensure support resources are ready before deployment'
         ],
-        prerequisites: ['Phase 3 completion']
+        prerequisites: ['Phase 3 completion'],
+        color: 'bg-blue-50'
     },
     {
         title: 'Evaluation & Optimization',
@@ -163,16 +172,50 @@ const phases = [
             'Establish clear metrics for success',
             'Regular review and optimization cycles'
         ],
-        prerequisites: ['Phase 4 completion']
+        prerequisites: ['Phase 4 completion'],
+        color: 'bg-orange-50'
     }
 ];
 </script>
 
 <template>
-    <section ref="sectionRef" class="relative mt-4 pt-4 sm:pt-8 py-16 px-4 sm:px-4 max-w-7xl mx-auto">
-        <div class="text-center">
-            <div class="inline-block bg-green-100 text-green-800 px-4 py-1 rounded-full text-sm mb-4">
-                Discover the Process
+    <section ref="sectionRef" class="relative mt-4 pt-24 py-16 px-4 max-w-7xl mx-auto">
+        <!-- Title -->
+        <h1 class="text-3xl font-bold text-center mb-12">The Five Phases of Successful Implementation</h1>
+
+        <!-- Visual Roadmap -->
+        <div class="implementation-container mb-16 relative">
+            <!-- Main vertical line -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-blue-200"></div>
+
+            <!-- Phases -->
+            <div class="relative space-y-2">
+                <div v-for="(phase, index) in phases" :key="index"
+                    class="relative flex items-center"
+                    :class="index % 2 === 0 ? 'justify-start' : 'justify-end'">
+                    <!-- Connector -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-0.5 bg-blue-200"
+                        :class="index % 2 === 0 ? 'translate-x-0' : '-translate-x-full'"></div>
+
+                    <!-- Phase marker -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-blue-500 border-4 border-white"></div>
+
+                    <!-- Phase card -->
+                    <div class="w-5/12 phase-card p-4 rounded-lg shadow-sm transition-all duration-300 cursor-pointer"
+                        :class="[
+                            phase.color,
+                            { 'ml-8': index % 2 === 0, 'mr-8': index % 2 === 1 }
+                        ]"
+                        @click="handlePhaseSelected(index)">
+                        <div class="flex items-start justify-between mb-2">
+                            <span class="bg-white/80 backdrop-blur-sm text-sm font-medium px-2 py-1 rounded">
+                                Phase {{ index + 1 }}
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">{{ phase.title }}</h3>
+                        <p class="text-sm text-gray-600">{{ phase.description }}</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -309,7 +352,7 @@ const phases = [
     </section>
 </template>
 
-<style>
+<style scoped>
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity 0.4s ease;
@@ -318,5 +361,18 @@ const phases = [
 .fade-enter-from,
 .fade-leave-to {
     opacity: 0;
+}
+
+.phase-card {
+    transition: all 0.3s ease;
+}
+
+.phase-card:hover {
+    transform: translateY(-2px);
+}
+
+.implementation-container {
+    min-height: 800px;
+    padding: 2rem 0;
 }
 </style>

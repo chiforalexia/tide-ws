@@ -3,22 +3,22 @@ const photos = [
   {
     id: 1,
     src: './public/tile_AC.png',
-    title: 'Landscape Valley',
+    title: 'Advanced Computing',
   },
   {
     id: 2,
     src: './public/tile_AI.png',
-    title: 'Mountain Forest',
+    title: 'Artificial Intelligence',
   },
   {
     id: 3,
     src: './public/tile_Edge.png',
-    title: 'Peaceful Lake',
+    title: 'Edge',
   },
   {
     id: 4,
     src: './public/tile_Network.png',
-    title: 'Autumn Colors',
+    title: 'Network',
   }
 ];
 </script>
@@ -30,8 +30,10 @@ const photos = [
       <!-- Title section -->
       <div class="text-center">
         <!-- Badge -->
-        <div class="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm mb-4">
-          Technologies
+        <div class="text-center">
+            <div class="inline-block bg-green-100 text-green-800 px-4 py-1 rounded-full text-sm mb-4">
+                Stories
+            </div>
         </div>
 
         <!-- Main title -->
