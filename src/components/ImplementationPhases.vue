@@ -1,43 +1,15 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 
 const activePhase = ref(0);
-const touchStart = ref(null);
-const sectionRef = ref(null);
+const totalPhases = 5;
 
-const handleTouchStart = (e: TouchEvent) => {
-    touchStart.value = e.touches[0].clientX;
-};
-
-const scrollToPhaseTop = () => {
-    if (window.matchMedia('(max-width: 768px)').matches && sectionRef.value) {
-        const offsetTop = sectionRef.value.getBoundingClientRect().top + window.scrollY - 64;
-        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
-    }
-};
-
-const handleTouchEnd = (e: TouchEvent) => {
-    if (!touchStart.value) return;
-
-    const touchEnd = e.changedTouches[0].clientX;
-    const diff = touchStart.value - touchEnd;
-
-    if (Math.abs(diff) > 50) {
-        if (diff > 0) {
-            activePhase.value = (activePhase.value + 1) % phases.length;
-        } else {
-            activePhase.value = (activePhase.value - 1 + phases.length) % phases.length;
-        }
-        scrollToPhaseTop();
-    }
-
-    touchStart.value = null;
-};
-
-const handlePhaseSelected = (index: number) => {
-    activePhase.value = index;
-    scrollToPhaseTop();
-};
+const progressHeight = computed(() => {
+  if (activePhase.value === 0) return '0%';
+  // Calculate progress based on active phase (0-4)
+  // For 5 phases, each phase represents 25% of the total distance between first and last dot
+  return `${(activePhase.value / (totalPhases - 1)) * 100}%`;
+});
 
 const phases = [
     {
@@ -48,7 +20,7 @@ const phases = [
             'Identify key stakeholders and decision-makers',
             'Define clear objectives and success metrics',
             'Develop a comprehensive project plan with timelines',
-            'Conduct a risk assessment and mitigation strategy'
+            'Research relevant regulations and policy considerations to ensure legal alignment and risk preparedness'
         ],
         resources: [
             { title: 'Readiness Assessment Template', type: 'Document' },
@@ -58,14 +30,13 @@ const phases = [
         indicators: [
             'Completed readiness assessment',
             'Documented implementation plan',
-            'Resource allocation secured'
+            'Timelines established'
         ],
         tips: [
             'Start with a thorough current state assessment to identify gaps and opportunities.',
-            'Align implementation goals with broader institutional strategic objectives for better buy-in.'
+            'Tailor the implementation strategy to reflect institutional context and capacity.'
         ],
-        prerequisites: ['None'],
-        color: 'bg-green-50'
+        prerequisites: ['None']
     },
     {
         title: 'Stakeholder Engagement',
@@ -91,8 +62,7 @@ const phases = [
             'Engage stakeholders early and often throughout the process',
             'Document all feedback and decisions for future reference'
         ],
-        prerequisites: ['Phase 1 completion'],
-        color: 'bg-green-50'
+        prerequisites: ['Phase 1 completion']
     },
     {
         title: 'Pilot Implementation',
@@ -118,8 +88,7 @@ const phases = [
             'Choose a diverse pilot group for comprehensive feedback',
             'Document all issues and resolutions during the pilot'
         ],
-        prerequisites: ['Phase 2 completion'],
-        color: 'bg-blue-50'
+        prerequisites: ['Phase 2 completion']
     },
     {
         title: 'Full Deployment',
@@ -145,8 +114,7 @@ const phases = [
             'Plan for phased rollout to manage risk',
             'Ensure support resources are ready before deployment'
         ],
-        prerequisites: ['Phase 3 completion'],
-        color: 'bg-blue-50'
+        prerequisites: ['Phase 3 completion']
     },
     {
         title: 'Evaluation & Optimization',
@@ -172,184 +140,121 @@ const phases = [
             'Establish clear metrics for success',
             'Regular review and optimization cycles'
         ],
-        prerequisites: ['Phase 4 completion'],
-        color: 'bg-orange-50'
+        prerequisites: ['Phase 4 completion']
     }
 ];
 </script>
 
 <template>
-    <section ref="sectionRef" class="relative mt-4 pt-24 py-16 px-4 max-w-7xl mx-auto">
-        <!-- Title -->
-        <h1 class="text-3xl font-bold text-center mb-12">The Five Phases of Successful Implementation</h1>
+    <div class="min-h-screen bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 py-12">
+            <h1 class="text-3xl font-bold text-center mb-12">Implementation Phases</h1>
 
-        <!-- Visual Roadmap -->
-        <div class="implementation-container mb-16 relative">
-            <!-- Main vertical line -->
-            <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-blue-200"></div>
-
-            <!-- Phases -->
-            <div class="relative space-y-2">
-                <div v-for="(phase, index) in phases" :key="index"
-                    class="relative flex items-center"
-                    :class="index % 2 === 0 ? 'justify-start' : 'justify-end'">
-                    <!-- Connector -->
-                    <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-0.5 bg-blue-200"
-                        :class="index % 2 === 0 ? 'translate-x-0' : '-translate-x-full'"></div>
-
-                    <!-- Phase marker -->
-                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-blue-500 border-4 border-white"></div>
-
-                    <!-- Phase card -->
-                    <div class="w-5/12 phase-card p-4 rounded-lg shadow-sm transition-all duration-300 cursor-pointer"
-                        :class="[
-                            phase.color,
-                            { 'ml-8': index % 2 === 0, 'mr-8': index % 2 === 1 }
-                        ]"
-                        @click="handlePhaseSelected(index)">
-                        <div class="flex items-start justify-between mb-2">
-                            <span class="bg-white/80 backdrop-blur-sm text-sm font-medium px-2 py-1 rounded">
-                                Phase {{ index + 1 }}
-                            </span>
+            <div class="flex flex-col md:flex-row gap-8">
+                <!-- Timeline (Sticky Left Column with Progress Bar) -->
+                <div class="md:w-1/3">
+                    <div class="sticky top-4 relative">
+                        <!-- Vertical Progress Line -->
+                        <div class="absolute right-[2px] top-[52px] bottom-[52px] w-1 bg-gray-200">
+                            <div class="absolute top-0 w-full bg-blue-500 transition-all duration-500"
+                                :style="{ height: progressHeight }">
+                            </div>
                         </div>
-                        <h3 class="text-lg font-semibold mb-2">{{ phase.title }}</h3>
-                        <p class="text-sm text-gray-600">{{ phase.description }}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Phase Navigation Styled as a Pill Card -->
-        <div ref="navigationRef"
-            class="transition-all duration-300 sticky top-16 z-40 bg-white/95 backdrop-blur-sm md:static">
-            <div class="max-w-6xl mx-auto bg-white rounded-lg border border-gray-200 shadow-sm transition p-3 sm:px-6 sm:py-4"
-                @touchstart="handleTouchStart" @touchend="handleTouchEnd">
-                <div class="flex items-center justify-between gap-2 sm:gap-4">
-                    <!-- Prev Arrow -->
-                    <button @click="()=> { activePhase = (activePhase - 1 + phases.length) % phases.length; scrollToPhaseTop(); }"
-                        class="text-gray-600 hover:text-blue-600 transition p-1" aria-label="Previous Phase">
-                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" stroke-width="2.5"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </button>
+                        <!-- Cards with aligned dots -->
+                        <div class="space-y-8">
+                            <div v-for="(phase, index) in phases" :key="index" class="relative flex items-center">
+                                <!-- Card -->
+                                <div @click="activePhase = index"
+                                    class="bg-white rounded-lg p-6 shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md w-full mr-6"
+                                    :class="activePhase === index ? 'border-2 border-blue-500' : 'border border-gray-200'">
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-semibold text-lg">
+                                            {{ index + 1 }}
+                                        </div>
+                                        <h3 class="font-medium text-lg">{{ phase.title }}</h3>
+                                    </div>
+                                </div>
 
-                    <!-- Title + Progress Bar -->
-                    <div class="flex flex-col items-center flex-1 px-2 sm:px-4">
-                        <h2 class="text-center text-sm sm:text-base md:text-lg font-medium">
-                            {{ phases[activePhase].title }}
-                        </h2>
-                        <div class="w-full max-w-md h-1.5 bg-blue-100 rounded-full overflow-hidden mt-2">
-                            <div class="h-full bg-blue-500 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 animate-pulse transition-all duration-500"
-                                :style="{ width: ((activePhase + 1) / phases.length * 100) + '%' }"></div>
+                                <!-- Dot -->
+                                <div class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2">
+                                    <div class="w-4 h-4 rounded-full"
+                                        :class="activePhase >= index ? 'bg-blue-500' : 'bg-gray-300'">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Next Arrow -->
-                    <button @click="() => { activePhase = (activePhase + 1) % phases.length; scrollToPhaseTop() }"
-                        class="text-gray-600 hover:text-blue-600 transition p-1" aria-label="Next Phase">
-                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" stroke-width="2.5"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
                 </div>
-            </div>
-        </div>
 
-        <!-- Content Area -->
-        <div class="px-2 sm:px-8 py-4 sm:py-6 mt-6" @touchstart="handleTouchStart" @touchend="handleTouchEnd">
-            <div class="max-w-6xl mx-auto">
-                <transition name="fade" mode="out-in">
-                    <div :key="activePhase" class="bg-white rounded-lg p-4 sm:p-6">
-                        <!-- Title and Description -->
-                        <h2 class="text-lg sm:text-xl font-semibold mb-2">Phase {{ activePhase + 1 }} of {{
-                            phases.length }}</h2>
-                        <p class="text-gray-600 mb-6 sm:mb-8">{{ phases[activePhase].description }}</p>
+                <!-- Phase Details (Right Side) -->
+                <div class="md:w-2/3">
+                    <transition name="fade" mode="out-in">
+                        <div :key="activePhase" class="bg-white rounded-lg p-8 shadow-lg">
+                            <h2 class="text-2xl font-bold mb-4">{{ phases[activePhase].title }}</h2>
+                            <p class="text-gray-600 mb-8">{{ phases[activePhase].description }}</p>
 
-                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
-                            <!-- Left Column -->
-                            <div class="lg:col-span-2">
-                                <!-- Key Activities -->
-                                <h3 class="font-semibold mb-4">Key Activities</h3>
-                                <ol class="space-y-3 mb-6 sm:mb-8">
+                            <!-- Activities -->
+                            <div class="mb-8">
+                                <h3 class="text-lg font-semibold mb-4">Key Activities</h3>
+                                <ul class="space-y-4">
                                     <li v-for="(activity, index) in phases[activePhase].activities" :key="index"
                                         class="flex items-start gap-3">
                                         <span
-                                            class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm">
+                                            class="w-7 h-7 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 text-sm">
                                             {{ index + 1 }}
                                         </span>
                                         <span class="text-gray-700">{{ activity }}</span>
                                     </li>
-                                </ol>
-
-                                <!-- Implementation Tips -->
-                                <h3 class="font-semibold mb-4">Implementation Tips</h3>
-                                <ul class="space-y-2 mb-6 sm:mb-8">
-                                    <li v-for="(tip, index) in phases[activePhase].tips" :key="index"
-                                        class="text-gray-700">
-                                        • {{ tip }}
-                                    </li>
                                 </ul>
+                            </div>
 
-                                <!-- Prerequisites -->
-                                <h3 class="font-semibold mb-4">Prerequisites for this phase</h3>
-                                <ul class="text-gray-700">
-                                    <li v-for="(prerequisite, index) in phases[activePhase].prerequisites" :key="index">
-                                        {{ prerequisite }}
+                            <!-- Resources -->
+                            <div class="mb-8">
+                                <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div v-for="(resource, index) in phases[activePhase].resources" :key="index"
+                                        class="bg-gray-50 p-4 rounded-lg border border-gray-100">
+                                        <h4 class="font-medium">{{ resource.title }}</h4>
+                                        <p class="text-sm text-gray-500">{{ resource.type }}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Success Indicators -->
+                            <div class="mb-8">
+                                <h3 class="text-lg font-semibold mb-4">Success Indicators</h3>
+                                <ul class="space-y-3">
+                                    <li v-for="(indicator, index) in phases[activePhase].indicators" :key="index"
+                                        class="flex items-center gap-3">
+                                        <svg class="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                        <span class="text-gray-700">{{ indicator }}</span>
                                     </li>
                                 </ul>
                             </div>
 
-                            <!-- Right Column -->
-                            <div class="space-y-6">
-                                <!-- Resources & Tools -->
-                                <div class="bg-gray-50 rounded-lg p-4 border border-gray-200 shadow-sm transition">
-                                    <h3 class="font-semibold mb-2">Resources & Tools</h3>
-                                    <p class="text-sm text-gray-600 mb-4">Supporting materials for this phase</p>
-                                    <div class="space-y-3">
-                                        <div v-for="(resource, index) in phases[activePhase].resources" :key="index"
-                                            class="bg-white rounded-lg p-3 sm:p-4 flex items-center gap-3 border border-gray-200 shadow-sm transition">
-                                            <div class="w-8 h-8 rounded bg-blue-50 flex items-center justify-center">
-                                                <svg class="w-4 h-4 text-blue-600" fill="currentColor"
-                                                    viewBox="0 0 20 20">
-                                                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
-                                                    <path fill-rule="evenodd"
-                                                        d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
-                                                        clip-rule="evenodd" />
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <div class="font-medium text-sm">{{ resource.title }}</div>
-                                                <div class="text-xs text-gray-500">{{ resource.type }}</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Success Indicators -->
-                                <div class="bg-gray-50 rounded-lg p-4 border border-gray-200 shadow-sm transition">
-                                    <h3 class="font-semibold mb-2">Success Indicators</h3>
-                                    <p class="text-sm text-gray-600 mb-4">How to measure progress</p>
-                                    <div class="space-y-2">
-                                        <div v-for="(indicator, index) in phases[activePhase].indicators" :key="index"
-                                            class="flex items-center gap-2">
-                                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd"
-                                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                                    clip-rule="evenodd" />
-                                            </svg>
-                                            <span class="text-sm text-gray-700">{{ indicator }}</span>
-                                        </div>
-                                    </div>
-                                </div>
+                            <!-- Tips -->
+                            <div>
+                                <h3 class="text-lg font-semibold mb-4">Implementation Tips</h3>
+                                <ul class="space-y-3">
+                                    <li v-for="(tip, index) in phases[activePhase].tips" :key="index"
+                                        class="flex items-start gap-3">
+                                        <span class="text-blue-500 text-xl leading-none">•</span>
+                                        <span class="text-gray-700">{{ tip }}</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
-                </transition>
+                    </transition>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 </template>
 
 <style scoped>
@@ -369,10 +274,5 @@ const phases = [
 
 .phase-card:hover {
     transform: translateY(-2px);
-}
-
-.implementation-container {
-    min-height: 800px;
-    padding: 2rem 0;
 }
 </style>
