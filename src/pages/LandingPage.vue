@@ -5,6 +5,11 @@
     
     <!-- Other sections -->
 
+    <!-- Website Introduction Section -->
+      <section id="website-introduction">
+        <WebsiteIntroduction />
+      </section>
+
       <!-- Report Chapters -->
       <section id="chapters">
       <ImageGrid />
@@ -29,7 +34,8 @@ import Hero from '../components/Hero.vue';
 import Photoscroll from '../components/Photoscroll.vue';
 //import WaveAnimation from '../components/WaveAnimation.vue';
 import ImageGrid from '../components/ImageGrid.vue';
-import SuccessStories from '../components/SuccessStories.vue'
+import SuccessStories from '../components/SuccessStories.vue';
+import WebsiteIntroduction from '../components/Website_introduction.vue';
 
 export default {
   name: 'LandingPage',
@@ -39,7 +45,7 @@ export default {
     //WaveAnimation,
     ImageGrid,
     SuccessStories,
-
+    WebsiteIntroduction,
   },
 };
 </script>
