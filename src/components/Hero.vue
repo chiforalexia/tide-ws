@@ -1,5 +1,5 @@
 <template>
-  <section class="relative min-h-screen bg-transparent flex items-center justify-center mb-2">
+  <section class="relative min-h-screen bg-transparent flex items-center justify-center mb-3">
     <!-- Hero Section Content -->
     <div class="text-center text-gray-800 px-6 py-12 max-w-4xl mx-auto z-10 relative">
       <div class="transition-all duration-700 opacity-100 translate-y-0">

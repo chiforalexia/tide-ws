@@ -38,12 +38,12 @@ const photos = [
 
         <!-- Main title -->
         <h2 class="text-3xl md:text-4xl font-bold mb-2">
-          Explore the Future of Technology
+          Get inspired
         </h2>
 
         <!-- Subtitle -->
         <p class="text-gray-600 max-w-2xl mx-auto">
-          From AI to Quantum and beyond, explore how emerging technologies are shaping the future of research and innovation in the Netherlands.
+          Explore the Future of Technology: From AI to Quantum and beyond, explore how emerging technologies are shaping the future of research and innovation in the Netherlands.
         </p>
       </div>
     </div>
@@ -72,7 +72,9 @@ const photos = [
 <style scoped>
 .photo-gallery {
   width: 100%;
+  max-width: 1250px;
   padding: 1rem;
+  margin: 0 auto; /* Center the gallery horizontally */
 }
 
 .photos-container {

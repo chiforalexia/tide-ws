@@ -5,9 +5,19 @@
     
     <!-- Other sections -->
 
+      <!-- Information Section-->
+      <section id="info">
+
+      </section>
+
       <!-- Report Chapters -->
       <section id="chapters">
       <ImageGrid />
+      </section>
+
+      <!-- Roadmap Introduction Section-->
+      <section id="roadinfo">
+
       </section>
 
       <!-- Something menu -->

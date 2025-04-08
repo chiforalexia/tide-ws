@@ -25,23 +25,23 @@
         <div
           class="hidden md:flex items-center bg-white rounded-xl custom-shadow px-4 py-3 space-x-10 transition-all duration-300 hover:scale-105 min-w-[520px] justify-center"
         >
-          <a
+          <!-- <a
             href="#technologies"
             class="font-medium hover:text-primary transition-colors link-underline"
             >Technologies</a
-          >
-          <a
-            href="#stories"
+          >-->
+          <a 
+            href="/success-stories"
             class="font-medium hover:text-primary transition-colors link-underline"
             >Success Stories</a
-          >
-          <a
+            >
+          <!-- <a
             href="#features"
             class="font-medium hover:text-primary transition-colors link-underline"
             >Features</a
-          >
-          <a
-            href="#chapters"
+          > -->
+          <a 
+            href="/roadmap"
             class="font-medium hover:text-primary transition-colors link-underline"
             ><button class="w-full btn">Explore the Roadmap</button></a>
         </div>
