@@ -5,10 +5,10 @@ const activePhase = ref(0);
 const totalPhases = 5;
 
 const progressHeight = computed(() => {
-  if (activePhase.value === 0) return '0%';
-  // Calculate progress based on active phase (0-4)
-  // For 5 phases, each phase represents 25% of the total distance between first and last dot
-  return `${(activePhase.value / (totalPhases - 1)) * 100}%`;
+    if (activePhase.value === 0) return '0%';
+    // Calculate progress based on active phase (0-4)
+    // For 5 phases, each phase represents 25% of the total distance between first and last dot
+    return `${(activePhase.value / (totalPhases - 1)) * 100}%`;
 });
 
 const phases = [
@@ -68,11 +68,11 @@ const phases = [
         title: 'Pilot Implementation',
         description: 'Test and validate the solution in a controlled environment.',
         activities: [
-            'Select pilot group',
+            'Identify a representative pilot setting',
             'Configure test environment',
-            'Train pilot users',
-            'Collect feedback',
-            'Analyze results'
+            'Run pilot and provide support',
+            'Gather user feedback',
+            'Evaluate pilot outcomes'
         ],
         resources: [
             { title: 'Pilot Plan Template', type: 'Document' },
@@ -85,20 +85,20 @@ const phases = [
             'Improvements identified'
         ],
         tips: [
-            'Choose a diverse pilot group for comprehensive feedback',
+            'Choose a pilot context with practical constraints similar to the wider rollout',
             'Document all issues and resolutions during the pilot'
         ],
-        prerequisites: ['Phase 2 completion']
+        prerequisites: ['Phase 2 completion'],
     },
     {
         title: 'Full Deployment',
         description: 'Roll out the solution across the organization.',
         activities: [
-            'Finalize deployment plan',
+            'Refine and validate deployment plan',
             'Prepare training materials',
             'Execute rollout strategy',
-            'Monitor progress',
-            'Provide support'
+            'Track progress and issues',
+            'Activate support channels'
         ],
         resources: [
             { title: 'Deployment Checklist', type: 'Document' },
@@ -107,7 +107,7 @@ const phases = [
         ],
         indicators: [
             'Full deployment completed',
-            'Users trained',
+            'Users onboarded',
             'Support system established'
         ],
         tips: [
