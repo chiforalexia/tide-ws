@@ -1,5 +1,5 @@
 <template>
-  <section class="relative min-h-screen bg-transparent flex items-center justify-center">
+  <section class="relative min-h-screen bg-transparent flex items-center justify-center mb-2">
     <!-- Hero Section Content -->
     <div class="text-center text-gray-800 px-6 py-12 max-w-4xl mx-auto z-10 relative">
       <div class="transition-all duration-700 opacity-100 translate-y-0">
@@ -38,7 +38,7 @@
     </div>
 
     <!-- Wave Animation -->
-    <div class="wave-wrapper dy=8">
+    <div class="wave-wrapper dy=12">
       <svg class="wave-svg" viewBox="0 0 1200 250" preserveAspectRatio="xMidYMid meet">
         <defs>
           <!-- Main wave path for text -->
@@ -109,12 +109,19 @@ onMounted(() => {
 
 .wave-wrapper {
   position: absolute;
-  bottom: -40px; /* Raise wave higher */
-  left: 0;
-  width: 100%;
-  height: 400px; /* Thicker wave band */
+  bottom: -50px; /* Adjust to raise wave higher or lower */
+  left: 50%;
+  transform: translateX(-50%) rotate(-10deg); /* Center the wave and rotate */
+  width: 100%; 
+  max-width: 1400px; /* Make sure wave doesn't stretch too wide */
+  height: 425px; /* Adjust height for the wave */
   z-index: -1;
-  transform: rotate(-10deg); /* Slight diagonal */
+  overflow: hidden; /* Prevent horizontal scrolling */
+  mask-image: linear-gradient(to right, transparent 0%, black 128px, black calc(100% - 200px), transparent 100%); /* Smooth fade */
+}
+
+.mask-container {
+	mask-image: linear-gradient(to right, transparent 0, black 128px, black calc(100% - 200px), transparent 100%);
 }
 
 .wave-svg {

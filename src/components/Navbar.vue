@@ -3,7 +3,7 @@
     :class="[
       'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
       isScrolled
-        ? 'py-2 bg-white/80 backdrop-blur-lg shadow-sm'
+        ? 'py-2 bg-white/80 backdrop-blur-lg'
         : 'py-5 bg-transparent'
     ]"
   >
@@ -14,16 +14,16 @@
           to="/"
           class="flex items-center space-x-3 pt-1 md:pt-2"
         >
-        <div class="relative flex items-start space-x-2">
-          <img src="/surf_logo.svg" alt="SURF Logo" class="w-50 h-auto absolute" />
-          <h1 class="text-4xl font-bold mt-2 relative left-36 z-10 ">Roadmap</h1>
-       </div>
+        <div class="relative flex items-start">
+            <img src="/surf_logo.svg" alt="SURF Logo" class="w-36 h-auto" />
+            <h1 class="text-2xl font-bold absolute top-2 left-32">Roadmap</h1>
+        </div>
 
         </router-link>
 
         <!-- Floating Menu Bubble (Desktop) -->
         <div
-          class="hidden md:flex items-center bg-white rounded-xl custom-shadow px-10 py-5 space-x-10 transition-all duration-300 hover:scale-105 min-w-[520px] justify-center"
+          class="hidden md:flex items-center bg-white rounded-xl custom-shadow px-4 py-3 space-x-10 transition-all duration-300 hover:scale-105 min-w-[520px] justify-center"
         >
           <a
             href="#technologies"
@@ -40,6 +40,10 @@
             class="font-medium hover:text-primary transition-colors link-underline"
             >Features</a
           >
+          <a
+            href="#chapters"
+            class="font-medium hover:text-primary transition-colors link-underline"
+            ><button class="w-full btn">Explore the Roadmap</button></a>
         </div>
 
         <!-- Mobile Menu Button -->
