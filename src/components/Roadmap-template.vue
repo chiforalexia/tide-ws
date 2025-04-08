@@ -153,9 +153,9 @@ const getDurationQuarters = (startDate, endDate) => {
   <div class="roadmap-container">
     <div class="roadmap-header">
       <div class="text-center mb-12">
-            <div class="inline-block bg-green-100 text-green-800 px-4 py-1 rounded-full text-sm mb-4">
-                Case Study
-            </div>
+        <div class="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm mb-4">
+          Case Study
+        </div>
             <h2 class="text-3xl font-bold mb-4">Roadmap based on Successful Implementations</h2>
             <p class="text-gray-600 max-w-2xl mx-auto">
                 View a breakdown of how the UvA developed their AI Chatbot.
