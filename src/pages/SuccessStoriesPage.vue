@@ -9,8 +9,9 @@
           <!-- Add your process section content here -->
         </section>
   
-        <section id="features">
+        <section id="features" class="pt-40">
           <!-- Add your features section content here -->
+           <Roadmap-template />
         </section>
             
       </div>
@@ -21,6 +22,7 @@
   // Import components here
   import Navbar from '../components/Navbar.vue';
   import Footer from '../components/Footer.vue';
+  import RoadmapTemplate from '../components/Roadmap-template.vue';
 
   
   export default {
@@ -28,6 +30,7 @@
     components: { //Add components here
       Navbar,
       Footer,
+      RoadmapTemplate,
     },
   };
   </script>
