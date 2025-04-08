@@ -156,11 +156,11 @@ const getDurationQuarters = (startDate, endDate) => {
         <div class="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm mb-4">
           Case Study
         </div>
-            <h2 class="text-3xl font-bold mb-4">Roadmap based on Successful Implementations</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">
-                View a breakdown of how the UvA developed their AI Chatbot.
-            </p>
-        </div>
+        <h2 class="text-3xl font-bold mb-4">Roadmap based on Successful Implementations</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+            View a breakdown of how the UvA developed their AI Chatbot.
+        </p>
+      </div>
     </div>
 
     <div class="track-filter">
@@ -186,10 +186,9 @@ const getDurationQuarters = (startDate, endDate) => {
       <div class="timeline-header">
         <div class="track-column">Track</div>
         <div class="quarters-grid">
-          <template v-for="year in ['Year 1', 'Year 3', 'Year 2']" :key="year">
+          <template v-for="year in ['Year 1', 'Year 2', 'Year 3']" :key="year">
             <div class="year">{{ year }}</div>
             <div v-for="quarter in ['Q1', 'Q2', 'Q3', 'Q4']" :key="year + '-' + quarter" class="quarter">
-
               {{ quarter }}
             </div>
           </template>
@@ -262,7 +261,7 @@ const getDurationQuarters = (startDate, endDate) => {
 }
 
 .roadmap-header h1 {
-  color: #8B5CF6;
+  color: #2563EB;
   margin-bottom: 0.5rem;
   font-size: 2.5rem;
 }
@@ -306,7 +305,7 @@ const getDurationQuarters = (startDate, endDate) => {
 }
 
 .filter-btn.active {
-  background: #8B5CF6;
+  background: #2563EB;
   color: white;
 }
 
@@ -380,26 +379,6 @@ const getDurationQuarters = (startDate, endDate) => {
   left: calc(var(--start-quarter) * (100% / 12) + 4px);
   width: auto;
   min-width: 50px;
-  height: 30px;
-  background: var(--track-color);
-  opacity: 1;
-  border-radius: 0.5rem;
-  padding: 0.25rem 0.5rem;
-  color: #1F2937;
-  font-size: 0.875rem;
-  box-sizing: border-box;
-  z-index: 1;
-  margin-bottom: 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.roadmap-item {
-  position: relative;
-  left: calc(var(--start-quarter) * (100% / 12) + 4px);
-  width: auto;
-  min-width: 50px;
   max-width: 300px;
   height: 40px;
   background: var(--track-color);
@@ -415,11 +394,6 @@ const getDurationQuarters = (startDate, endDate) => {
   justify-content: flex-start;
   align-items: center;
 }
-
-.roadmap-item:hover {
-  filter: brightness(85%);
-}
-
 
 .roadmap-item:hover {
   filter: brightness(85%);

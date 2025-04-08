@@ -57,7 +57,7 @@ export default {
         const response = await fetch(apiUrl);
         const data = await response.json();
         const fileUrl = data.download_url;
-        
+
         // Get excel file content from the CORS-enabled download URL
         const fileResponse = await fetch(fileUrl);
         const arrayBuffer = await fileResponse.arrayBuffer();
@@ -73,7 +73,12 @@ export default {
         console.log("Parsed Excel Data:", jsonData);
 
         if (jsonData.length > 1 && jsonData[0].length > 1) {
-          // Run Handsontable
+          // Destroy existing Handsontable instance if it exists
+          if (this.hotInstance) {
+            this.hotInstance.destroy();
+          }
+
+          // Run Handsontable with interactive features
           this.hotInstance = new Handsontable(this.$refs.excelTable, {
             data: jsonData.slice(1),
             colHeaders: jsonData[0],
@@ -81,12 +86,13 @@ export default {
             filters: true,
             dropdownMenu: true,
             licenseKey: "non-commercial-and-evaluation",
-            // Adjustments for size and zoom
             width: '100%',
             stretchH: 'all',
             rowHeight: 35,
             autoColumnSize: true,
             fontSize: 14,
+            // Enable manual column resizing
+            manualColumnResize: true,
           });
         } else {
           console.error("No valid data found in the Excel sheet.");
