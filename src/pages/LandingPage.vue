@@ -5,6 +5,11 @@
     
     <!-- Other sections -->
 
+    <!-- Website Introduction Section -->
+      <section id="website-introduction">
+        <WebsiteIntroduction />
+      </section>
+
       <!-- Information Section-->
       <section id="info">
 
@@ -33,6 +38,8 @@
 import Hero from '../components/Hero.vue';
 import Photoscroll from '../components/Photoscroll.vue';
 import ImageGrid from '../components/ImageGrid.vue';
+import SuccessStories from '../components/SuccessStories.vue';
+import WebsiteIntroduction from '../components/Website_introduction.vue';
 import RoadmapIntro from '../components/RoadmapIntro.vue';
 
 export default {
@@ -41,6 +48,8 @@ export default {
     Hero, 
     Photoscroll,
     ImageGrid,
+    SuccessStories,
+    WebsiteIntroduction,
     RoadmapIntro,
 
   },
