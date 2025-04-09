@@ -5,36 +5,36 @@ const selectedTrack = ref('All Tracks')
 
 const tracks = [
   'All Tracks',
-  'Approval & Initiation',
-  'Project Planning & Development',
-  'Testing & Quality Assurance',
-  'Deployment'
+  'Assessment & Planning',
+  'Stakeholder Engagement',
+  'Pilot Implementation',
+  'Full Deployment'
 ]
 
 const roadmapItems = [
   {
-    track: 'Approval & Initiation',
+    track: 'Assessment & Planning',
     items: [
       {
-        name: 'NLP Engine Core',
+        name: 'Initial LLM Testing',
         status: 'completed',
         startDate: '2023-Q1',
         endDate: '2023-Q2'
       },
       {
-        name: 'Knowledge Base Integration',
+        name: 'Project Plan',
         status: 'completed',
         startDate: '2023-Q2',
         endDate: '2023-Q3'
       },
       {
-        name: 'Context Awareness',
+        name: 'Identify Key Stakeholders',
         status: 'completed',
         startDate: '2023-Q3',
         endDate: '2023-Q4'
       },
       {
-        name: 'Autonomous Agents',
+        name: 'Conduct Risk Assessments',
         status: 'planned',
         startDate: '2025-Q1',
         endDate: '2025-Q4'
@@ -42,16 +42,16 @@ const roadmapItems = [
     ]
   },
   {
-    track: 'Project Planning & Development',
+    track: 'Stakeholder Engagement',
     items: [
       {
-        name: 'Cloud Infrastructure',
-        status: 'in progress',
+        name: 'Stakeholder Buy-in',
+        status: 'in-progress',
         startDate: '2024-Q1',
         endDate: '2024-Q3'
       },
       {
-        name: 'Load Balancing',
+        name: 'Create Budget Proposal',
         status: 'planned',
         startDate: '2024-Q3',
         endDate: '2024-Q4'
@@ -59,22 +59,22 @@ const roadmapItems = [
     ]
   },
   {
-    track: 'Testing & Quality Assurance',
+    track: 'Pilot Implementation',
     items: [
       {
-        name: 'User Personalization',
-        status: 'in progress',
+        name: 'Determine Representative Pilot Setting',
+        status: 'in-progress',
         startDate: '2024-Q2',
         endDate: '2024-Q3'
       },
       {
-        name: 'Multimodal Interactions',
-        status: 'in progress',
+        name: 'Run Pilot',
+        status: 'in-progress',
         startDate: '2024-Q3',
         endDate: '2024-Q4'
       },
       {
-        name: 'Real-time Translation',
+        name: 'Evaluate Pilot Feedback',
         status: 'planned',
         startDate: '2025-Q1',
         endDate: '2025-Q2'
@@ -82,32 +82,26 @@ const roadmapItems = [
     ]
   },
   {
-    track: 'Deployment',
+    track: 'Full Deployment',
     items: [
       {
-        name: 'Developer API Platform',
-        status: 'in progress',
+        name: 'Secure Departmental Buy-in',
+        status: 'in-progress',
         startDate: '2024-Q2',
         endDate: '2024-Q3'
       },
       {
-        name: 'Analytics Dashboard',
+        name: 'Establish Maintenance & Support ',
         status: 'planned',
         startDate: '2024-Q3',
         endDate: '2024-Q4'
       },
       {
-        name: 'Enterprise Security',
+        name: 'Monitor Usage',
         status: 'planned',
         startDate: '2024-Q4',
         endDate: '2025-Q1'
       },
-      {
-        name: 'Industry Solutions',
-        status: 'planned',
-        startDate: '2025-Q1',
-        endDate: '2025-Q2'
-      }
     ]
   }
 ]
@@ -119,7 +113,7 @@ const filterItems = (track) => {
 const getStatusColor = (status) => {
   switch(status) {
     case 'completed': return '#B8E3C9'
-    case 'in progress': return '#B3E5FF'
+    case 'in-progress': return '#B3E5FF'
     case 'planned': return '#EAECF0'
     default: return '#9CA3AF'
   }
@@ -127,10 +121,10 @@ const getStatusColor = (status) => {
 
 const getTrackColor = (track) => {
   switch(track) {
-    case 'Approval & Initiation': return '#FFE6D2'
-    case 'Project Planning & Development': return '#DFF4FF'
-    case 'Testing & Quality Assurance': return '#f6e8fc'
-    case 'Deployment': return '#DCF2E5'
+    case 'Assessment & Planning': return '#FFE6D2'
+    case 'Stakeholder Engagement': return '#DFF4FF'
+    case 'Pilot Implementation': return '#f6e8fc'
+    case 'Full Deployment': return '#DCF2E5'
     default: return '#6B7280'
   }
 }
@@ -186,12 +180,24 @@ const getDurationQuarters = (startDate, endDate) => {
       <div class="timeline-header">
         <div class="track-column">Track</div>
         <div class="quarters-grid">
-          <template v-for="year in ['Year 1', 'Year 2', 'Year 3']" :key="year">
-            <div class="year">{{ year }}</div>
-            <div v-for="quarter in ['Q1', 'Q2', 'Q3', 'Q4']" :key="year + '-' + quarter" class="quarter">
-              {{ quarter }}
-            </div>
-          </template>
+          <!-- Year Row -->
+          <div class="year">Year 1</div>
+          <div class="year">Year 2</div>
+          <div class="year">Year 3</div>
+          
+          <!-- Quarter Row -->
+          <div class="quarter">Q1</div>
+          <div class="quarter">Q2</div>
+          <div class="quarter">Q3</div>
+          <div class="quarter">Q4</div>
+          <div class="quarter">Q1</div>
+          <div class="quarter">Q2</div>
+          <div class="quarter">Q3</div>
+          <div class="quarter">Q4</div>
+          <div class="quarter">Q1</div>
+          <div class="quarter">Q2</div>
+          <div class="quarter">Q3</div>
+          <div class="quarter">Q4</div>
         </div>
       </div>
 
@@ -247,6 +253,8 @@ const getDurationQuarters = (startDate, endDate) => {
     </div>
   </div>
 </template>
+
+
 
 <style scoped>
 .roadmap-container {
@@ -377,14 +385,13 @@ const getDurationQuarters = (startDate, endDate) => {
 .roadmap-item {
   position: relative;
   left: calc(var(--start-quarter) * (100% / 12) + 4px);
-  width: auto;
-  min-width: 50px;
-  max-width: 300px;
+  width: fit-content;
+  max-width: 370px;
   height: 40px;
   background: var(--track-color);
   opacity: 1;
   border-radius: 0.5rem;
-  padding: 0.25rem 0.25rem;
+  padding: 0.25rem 0.5rem;
   color: #1F2937;
   font-size: 0.875rem;
   box-sizing: border-box;
@@ -393,6 +400,7 @@ const getDurationQuarters = (startDate, endDate) => {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  white-space: nowrap;
 }
 
 .roadmap-item:hover {
@@ -409,6 +417,7 @@ const getDurationQuarters = (startDate, endDate) => {
 
 .item-name {
   font-weight: 500;
+  padding-right: 10px;
 }
 
 .item-status {
@@ -476,5 +485,4 @@ const getDurationQuarters = (startDate, endDate) => {
 .legend-dot.planned {
   background-color: #9CA3AF;
 }
-
 </style>
