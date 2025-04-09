@@ -46,7 +46,7 @@ const roadmapItems = [
     items: [
       {
         name: 'Stakeholder Buy-in',
-        status: 'in progress',
+        status: 'in-progress',
         startDate: '2024-Q1',
         endDate: '2024-Q3'
       },
@@ -63,13 +63,13 @@ const roadmapItems = [
     items: [
       {
         name: 'Determine Representative Pilot Setting',
-        status: 'in progress',
+        status: 'in-progress',
         startDate: '2024-Q2',
         endDate: '2024-Q3'
       },
       {
         name: 'Run Pilot',
-        status: 'in progress',
+        status: 'in-progress',
         startDate: '2024-Q3',
         endDate: '2024-Q4'
       },
@@ -86,7 +86,7 @@ const roadmapItems = [
     items: [
       {
         name: 'Secure Departmental Buy-in',
-        status: 'in progress',
+        status: 'in-progress',
         startDate: '2024-Q2',
         endDate: '2024-Q3'
       },
@@ -113,7 +113,7 @@ const filterItems = (track) => {
 const getStatusColor = (status) => {
   switch(status) {
     case 'completed': return '#B8E3C9'
-    case 'in progress': return '#B3E5FF'
+    case 'in-progress': return '#B3E5FF'
     case 'planned': return '#EAECF0'
     default: return '#9CA3AF'
   }
@@ -385,14 +385,13 @@ const getDurationQuarters = (startDate, endDate) => {
 .roadmap-item {
   position: relative;
   left: calc(var(--start-quarter) * (100% / 12) + 4px);
-  width: auto;
-  min-width: 50px;
-  max-width: 300px;
+  width: fit-content;
+  max-width: 370px;
   height: 40px;
   background: var(--track-color);
   opacity: 1;
   border-radius: 0.5rem;
-  padding: 0.25rem 0.25rem;
+  padding: 0.25rem 0.5rem;
   color: #1F2937;
   font-size: 0.875rem;
   box-sizing: border-box;
@@ -401,6 +400,7 @@ const getDurationQuarters = (startDate, endDate) => {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  white-space: nowrap;
 }
 
 .roadmap-item:hover {
@@ -417,6 +417,7 @@ const getDurationQuarters = (startDate, endDate) => {
 
 .item-name {
   font-weight: 500;
+  padding-right: 10px;
 }
 
 .item-status {
