@@ -10,11 +10,6 @@
         <WebsiteIntroduction />
       </section>
 
-      <!-- Information Section-->
-      <section id="info">
-
-      </section>
-
       <!-- Report Chapters -->
       <section id="chapters">
         <ImageGrid />
