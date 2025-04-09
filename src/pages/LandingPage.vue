@@ -1,7 +1,9 @@
 <template>
   <div>
     <!-- Hero Section-->
-    <Hero />
+    <section >
+      <Hero />
+    </section>
     
     <!-- Other sections -->
 

@@ -3,12 +3,16 @@ const photos = [
   {
     id: 1,
     src: './public/tile_AC.png',
-    title: 'Advanced Computing',
+    title: 'Success Stories',
+    link: '/success-stories',
+    description: 'read more about succesful implementations',
   },
   {
     id: 2,
     src: './public/tile_AI.png',
-    title: 'Artificial Intelligence',
+    title: 'SURF Futuring',
+    link: 'https://www.surf.nl/en/themes/futuring',
+    description: 'learn more about SURF Futuring and their mission',
   },
   {
     id: 3,
@@ -61,6 +65,7 @@ const photos = [
             <img :src="photo.src" :alt="photo.title">
             <div class="photo-title">
               <h3>{{ photo.title }}</h3>
+              <p class="text-sm text-gray-300">Click to {{photo.description}}</p>
             </div>
           </a>
         </div>

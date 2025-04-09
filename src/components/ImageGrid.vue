@@ -239,7 +239,7 @@ const setHovered = (section: Section, value: boolean) => {
       <!-- Title section -->
       <div class="text-center">
         <!-- Badge -->
-        <div class="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm mb-4">
+        <div class="inline-block bg-green-100 text-green-800 px-4 py-1 rounded-full text-sm mb-4">
           Technologies
         </div>
 
@@ -326,6 +326,15 @@ const setHovered = (section: Section, value: boolean) => {
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
         </button>
 
+        <!-- Download Chapter button
+        <a 
+          :href= "section.link"
+          class="absolute top-4 right-4 px-4 py-2 bg-blue-600 text-white rounded-full text-sm hover:bg-blue-700 transition z-50"
+        >
+          Download Chapter
+        </a> -->
+
+
         <div 
           ref="scrollContainer" 
           class="flex-1 flex overflow-x-auto snap-x snap-mandatory hide-scrollbar"
@@ -342,6 +351,17 @@ const setHovered = (section: Section, value: boolean) => {
                 <div class="flex-1">
                   <h2 class="text-5xl font-bold text-gray-800 mb-6">{{ section.title }}</h2>
                   <p class="text-gray-600 text-xl leading-relaxed">{{ section.description }}</p>
+
+              <!-- Download Chapter button -->
+              <div class="mt-6 flex justify-start">
+                <a 
+                  href="https://www.surf.nl/files/2023-02/sf_trendrapport_h1.pdf"
+                  class="inline-block bg-black text-white px-5 py-2 rounded-xl shadow-md transition-all duration-300 hover:bg-white hover:text-black border border-black"
+                >
+                  Download Chapter
+                </a>
+              </div>
+
                 </div>
                 <img 
                   :src="section.image" 
@@ -414,6 +434,7 @@ const setHovered = (section: Section, value: boolean) => {
               </div>
             </div>
           </div>
+          
         </div>
 
         <!-- Navigation and progress -->

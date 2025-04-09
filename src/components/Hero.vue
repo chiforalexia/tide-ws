@@ -1,5 +1,5 @@
 <template>
-  <section class="relative min-h-screen bg-transparent flex items-center justify-center mb-3">
+  <section class="relative min-h-screen bg-transparent flex items-center justify-center">
     <!-- Hero Section Content -->
     <div class="text-center text-gray-800 px-6 py-12 max-w-4xl mx-auto z-10 relative">
       <div class="transition-all duration-700 opacity-100 translate-y-0">
@@ -26,7 +26,7 @@
 
 
       <div class="transition-all duration-700 delay-500 opacity-100">
-        <a href="#chapters" class="inline-flex items-center bg-green-100 text-green-800 px-3 py-1.5 rounded-full text-sm font-medium hover:bg-green-200 transition">
+        <a href="#website-introduction" class="inline-flex items-center bg-green-100 text-green-800 px-3 py-1.5 rounded-full text-sm font-medium hover:bg-green-200 transition">
           <span class="mr-2">Discover the process</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
               class="w-4 h-4 animate-bounce">

@@ -57,12 +57,12 @@
               </div>
   
               <div class="mt-6 text-center">
-                <router-link to="/roadmap" class="inline-flex items-center">
+                <!-- <router-link to="/roadmap" class="inline-flex items-center">
                   View Detailed Roadmap
                   <svg xmlns="http://www.w3.org/2000/svg" class="ml-1" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M10 19l5-5-5-5" />
                   </svg>
-                </router-link>
+                </router-link> -->
               </div>
             </div>
           </div>
@@ -77,11 +77,11 @@
   import { useRouter } from 'vue-router'
   
   const steps = [
-    { id: 1, title: 'Assessment & Planning', color: 'bg-blue-600' },
-    { id: 2, title: 'Stakeholder Engagement', color: 'bg-green-600' },
-    { id: 3, title: 'Pilot Implementation', color: 'bg-yellow-500' }, // Updated for better visibility
-    { id: 4, title: 'Full Deployment', color: 'bg-purple-600' },
-    { id: 5, title: 'Evaluation & Optimization', color: 'bg-rose-500' } // Updated for better visibility
+    { id: 1, title: 'Assessment & Planning', color: 'bg-blue-100 text-blue-600' },
+    { id: 2, title: 'Stakeholder Engagement', color: 'bg-blue-100 text-blue-600' },
+    { id: 3, title: 'Pilot Implementation', color: 'bg-blue-100 text-blue-600' }, // Updated for better visibility
+    { id: 4, title: 'Full Deployment', color: 'bg-blue-100 text-blue-600' },
+    { id: 5, title: 'Evaluation & Optimization', color: 'bg-blue-100 text-blue-600 ' } // Updated for better visibility
   ]
   
   const activeStep = ref(0)

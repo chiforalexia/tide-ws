@@ -148,8 +148,13 @@ const phases = [
 <template>
     <div class="min-h-screen bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 py-12">
-            <h1 class="text-3xl font-bold text-center mb-12">Implementation Phases</h1>
-
+            <h1 class="text-3xl font-bold text-center mb-12">Implementation Phases
+                <br>
+                <span class="text-xl text-blue-600 mb-4">
+                    Click on a phase to learn more about it.
+                </span>
+            </h1>
+            <br>
             <div class="flex flex-col md:flex-row gap-8">
                 <!-- Timeline (Sticky Left Column with Progress Bar) -->
                 <div class="md:w-1/3">
