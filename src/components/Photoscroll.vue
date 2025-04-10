@@ -3,16 +3,12 @@ const photos = [
   {
     id: 1,
     src: './public/tile_AC.png',
-    title: 'Success Stories',
-    link: '/success-stories',
-    description: 'read more about succesful implementations',
+    title: 'Advanced Computing',
   },
   {
     id: 2,
     src: './public/tile_AI.png',
-    title: 'SURF Futuring',
-    link: 'https://www.surf.nl/en/themes/futuring',
-    description: 'learn more about SURF Futuring and their mission',
+    title: 'Artificial Intelligence',
   },
   {
     id: 3,
@@ -42,12 +38,12 @@ const photos = [
 
         <!-- Main title -->
         <h2 class="text-3xl md:text-4xl font-bold mb-2">
-          Get inspired
+          Explore the Future of Technology
         </h2>
 
         <!-- Subtitle -->
         <p class="text-gray-600 max-w-2xl mx-auto">
-          Explore the Future of Technology: From AI to Quantum and beyond, explore how emerging technologies are shaping the future of research and innovation in the Netherlands.
+          From AI to Quantum and beyond, explore how emerging technologies are shaping the future of research and innovation in the Netherlands.
         </p>
       </div>
     </div>
@@ -65,7 +61,6 @@ const photos = [
             <img :src="photo.src" :alt="photo.title">
             <div class="photo-title">
               <h3>{{ photo.title }}</h3>
-              <p class="text-sm text-gray-300">Click to {{photo.description}}</p>
             </div>
           </a>
         </div>
@@ -77,9 +72,7 @@ const photos = [
 <style scoped>
 .photo-gallery {
   width: 100%;
-  max-width: 1250px;
   padding: 1rem;
-  margin: 0 auto; /* Center the gallery horizontally */
 }
 
 .photos-container {

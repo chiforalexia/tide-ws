@@ -26,7 +26,7 @@
 
 
       <div class="transition-all duration-700 delay-500 opacity-100">
-        <a href="#website-introduction" class="inline-flex items-center bg-green-100 text-green-800 px-3 py-1.5 rounded-full text-sm font-medium hover:bg-green-200 transition">
+        <a href="#chapters" class="inline-flex items-center bg-green-100 text-green-800 px-3 py-1.5 rounded-full text-sm font-medium hover:bg-green-200 transition">
           <span class="mr-2">Discover the process</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
               class="w-4 h-4 animate-bounce">
@@ -38,7 +38,7 @@
     </div>
 
     <!-- Wave Animation -->
-    <div class="wave-wrapper dy=12">
+    <div class="wave-wrapper dy=8">
       <svg class="wave-svg" viewBox="0 0 1200 250" preserveAspectRatio="xMidYMid meet">
         <defs>
           <!-- Main wave path for text -->
@@ -109,19 +109,12 @@ onMounted(() => {
 
 .wave-wrapper {
   position: absolute;
-  bottom: -50px; /* Adjust to raise wave higher or lower */
-  left: 50%;
-  transform: translateX(-50%) rotate(-10deg); /* Center the wave and rotate */
-  width: 100%; 
-  max-width: 1400px; /* Make sure wave doesn't stretch too wide */
-  height: 425px; /* Adjust height for the wave */
+  bottom: -40px; /* Raise wave higher */
+  left: 0;
+  width: 100%;
+  height: 400px; /* Thicker wave band */
   z-index: -1;
-  overflow: hidden; /* Prevent horizontal scrolling */
-  mask-image: linear-gradient(to right, transparent 0%, black 128px, black calc(100% - 200px), transparent 100%); /* Smooth fade */
-}
-
-.mask-container {
-	mask-image: linear-gradient(to right, transparent 0, black 128px, black calc(100% - 200px), transparent 100%);
+  transform: rotate(-10deg); /* Slight diagonal */
 }
 
 .wave-svg {
