@@ -8,7 +8,8 @@ const tracks = [
   'Assessment & Planning',
   'Stakeholder Engagement',
   'Pilot Implementation',
-  'Full Deployment'
+  'Full Deployment',
+  'Evaluation & Optimization'
 ]
 
 const roadmapItems = [
@@ -35,7 +36,7 @@ const roadmapItems = [
       },
       {
         name: 'Conduct Risk Assessments',
-        status: 'planned',
+        status: 'completed',
         startDate: '2025-Q1',
         endDate: '2025-Q4'
       }
@@ -46,13 +47,13 @@ const roadmapItems = [
     items: [
       {
         name: 'Stakeholder Buy-in',
-        status: 'in-progress',
+        status: 'completed',
         startDate: '2024-Q1',
         endDate: '2024-Q3'
       },
       {
         name: 'Create Budget Proposal',
-        status: 'planned',
+        status: 'in-progress',
         startDate: '2024-Q3',
         endDate: '2024-Q4'
       }
@@ -63,7 +64,7 @@ const roadmapItems = [
     items: [
       {
         name: 'Determine Representative Pilot Setting',
-        status: 'in-progress',
+        status: 'completed',
         startDate: '2024-Q2',
         endDate: '2024-Q3'
       },
@@ -86,7 +87,7 @@ const roadmapItems = [
     items: [
       {
         name: 'Secure Departmental Buy-in',
-        status: 'in-progress',
+        status: 'planned',
         startDate: '2024-Q2',
         endDate: '2024-Q3'
       },
@@ -101,10 +102,15 @@ const roadmapItems = [
         status: 'planned',
         startDate: '2024-Q4',
         endDate: '2025-Q1'
-      },
+      }
     ]
+  },
+  {
+    track: 'Evaluation & Optimization',
+    items: [ ]
   }
 ]
+
 
 const filterItems = (track) => {
   selectedTrack.value = track
@@ -113,7 +119,7 @@ const filterItems = (track) => {
 const getStatusColor = (status) => {
   switch(status) {
     case 'completed': return '#B8E3C9'
-    case 'in-progress': return '#B3E5FF'
+    case 'in-progress': return '#FFF3B0'
     case 'planned': return '#EAECF0'
     default: return '#9CA3AF'
   }
@@ -121,10 +127,11 @@ const getStatusColor = (status) => {
 
 const getTrackColor = (track) => {
   switch(track) {
-    case 'Assessment & Planning': return '#FFE6D2'
-    case 'Stakeholder Engagement': return '#DFF4FF'
-    case 'Pilot Implementation': return '#f6e8fc'
-    case 'Full Deployment': return '#DCF2E5'
+    case 'Assessment & Planning': return '#DCF2E5'
+    case 'Stakeholder Engagement': return '#DCF2E5'
+    case 'Pilot Implementation': return '#DFF4FF'
+    case 'Full Deployment': return '#DFF4FF'
+    case 'Evaluation & Optimization': return '#FFE6D2'
     default: return '#6B7280'
   }
 }
@@ -177,6 +184,7 @@ const getDurationQuarters = (startDate, endDate) => {
     </div>
 
     <div class="timeline-container">
+      <div class="three-quarter-line"></div>
       <div class="timeline-header">
         <div class="track-column">Track</div>
         <div class="quarters-grid">
@@ -185,7 +193,8 @@ const getDurationQuarters = (startDate, endDate) => {
           <div class="year">Year 2</div>
           <div class="year">Year 3</div>
           
-          <!-- Quarter Row -->
+          <!-- Quarter Row (Currently commented out, functional when needed) -->
+          <!--
           <div class="quarter">Q1</div>
           <div class="quarter">Q2</div>
           <div class="quarter">Q3</div>
@@ -198,6 +207,8 @@ const getDurationQuarters = (startDate, endDate) => {
           <div class="quarter">Q2</div>
           <div class="quarter">Q3</div>
           <div class="quarter">Q4</div>
+          -->
+        
         </div>
       </div>
 
@@ -229,6 +240,9 @@ const getDurationQuarters = (startDate, endDate) => {
                 </div>
               </div>
             </div>
+            <div class="one-quarter-line"></div>
+            <div class="half-line"></div>
+            <div class="three-quarter-line"></div>
           </div>
         </template>
       </div>
@@ -253,8 +267,6 @@ const getDurationQuarters = (startDate, endDate) => {
     </div>
   </div>
 </template>
-
-
 
 <style scoped>
 .roadmap-container {
@@ -322,6 +334,7 @@ const getDurationQuarters = (startDate, endDate) => {
   border-radius: 0.75rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   padding-bottom: 2rem;
+  border-right: 1px solid #E5E7EB;
 }
 
 .timeline-header {
@@ -336,6 +349,7 @@ const getDurationQuarters = (startDate, endDate) => {
   grid-template-columns: repeat(12, 1fr);
   gap: 0.5rem;
   align-items: center;
+  position: relative;
 }
 
 .year {
@@ -345,10 +359,12 @@ const getDurationQuarters = (startDate, endDate) => {
   color: #4B5563;
 }
 
-.quarter {
-  text-align: center;
-  color: #6B7280;
-  font-size: 0.875rem;
+.timeline-container {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding-bottom: 2rem;
+  border-right: 1px solid #E5E7EB;
 }
 
 .track-row {
@@ -356,7 +372,39 @@ const getDurationQuarters = (startDate, endDate) => {
   grid-template-columns: 200px 1fr;
   padding: 1rem;
   border-bottom: 1px solid #E5E7EB;
+  position: relative; /* Ensures lines are positioned within this container */
 }
+
+/* 1/4th line */
+.track-row .one-quarter-line {
+  position: absolute;
+  top: 0;
+  left: 19%; /* 1/4th of the container's width */
+  width: 1px;
+  height: 100%;
+  background-color: #E5E7EB;
+}
+
+/* 1/2 line */
+.track-row .half-line {
+  position: absolute;
+  top: 0;
+  left: 46%; /* 1/2 of the container's width */
+  width: 1px;
+  height: 100%;
+  background-color: #E5E7EB;
+}
+
+/* 3/4 line */
+.track-row .three-quarter-line {
+  position: absolute;
+  top: 0;
+  left: 73%; /* 3/4 of the container's width */
+  width: 1px;
+  height: 100%;
+  background-color: #E5E7EB;
+}
+
 
 .track-name {
   font-weight: 600;
@@ -429,12 +477,12 @@ const getDurationQuarters = (startDate, endDate) => {
 }
 
 .item-status.completed {
-  background-color: #DCF2E5;
+  background-color: #e7f9c6;
   color: #008939; 
 }
 
 .item-status.in-progress {
-  background-color: #DFF4FF;
+  background-color: #fcf8db;
   color: #0077C8;
 }
 
@@ -475,14 +523,14 @@ const getDurationQuarters = (startDate, endDate) => {
 }
 
 .legend-dot.completed {
-  background-color: #22C55E;
+  background-color: #008939;
 }
 
 .legend-dot.in-progress {
-  background-color: #3B82F6;
+  background-color: #0077C8;
 }
 
 .legend-dot.planned {
-  background-color: #9CA3AF;
+  background-color: #EAECF0;
 }
 </style>
