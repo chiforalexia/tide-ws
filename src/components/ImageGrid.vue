@@ -17,18 +17,18 @@ const sections = ref<Section[]>([
     description: 'Artificial Intelligence (AI) and, more specifically, Machine Learning (ML) continue to evolve, leading to both groundbreaking achievements and ethical concerns.',
     image: '/public/tile_AI.png',
     subChapters: [
-      'Machine Learning',
-      'Neural Networks',
-      'Natural Language Processing',
-      'Computer Vision',
-      'Robotics'
+      'Towards ‘Frankenmodels’',
+      'More efficient approaches towards AI systems',
+      'New ways to access data',
+      'Towards trustworthy AI',
+      'More accessible computing and models'
     ],
     keyTrends: [
-      'Frankenmodels & Modular AI',
-      'Efficient AI Systems',
-      'New Data Access Methods',
-      'Trustworthy AI',
-      'Accessible AI Computing'
+      'Towards ‘Frankenmodels’',
+      'More efficient approaches towards AI systems',
+      'New ways to access data',
+      'Towards trustworthy AI',
+      'More accessible computing and models'
     ],
     dutchTechnologies: [
       'TU Delft AI Labs',
@@ -45,18 +45,18 @@ const sections = ref<Section[]>([
     description: 'Solving societal challenges with digital research infrastructure on a global scale requires a unique combination of computing, storage, and networking technologies.',
     image: '/public/tile_AC.png',
     subChapters: [
-      'High Performance Computing',
-      'Cloud Infrastructure',
-      'Data Centers',
-      'Green Computing',
-      'Distributed Systems'
+      'Computing continuum',
+      'Energy sustainability in digital infrastructures',
+      'Protect sovereignty in digital infrastructure',
+      'Unconventional paradigms for computing',
+      'High-end computing in qualitative research fields'
     ],
     keyTrends: [
-      'Quantum Integration',
-      'Sustainable Computing',
-      'Edge Computing',
-      'AI Accelerators',
-      'Neuromorphic Computing'
+      'Computing continuum',
+      'Energy sustainability in digital infrastructures',
+      'Protect sovereignty in digital infrastructure',
+      'Unconventional paradigms for computing',
+      'High-end computing in qualitative research fields'
     ],
     dutchTechnologies: [
       'SURF Supercomputing',
@@ -70,21 +70,21 @@ const sections = ref<Section[]>([
   {
     id: 3,
     title: 'Quantum',
-    description: 'There are three main subfields under the umbrella of Quantum Information Science and Technology: quantum computing and simulation, quantum sensing and metrology, and quantum communication.',
+    description: 'Quantum technologies span computing, communication, and sensing, promising exponential performance improvements and novel applications.',
     image: '/public/tile_Quantum.png',
     subChapters: [
-      'Quantum Computing',
-      'Quantum Cryptography',
-      'Quantum Sensing',
-      'Quantum Networks',
-      'Quantum Algorithms'
+      'Quantum Key Distribution (QKD) gaining momentum',
+      'Quantum Computing in the Cloud',
+      'Hybrid quantum/classical computing',
+      'Error correction techniques',
+      'Quantum curiosity'
     ],
     keyTrends: [
-      'Error Correction',
-      'Quantum Supremacy',
-      'Quantum Internet',
-      'Quantum Software',
-      'Quantum-Safe Security'
+      'Quantum Key Distribution (QKD) gaining momentum',
+      'Quantum Computing in the Cloud',
+      'Hybrid quantum/classical computing',
+      'Error correction techniques',
+      'Quantum curiosity'
     ],
     dutchTechnologies: [
       'QuTech Delft',
@@ -98,21 +98,21 @@ const sections = ref<Section[]>([
   {
     id: 4,
     title: 'Edge',
-    description: 'Edge computing covers a broad spectrum of technologies from Internet of Things sensors to Extended Reality devices.',
+    description: 'Edge computing enables real-time, distributed processing and automation close to the data source, supporting smart environments and systems.',
     image: '/public/tile_Edge.png',
     subChapters: [
-      'IoT Devices',
-      'Edge Analytics',
-      'Mobile Edge Computing',
-      'Smart Sensors',
-      'Edge Security'
+      'Cloud-Edge Continuum',
+      'Digital Twins',
+      'Actual real-time data streams',
+      'Run code anywhere',
+      'Robotic Automation'
     ],
     keyTrends: [
-      '5G Integration',
-      'Edge AI/ML',
-      'IoT Platforms',
-      'Smart Cities',
-      'Edge Orchestration'
+      'Cloud-Edge Continuum',
+      'Digital Twins',
+      'Actual real-time data streams',
+      'Run code anywhere',
+      'Robotic Automation'
     ],
     dutchTechnologies: [
       'SURF Edge Lab',
@@ -126,21 +126,19 @@ const sections = ref<Section[]>([
   {
     id: 5,
     title: 'Network',
-    description: 'Fixed communication networks are essential for the digitalisation of society in the Netherlands. Networks also integrate compute and storage more and more.',
+    description: 'Modern networks support intelligent connectivity and architectural flexibility across cloud, edge, and enterprise environments.',
     image: '/public/tile_Network.png',
     subChapters: [
-      '5G Networks',
-      'Network Security',
-      'Software-Defined Networks',
-      'Network Protocols',
-      'Network Architecture'
+      'Big Tech and networking',
+      'Intelligent networks',
+      'Edge and campus architecture',
+      'Next generation networks'
     ],
     keyTrends: [
-      '6G Research',
-      'Network Slicing',
-      'Zero Trust Security',
-      'Open RAN',
-      'Network AI'
+      'Big Tech and networking',
+      'Intelligent networks',
+      'Edge and campus architecture',
+      'Next generation networks'
     ],
     dutchTechnologies: [
       'KPN Networks',
@@ -157,18 +155,18 @@ const sections = ref<Section[]>([
     description: 'XR, or \'eXtended Reality\' is both a technology in its own right, as well as a term used for a combination of other reality-altering technologies; combinations of virtual reality, augmented reality and mixed reality could all constitute XR.',
     image: '/public/tile_XR.png',
     subChapters: [
-      'Virtual Reality',
-      'Augmented Reality',
-      'Mixed Reality',
-      'Immersive Technologies',
-      'XR Applications'
+      'Enriching XR by combining technologies',
+      'Virtual social interactions are getting more advanced',
+      'New gear for new realities',
+      'An increasing number of ethical concerns',
+      'A fragmented ecosystem'
     ],
     keyTrends: [
-      'Metaverse',
-      'Digital Twins',
-      'Haptic Feedback',
-      'Social VR',
-      'Enterprise AR'
+      'Enriching XR by combining technologies',
+      'Virtual social interactions are getting more advanced',
+      'New gear for new realities',
+      'An increasing number of ethical concerns',
+      'A fragmented ecosystem'
     ],
     dutchTechnologies: [
       'TNO XR Lab',
@@ -180,6 +178,7 @@ const sections = ref<Section[]>([
     hovered: false
   }
 ])
+
 
 const activeSection = ref<Section | null>(null)
 const scrollContainer = ref<HTMLElement | null>(null)
@@ -240,7 +239,7 @@ const setHovered = (section: Section, value: boolean) => {
       <!-- Title section -->
       <div class="text-center">
         <!-- Badge -->
-        <div class="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm mb-4">
+        <div class="inline-block bg-green-100 text-green-800 px-4 py-1 rounded-full text-sm mb-4">
           Technologies
         </div>
 
@@ -327,6 +326,15 @@ const setHovered = (section: Section, value: boolean) => {
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
         </button>
 
+        <!-- Download Chapter button
+        <a 
+          :href= "section.link"
+          class="absolute top-4 right-4 px-4 py-2 bg-blue-600 text-white rounded-full text-sm hover:bg-blue-700 transition z-50"
+        >
+          Download Chapter
+        </a> -->
+
+
         <div 
           ref="scrollContainer" 
           class="flex-1 flex overflow-x-auto snap-x snap-mandatory hide-scrollbar"
@@ -343,6 +351,17 @@ const setHovered = (section: Section, value: boolean) => {
                 <div class="flex-1">
                   <h2 class="text-5xl font-bold text-gray-800 mb-6">{{ section.title }}</h2>
                   <p class="text-gray-600 text-xl leading-relaxed">{{ section.description }}</p>
+
+              <!-- Download Chapter button -->
+              <div class="mt-6 flex justify-start">
+                <a 
+                  href="https://www.surf.nl/files/2023-02/sf_trendrapport_h1.pdf"
+                  class="inline-block bg-black text-white px-5 py-2 rounded-xl shadow-md transition-all duration-300 hover:bg-white hover:text-black border border-black"
+                >
+                  Download Chapter
+                </a>
+              </div>
+
                 </div>
                 <img 
                   :src="section.image" 
@@ -415,6 +434,7 @@ const setHovered = (section: Section, value: boolean) => {
               </div>
             </div>
           </div>
+          
         </div>
 
         <!-- Navigation and progress -->
