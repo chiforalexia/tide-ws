@@ -170,31 +170,28 @@ const phases = [
 
                 <!-- Middle column with stepper -->
                 <div class="w-16 mt-4">
-                    <ol class="flex flex-col items-center h-full relative mt-2">
+                    <ol class="flex flex-col items-center h-full relative z-10">
                         <li v-for="(phase, index) in phases" :key="index" class="flex flex-col items-center"
                             :class="{ 'w-full': index < phases.length - 1 }">
-                            <!-- Step circle -->
+                            <!-- Step circle with fade transition -->
                             <span
-                                class="flex items-center justify-center w-10 h-10 rounded-full lg:h-12 lg:w-12 shrink-0"
+                                class="flex items-center justify-center w-10 h-10 rounded-full lg:h-12 lg:w-12 shrink-0 transition-colors duration-300"
                                 :class="[
-                                    activePhase >= index
-                                        ? 'bg-blue-100 text-blue-600'
-                                        : 'bg-gray-100 text-gray-500'
+                                    activePhase >= index ? 'bg-blue-100 text-blue-600' : 'bg-gray-100 text-gray-500'
                                 ]">
-                                <svg v-if="activePhase > index" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
+                                <svg v-if="activePhase > index" class="w-6 h-6 transition-colors duration-300"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M5 13l4 4L19 7" />
                                 </svg>
                                 <span v-else>{{ index + 1 }}</span>
                             </span>
-                            <!-- Connector line -->
-                            <div v-if="index < phases.length - 1" class="w-1 h-14 my-2" :class="[
-                                activePhase > index
-                                    ? 'bg-blue-100'
-                                    : 'bg-gray-100'
-                            ]">
-                            </div>
+
+                            <!-- Connector line with fade transition -->
+                            <div v-if="index < phases.length - 1" class="w-1 h-14 my-2 transition-colors duration-300"
+                                :class="[
+                                    activePhase > index ? 'bg-blue-100' : 'bg-gray-100'
+                                ]"></div>
                         </li>
                     </ol>
                 </div>
