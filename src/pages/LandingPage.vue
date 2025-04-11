@@ -1,18 +1,30 @@
 <template>
   <div>
     <!-- Hero Section-->
-    <Hero />
+    <section >
+      <Hero />
+    </section>
     
     <!-- Other sections -->
 
+    <!-- Website Introduction Section -->
+      <section id="website-introduction">
+        <WebsiteIntroduction />
+      </section>
+
       <!-- Report Chapters -->
       <section id="chapters">
-      <ImageGrid />
+        <ImageGrid />
+      </section>
+
+      <!-- Roadmap Introduction Section-->
+      <section id="roadinfo">
+        <RoadmapIntro />
       </section>
 
       <!-- Something menu -->
       <section id="photoscroll">
-      <Photoscroll />
+        <Photoscroll />
       </section>
 
   </div>
@@ -23,6 +35,9 @@
 import Hero from '../components/Hero.vue';
 import Photoscroll from '../components/Photoscroll.vue';
 import ImageGrid from '../components/ImageGrid.vue';
+import SuccessStories from '../components/SuccessStories.vue';
+import WebsiteIntroduction from '../components/Website_introduction.vue';
+import RoadmapIntro from '../components/RoadmapIntro.vue';
 
 export default {
   name: 'LandingPage',
@@ -30,6 +45,9 @@ export default {
     Hero, 
     Photoscroll,
     ImageGrid,
+    SuccessStories,
+    WebsiteIntroduction,
+    RoadmapIntro,
 
   },
 };

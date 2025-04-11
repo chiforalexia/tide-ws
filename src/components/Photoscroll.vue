@@ -9,7 +9,7 @@ const photos = [
   },
   {
     id: 2,
-    src: './public/SURF Futuring.png',
+    src: './public/tile_AI.png',
     title: 'SURF Futuring',
     link: 'https://www.surf.nl/en/themes/futuring',
     description: 'learn more about SURF Futuring and their mission',
