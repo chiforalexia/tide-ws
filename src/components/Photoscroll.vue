@@ -2,23 +2,31 @@
 const photos = [
   {
     id: 1,
-    src: './public/tile_AC.png',
-    title: 'Advanced Computing',
+    src: './public/Generative AI Erasmus University.jpg.avif',
+    title: 'Generative AI model',
+    link: 'https://www.eur.nl/en/news/erasmus-university-trains-first-generative-ai-model-social-science-and-humanities',
+    description: 'learn about the Generative AI model build at the Erasmus University',
   },
   {
     id: 2,
-    src: './public/tile_AI.png',
-    title: 'Artificial Intelligence',
+    src: './public/SURF Futuring.png',
+    title: 'SURF Futuring',
+    link: 'https://www.surf.nl/en/themes/futuring',
+    description: 'learn more about SURF Futuring and their mission',
   },
   {
     id: 3,
-    src: './public/tile_Edge.png',
-    title: 'Edge',
+    src: './public/House of AI.png',
+    title: 'House of AI',
+    link: 'https://www.surf.nl/en/themes/futuring',
+    description: 'explore a virtual network of AI labs',
   },
   {
     id: 4,
-    src: './public/tile_Network.png',
-    title: 'Network',
+    src: './public/EDGE.jpg',
+    title: 'EDGE Research Center',
+    link: 'https://www.utwente.nl/en/edge/',
+    description: 'read all about Twente Universities EDGE Research',
   }
 ];
 </script>
@@ -38,12 +46,12 @@ const photos = [
 
         <!-- Main title -->
         <h2 class="text-3xl md:text-4xl font-bold mb-2">
-          Explore the Future of Technology
+          Get inspired
         </h2>
 
         <!-- Subtitle -->
         <p class="text-gray-600 max-w-2xl mx-auto">
-          From AI to Quantum and beyond, explore how emerging technologies are shaping the future of research and innovation in the Netherlands.
+          Explore the Future of Technology: From AI to Quantum and beyond, explore how emerging technologies are shaping the future of research and innovation in the Netherlands.
         </p>
       </div>
     </div>
@@ -61,6 +69,7 @@ const photos = [
             <img :src="photo.src" :alt="photo.title">
             <div class="photo-title">
               <h3>{{ photo.title }}</h3>
+              <p class="text-sm text-gray-300">Click to {{photo.description}}</p>
             </div>
           </a>
         </div>
@@ -72,7 +81,9 @@ const photos = [
 <style scoped>
 .photo-gallery {
   width: 100%;
+  max-width: 1250px;
   padding: 1rem;
+  margin: 0 auto; /* Center the gallery horizontally */
 }
 
 .photos-container {
