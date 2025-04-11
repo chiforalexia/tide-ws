@@ -2,10 +2,10 @@
 const photos = [
   {
     id: 1,
-    src: './public/tile_AC.png',
-    title: 'Success Stories',
-    link: '/success-stories',
-    description: 'read more about succesful implementations',
+    src: './public/Generative AI Erasmus University.jpg.avif',
+    title: 'Generative AI model',
+    link: 'https://www.eur.nl/en/news/erasmus-university-trains-first-generative-ai-model-social-science-and-humanities',
+    description: 'learn about the Generative AI model build at the Erasmus University',
   },
   {
     id: 2,
@@ -16,13 +16,17 @@ const photos = [
   },
   {
     id: 3,
-    src: './public/tile_Edge.png',
-    title: 'Edge',
+    src: './public/House of AI.png',
+    title: 'House of AI',
+    link: 'https://www.surf.nl/en/themes/futuring',
+    description: 'explore a virtual network of AI labs',
   },
   {
     id: 4,
-    src: './public/tile_Network.png',
-    title: 'Network',
+    src: './public/EDGE.jpg',
+    title: 'EDGE Research Center',
+    link: 'https://www.utwente.nl/en/edge/',
+    description: 'read all about Twente Universities EDGE Research',
   }
 ];
 </script>
