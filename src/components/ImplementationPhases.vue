@@ -150,42 +150,53 @@ const phases = [
         <div class="max-w-7xl mx-auto px-4 py-12">
             <h1 class="text-3xl font-bold text-center mb-12">Implementation Phases</h1>
 
-            <div class="flex flex-col md:flex-row gap-8">
-                <!-- Timeline (Sticky Left Column with Progress Bar) -->
-                <div class="md:w-1/3">
-                    <div class="sticky top-4 relative">
-                        <!-- Vertical Progress Line -->
-                        <div class="absolute right-[2px] top-[52px] bottom-[52px] w-1 bg-gray-200">
-                            <div class="absolute top-0 w-full bg-blue-500 transition-all duration-500"
-                                :style="{ height: progressHeight }">
-                            </div>
-                        </div>
-
-                        <!-- Cards with aligned dots -->
-                        <div class="space-y-8">
-                            <div v-for="(phase, index) in phases" :key="index" class="relative flex items-center">
-                                <!-- Card -->
-                                <div @click="activePhase = index"
-                                    class="bg-white rounded-lg p-6 shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md w-full mr-6"
-                                    :class="activePhase === index ? 'border-2 border-blue-500' : 'border border-gray-200'">
-                                    <div class="flex items-center gap-4">
-                                        <div
-                                            class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-semibold text-lg">
-                                            {{ index + 1 }}
-                                        </div>
-                                        <h3 class="font-medium text-lg">{{ phase.title }}</h3>
-                                    </div>
+            <div class="flex gap-8 items-start">
+                <!-- Left side with cards -->
+                <div class="w-5/12">
+                    <div class="space-y-8">
+                        <div v-for="(phase, index) in phases" :key="index" @click="activePhase = index"
+                            class="bg-white rounded-lg p-6 shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md"
+                            :class="activePhase === index ? 'border-2 border-blue-500' : 'border border-gray-200'">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-semibold text-lg">
+                                    {{ index + 1 }}
                                 </div>
-
-                                <!-- Dot -->
-                                <div class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2">
-                                    <div class="w-4 h-4 rounded-full"
-                                        :class="activePhase >= index ? 'bg-blue-500' : 'bg-gray-300'">
-                                    </div>
-                                </div>
+                                <h3 class="font-medium text-lg">{{ phase.title }}</h3>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <!-- Middle column with stepper -->
+                <div class="w-16 mt-4">
+                    <ol class="flex flex-col items-center h-full relative mt-2">
+                        <li v-for="(phase, index) in phases" :key="index" class="flex flex-col items-center"
+                            :class="{ 'w-full': index < phases.length - 1 }">
+                            <!-- Step circle -->
+                            <span
+                                class="flex items-center justify-center w-10 h-10 rounded-full lg:h-12 lg:w-12 shrink-0"
+                                :class="[
+                                    activePhase >= index
+                                        ? 'bg-blue-100 text-blue-600'
+                                        : 'bg-gray-100 text-gray-500'
+                                ]">
+                                <svg v-if="activePhase > index" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span v-else>{{ index + 1 }}</span>
+                            </span>
+                            <!-- Connector line -->
+                            <div v-if="index < phases.length - 1" class="w-1 h-14 my-2" :class="[
+                                activePhase > index
+                                    ? 'bg-blue-100'
+                                    : 'bg-gray-100'
+                            ]">
+                            </div>
+                        </li>
+                    </ol>
                 </div>
 
                 <!-- Phase Details (Right Side) -->
