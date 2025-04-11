@@ -180,6 +180,19 @@ const phases = [
                                             d="M9 2h6a1 1 0 011 1v2h-8V3a1 1 0 011-1zM6 6h12v14a2 2 0 01-2 2H8a2 2 0 01-2-2V6z" />
                                     </svg>
 
+            <br>
+            <div class="flex flex-col md:flex-row gap-8">
+                <!-- Timeline (Sticky Left Column with Progress Bar) -->
+                <div class="md:w-1/3">
+                    <div class="sticky top-4 relative">
+                        <!-- Vertical Progress Line -->
+                        <div class="absolute right-[2px] top-[52px] bottom-[52px] w-1 bg-gray-200">
+                            <div class="absolute top-0 w-full bg-blue-500 transition-all duration-500"
+                                :style="{ height: progressHeight }">
+                            </div>
+                        </div>
+
+
                                     <!-- People icon -->
                                     <svg v-else-if="index === 1" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"
                                         fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"

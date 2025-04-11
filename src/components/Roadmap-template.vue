@@ -5,76 +5,77 @@ const selectedTrack = ref('All Tracks')
 
 const tracks = [
   'All Tracks',
-  'Approval & Initiation',
-  'Project Planning & Development',
-  'Testing & Quality Assurance',
-  'Deployment'
+  'Assessment & Planning',
+  'Stakeholder Engagement',
+  'Pilot Implementation',
+  'Full Deployment',
+  'Evaluation & Optimization'
 ]
 
 const roadmapItems = [
   {
-    track: 'Approval & Initiation',
+    track: 'Assessment & Planning',
     items: [
       {
-        name: 'NLP Engine Core',
+        name: 'Initial LLM Testing',
         status: 'completed',
         startDate: '2023-Q1',
         endDate: '2023-Q2'
       },
       {
-        name: 'Knowledge Base Integration',
+        name: 'Project Plan',
         status: 'completed',
         startDate: '2023-Q2',
         endDate: '2023-Q3'
       },
       {
-        name: 'Context Awareness',
+        name: 'Identify Key Stakeholders',
         status: 'completed',
         startDate: '2023-Q3',
         endDate: '2023-Q4'
       },
       {
-        name: 'Autonomous Agents',
-        status: 'planned',
+        name: 'Conduct Risk Assessments',
+        status: 'completed',
         startDate: '2025-Q1',
         endDate: '2025-Q4'
       }
     ]
   },
   {
-    track: 'Project Planning & Development',
+    track: 'Stakeholder Engagement',
     items: [
       {
-        name: 'Cloud Infrastructure',
-        status: 'in progress',
+        name: 'Stakeholder Buy-in',
+        status: 'completed',
         startDate: '2024-Q1',
         endDate: '2024-Q3'
       },
       {
-        name: 'Load Balancing',
-        status: 'planned',
+        name: 'Create Budget Proposal',
+        status: 'in-progress',
         startDate: '2024-Q3',
         endDate: '2024-Q4'
       }
     ]
   },
   {
-    track: 'Testing & Quality Assurance',
+    track: 'Pilot Implementation',
     items: [
       {
-        name: 'User Personalization',
-        status: 'in progress',
+        name: 'Determine Representative Pilot Setting',
+        status: 'completed',
         startDate: '2024-Q2',
         endDate: '2024-Q3'
       },
       {
-        name: 'Multimodal Interactions',
-        status: 'in progress',
+        name: 'Run Pilot',
+        status: 'in-progress',
         startDate: '2024-Q3',
         endDate: '2024-Q4'
       },
       {
-        name: 'Real-time Translation',
+        name: 'Evaluate Pilot Feedback',
         status: 'planned',
         startDate: '2025-Q1',
         endDate: '2025-Q2'
@@ -82,35 +83,34 @@ const roadmapItems = [
     ]
   },
   {
-    track: 'Deployment',
+    track: 'Full Deployment',
     items: [
       {
-        name: 'Developer API Platform',
-        status: 'in progress',
+        name: 'Secure Departmental Buy-in',
+        status: 'planned',
         startDate: '2024-Q2',
         endDate: '2024-Q3'
       },
       {
-        name: 'Analytics Dashboard',
+        name: 'Establish Maintenance & Support ',
         status: 'planned',
         startDate: '2024-Q3',
         endDate: '2024-Q4'
       },
       {
-        name: 'Enterprise Security',
+        name: 'Monitor Usage',
         status: 'planned',
         startDate: '2024-Q4',
         endDate: '2025-Q1'
-      },
-      {
-        name: 'Industry Solutions',
-        status: 'planned',
-        startDate: '2025-Q1',
-        endDate: '2025-Q2'
       }
     ]
+  },
+  {
+    track: 'Evaluation & Optimization',
+    items: [ ]
   }
 ]
+
 
 const filterItems = (track) => {
   selectedTrack.value = track
@@ -119,7 +119,7 @@ const filterItems = (track) => {
 const getStatusColor = (status) => {
   switch(status) {
     case 'completed': return '#B8E3C9'
-    case 'in progress': return '#B3E5FF'
+    case 'in-progress': return '#FFF3B0'
     case 'planned': return '#EAECF0'
     default: return '#9CA3AF'
   }
@@ -127,10 +127,11 @@ const getStatusColor = (status) => {
 
 const getTrackColor = (track) => {
   switch(track) {
-    case 'Approval & Initiation': return '#FFE6D2'
-    case 'Project Planning & Development': return '#DFF4FF'
-    case 'Testing & Quality Assurance': return '#f6e8fc'
-    case 'Deployment': return '#DCF2E5'
+    case 'Assessment & Planning': return '#DCF2E5'
+    case 'Stakeholder Engagement': return '#DCF2E5'
+    case 'Pilot Implementation': return '#DFF4FF'
+    case 'Full Deployment': return '#DFF4FF'
+    case 'Evaluation & Optimization': return '#FFE6D2'
     default: return '#6B7280'
   }
 }
@@ -156,11 +157,11 @@ const getDurationQuarters = (startDate, endDate) => {
         <div class="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm mb-4">
           Case Study
         </div>
-            <h2 class="text-3xl font-bold mb-4">Roadmap based on Successful Implementations</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">
-                View a breakdown of how the UvA developed their AI Chatbot.
-            </p>
-        </div>
+        <h2 class="text-3xl font-bold mb-4">Roadmap based on Successful Implementations</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+            View a breakdown of how the UvA developed their AI Chatbot.
+        </p>
+      </div>
     </div>
 
     <div class="track-filter">
@@ -183,16 +184,31 @@ const getDurationQuarters = (startDate, endDate) => {
     </div>
 
     <div class="timeline-container">
+      <div class="three-quarter-line"></div>
       <div class="timeline-header">
         <div class="track-column">Track</div>
         <div class="quarters-grid">
-          <template v-for="year in ['Year 1', 'Year 3', 'Year 2']" :key="year">
-            <div class="year">{{ year }}</div>
-            <div v-for="quarter in ['Q1', 'Q2', 'Q3', 'Q4']" :key="year + '-' + quarter" class="quarter">
-
-              {{ quarter }}
-            </div>
-          </template>
+          <!-- Year Row -->
+          <div class="year">Year 1</div>
+          <div class="year">Year 2</div>
+          <div class="year">Year 3</div>
+          
+          <!-- Quarter Row (Currently commented out, functional when needed) -->
+          <!--
+          <div class="quarter">Q1</div>
+          <div class="quarter">Q2</div>
+          <div class="quarter">Q3</div>
+          <div class="quarter">Q4</div>
+          <div class="quarter">Q1</div>
+          <div class="quarter">Q2</div>
+          <div class="quarter">Q3</div>
+          <div class="quarter">Q4</div>
+          <div class="quarter">Q1</div>
+          <div class="quarter">Q2</div>
+          <div class="quarter">Q3</div>
+          <div class="quarter">Q4</div>
+          -->
+        
         </div>
       </div>
 
@@ -224,6 +240,9 @@ const getDurationQuarters = (startDate, endDate) => {
                 </div>
               </div>
             </div>
+            <div class="one-quarter-line"></div>
+            <div class="half-line"></div>
+            <div class="three-quarter-line"></div>
           </div>
         </template>
       </div>
@@ -262,7 +281,7 @@ const getDurationQuarters = (startDate, endDate) => {
 }
 
 .roadmap-header h1 {
-  color: #8B5CF6;
+  color: #2563EB;
   margin-bottom: 0.5rem;
   font-size: 2.5rem;
 }
@@ -306,7 +325,7 @@ const getDurationQuarters = (startDate, endDate) => {
 }
 
 .filter-btn.active {
-  background: #8B5CF6;
+  background: #2563EB;
   color: white;
 }
 
@@ -315,6 +334,7 @@ const getDurationQuarters = (startDate, endDate) => {
   border-radius: 0.75rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   padding-bottom: 2rem;
+  border-right: 1px solid #E5E7EB;
 }
 
 .timeline-header {
@@ -329,6 +349,7 @@ const getDurationQuarters = (startDate, endDate) => {
   grid-template-columns: repeat(12, 1fr);
   gap: 0.5rem;
   align-items: center;
+  position: relative;
 }
 
 .year {
@@ -338,10 +359,12 @@ const getDurationQuarters = (startDate, endDate) => {
   color: #4B5563;
 }
 
-.quarter {
-  text-align: center;
-  color: #6B7280;
-  font-size: 0.875rem;
+.timeline-container {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding-bottom: 2rem;
+  border-right: 1px solid #E5E7EB;
 }
 
 .track-row {
@@ -349,7 +372,39 @@ const getDurationQuarters = (startDate, endDate) => {
   grid-template-columns: 200px 1fr;
   padding: 1rem;
   border-bottom: 1px solid #E5E7EB;
+  position: relative; /* Ensures lines are positioned within this container */
 }
+
+/* 1/4th line */
+.track-row .one-quarter-line {
+  position: absolute;
+  top: 0;
+  left: 19%; /* 1/4th of the container's width */
+  width: 1px;
+  height: 100%;
+  background-color: #E5E7EB;
+}
+
+/* 1/2 line */
+.track-row .half-line {
+  position: absolute;
+  top: 0;
+  left: 46%; /* 1/2 of the container's width */
+  width: 1px;
+  height: 100%;
+  background-color: #E5E7EB;
+}
+
+/* 3/4 line */
+.track-row .three-quarter-line {
+  position: absolute;
+  top: 0;
+  left: 73%; /* 3/4 of the container's width */
+  width: 1px;
+  height: 100%;
+  background-color: #E5E7EB;
+}
+
 
 .track-name {
   font-weight: 600;
@@ -378,9 +433,9 @@ const getDurationQuarters = (startDate, endDate) => {
 .roadmap-item {
   position: relative;
   left: calc(var(--start-quarter) * (100% / 12) + 4px);
-  width: auto;
-  min-width: 50px;
-  height: 30px;
+  width: fit-content;
+  max-width: 370px;
+  height: 40px;
   background: var(--track-color);
   opacity: 1;
   border-radius: 0.5rem;
@@ -389,37 +444,12 @@ const getDurationQuarters = (startDate, endDate) => {
   font-size: 0.875rem;
   box-sizing: border-box;
   z-index: 1;
-  margin-bottom: 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.roadmap-item {
-  position: relative;
-  left: calc(var(--start-quarter) * (100% / 12) + 4px);
-  width: auto;
-  min-width: 50px;
-  max-width: 300px;
-  height: 40px;
-  background: var(--track-color);
-  opacity: 1;
-  border-radius: 0.5rem;
-  padding: 0.25rem 0.25rem;
-  color: #1F2937;
-  font-size: 0.875rem;
-  box-sizing: border-box;
-  z-index: 1;
   margin-bottom: 4px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  white-space: nowrap;
 }
-
-.roadmap-item:hover {
-  filter: brightness(85%);
-}
-
 
 .roadmap-item:hover {
   filter: brightness(85%);
@@ -435,6 +465,7 @@ const getDurationQuarters = (startDate, endDate) => {
 
 .item-name {
   font-weight: 500;
+  padding-right: 10px;
 }
 
 .item-status {
@@ -446,12 +477,12 @@ const getDurationQuarters = (startDate, endDate) => {
 }
 
 .item-status.completed {
-  background-color: #DCF2E5;
+  background-color: #e7f9c6;
   color: #008939; 
 }
 
 .item-status.in-progress {
-  background-color: #DFF4FF;
+  background-color: #fcf8db;
   color: #0077C8;
 }
 
@@ -492,15 +523,14 @@ const getDurationQuarters = (startDate, endDate) => {
 }
 
 .legend-dot.completed {
-  background-color: #22C55E;
+  background-color: #008939;
 }
 
 .legend-dot.in-progress {
-  background-color: #3B82F6;
+  background-color: #0077C8;
 }
 
 .legend-dot.planned {
-  background-color: #9CA3AF;
+  background-color: #EAECF0;
 }
-
 </style>
