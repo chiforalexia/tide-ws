@@ -173,44 +173,62 @@ const phases = ref([
         <div class="text-xl text-blue-600 mt-2">Click to explore.</div>
       </h1>
 
-      <div class="flex flex-col md:flex-row gap-10">
-        <!-- Sidebar -->
-        <div :class="['transition-all duration-300 relative', collapsed ? 'w-20' : 'md:w-1/3']">
-          <!-- Toggle Button -->
-          <div class="absolute -top-4 left-3 z-40">
-            <button
-              @click="toggleSidebar"
-              class="p-2 bg-white border rounded-full shadow hover:bg-gray-100"
-            >
-              <span v-if="!collapsed">✕</span>
-              <span v-else>☰</span>
-            </button>
-          </div>
+            <div class="flex gap-8 items-start">
+                <!-- Left side with cards -->
+                <div class="sticky top-24 w-5/12">
+                    <div class="space-y-8">
+                        <div v-for="(phase, index) in phases" :key="index" @click="activePhase = index"
+                            class="bg-white rounded-lg p-6 shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md"
+                            :class="activePhase === index ? 'border-2 border-blue-500' : 'border border-gray-200'">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-semibold text-lg">
+                                    <!-- Clipboard icon -->
+                                    <svg v-if="index === 0" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M9 2h6a1 1 0 011 1v2h-8V3a1 1 0 011-1zM6 6h12v14a2 2 0 01-2 2H8a2 2 0 01-2-2V6z" />
+                                    </svg>
 
-          <!-- Phase Buttons -->
-          <div class="space-y-6 pt-12">
-            <div v-for="(phase, index) in phases" :key="index" class="relative">
-              <button
-                @click="activePhase = index"
-                :class="[
-                  'transition-all duration-300 flex items-center px-5 py-6 rounded-xl cursor-pointer shadow-md border w-full hover:scale-[1.02] hover:shadow-lg',
-                  activePhase === index ? 'bg-blue-50 border-blue-500 ring-2 ring-blue-200' : 'bg-white border-gray-200',
-                  collapsed ? 'justify-center w-14 h-14 p-0 rounded-full' : ''
-                ]"
-              >
-                <div class="flex items-center gap-3 w-full">
-                  <div class="flex items-center gap-2">
-                    <div class="w-3 h-3 rounded-full" :class="activePhase >= index ? 'bg-blue-500' : 'bg-gray-300'" />
-                    <div class="text-blue-600 font-semibold text-sm">{{ index + 1 }}</div>
-                  </div>
-                  <span v-if="!collapsed" class="text-sm font-semibold text-gray-800 truncate">
-                    {{ phase.title }}
-                  </span>
+                                    <!-- People icon -->
+                                    <svg v-else-if="index === 1" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M17 20v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2M9 10a4 4 0 100-8 4 4 0 000 8zM23 20v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+                                    </svg>
+
+                                    <!-- Play icon -->
+                                    <svg v-else-if="index === 2" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 3l14 9-14 9V3z" />
+                                    </svg>
+
+                                    <!-- Chart icon -->
+                                    <svg v-else-if="index === 3" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M4 18V5a1 1 0 011-1h2v14H5a1 1 0 01-1-1zm6 0V9a1 1 0 011-1h2v10h-2a1 1 0 01-1-1zm6 0v-6a1 1 0 011-1h2v7h-2a1 1 0 01-1-1z" />
+                                    </svg>
+
+                                    <!-- Brain icon -->
+                                    <svg v-else-if="index === 4" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" style="transform: translateY(0.5px);">
+                                        <path
+                                            d="M12 2a7 7 0 00-7 7c0 2.4 1.3 4.3 2.7 6s2.3 3 2.3 4h4c0-1 .9-2.5 2.3-4s2.7-3.6 2.7-6a7 7 0 00-7-7z" />
+                                        <path d="M10 21h4" />
+                                        <path d="M10.5 22.8h3" />
+                                    </svg>
+                                </div>
+                                <h3 class="font-medium text-lg">{{ phase.title }}</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </button>
-            </div>
-          </div>
-        </div>
 
         <!-- Content Area -->
         <div :class="['transition-all duration-300', collapsed ? 'w-full' : 'md:w-2/3']">
