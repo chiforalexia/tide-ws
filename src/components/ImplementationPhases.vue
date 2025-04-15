@@ -169,8 +169,8 @@ const phases = ref([
   <div class="min-h-screen bg-gray-50 relative">
     <div class="max-w-7xl mx-auto px-4 py-12">
       <h1 class="text-4xl font-extrabold text-center mb-16 text-gray-800">
-        Microcredential Implementation Phases
-        <div class="text-xl text-blue-600 mt-2">Click a phase number or title to explore.</div>
+        Implementation Phases
+        <div class="text-xl text-blue-600 mt-2">Click to explore.</div>
       </h1>
 
       <div class="flex flex-col md:flex-row gap-10">
