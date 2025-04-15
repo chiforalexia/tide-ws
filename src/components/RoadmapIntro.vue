@@ -77,11 +77,12 @@
   import { useRouter } from 'vue-router'
   
   const steps = [
-    { id: 1, title: 'Assessment & Planning', color: 'bg-blue-100 text-blue-600' },
-    { id: 2, title: 'Stakeholder Engagement', color: 'bg-blue-100 text-blue-600' },
-    { id: 3, title: 'Pilot Implementation', color: 'bg-blue-100 text-blue-600' }, // Updated for better visibility
-    { id: 4, title: 'Full Deployment', color: 'bg-blue-100 text-blue-600' },
-    { id: 5, title: 'Evaluation & Optimization', color: 'bg-blue-100 text-blue-600 ' } // Updated for better visibility
+    { id: 1, title: 'Assessment & Readiness', color: 'bg-blue-100 text-blue-600' },
+    { id: 2, title: 'Strategic Planning', color: 'bg-blue-100 text-blue-600' },
+    { id: 3, title: 'Stakeholder Engagement', color: 'bg-blue-100 text-blue-600' },
+    { id: 4, title: 'Pilot Implementation', color: 'bg-blue-100 text-blue-600' }, // Updated for better visibility
+    { id: 5, title: 'Full Deployment', color: 'bg-blue-100 text-blue-600' },
+    { id: 6, title: 'Evaluation & Optimization', color: 'bg-blue-100 text-blue-600 ' } // Updated for better visibility
   ]
   
   const activeStep = ref(0)
