@@ -5,15 +5,12 @@
       <div class="min-h-screen">
   
         <!-- sections -->
-        <section id="process" class="pt-40">
+        <section >
           <!-- Add your process section content here -->
-           <implementationPhases />
+           <Questionnaire />
         </section>
   
-        <section id="features" class="pt-40">
-          <!-- Add your features section content here -->
-           <Template />
-        </section>
+
       </div>
     </div>
   </template>
@@ -22,20 +19,16 @@
   // Import components here
   import Navbar from '../components/Navbar.vue';
   import Footer from '../components/Footer.vue';
-  //import ImplementationPhases from '../components/ImplementationPhases.vue'
-  import Template from '../components/Template.vue';
-  import implementationPhases from '../components/implementatinphases.vue'
+  import Questionnaire from '../components/Questionaire.vue'
 
- 
   
   export default {
     name: 'RoadmapPage',
     components: { //Add components here
-      Navbar,
-      Footer,
-      //ImplementationPhases,
-      Template,
-      implementationPhases,
+        Navbar,
+        Footer,
+        Questionnaire,
+
 
     },
   };

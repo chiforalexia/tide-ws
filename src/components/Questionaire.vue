@@ -1,8 +1,8 @@
 <template>
-  <div class="container mx-auto px-4 py-16 max-w-3xl">
+  <div class="container mx-auto px-4 py-32 max-w-2xl">
     <div class="card border-purple-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
-      <div class="card-header bg-gradient-to-r from-purple-50 to-blue-50 rounded-t-lg p-6">
-        <h2 class="text-2xl text-purple-700">Your Institution Profile</h2>
+      <div class="card-header bg-gradient-to-r from-blue-300 to-blue-200 rounded-t-lg p-6">
+        <h2 class="text-2xl text-blue">Your Institution Profile</h2>
         <p class="text-gray-600">
           Tell us about your institution to receive personalized technology trend recommendations.
         </p>
@@ -20,8 +20,8 @@
         <form @submit.prevent="onSubmit" class="space-y-8">
           <!-- Institution -->
           <div class="form-item transition-all duration-300 hover:-translate-y-0.5">
-            <label class="flex items-center gap-2 text-purple-700">
-              <svg class="h-6 w-6 text-purple-500" fill="none" stroke="currentColor" stroke-width="2"
+            <label class="flex items-center gap-2 text-blue-700">
+              <svg class="h-6 w-6 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
                   viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M3 10l9-7 9 7" />
                 <path d="M4 10v10h4v-6h8v6h4V10" />
@@ -41,9 +41,9 @@
 
           <!-- Institution Size -->
           <div class="form-item space-y-3 transition-all duration-300 hover:-translate-y-0.5">
-            <label class="flex items-center gap-2 text-blue-600">
+            <label class="flex items-center gap-3 text-blue-600">
               <!-- Simplified SVG for People -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <!-- First head -->
                 <circle cx="7" cy="7" r="3" />
                 <!-- Second head -->
@@ -59,7 +59,7 @@
               <div
                 v-for="size in institutionSizes"
                 :key="size.value"
-                class="flex items-center space-x-3 rounded-md p-2 hover:bg-purple-50 transition-colors"
+                class="flex items-center space-x-3 rounded-md p-1 hover:bg-blue-50 transition-colors"
               >
                 <input
                   type="radio"
@@ -68,7 +68,7 @@
                   class="text-purple-600"
                   :id="size.value"
                 />
-                <label :for="size.value" class="text-gray-700 cursor-pointer">{{ size.label }}</label>
+                <label :for="size.value" class="text-gray-700 text-sm cursor-pointer">{{ size.label }}</label>
               </div>
             </div>
           </div>
@@ -89,7 +89,7 @@
               <div
                 v-for="item in institutionValues"
                 :key="item.id"
-                class="flex flex-row items-start space-x-3 rounded-md p-3 hover:bg-green-50 transition-colors border border-transparent hover:border-green-100"
+                class="flex flex-row items-start space-x-3 rounded-md p-3 hover:bg-blue-50 transition-colors border border-transparent hover:border-green-100"
               >
                 <input
                   type="checkbox"
@@ -97,9 +97,9 @@
                   :value="item.id"
                   :checked="form.values.includes(item.id)"
                   @change="handleCheckboxChange($event, item.id)"
-                  class="accent-green-600"
+                  class="accent-blue-600"
                 />
-                <label :for="item.id" class="text-gray-700 cursor-pointer">{{ item.label }}</label>
+                <label :for="item.id" class="text-gray-700 text-sm cursor-pointer">{{ item.label }}</label>
               </div>
             </div>
           </div>
@@ -107,7 +107,7 @@
           <!-- Submit -->
           <button
             type="submit"
-            class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+            class="w-full bg-gradient-to-r from-blue-500 to-blue-800 text-white py-2 px-4 rounded-lg hover:from-blue-800 hover:to-blue-500 transition-all duration-300 transform hover:scale-105"
             :disabled="formProgress < 100"
           >
             Get Personalized Recommendations

@@ -1,14 +1,14 @@
 <template>
-    <div class="container mx-auto px-4 py-16 max-w-5xl">
+    <div class="container mx-auto px-4 py-32 max-w-4xl">
       <!-- This is the content to export -->
       <div ref="pdfContent">
-        <div class="text-center mb-12 bg-gradient-to-r from-purple-50 to-blue-50 p-8 rounded-xl shadow-sm">
-          <h1 class="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-blue-700">
+        <div class="text-center mb-12 bg-gradient-to-r from-blue-100 to-blue-200 p-6 rounded-xl shadow-sm">
+          <h1 class="text-4xl font-bold mb-6 bg-clip-text text-blue-700">
             Your Personalized Technology Recommendations
           </h1>
   
-          <div class="bg-white p-6 rounded-lg shadow-md mb-8 max-w-3xl mx-auto">
-            <h2 class="text-xl font-semibold mb-4 text-purple-700">Your Institution Profile</h2>
+          <div class="bg-white p-6 rounded-lg shadow-md mb-8 max-w-2xl mx-auto">
+            <h2 class="text-xl font-semibold mb-4 text-blue-500">Your Institution Profile</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
               <div class="bg-purple-50 p-4 rounded-lg">
                 <p class="text-sm text-gray-500">Institution Type</p>
@@ -39,7 +39,7 @@
           </p>
         </div>
   
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
           <div
             v-for="(category, index) in techCategories"
             :key="index"
@@ -86,7 +86,7 @@
       <div class="mt-16 text-center space-y-6">
         <button
           @click="handleDownload"
-          class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transition-all transform hover:scale-105 duration-300 shadow-md text-white font-medium py-3 px-6 rounded-lg"
+          class="bg-gradient-to-r from-blue-500 to-blue-800 hover:from-blue-800 hover:to-blue-500 transition-all transform hover:scale-105 duration-300 shadow-md text-white font-medium py-3 px-6 rounded-lg"
         >
           Download Full Recommendations
         </button>
@@ -97,7 +97,7 @@
           </p>
           <router-link to="/roadmap">
             <button
-              class="mt-2 group border border-purple-200 text-purple-700 hover:bg-purple-50 font-medium py-3 px-6 rounded-lg"
+              class="mt-2 group border border-blue-200 text-blue-700 hover:bg-blue-50 font-medium py-3 px-6 rounded-lg"
             >
               View Our Complete Technology Roadmap
               <span class="ml-2 group-hover:translate-x-1 transition-transform inline-block">→</span>
@@ -241,6 +241,69 @@
   </script>
   
   <style scoped>
-  
+
+.container {
+  font-family: 'Inter', sans-serif;
+  color: #1f2937; /* Tailwind's gray-800 */
+}
+
+h1, h2, h3 {
+  color: #1e40af; /* Tailwind's blue-800 */
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.card h3 {
+  font-size: 1rem; /* smaller heading */
+  color: #334155; /* Tailwind slate-700 */
+}
+
+.card p {
+  font-size: 0.875rem;
+  color: #475569; /* Tailwind slate-600 */
+}
+
+.list-disc li {
+  font-size: 0.875rem;
+}
+
+button {
+  transition: all 0.3s ease;
+}
+
+.bg-section {
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f4ff 100%);
+}
+
+.section-card {
+  background-color: #f9fafb;
+  border: 1px solid #e2e8f0;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.tag {
+  background-color: #dbeafe;
+  color: #1e3a8a;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+
   </style>
   
