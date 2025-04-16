@@ -15,48 +15,79 @@ const progressHeight = computed(() => {
 });
 
 const phases = ref([
-  {
-    title: 'Assessment & Readiness',
-    description: 'Evaluate the current institutional landscape to determine readiness, identify gaps, and engage key stakeholders.',
-    activities: [
-      'Assess current infrastructure and capabilities',
-      'Identify key stakeholders and decision-makers',
-      'Research relevant regulations and policy considerations to ensure legal alignment and risk preparedness'
-    ],
-    resources: [
-      { title: 'Readiness Assessment Template', type: 'Document' },
-      { title: 'Stakeholder Mapping Tool', type: 'Interactive' }
-    ],
-    indicators: [
-      'Completed readiness assessment',
-      'Stakeholders identified and engaged'
-    ],
-    tips: [
-      'Start with a thorough current state assessment to identify gaps and opportunities.',
-      'Engage stakeholders early to build support and gather diverse perspectives.'
-    ],
-    prerequisites: ['None']
-  },
-  {
-    title: 'Strategic Planning',
-    description: 'Define clear goals, success metrics, and create a detailed, actionable roadmap for implementation.',
-    activities: [
-      'Define clear objectives and success metrics',
-      'Develop a comprehensive project plan with timelines'
-    ],
-    resources: [
-      { title: 'Project Planning Guide', type: 'PDF' }
-    ],
-    indicators: [
-      'Documented implementation plan',
-      'Timelines established'
-    ],
-    tips: [
-      'Tailor the implementation strategy to reflect institutional context and capacity.',
-      'Ensure the plan is flexible enough to adapt to changes during execution.'
-    ],
-    prerequisites: ['Assessment & Readiness']
-  },
+{
+  title: 'Exploration',
+  description: 'Scan the external environment and assess internal readiness to identify trends, capabilities, and stakeholder engagement opportunities.',
+  activities: [
+    'Scan the external environment for emerging trends and disruptions using tools like PESTEL, horizon scanning, and scenario planning',
+    'Explore insights from sources such as the SURF Tech Trends Report and contextualize them for your institution',
+    'Conduct a readiness/maturity assessment using innovation models (see Tidd & Bessant, Ch. 3)',
+    'Review institutional infrastructure, culture, and leadership alignment',
+    'Map key stakeholders and influencers to understand engagement needs and governance structures',
+    'Identify existing challenges and gaps in current innovation approaches'
+  ],
+  resources: [
+    { title: 'SURF Tech Trends Report', type: 'Document' },
+    { title: 'Innovation Maturity Models (Tidd & Bessant, Ch. 3)', type: 'Document' },
+    { title: 'PESTEL Analysis', type: 'Framework' },
+    { title: 'SWOT, Horizon Scanning, Scenario Planning', type: 'Framework' },
+    { title: 'Readiness Assessment Template', type: 'Document' },
+    { title: 'Stakeholder Mapping Tool', type: 'Interactive' },
+    { title: 'Foresight Framework - Context Maps (p. 60)', type: 'Perspective' },
+    { title: 'Foresight Framework - Progression Curves (p. 70)', type: 'Perspective' },
+    { title: 'Foresight Framework - Janus Cones (p. 82)', type: 'Perspective' }
+  ],
+  indicators: [
+    'Clear mapping of external trends and internal capabilities',
+    'Stakeholders identified and engaged early',
+    'Challenges and opportunities documented with supporting evidence',
+    'Readiness evaluation completed'
+  ],
+  tips: [
+    'Use both problem-push (unmet needs) and solution-pull (emerging opportunities) strategies to guide exploration.',
+    'Visual tools like Janus Cones can help frame long-term implications of current trends.',
+    'Align findings with user needs and institutional strategy to build a strong case for innovation.'
+  ],
+  prerequisites: ['None']
+},
+
+{
+  title: 'Strategic Planning',
+  description: 'Evaluate innovation options, prioritize projects, and develop a strategic, scalable plan aligned with institutional vision and capabilities.',
+  activities: [
+    'Assess innovation ideas for feasibility, impact, risk, and alignment with institutional priorities',
+    'Apply tools like cost-impact analysis and risk assessment frameworks',
+    'Select and prioritize innovation projects using tools like the Innovation Portfolio Matrix',
+    'Ensure alignment with organizational vision, capacity, and resources',
+    'Engage leadership, IT, legal, and policy stakeholders for strategic validation and long-term planning',
+    'Sharpen and communicate a compelling innovation vision using Foresight Framework tools'
+  ],
+  resources: [
+    { title: 'Innovation Portfolio Matrix (Tidd & Bessant, Ch. 4)', type: 'Framework' },
+    { title: 'Cost-Impact Mapping (Tidd & Bessant, Ch. 5)', type: 'Framework' },
+    { title: 'Decision-Making Frameworks (Scoring Matrices, MoSCoW)', type: 'Framework' },
+    { title: 'Strategic Alignment Rubrics', type: 'Document' },
+    { title: 'Foresight Framework - White Spots (p. 130)', type: 'Vision Tool' },
+    { title: 'Foresight Framework - Paper Mockups (p. 140)', type: 'Vision Tool' },
+    { title: 'Foresight Framework - Dark Horse Prototypes (p. 150)', type: 'Vision Tool' },
+    { title: 'Foresight Framework - Change Paths (p. 154)', type: 'Team Tool' },
+    { title: 'Foresight Framework - Buddy Checks (p. 174)', type: 'Team Tool' },
+    { title: 'Foresight Framework - VOICE Stars (p. 184)', type: 'Team Tool' },
+    { title: 'Foresight Framework - Crowd Clovers (p. 194)', type: 'Team Tool' }
+  ],
+  indicators: [
+    'Prioritized list of innovation projects with strategic fit',
+    'Balanced portfolio including both incremental and radical innovations',
+    'Leadership buy-in for selected innovation directions',
+    'Shared and communicated innovation vision'
+  ],
+  tips: [
+    'Use portfolio thinking to manage risk and balance innovation types.',
+    'Engage diverse stakeholders early to ensure broad support and uncover blind spots.',
+    'Align innovation planning with institutional mission, long-term goals, and capacity for change.'
+  ],
+  prerequisites: ['Assessment & Readiness']
+},
   {
     title: 'Stakeholder Engagement',
     description: 'Build support and alignment across the organization.',
@@ -84,83 +115,94 @@ const phases = ref([
     prerequisites: ['Phase 1 completion']
   },
   {
-    title: 'Pilot Implementation',
-    description: 'Test and validate the solution in a controlled environment.',
-    activities: [
-      'Identify a representative pilot setting',
-      'Configure test environment',
-      'Run pilot and provide support',
-      'Gather user feedback',
-      'Evaluate pilot outcomes'
-    ],
-    resources: [
-      { title: 'Pilot Plan Template', type: 'Document' },
-      { title: 'Training Materials', type: 'PDF' },
-      { title: 'Feedback Survey', type: 'Form' }
-    ],
-    indicators: [
-      'Pilot successfully completed',
-      'User feedback collected',
-      'Improvements identified'
-    ],
-    tips: [
-      'Choose a pilot context with practical constraints similar to the wider rollout',
-      'Document all issues and resolutions during the pilot'
-    ],
-    prerequisites: ['Phase 2 completion']
-  },
-  {
-    title: 'Full Deployment',
-    description: 'Roll out the solution across the organization.',
-    activities: [
-      'Refine and validate deployment plan',
-      'Prepare training materials',
-      'Execute rollout strategy',
-      'Track progress and issues',
-      'Activate support channels'
-    ],
-    resources: [
-      { title: 'Deployment Checklist', type: 'Document' },
-      { title: 'User Guide', type: 'PDF' },
-      { title: 'Support Documentation', type: 'Wiki' }
-    ],
-    indicators: [
-      'Full deployment completed',
-      'Users onboarded',
-      'Support system established'
-    ],
-    tips: [
-      'Plan for phased rollout to manage risk',
-      'Ensure support resources are ready before deployment'
-    ],
-    prerequisites: ['Phase 3 completion']
-  },
-  {
-    title: 'Evaluation & Optimization',
-    description: 'Assess outcomes and implement improvements.',
-    activities: [
-      'Gather metrics',
-      'Analyze performance',
-      'Identify improvements',
-      'Implement optimizations',
-      'Document lessons learned'
-    ],
-    resources: [
-      { title: 'Evaluation Framework', type: 'Template' },
-      { title: 'Analytics Dashboard', type: 'Interactive' },
-      { title: 'Improvement Log', type: 'Document' }
-    ],
-    indicators: [
-      'Performance metrics collected',
-      'Improvements implemented',
-      'Success documented'
-    ],
-    tips: [
-      'Establish clear metrics for success',
-      'Regular review and optimization cycles'
-    ],
-    prerequisites: ['Phase 4 completion']
-  }
+  title: 'Pilot Implementation',
+  description: 'Turn plans into action by testing and validating your innovation in a real-world setting, while building capacity for broader implementation.',
+  activities: [
+    'Establish an implementation team with clear roles, responsibilities, and support structures',
+    'Develop a robust implementation plan outlining activities, deadlines, responsibilities, and success indicators',
+    'Allocate necessary resources including personnel, funding, tools, and technologies',
+    'Pilot and prototype the solution in a controlled setting, balancing design fidelity with real-world flexibility',
+    'Coordinate across departments and teams to ensure seamless execution',
+    'Apply change management practices to communicate, manage resistance, and build buy-in throughout the pilot'
+  ],
+  resources: [
+    { title: 'Implementation Planning Template', type: 'Document' },
+    { title: 'Agile Sprint Board / Gantt Chart', type: 'Tool' },
+    { title: 'Pilot Evaluation Metrics', type: 'Framework' },
+    { title: 'Fidelity-Flexibility Tracker', type: 'Tool' },
+    { title: 'Change Management Toolkit', type: 'Toolkit' },
+    { title: 'Training Materials', type: 'PDF' },
+    { title: 'Feedback Survey', type: 'Form' }
+  ],
+  indicators: [
+    'Implementation team established with defined roles and responsibilities',
+    'Pilot plan documented and aligned with strategic objectives',
+    'Pilot successfully initiated with ongoing tracking and support',
+    'Feedback loops in place to capture insights and enable iterative improvements'
+  ],
+  tips: [
+    'Start small and iterate—don’t overplan the first step.',
+    'Ensure visible leadership support to drive momentum and credibility.',
+    'Capture and document quick wins to build early enthusiasm and buy-in.',
+    'Use retrospectives and pulse surveys to learn and adapt throughout the pilot phase.'
+  ],
+  prerequisites: ['Phase 2 completion']
+},
+{
+  title: 'Full Deployment',
+  description: 'Transition from implementation to sustained deployment, ensuring the solution is fully integrated and functioning across the organization.',
+  activities: [
+    'Refine and validate the deployment plan based on insights gained from the implementation phase',
+    'Prepare and finalize training materials to ensure users are equipped with the skills for successful adoption',
+    'Execute the full-scale rollout strategy, ensuring logistics such as timing, resources, and coordination are in place',
+    'Track progress and address issues through ongoing monitoring and regular feedback loops',
+    'Activate dedicated support channels to provide technical assistance, coaching, and resources for resolving challenges promptly'
+  ],
+  resources: [
+    { title: 'Deployment Checklist', type: 'Document' },
+    { title: 'User Guide', type: 'PDF' },
+    { title: 'Support Documentation', type: 'Wiki' }
+  ],
+  indicators: [
+    'Full deployment successfully completed',
+    'Users successfully onboarded and engaged',
+    'Support system and channels firmly established and operational'
+  ],
+  tips: [
+    'Consider a phased rollout to manage risks and ensure smoother transitions during deployment.',
+    'Ensure support resources, such as technical assistance and feedback mechanisms, are fully prepared before beginning full deployment.',
+    'Be proactive in addressing challenges such as training gaps, resource constraints, or scheduling conflicts to maintain momentum.'
+  ],
+  prerequisites: ['Phase 4 completion']
+},
+
+{
+  title: 'Evaluation & Optimization',
+  description: 'Assess the performance of the deployed solution, gather feedback, and optimize processes for continuous improvement and future innovation efforts.',
+  activities: [
+    'Gather key performance indicators (KPIs), user feedback, and market reception data to evaluate the solution’s impact',
+    'Conduct a detailed performance analysis, comparing outcomes with expected goals to identify strengths and areas for improvement',
+    'Identify areas for improvement based on data and insights, and pinpoint opportunities to refine or optimize the solution',
+    'Implement necessary optimizations, ensuring that improvements are effectively integrated and aligned with organizational objectives',
+    'Document lessons learned, best practices, and recommendations to inform future innovation efforts'
+  ],
+  resources: [
+    { title: 'Evaluation Framework (Template)', type: 'Template' },
+    { title: 'Analytics Dashboard (Interactive)', type: 'Tool' },
+    { title: 'Improvement Log', type: 'Document' }
+  ],
+  indicators: [
+    'Key performance metrics successfully collected and analyzed',
+    'Improvements made based on data-driven insights and feedback',
+    'Key lessons learned and successes documented for future reference'
+  ],
+  tips: [
+    'Establish clear success metrics early and ensure they align with overall organizational goals.',
+    'Set up regular review cycles and feedback loops to continuously optimize the solution.',
+    'Document key insights and improvements to build a knowledge base for future innovations and projects.'
+  ],
+  prerequisites: ['Phase 5 completion']
+}
 ]);
 
 </script>
