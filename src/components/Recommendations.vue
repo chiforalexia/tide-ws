@@ -4,7 +4,7 @@
       <div ref="pdfContent">
         <div class="text-center mb-12 bg-gradient-to-r from-purple-50 to-blue-50 p-8 rounded-xl shadow-sm">
           <h1 class="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-blue-700">
-            Your Personalized Technology Recommendations
+            Your Personalized Tech-Trend Recommendations
           </h1>
   
           <div class="bg-white p-6 rounded-lg shadow-md mb-8 max-w-3xl mx-auto">
@@ -35,7 +35,7 @@
           </div>
   
           <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Based on your profile, we've curated the following technology recommendations.
+            Based on your profile, we've curated the following recommendations.
           </p>
         </div>
   

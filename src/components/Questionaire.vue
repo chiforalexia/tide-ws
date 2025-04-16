@@ -39,6 +39,27 @@
             </p>
           </div>
 
+
+          <!-- Institution Type -->
+          <div class="form-item transition-all duration-300 hover:-translate-y-0.5">
+            <label class="flex items-center gap-2 text-purple-700">
+              <!-- Simplified Building SVG for Institution Type -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path d="M3 10V3h18v7M3 10h18v10H3z" />
+              </svg>
+              Your Institution Type
+            </label>
+            <select v-model="form.institutionType" class="input border-purple-200 focus:ring-purple-500 w-full">
+              <option disabled value="">Select your institution type</option>
+              <option v-for="item in institution_type" :key="item.value" :value="item.value">
+                {{ item.label }}
+              </option>
+            </select>
+            <p class="text-gray-500 text-sm">
+              The type of educational or research institution you represent.
+            </p>
+          </div>
+
           <!-- Institution Size -->
           <div class="form-item space-y-3 transition-all duration-300 hover:-translate-y-0.5">
             <label class="flex items-center gap-2 text-blue-600">
@@ -80,7 +101,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
               </svg>
-              Your Institution's Values
+              Values
             </label>
             <p class="text-gray-500 text-sm mb-3">
               Select the values that are most important to your institution.
@@ -132,118 +153,131 @@ export default {
 
     const form = ref({
       institution: "",
+      institutionType: "",
       size: "",
       values: [],
     });
 
     const institutions = [
-    { value: "aeres-group-groenhorst-college", label: "Aeres Group (Groenhorst College)" },
-    { value: "aeres-university-college", label: "Aeres University College" },
-    { value: "albeda-college", label: "Albeda College" },
-    { value: "amsterdam-school-of-the-arts", label: "Amsterdam School of the Arts" },
-    { value: "amsterdam-umc", label: "Amsterdam UMC" },
-    { value: "artEZ-university-for-the-arts", label: "ArtEZ University for the Arts" },
-    { value: "avans-university-of-applied-sciences", label: "Avans University of Applied Sciences" },
-    { value: "breda-university-of-applied-sciences", label: "Breda University of Applied Sciences" },
-    { value: "cibap-school-of-design", label: "CIBAP School of Design" },
-    { value: "codarts-rotterdam", label: "Codarts Rotterdam" },
-    { value: "curio", label: "Curio" },
-    { value: "da-vinci-college", label: "Da Vinci College" },
-    { value: "delft-university-of-technology", label: "Delft University of Technology" },
-    { value: "de-rooi-pannen", label: "De Rooi Pannen" },
-    { value: "design-academy-eindhoven", label: "Design Academy Eindhoven" },
-    { value: "dcterra", label: "DCTerra" },
-    { value: "deltion-college", label: "Deltion College" },
-    { value: "driestar-university-of-applied-sciences", label: "Driestar University of Applied Sciences" },
-    { value: "eindhoven-university-of-technology", label: "Eindhoven University of Technology" },
-    { value: "ede-university-of-applied-sciences", label: "Ede University of Applied Sciences" },
-    { value: "erasmus-university-medical-centre", label: "Erasmus University Medical Centre" },
-    { value: "erasmus-university-rotterdam", label: "Erasmus University Rotterdam" },
-    { value: "firda", label: "Firda" },
-    { value: "fontys-universities-of-applied-sciences", label: "Fontys Universities of Applied Sciences" },
-    { value: "gerrit-rietveld-academie", label: "Gerrit Rietveld Academie" },
-    { value: "gilde-opleidingen", label: "Gilde Opleidingen" },
-    { value: "graafschap-college", label: "Graafschap College" },
-    { value: "groningen-university-of-applied-sciences", label: "Groningen University of Applied Sciences" },
-    { value: "graphic-lyceum-rotterdam", label: "Graphic Lyceum Rotterdam" },
-    { value: "graphic-lyceum-utrecht", label: "Graphic Lyceum Utrecht" },
-    { value: "hotelschool-the-hague", label: "Hotelschool The Hague" },
-    { value: "has-university-of-applied-sciences", label: "HAS University of Applied Sciences" },
-    { value: "hz-university-of-applied-sciences", label: "HZ University of Applied Sciences" },
-    { value: "integral-cancer-centre-of-the-netherlands", label: "Integral Cancer Centre of the Netherlands" },
-    { value: "iselinge-university-of-applied-sciences", label: "Iselinge University of Applied Sciences" },
-    { value: "kempel-university-of-applied-sciences", label: "Kempel University of Applied Sciences" },
-    { value: "knmi", label: "KNMI" },
-    { value: "kpz-university-of-applied-sciences", label: "KPZ University of Applied Sciences" },
-    { value: "landstede-mbo", label: "Landstede MBO" },
-    { value: "leiden-instrumentation-school", label: "Leiden Instrumentation School" },
-    { value: "leiden-university", label: "Leiden University" },
-    { value: "leiden-university-medical-centre", label: "Leiden University Medical Centre" },
-    { value: "lentiz-onderwijsgroep", label: "Lentiz Onderwijsgroep" },
-    { value: "maastricht-university", label: "Maastricht University" },
-    { value: "maastricht-university-hospital", label: "Maastricht University Hospital" },
-    { value: "media-college-amsterdam", label: "Media College Amsterdam" },
-    { value: "marnix-academy", label: "Marnix Academy" },
-    { value: "mbo-amersfoort", label: "MBO Amersfoort" },
-    { value: "mbo-rhineland", label: "MBO Rhineland" },
-    { value: "mbo-utrecht", label: "MBO Utrecht" },
-    { value: "national-archives", label: "National Archives" },
-    { value: "netherlands-forensic-institute", label: "Netherlands Forensic Institute" },
-    { value: "netherlands-organisation-for-scientific-research", label: "Netherlands Organisation for Scientific Research" },
-    { value: "nimeto-utrecht", label: "Nimeto Utrecht" },
-    { value: "noorderpoort", label: "Noorderpoort" },
-    { value: "police-academy", label: "Police Academy" },
-    { value: "radboud-university-nijmegen", label: "Radboud University Nijmegen" },
-    { value: "radboudumc", label: "Radboudumc" },
-    { value: "roc-alfa-college", label: "ROC Alfa-college" },
-    { value: "roc-aventus", label: "ROC Aventus" },
-    { value: "roc-central-netherlands", label: "ROC Central Netherlands" },
-    { value: "roc-mondriaan", label: "ROC Mondriaan" },
-    { value: "roc-nijmegen", label: "ROC Nijmegen" },
-    { value: "roc-nova-college", label: "ROC Nova College" },
-    { value: "roc-rivor", label: "ROC Rivor" },
-    { value: "roc-van-amsterdam-flevoland", label: "ROC van Amsterdam-Flevoland" },
-    { value: "roc-of-twente", label: "ROC of Twente" },
-    { value: "royal-library", label: "Royal Library" },
-    { value: "royal-netherlands-academy-of-arts-and-sciences", label: "Royal Netherlands Academy of Arts and Sciences" },
-    { value: "rivm", label: "RIVM" },
-    { value: "saxion", label: "Saxion" },
-    { value: "scalda", label: "Scalda" },
-    { value: "sivon", label: "SIVON" },
-    { value: "sintlucas", label: "SintLucas" },
-    { value: "soma-college", label: "SOMA College" },
-    { value: "stc-group", label: "STC Group" },
-    { value: "svo-foundation-for-vocational-education", label: "SVO Foundation for Vocational Education" },
-    { value: "summa-college", label: "Summa College" },
-    { value: "talland-college", label: "Talland College" },
-    { value: "the-hague-university-of-applied-sciences", label: "The Hague University of Applied Sciences" },
-    { value: "ter-aa", label: "Ter AA" },
-    { value: "tno", label: "TNO" },
-    { value: "university-for-humanistics", label: "University for Humanistics" },
-    { value: "university-of-amsterdam", label: "University of Amsterdam" },
-    { value: "university-of-applied-sciences-amsterdam", label: "University of Applied Sciences Amsterdam" },
-    { value: "university-of-applied-sciences-inholland", label: "University of Applied Sciences Inholland" },
-    { value: "university-of-applied-sciences-ipabo", label: "University of Applied Sciences iPabo" },
-    { value: "university-of-applied-sciences-leiden", label: "University of Applied Sciences Leiden" },
-    { value: "university-of-applied-sciences-rotterdam", label: "University of Applied Sciences Rotterdam" },
-    { value: "university-of-applied-sciences-utrecht", label: "University of Applied Sciences Utrecht" },
-    { value: "university-of-applied-sciences-viaa", label: "University of Applied Sciences Viaa" },
-    { value: "university-of-arnhem-and-nijmegen", label: "University of Arnhem and Nijmegen" },
-    { value: "university-of-groningen", label: "University of Groningen" },
-    { value: "university-of-twente", label: "University of Twente" },
-    { value: "utrecht-school-of-the-arts", label: "Utrecht School of the Arts" },
-    { value: "utrecht-university", label: "Utrecht University" },
-    { value: "van-hall-larenstein-university-of-applied-sciences", label: "Van Hall Larenstein University of Applied Sciences" },
-    { value: "windesheim", label: "Windesheim" },
-    { value: "willem-i-college", label: "Willem I College" },
-    { value: "wood-and-furnishings-college", label: "Wood and Furnishings College" },
-    { value: "yonder", label: "Yonder" },
-    { value: "yuverta", label: "Yuverta" },
-    { value: "zadkine", label: "Zadkine" },
-    { value: "zonmw", label: "ZonMw" },
-    { value: "zone-college", label: "Zone.College" },
-    { value: "zuyd-university-of-applied-sciences", label: "Zuyd University of Applied Sciences" }
+      { value: "aeres-group-groenhorst-college", label: "Aeres Group (Groenhorst College)" },
+      { value: "aeres-group-groenhorst-college", label: "Aeres Group (Groenhorst College)" },
+      { value: "aeres-university-college", label: "Aeres University College" },
+      { value: "albeda-college", label: "Albeda College" },
+      { value: "amsterdam-school-of-the-arts", label: "Amsterdam School of the Arts" },
+      { value: "amsterdam-umc", label: "Amsterdam UMC" },
+      { value: "artEZ-university-for-the-arts", label: "ArtEZ University for the Arts" },
+      { value: "avans-university-of-applied-sciences", label: "Avans University of Applied Sciences" },
+      { value: "breda-university-of-applied-sciences", label: "Breda University of Applied Sciences" },
+      { value: "cibap-school-of-design", label: "CIBAP School of Design" },
+      { value: "codarts-rotterdam", label: "Codarts Rotterdam" },
+      { value: "curio", label: "Curio" },
+      { value: "da-vinci-college", label: "Da Vinci College" },
+      { value: "delft-university-of-technology", label: "Delft University of Technology" },
+      { value: "de-rooi-pannen", label: "De Rooi Pannen" },
+      { value: "design-academy-eindhoven", label: "Design Academy Eindhoven" },
+      { value: "dcterra", label: "DCTerra" },
+      { value: "deltion-college", label: "Deltion College" },
+      { value: "driestar-university-of-applied-sciences", label: "Driestar University of Applied Sciences" },
+      { value: "eindhoven-university-of-technology", label: "Eindhoven University of Technology" },
+      { value: "ede-university-of-applied-sciences", label: "Ede University of Applied Sciences" },
+      { value: "erasmus-university-medical-centre", label: "Erasmus University Medical Centre" },
+      { value: "erasmus-university-rotterdam", label: "Erasmus University Rotterdam" },
+      { value: "firda", label: "Firda" },
+      { value: "fontys-universities-of-applied-sciences", label: "Fontys Universities of Applied Sciences" },
+      { value: "gerrit-rietveld-academie", label: "Gerrit Rietveld Academie" },
+      { value: "gilde-opleidingen", label: "Gilde Opleidingen" },
+      { value: "graafschap-college", label: "Graafschap College" },
+      { value: "groningen-university-of-applied-sciences", label: "Groningen University of Applied Sciences" },
+      { value: "graphic-lyceum-rotterdam", label: "Graphic Lyceum Rotterdam" },
+      { value: "graphic-lyceum-utrecht", label: "Graphic Lyceum Utrecht" },
+      { value: "hotelschool-the-hague", label: "Hotelschool The Hague" },
+      { value: "has-university-of-applied-sciences", label: "HAS University of Applied Sciences" },
+      { value: "hz-university-of-applied-sciences", label: "HZ University of Applied Sciences" },
+      { value: "integral-cancer-centre-of-the-netherlands", label: "Integral Cancer Centre of the Netherlands" },
+      { value: "iselinge-university-of-applied-sciences", label: "Iselinge University of Applied Sciences" },
+      { value: "kempel-university-of-applied-sciences", label: "Kempel University of Applied Sciences" },
+      { value: "knmi", label: "KNMI" },
+      { value: "kpz-university-of-applied-sciences", label: "KPZ University of Applied Sciences" },
+      { value: "landstede-mbo", label: "Landstede MBO" },
+      { value: "leiden-instrumentation-school", label: "Leiden Instrumentation School" },
+      { value: "leiden-university", label: "Leiden University" },
+      { value: "leiden-university-medical-centre", label: "Leiden University Medical Centre" },
+      { value: "lentiz-onderwijsgroep", label: "Lentiz Onderwijsgroep" },
+      { value: "maastricht-university", label: "Maastricht University" },
+      { value: "maastricht-university-hospital", label: "Maastricht University Hospital" },
+      { value: "media-college-amsterdam", label: "Media College Amsterdam" },
+      { value: "marnix-academy", label: "Marnix Academy" },
+      { value: "mbo-amersfoort", label: "MBO Amersfoort" },
+      { value: "mbo-rhineland", label: "MBO Rhineland" },
+      { value: "mbo-utrecht", label: "MBO Utrecht" },
+      { value: "national-archives", label: "National Archives" },
+      { value: "netherlands-forensic-institute", label: "Netherlands Forensic Institute" },
+      { value: "netherlands-organisation-for-scientific-research", label: "Netherlands Organisation for Scientific Research" },
+      { value: "nimeto-utrecht", label: "Nimeto Utrecht" },
+      { value: "noorderpoort", label: "Noorderpoort" },
+      { value: "police-academy", label: "Police Academy" },
+      { value: "radboud-university-nijmegen", label: "Radboud University Nijmegen" },
+      { value: "radboudumc", label: "Radboudumc" },
+      { value: "roc-alfa-college", label: "ROC Alfa-college" },
+      { value: "roc-aventus", label: "ROC Aventus" },
+      { value: "roc-central-netherlands", label: "ROC Central Netherlands" },
+      { value: "roc-mondriaan", label: "ROC Mondriaan" },
+      { value: "roc-nijmegen", label: "ROC Nijmegen" },
+      { value: "roc-nova-college", label: "ROC Nova College" },
+      { value: "roc-rivor", label: "ROC Rivor" },
+      { value: "roc-van-amsterdam-flevoland", label: "ROC van Amsterdam-Flevoland" },
+      { value: "roc-of-twente", label: "ROC of Twente" },
+      { value: "royal-library", label: "Royal Library" },
+      { value: "royal-netherlands-academy-of-arts-and-sciences", label: "Royal Netherlands Academy of Arts and Sciences" },
+      { value: "rivm", label: "RIVM" },
+      { value: "saxion", label: "Saxion" },
+      { value: "scalda", label: "Scalda" },
+      { value: "sivon", label: "SIVON" },
+      { value: "sintlucas", label: "SintLucas" },
+      { value: "soma-college", label: "SOMA College" },
+      { value: "stc-group", label: "STC Group" },
+      { value: "svo-foundation-for-vocational-education", label: "SVO Foundation for Vocational Education" },
+      { value: "summa-college", label: "Summa College" },
+      { value: "talland-college", label: "Talland College" },
+      { value: "the-hague-university-of-applied-sciences", label: "The Hague University of Applied Sciences" },
+      { value: "ter-aa", label: "Ter AA" },
+      { value: "tno", label: "TNO" },
+      { value: "university-for-humanistics", label: "University for Humanistics" },
+      { value: "university-of-amsterdam", label: "University of Amsterdam" },
+      { value: "university-of-applied-sciences-amsterdam", label: "University of Applied Sciences Amsterdam" },
+      { value: "university-of-applied-sciences-inholland", label: "University of Applied Sciences Inholland" },
+      { value: "university-of-applied-sciences-ipabo", label: "University of Applied Sciences iPabo" },
+      { value: "university-of-applied-sciences-leiden", label: "University of Applied Sciences Leiden" },
+      { value: "university-of-applied-sciences-rotterdam", label: "University of Applied Sciences Rotterdam" },
+      { value: "university-of-applied-sciences-utrecht", label: "University of Applied Sciences Utrecht" },
+      { value: "university-of-applied-sciences-viaa", label: "University of Applied Sciences Viaa" },
+      { value: "university-of-arnhem-and-nijmegen", label: "University of Arnhem and Nijmegen" },
+      { value: "university-of-groningen", label: "University of Groningen" },
+      { value: "university-of-twente", label: "University of Twente" },
+      { value: "utrecht-school-of-the-arts", label: "Utrecht School of the Arts" },
+      { value: "utrecht-university", label: "Utrecht University" },
+      { value: "van-hall-larenstein-university-of-applied-sciences", label: "Van Hall Larenstein University of Applied Sciences" },
+      { value: "windesheim", label: "Windesheim" },
+      { value: "willem-i-college", label: "Willem I College" },
+      { value: "wood-and-furnishings-college", label: "Wood and Furnishings College" },
+      { value: "yonder", label: "Yonder" },
+      { value: "yuverta", label: "Yuverta" },
+      { value: "zadkine", label: "Zadkine" },
+      { value: "zonmw", label: "ZonMw" },
+      { value: "zone-college", label: "Zone.College" },
+      { value: "zuyd-university-of-applied-sciences", label: "Zuyd University of Applied Sciences" }
 
+
+
+    ];
+
+    const institution_type = [
+      { value: "university", label: "University" },
+      { value: "college", label: "College" },
+      { value: "mbo", label: "Mbo" },
+      { value: "umc", label: "Umc" },
+      { value: "research", label: "Research" },
+      { value: "other", label: "Other" },
     ];
 
     const institutionSizes = [
@@ -261,9 +295,10 @@ export default {
 
     const formProgress = computed(() => {
       let progress = 0;
-      if (form.value.institution) progress += 33;
-      if (form.value.size) progress += 33;
-      if (form.value.values.length > 0) progress += 34;
+      if (form.value.institution) progress += 25;
+      if (form.value.institutionType) progress += 25;
+      if (form.value.size) progress += 25;
+      if (form.value.values.length > 0) progress += 25;
       return progress;
     });
 
@@ -287,6 +322,7 @@ export default {
       formProgress,
       onSubmit,
       institutions,
+      institution_type,
       institutionSizes,
       institutionValues,
       handleCheckboxChange,
