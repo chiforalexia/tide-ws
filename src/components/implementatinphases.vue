@@ -2,7 +2,7 @@
 import { ref, computed} from 'vue';
 
 const activePhase = ref(0);
-const collapsed = ref(false);
+const collapsed = ref(true);
 const totalPhases = 6;
 
 const toggleSidebar = () => {
@@ -203,146 +203,155 @@ const phases = ref([
 </script>
 
 <template>
-  <div class="min-h-screen bg-gray-50 relative">
-    <div class="max-w-7xl mx-auto px-4 py-12">
-      <h1 class="text-4xl font-extrabold text-center mb-16 text-gray-800">
-        Implementation Phases
-        <div class="text-xl text-blue-600 mt-2">Click to explore.</div>
-      </h1>
+  <div>
+    <!-- Header -->
+    <h1 class="text-4xl font-extrabold text-center mb-4 text-gray-800">
+      Implementation Phases
+      <div class="text-xl text-blue-600 mt-2">Click to explore.</div>
+    </h1>
 
-      <div class="flex flex-col md:flex-row gap-10">
-        <!-- Sidebar -->
-        <div :class="['transition-all duration-300 relative', collapsed ? 'w-20' : 'md:w-1/3']">
-          <!-- Toggle Button -->
-          <div class="absolute -top-4 left-3 z-40">
-            <button
-              @click="toggleSidebar"
-              class="p-2 bg-white border rounded-full shadow hover:bg-gray-100"
-            >
-              <span v-if="!collapsed">✕</span>
-              <span v-else>☰</span>
-            </button>
-          </div>
+    <div class="min-h-screen bg-gray-50 flex">
+      <!-- Sidebar (phase menu) -->
 
-          <!-- Phase Buttons -->
-          <div class="space-y-6 pt-12">
-            <div v-for="(phase, index) in phases" :key="index" class="relative">
-              <button
-                @click="activePhase = index"
-                :class="[
-                  'transition-all duration-300 flex items-center px-5 py-6 rounded-xl cursor-pointer shadow-md border w-3/4 hover:scale-[1.02] hover:shadow-lg',
-                  activePhase === index ? 'bg-blue-50 border-blue-500 ring-2 ring-blue-200' : 'bg-white border-gray-200',
-                  collapsed ? 'justify-center w-14 h-14 p-0 w-full rounded-full' : ''
-                ]"
-              >
-                <div class="flex items-center gap-3 w-full">
-                  <div class="flex items-center gap-2">
-                    <div class="w-3 h-3 rounded-full" :class="activePhase >= index ? 'bg-blue-500' : 'bg-gray-300'" />
-                    <div class="text-blue-600 font-semibold qtext-sm">{{ index + 1 }}</div>
-                  </div>
-                  <span v-if="!collapsed" class="text-sm font-semibold text-gray-800 truncate">
-                    {{ phase.title }}
-                  </span>
-                </div>
-              </button>
-            </div>
-          </div>
+      <div
+        :class="[
+          'transition-all duration-500 relative bg-white border-r border-gray-200',
+          collapsed ? 'w-20' : 'w-72',
+          'group',  /* Add group class for hover detection */
+        ]"
+        @mouseover="collapsed = false"
+        @mouseleave="collapsed = true"
+      >
+              <!-- Always-visible Toggle Button -->
+              <div class="absolute top-3 left-5 z-40">
+          <button
+            @click="toggleSidebar"
+            class="p-2 bg-white border rounded-full shadow hover:bg-gray-100"
+          >
+            <span v-if="!collapsed">✕</span>
+            <span v-else>☰</span>
+          </button>
         </div>
 
-        <!-- Content Area -->
-        <div :class="['transition-all duration-300', collapsed ? 'w-full' : 'md:w-full']">
-          <transition name="fade" mode="out-in">
-            <div
-              :key="activePhase"
-              id="phase-content"
-              class="bg-white rounded-2xl p-10 shadow-xl border border-gray-100 transition-all duration-500 hover:shadow-2xl"
+        <!-- Phase Buttons -->
+        <div class="space-y-6 pt-10 pl-4 pr-2">
+          <div v-for="(phase, index) in phases" :key="index">
+            <button
+              @click="activePhase = index"
+              :class="[
+                'transition-all duration-300 flex items-center px-3 py-3 rounded-xl cursor-pointer shadow-md border w-full hover:scale-[1.02] hover:shadow-lg',
+                activePhase === index ? 'bg-blue-50 border-blue-500 ring-2 ring-blue-200' : 'bg-white border-gray-200',
+                collapsed ? 'justify-center w-10 h-10 p-0 rounded-full' : ''
+              ]"
             >
-              <h2 class="text-3xl font-bold mb-4 text-blue-700">
-                {{ phases[activePhase].title }}
-              </h2>
-              <p class="text-gray-600 mb-8 text-lg">{{ phases[activePhase].description }}</p>
-              <div class="grid md:grid-cols-3 gap-8">
-                
-                <!-- Left column: Activities, Indicators, Tips -->
-                <div class="md:col-span-2 space-y-10">
-                    <!-- Activities -->
+              <div class="flex items-center gap-3 w-full">
+                <div class="flex items-center gap-2">
+                  <div class="w-3 h-3 rounded-full" :class="activePhase >= index ? 'bg-blue-500' : 'bg-gray-300'" />
+                  <div class="text-blue-600 font-semibold text-sm">{{ index + 1 }}</div>
+                </div>
+                <span v-if="!collapsed" class="text-sm font-semibold text-gray-800 truncate">
+                  {{ phase.title }}
+                </span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="flex-1 px-8 py-12">
+        <div class="max-w-6xl mx-auto">
+          <div :class="['transition-all duration-300', collapsed ? 'w-full' : 'md:w-full']">
+            <transition name="fade" mode="out-in">
+              <div
+                :key="activePhase"
+                id="phase-content"
+                class="bg-white rounded-xl p-10 shadow-xl border border-gray-100 transition-all duration-500 hover:shadow-2xl"
+              >
+                <h2 class="text-3xl font-bold mb-4 text-blue-700">
+                  {{ phases[activePhase].title }}
+                </h2>
+                <p class="text-gray-600 mb-8 text-lg">{{ phases[activePhase].description }}</p>
+                <div class="grid md:grid-cols-3 gap-8">
+                  <!-- Left column: Activities, Indicators, Tips -->
+                  <div class="md:col-span-2 space-y-10">
                     <div>
-                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Key Activities</h3>
-                    <ul class="space-y-4">
+                      <h3 class="text-xl font-semibold mb-4 text-gray-800">Key Activities</h3>
+                      <ul class="space-y-4">
                         <li
-                        v-for="(activity, i) in phases[activePhase].activities"
-                        :key="i"
-                        class="flex items-start gap-3"
+                          v-for="(activity, i) in phases[activePhase].activities"
+                          :key="i"
+                          class="flex items-start gap-3"
                         >
-                        <span
+                          <span
                             class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 text-sm font-bold"
-                        >
+                          >
                             {{ i + 1 }}
-                        </span>
-                        <span class="text-gray-700">{{ activity }}</span>
+                          </span>
+                          <span class="text-gray-700">{{ activity }}</span>
                         </li>
-                    </ul>
+                      </ul>
                     </div>
 
                     <!-- Indicators -->
                     <div>
-                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Success Indicators</h3>
-                    <ul class="space-y-3">
+                      <h3 class="text-xl font-semibold mb-4 text-gray-800">Success Indicators</h3>
+                      <ul class="space-y-3">
                         <li
-                        v-for="(indicator, i) in phases[activePhase].indicators"
-                        :key="i"
-                        class="flex items-center gap-3"
+                          v-for="(indicator, i) in phases[activePhase].indicators"
+                          :key="i"
+                          class="flex items-center gap-3"
                         >
-                        <svg
+                          <svg
                             class="w-6 h-6 text-green-500"
                             fill="currentColor"
                             viewBox="0 0 20 20"
-                        >
+                          >
                             <path
-                            fill-rule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                            clip-rule="evenodd"
+                              fill-rule="evenodd"
+                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                              clip-rule="evenodd"
                             />
-                        </svg>
-                        <span class="text-gray-700">{{ indicator }}</span>
+                          </svg>
+                          <span class="text-gray-700">{{ indicator }}</span>
                         </li>
-                    </ul>
+                      </ul>
                     </div>
 
                     <!-- Tips -->
                     <div>
-                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Implementation Tips</h3>
-                    <ul class="space-y-3">
+                      <h3 class="text-xl font-semibold mb-4 text-gray-800">Implementation Tips</h3>
+                      <ul class="space-y-3">
                         <li
-                        v-for="(tip, i) in phases[activePhase].tips"
-                        :key="i"
-                        class="flex items-start gap-3"
+                          v-for="(tip, i) in phases[activePhase].tips"
+                          :key="i"
+                          class="flex items-start gap-3"
                         >
-                        <span class="text-blue-500 text-xl leading-none">•</span>
-                        <span class="text-gray-700">{{ tip }}</span>
+                          <span class="text-blue-500 text-xl leading-none">•</span>
+                          <span class="text-gray-700">{{ tip }}</span>
                         </li>
-                    </ul>
+                      </ul>
                     </div>
-                </div>
+                  </div>
 
-                <!-- Right column: Resources -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-lg border border-blue-200 h-fit">
+                  <!-- Right column: Resources -->
+                  <div class="bg-gray-50 p-6 rounded-xl shadow-lg border border-blue-200 h-fit">
                     <h3 class="text-2xl font-semibold mb-6 text-gray-800">Resources</h3>
                     <div class="space-y-4">
-                    <div
+                      <div
                         v-for="(resource, i) in phases[activePhase].resources"
                         :key="i"
                         class="bg-white p-4 rounded-lg border hover:shadow transition duration-300"
-                    >
+                      >
                         <h4 class="font-medium text-gray-800">{{ resource.title }}</h4>
                         <p class="text-sm text-gray-500">{{ resource.type }}</p>
+                      </div>
                     </div>
-                    </div>
+                  </div>
                 </div>
-                </div>
-
-            </div>
-          </transition>
+              </div>
+            </transition>
+          </div>
         </div>
       </div>
     </div>
@@ -352,10 +361,22 @@ const phases = ref([
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.4s ease;
+  transition: opacity 0.7s ease;
 }
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+.sidebar {
+  transition: width 0.7s ease;
+}
+
+.sidebar:hover {
+  width: 18rem !important;
+}
+
+.space-y-6 {
+  padding-top: 4rem; /* Adjust this to lower the menu */
 }
 </style>
