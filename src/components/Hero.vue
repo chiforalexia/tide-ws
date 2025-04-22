@@ -7,7 +7,7 @@
       </div>
 
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 transition-all duration-700 opacity-100 translate-y-0 delay-100">
-        Your Roadmap to Successful <span class="text-blue-600">Technology Integration</span>
+        Your Roadmap  <span class="text-blue-600">into the Futureq</span>
       </h1>
 
       <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto transition-all duration-700 opacity-100 translate-y-0 delay-200">
@@ -15,11 +15,11 @@
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 transition-all duration-700 opacity-100 translate-y-0 delay-300">
-        <router-link to="/roadmap" class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-full">
-            Explore Roadmap
+        <router-link to="/questionnaire" class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-full">
+          Personalize your Report
         </router-link>
-        <router-link to="/success-stories" class="border-blue-600 text-blue-600 hover:bg-blue-50 py-3 px-8 rounded-full border-2">
-          See Success Stories
+        <router-link to="/roadmap" class="border-blue-600 text-blue-600 hover:bg-blue-50 py-3 px-8 rounded-full border-2">
+          Explore the Roadmap
         </router-link>
         <!-- <button class="">See Success Stories</button> -->
       </div>
