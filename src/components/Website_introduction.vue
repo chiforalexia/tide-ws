@@ -86,7 +86,7 @@ export default {
   
       <!-- Bubble -->
       <div class="transition-all duration-700 delay-500 opacity-100">
-        <a href="#chapters" class="inline-flex items-center animate-bounce bg-blue-100 text-blue-800 px-3 py-1.5 rounded-full text-sm font-medium hover:bg-green-200 transition">
+        <a href="#chapters" class="inline-flex items-center animate-bounce bg-blue-100 text-blue-800 px-3 py-1.5 rounded-full text-sm font-medium hover:bg-blue-200 transition">
           <span class="mr-2">Translate your vision into real impact</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
               class="w-4 h-4 animate-bounce">
