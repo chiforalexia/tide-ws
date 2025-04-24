@@ -8,13 +8,20 @@ import SuccessStoriesPage from './pages/SuccessStoriesPage.vue';
 import QuestionnairePage from './pages/QuestionnairePage.vue';
 import Recommendations from './components/Recommendations.vue';
 
+import MockSurvey from './survey/mock-survey.vue';
+import MockResult from './survey/mock-result.vue';
+
+
 // Define the routes
 const routes = [
   { path: '/', component: LandingPage },  // Landing page route
   { path: '/roadmap', component: RoadmapPage },  // Roadmap page route
   { path: '/success-stories', component: SuccessStoriesPage }, // Success stories page route
   { path: '/questionnaire', component: QuestionnairePage }, // Questionnaire page route
-  { path: '/recommendations', component: Recommendations } // Recommendations page route
+  { path: '/recommendations', component: Recommendations }, // Recommendations page route
+
+  { path: '/mock-survey', component: MockSurvey },
+  { path: '/mock-result', component: MockResult }
 ];
 
 // Create the router instance
