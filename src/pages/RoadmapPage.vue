@@ -22,14 +22,8 @@
   // Import components here
   import Navbar from '../components/Navbar.vue';
   import Footer from '../components/Footer.vue';
-<<<<<<< Updated upstream
   import ImplementationPhases from '../components/ImplementationPhases.vue'
-  import Template from '../components/Template.vue';
-=======
-  //import ImplementationPhases from '../components/ImplementationPhases.vue'
   //import Template from '../components/Template.vue';
-  import implementationPhases from '../components/implementatinphases.vue'
->>>>>>> Stashed changes
 
  
   
@@ -38,13 +32,8 @@
     components: { //Add components here
       Navbar,
       Footer,
-<<<<<<< Updated upstream
-      ImplementationPhases,
-      Template,
-=======
       //Template,
-      implementationPhases,
->>>>>>> Stashed changes
+      ImplementationPhases,
 
     },
   };

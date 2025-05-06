@@ -274,11 +274,11 @@ const setHovered = (section: Section, value: boolean) => {
                 class="w-full h-full object-cover transition-transform duration-300"
                 :class="{ 'scale-110': section.hovered }"
               />
-              <!-- Black overlay
-              <div 
-                class="absolute inset-0 bg-black transition-opacity duration-300"
-                :class="section.hovered ? 'opacity-70' : 'opacity-50'"
-              ></div>-->
+              <!-- Black overlay hover -->
+              <div
+                class="absolute inset-0 bg-black transition-all duration-300 ease-in-out"
+                :class="section.hovered ? 'opacity-40' : 'opacity-10'"
+              ></div>
               
               <!-- Gradient fade overlay -->
               <div 
