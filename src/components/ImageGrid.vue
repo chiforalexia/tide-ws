@@ -291,17 +291,17 @@ const setHovered = (section: Section, value: boolean) => {
             <!-- Content block that slides up -->
             <div 
               class="absolute inset-x-0 bottom-0 transform transition-all duration-300"
-              :class="section.hovered ? 'translate-y-0' : 'translate-y-8'"
+              :class="section.hovered ? 'translate-y-1' : 'translate-y-8'"
             >
               <!-- Content -->
-              <div class="px-6 py-4">
+              <div class="px-6 py-3">
                 <h3 class="text-white text-xl md:text-2xl font-bold mb-7">{{ section.title }}</h3>
                 <!-- Subtitle and description - only visible on hover -->
                 <div 
                   class="overflow-hidden transition-all duration-300"
                   :class="section.hovered ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'"
                 >
-                  <p class="text-white text-sm mb-4">{{ section.description }}</p>
+                  <p class="text-white text-sm mb-2">{{ section.description }}</p>
                   <div class="text-right">
                     <button class="px-2 py-2 border-2 border-white text-white rounded-full bg-transparent hover:bg-white hover:text-black transition-colors duration-300"
                     >
