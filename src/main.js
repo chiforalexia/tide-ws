@@ -5,12 +5,17 @@ import { createRouter, createWebHistory } from 'vue-router';  // Import Vue Rout
 import RoadmapPage from './pages/RoadmapPage.vue';  // Import other pages
 import LandingPage from './pages/LandingPage.vue';
 import SuccessStoriesPage from './pages/SuccessStoriesPage.vue';
+import SurveyPage from './survey/survey.vue';
+import ResultPage from './survey/result.vue';
+
 
 // Define the routes
 const routes = [
   { path: '/', component: LandingPage },  // Landing page route
   { path: '/roadmap', component: RoadmapPage },  // Roadmap page route
-  { path: '/success-stories', component: SuccessStoriesPage } // Success stories page route
+  { path: '/success-stories', component: SuccessStoriesPage }, // Success stories page route
+  { path: '/survey', component: SurveyPage }, // Survey page route
+  { path: '/result', component: ResultPage }, // Result page route
 ];
 
 // Create the router instance

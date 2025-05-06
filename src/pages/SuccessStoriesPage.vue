@@ -21,12 +21,11 @@
   
   <script>
   // Import components here
-  import Navbar from '../components/Navbar.vue';
-  import Footer from '../components/Footer.vue';
-  import SuccessStories from '../components/SuccessStories.vue';
-  import RoadmapTemplate from '../components/Roadmap-template.vue';
+  import Navbar from '../components/common/Navbar.vue';
+  import Footer from '../components/common/Footer.vue';
+  import SuccessStories from '../components/succes_stories/SuccessStories.vue';
+  import RoadmapTemplate from '../components/succes_stories/RoadmapTemplate.vue';
 
-  
   export default {
     name: 'SuccessStoriesPage',
     components: { //Add components here
