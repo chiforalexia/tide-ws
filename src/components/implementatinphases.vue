@@ -23,84 +23,99 @@ const phases = ref([
     ],
     stakeholderEngagement: `Use the Stakeholder Mapping Tool to identify influence patterns and engagement priorities. Bring diverse voices into exploration workshops to build momentum and trust from the start.`,
     resources: [
-  {
-    title: 'SURF Tech Trends Report',
-    type: 'Document',
-    description: 'This report provides an in-depth analysis of emerging technologies. Use it to spark discussions on future possibilities and inform strategic decisions.',
-    tips: [
-      'Leverage this as a conversation starter during strategic meetings or innovation sessions.',
-      'Use it to identify new technology opportunities and assess how they could impact your industry in the next 3-5 years.',
-      'Regularly review and share it with leadership teams to ensure your organization stays aligned with global trends.'
+      {
+        title: 'SURF Tech Trends Report',
+        type: 'Document',
+        description: 'This report provides an in-depth analysis of emerging technologies. Use it to spark discussions on future possibilities and inform strategic decisions.',
+        tips: [
+          'Leverage this as a conversation starter during strategic meetings or innovation sessions.',
+          'Use it to identify new technology opportunities and assess how they could impact your industry in the next 3-5 years.',
+          'Regularly review and share it with leadership teams to ensure your organization stays aligned with global trends.'
+        ],
+        url: '/resources/surf-tech-trends.pdf',
+        time: '3 hours',
+        people: 'Individual or small strategy team (1–3 people)',
+        exampleimage: '/public/forecasting_funnel.png',
+        citation: 'This resource is from ...'
+      },
+      {
+        title: 'Innovation Maturity Models (Tidd & Bessant, Ch. 3)',
+        type: 'Document',
+        description: 'This tool helps evaluate how ready your organization is for innovation and change. Use it to assess strengths and weaknesses before launching new projects.',
+        tips: [
+          'Apply it before launching new initiatives to understand where your organization stands and what needs improvement.',
+          'Use it to create an innovation action plan with targeted improvements in leadership, culture, and processes.',
+          'Revisit periodically to measure progress and realign your innovation strategies.'
+        ],
+        url: '/resources/maturity-models.pdf',
+        time: '2 hours',
+        people: 'Leadership team or innovation office (2–4 people)'
+      },
+      {
+        title: 'PESTEL Analysis',
+        type: 'Framework',
+        tips: [
+          'Conduct a PESTEL analysis at the start of a new strategic planning cycle.',
+          'Integrate this tool into your risk management processes to anticipate potential challenges.',
+          'Use it alongside SWOT analysis for a more comprehensive view of both internal and external factors.'
+        ],
+        url: '/resources/pestel-analysis.pdf',
+        time: '1.5–2 hours',
+        people: 'Cross-functional team (3–5 people)'
+      },
+      {
+        title: 'SWOT, Horizon Scanning, Scenario Planning',
+        type: 'Framework',
+        description: 'These frameworks are designed to surface external signals and pressures, enabling you to plan for multiple future scenarios. Great for brainstorming and visioning in group settings.',
+        tips: [
+          'Use SWOT to assess internal capabilities and external threats.',
+          'Conduct Horizon Scanning regularly to identify emerging trends and weak signals that could disrupt your strategy.',
+          'Implement Scenario Planning workshops to help teams think creatively about various future possibilities and develop flexible strategies.'
+        ],
+        url: '/resources/scenario-tools.pdf',
+        time: '3–5 hours (depending on depth)',
+        people: 'Workshop group (5–8 people)'
+      },
+      {
+        title: 'Readiness Assessment Template',
+        type: 'Document',
+        description: 'This template helps assess your organization’s preparedness for change across key dimensions. Ideal for planning major organizational shifts or new initiatives.',
+        tips: [
+          'Use this template when planning any major transformation, whether adopting new technology or shifting organizational culture.',
+          'Gather input from key stakeholders to get a comprehensive view of organizational readiness.',
+          'Reassess readiness periodically as part of your change management strategy.'
+        ],
+        url: '/resources/readiness-assessment-template.pdf',
+        time: '2–3 hours',
+        people: 'Change management team or leadership (3–6 people)'
+      },
+      {
+        title: 'Stakeholder Mapping Tool',
+        type: 'Interactive',
+        description: 'This tool helps you map stakeholder relationships and their engagement pathways. Essential for ensuring alignment and fostering effective communication during complex projects.',
+        tips: [
+          'Use it in the early stages of project planning to identify and categorize key stakeholders.',
+          'Regularly update the map as stakeholder dynamics evolve, ensuring continuous engagement and buy-in.',
+          'Leverage it for risk management by identifying stakeholders who could be sources of support or opposition.'
+        ],
+        url: '/resources/stakeholder-mapping-tool.html',
+        time: '1.5 hours',
+        people: 'Project lead + team (2–4 people)'
+      },
+      {
+        title: 'Foresight Framework – Context Maps / Progression Curves / Janus Cones',
+        type: 'Perspective',
+        description: 'These perspective tools allow you to map broad trends and visualize how signals might evolve into future scenarios. Great for making informed long-term strategic decisions.',
+        tips: [
+          'Use Context Maps to visualize how various signals (social, technological, environmental) interconnect and influence each other.',
+          'Apply Progression Curves to anticipate the development trajectory of trends or technologies.',
+          'Use Janus Cones during scenario planning to explore alternative futures and the range of possible outcomes for your business.'
+        ],
+        url: '/resources/foresight-framework-tools.pdf',
+        time: '3–4 hours',
+        people: 'Foresight or strategic planning group (3–6 people)'
+      }
     ],
-    url: '/resources/surf-tech-trends.pdf'
-  },
-  {
-    title: 'Innovation Maturity Models (Tidd & Bessant, Ch. 3)',
-    type: 'Document',
-    description: 'This tool helps evaluate how ready your organization is for innovation and change. Use it to assess strengths and weaknesses before launching new projects.',
-    tips: [
-      'Apply it before launching new initiatives to understand where your organization stands and what needs improvement.',
-      'Use it to create an innovation action plan with targeted improvements in leadership, culture, and processes.',
-      'Revisit periodically to measure progress and realign your innovation strategies.'
-    ],
-    url: '/resources/maturity-models.pdf'
-  },
-  {
-    title: 'PESTEL Analysis',
-    type: 'Framework',
-    tips: [
-      'Conduct a PESTEL analysis at the start of a new strategic planning cycle.',
-      'Integrate this tool into your risk management processes to anticipate potential challenges.',
-      'Use it alongside SWOT analysis for a more comprehensive view of both internal and external factors.'
-    ],
-    url: '/resources/pestel-analysis.pdf'
-  },
-  {
-    title: 'SWOT, Horizon Scanning, Scenario Planning',
-    type: 'Framework',
-    description: 'These frameworks are designed to surface external signals and pressures, enabling you to plan for multiple future scenarios. Great for brainstorming and visioning in group settings.',
-    tips: [
-      'Use SWOT to assess internal capabilities and external threats.',
-      'Conduct Horizon Scanning regularly to identify emerging trends and weak signals that could disrupt your strategy.',
-      'Implement Scenario Planning workshops to help teams think creatively about various future possibilities and develop flexible strategies.'
-    ],
-    url: '/resources/scenario-tools.pdf'
-  },
-  {
-    title: 'Readiness Assessment Template',
-    type: 'Document',
-    description: 'This template helps assess your organization’s preparedness for change across key dimensions. Ideal for planning major organizational shifts or new initiatives.',
-    tips: [
-      'Use this template when planning any major transformation, whether adopting new technology or shifting organizational culture.',
-      'Gather input from key stakeholders to get a comprehensive view of organizational readiness.',
-      'Reassess readiness periodically as part of your change management strategy.'
-    ],
-    url: '/resources/readiness-assessment-template.pdf'
-  },
-  {
-    title: 'Stakeholder Mapping Tool',
-    type: 'Interactive',
-    description: 'This tool helps you map stakeholder relationships and their engagement pathways. Essential for ensuring alignment and fostering effective communication during complex projects.',
-    tips: [
-      'Use it in the early stages of project planning to identify and categorize key stakeholders.',
-      'Regularly update the map as stakeholder dynamics evolve, ensuring continuous engagement and buy-in.',
-      'Leverage it for risk management by identifying stakeholders who could be sources of support or opposition.'
-    ],
-    url: '/resources/stakeholder-mapping-tool.html'
-  },
-  {
-    title: 'Foresight Framework – Context Maps / Progression Curves / Janus Cones',
-    type: 'Perspective',
-    description: 'These perspective tools allow you to map broad trends and visualize how signals might evolve into future scenarios. Great for making informed long-term strategic decisions.',
-    tips: [
-      'Use Context Maps to visualize how various signals (social, technological, environmental) interconnect and influence each other.',
-      'Apply Progression Curves to anticipate the development trajectory of trends or technologies.',
-      'Use Janus Cones during scenario planning to explore alternative futures and the range of possible outcomes for your business.'
-    ],
-    url: '/resources/foresight-framework-tools.pdf'
-  }
-],
-
     indicators: [
       'You’ve mapped external and internal landscapes',
       'You’ve built a baseline of institutional readiness',
@@ -109,6 +124,7 @@ const phases = ref([
     justification: `We chose the "Exploration" phase because it's a critical step in understanding the core problem and aligning stakeholders around initial solutions. This phase corresponds to steps 1 and 2 in the "Seven-Step Forecasting Funnel", where we define the problem and set the scope for the solution.`,
     justificationImage: '/public/forecasting_funnel.png',
   },
+
   {
     title: 'Strategic Planning',
 description: `From insight to action. Choose your future—then plan for it. Build a bold innovation strategy that aligns with your vision and resources. Prioritize projects, rehearse future challenges, and set the stage for execution.`,
@@ -473,10 +489,14 @@ justification: `Explanation .....`,
                   {{ phases[activePhase].title }}
                   <button
                     @click="showJustification = !showJustification"
-                    class="ml-3 text-gray-500 hover:text-gray-700 cursor-pointer text-xl focus:outline-none"
+                    class="ml-3 -mt-1.5 text-gray-500 hover:text-blue-600 transition-colors cursor-pointer focus:outline-none"
                     title="Why this phase matters?"
                   >
-                    ?
+                    <span
+                      class="w-5 h-5 flex items-center justify-center rounded-full border border-gray-400 text-xs font-semibold"
+                    >
+                      i
+                    </span>
                   </button>
                 </h2>
 
@@ -519,13 +539,15 @@ justification: `Explanation .....`,
                     <!-- Activities -->
                     <div>
                       <div class="flex items-center gap-2 mb-4">
-                        <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M9 12h6M9 16h6M9 8h6" />
+                        <svg class="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" stroke-width="2.2"
+                          viewBox="0 0 28 28" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M6 9h16M6 14h16M6 19h16" />
                         </svg>
                         <h3 class="text-xl font-semibold text-gray-800">Key Activities</h3>
                       </div>
+
                       <ul class="space-y-4">
+                        
                         <li
                           v-for="(activity, i) in phases[activePhase].activities"
                           :key="i"
@@ -578,7 +600,8 @@ justification: `Explanation .....`,
                       <div class="flex items-center gap-2 mb-4">
                         <svg class="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2"
                           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M17 20h5V4H2v16h5m10-10l-4 4-4-4" />
+                          <circle cx="12" cy="7" r="4" />
+                          <path d="M5.5 21h13a1 1 0 0 0 1-1v-1c0-2.5-2-4.5-4.5-4.5h-6A4.5 4.5 0 0 0 4 19v1a1 1 0 0 0 1.5 1z" />
                         </svg>
                         <h3 class="text-xl font-semibold text-gray-800">Stakeholder Engagement</h3>
                       </div>
@@ -591,7 +614,10 @@ justification: `Explanation .....`,
                     <div class="flex items-center gap-2 mb-6">
                       <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" stroke-width="2"
                         viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 4v16h16V4H4zm8 2v12M6 10h12" />
+                        <path d="M4 4h12l4 4v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
+                        <polyline points="16 4 16 8 20 8" />
+                        <line x1="8" y1="12" x2="16" y2="12" />
+                        <line x1="8" y1="16" x2="16" y2="16" />
                       </svg>
                       <h3 class="text-2xl font-semibold text-gray-800">Resources</h3>
                     </div>
