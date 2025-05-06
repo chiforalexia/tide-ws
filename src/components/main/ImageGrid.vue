@@ -1,237 +1,3 @@
-<script setup lang="ts">
-import { ref, nextTick } from 'vue'
-
-interface Section {
-  id: number
-  title: string
-  description: string
-  image: string
-  subChapters: string[]
-  hovered: boolean
-}
-
-const sections = ref<Section[]>([
-  {
-    id: 1,
-    title: 'Artificial Intelligence',
-    description: 'Artificial Intelligence (AI) and, more specifically, Machine Learning (ML) continue to evolve, leading to both groundbreaking achievements and ethical concerns.',
-    image: '/public/tile_AI.png',
-    subChapters: [
-      'Towards ‘Frankenmodels’',
-      'More efficient approaches towards AI systems',
-      'New ways to access data',
-      'Towards trustworthy AI',
-      'More accessible computing and models'
-    ],
-    keyTrends: [
-      'Towards ‘Frankenmodels’',
-      'More efficient approaches towards AI systems',
-      'New ways to access data',
-      'Towards trustworthy AI',
-      'More accessible computing and models'
-    ],
-    dutchTechnologies: [
-      'TU Delft AI Labs',
-      'Philips Healthcare AI',
-      'ING AI Solutions',
-      'TNO AI Research',
-      'Amsterdam AI Hub'
-    ],
-    hovered: false
-  },
-  {
-    id: 2,
-    title: 'Advanced Computing',
-    description: 'Solving societal challenges with digital research infrastructure on a global scale requires a unique combination of computing, storage, and networking technologies.',
-    image: '/public/tile_AC.png',
-    subChapters: [
-      'Computing continuum',
-      'Energy sustainability in digital infrastructures',
-      'Protect sovereignty in digital infrastructure',
-      'Unconventional paradigms for computing',
-      'High-end computing in qualitative research fields'
-    ],
-    keyTrends: [
-      'Computing continuum',
-      'Energy sustainability in digital infrastructures',
-      'Protect sovereignty in digital infrastructure',
-      'Unconventional paradigms for computing',
-      'High-end computing in qualitative research fields'
-    ],
-    dutchTechnologies: [
-      'SURF Supercomputing',
-      'Dutch National Supercomputer',
-      'Amsterdam Data Hub',
-      'Green IT Amsterdam',
-      'Delft Quantum Computing'
-    ],
-    hovered: false
-  },
-  {
-    id: 3,
-    title: 'Quantum',
-    description: 'Quantum technologies span computing, communication, and sensing, promising exponential performance improvements and novel applications.',
-    image: '/public/tile_Quantum.png',
-    subChapters: [
-      'Quantum Key Distribution (QKD) gaining momentum',
-      'Quantum Computing in the Cloud',
-      'Hybrid quantum/classical computing',
-      'Error correction techniques',
-      'Quantum curiosity'
-    ],
-    keyTrends: [
-      'Quantum Key Distribution (QKD) gaining momentum',
-      'Quantum Computing in the Cloud',
-      'Hybrid quantum/classical computing',
-      'Error correction techniques',
-      'Quantum curiosity'
-    ],
-    dutchTechnologies: [
-      'QuTech Delft',
-      'Quantum Delta NL',
-      'QphoX',
-      'Orange Quantum Systems',
-      'Quantum.Amsterdam'
-    ],
-    hovered: false
-  },
-  {
-    id: 4,
-    title: 'Edge',
-    description: 'Edge computing enables real-time, distributed processing and automation close to the data source, supporting smart environments and systems.',
-    image: '/public/tile_Edge.png',
-    subChapters: [
-      'Cloud-Edge Continuum',
-      'Digital Twins',
-      'Actual real-time data streams',
-      'Run code anywhere',
-      'Robotic Automation'
-    ],
-    keyTrends: [
-      'Cloud-Edge Continuum',
-      'Digital Twins',
-      'Actual real-time data streams',
-      'Run code anywhere',
-      'Robotic Automation'
-    ],
-    dutchTechnologies: [
-      'SURF Edge Lab',
-      'KPN Edge Cloud',
-      'Dutch Edge Forum',
-      'Smart Industry NL',
-      'EdgeLab Amsterdam'
-    ],
-    hovered: false
-  },
-  {
-    id: 5,
-    title: 'Network',
-    description: 'Modern networks support intelligent connectivity and architectural flexibility across cloud, edge, and enterprise environments.',
-    image: '/public/tile_Network.png',
-    subChapters: [
-      'Big Tech and networking',
-      'Intelligent networks',
-      'Edge and campus architecture',
-      'Next generation networks'
-    ],
-    keyTrends: [
-      'Big Tech and networking',
-      'Intelligent networks',
-      'Edge and campus architecture',
-      'Next generation networks'
-    ],
-    dutchTechnologies: [
-      'KPN Networks',
-      'TNO Telecom',
-      'Dutch Optics Centre',
-      'SURFnet',
-      'Amsterdam Internet Exchange'
-    ],
-    hovered: false
-  },
-  {
-    id: 6,
-    title: 'eXtended Reality',
-    description: 'XR, or \'eXtended Reality\' is both a technology in its own right, as well as a term used for a combination of other reality-altering technologies; combinations of virtual reality, augmented reality and mixed reality could all constitute XR.',
-    image: '/public/tile_XR.png',
-    subChapters: [
-      'Enriching XR by combining technologies',
-      'Virtual social interactions are getting more advanced',
-      'New gear for new realities',
-      'An increasing number of ethical concerns',
-      'A fragmented ecosystem'
-    ],
-    keyTrends: [
-      'Enriching XR by combining technologies',
-      'Virtual social interactions are getting more advanced',
-      'New gear for new realities',
-      'An increasing number of ethical concerns',
-      'A fragmented ecosystem'
-    ],
-    dutchTechnologies: [
-      'TNO XR Lab',
-      'Dutch VR Days',
-      'XR Base Amsterdam',
-      'VirtualDutch',
-      'AR/VR Next'
-    ],
-    hovered: false
-  }
-])
-
-
-const activeSection = ref<Section | null>(null)
-const scrollContainer = ref<HTMLElement | null>(null)
-const progress = ref(0)
-
-const openSection = (section: Section) => {
-  activeSection.value = section
-  progress.value = 0
-  document.body.style.overflow = 'hidden'
-
-  nextTick(() => {
-    if (scrollContainer.value) {
-      const index = sections.value.findIndex(s => s.id === section.id)
-      if (index !== -1) {
-        scrollContainer.value.scrollTo({
-          left: index * scrollContainer.value.clientWidth,
-          behavior: 'smooth'
-        })
-      }
-    }
-  })
-}
-
-const closeSection = () => {
-  activeSection.value = null
-  document.body.style.overflow = ''
-}
-
-const updateProgress = () => {
-  if (!scrollContainer.value) return
-  
-  const { scrollLeft, scrollWidth, clientWidth } = scrollContainer.value
-  
-  requestAnimationFrame(() => {
-    progress.value = (scrollLeft / (scrollWidth - clientWidth)) * 100
-  })
-}
-
-const scroll = (direction: 'left' | 'right') => {
-  if (!scrollContainer.value) return
-  
-  const scrollAmount = scrollContainer.value.clientWidth
-  scrollContainer.value.scrollBy({
-    left: direction === 'left' ? -scrollAmount : scrollAmount,
-    behavior: 'smooth'
-  })
-}
-
-const setHovered = (section: Section, value: boolean) => {
-  section.hovered = value
-}
-</script>
-
 <template>
   <section id="technologies" class="py-24">
 
@@ -476,6 +242,240 @@ const setHovered = (section: Section, value: boolean) => {
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { ref, nextTick } from 'vue'
+
+interface Section {
+  id: number
+  title: string
+  description: string
+  image: string
+  subChapters: string[]
+  hovered: boolean
+}
+
+const sections = ref<Section[]>([
+  {
+    id: 1,
+    title: 'Artificial Intelligence',
+    description: 'Artificial Intelligence (AI) and, more specifically, Machine Learning (ML) continue to evolve, leading to both groundbreaking achievements and ethical concerns.',
+    image: '/public/tile_AI.png',
+    subChapters: [
+      'Towards ‘Frankenmodels’',
+      'More efficient approaches towards AI systems',
+      'New ways to access data',
+      'Towards trustworthy AI',
+      'More accessible computing and models'
+    ],
+    keyTrends: [
+      'Towards ‘Frankenmodels’',
+      'More efficient approaches towards AI systems',
+      'New ways to access data',
+      'Towards trustworthy AI',
+      'More accessible computing and models'
+    ],
+    dutchTechnologies: [
+      'TU Delft AI Labs',
+      'Philips Healthcare AI',
+      'ING AI Solutions',
+      'TNO AI Research',
+      'Amsterdam AI Hub'
+    ],
+    hovered: false
+  },
+  {
+    id: 2,
+    title: 'Advanced Computing',
+    description: 'Solving societal challenges with digital research infrastructure on a global scale requires a unique combination of computing, storage, and networking technologies.',
+    image: '/public/tile_AC.png',
+    subChapters: [
+      'Computing continuum',
+      'Energy sustainability in digital infrastructures',
+      'Protect sovereignty in digital infrastructure',
+      'Unconventional paradigms for computing',
+      'High-end computing in qualitative research fields'
+    ],
+    keyTrends: [
+      'Computing continuum',
+      'Energy sustainability in digital infrastructures',
+      'Protect sovereignty in digital infrastructure',
+      'Unconventional paradigms for computing',
+      'High-end computing in qualitative research fields'
+    ],
+    dutchTechnologies: [
+      'SURF Supercomputing',
+      'Dutch National Supercomputer',
+      'Amsterdam Data Hub',
+      'Green IT Amsterdam',
+      'Delft Quantum Computing'
+    ],
+    hovered: false
+  },
+  {
+    id: 3,
+    title: 'Quantum',
+    description: 'Quantum technologies span computing, communication, and sensing, promising exponential performance improvements and novel applications.',
+    image: '/public/tile_Quantum.png',
+    subChapters: [
+      'Quantum Key Distribution (QKD) gaining momentum',
+      'Quantum Computing in the Cloud',
+      'Hybrid quantum/classical computing',
+      'Error correction techniques',
+      'Quantum curiosity'
+    ],
+    keyTrends: [
+      'Quantum Key Distribution (QKD) gaining momentum',
+      'Quantum Computing in the Cloud',
+      'Hybrid quantum/classical computing',
+      'Error correction techniques',
+      'Quantum curiosity'
+    ],
+    dutchTechnologies: [
+      'QuTech Delft',
+      'Quantum Delta NL',
+      'QphoX',
+      'Orange Quantum Systems',
+      'Quantum.Amsterdam'
+    ],
+    hovered: false
+  },
+  {
+    id: 4,
+    title: 'Edge',
+    description: 'Edge computing enables real-time, distributed processing and automation close to the data source, supporting smart environments and systems.',
+    image: '/public/tile_Edge.png',
+    subChapters: [
+      'Cloud-Edge Continuum',
+      'Digital Twins',
+      'Actual real-time data streams',
+      'Run code anywhere',
+      'Robotic Automation'
+    ],
+    keyTrends: [
+      'Cloud-Edge Continuum',
+      'Digital Twins',
+      'Actual real-time data streams',
+      'Run code anywhere',
+      'Robotic Automation'
+    ],
+    dutchTechnologies: [
+      'SURF Edge Lab',
+      'KPN Edge Cloud',
+      'Dutch Edge Forum',
+      'Smart Industry NL',
+      'EdgeLab Amsterdam'
+    ],
+    hovered: false
+  },
+  {
+    id: 5,
+    title: 'Network',
+    description: 'Modern networks support intelligent connectivity and architectural flexibility across cloud, edge, and enterprise environments.',
+    image: '/public/tile_Network.png',
+    subChapters: [
+      'Big Tech and networking',
+      'Intelligent networks',
+      'Edge and campus architecture',
+      'Next generation networks'
+    ],
+    keyTrends: [
+      'Big Tech and networking',
+      'Intelligent networks',
+      'Edge and campus architecture',
+      'Next generation networks'
+    ],
+    dutchTechnologies: [
+      'KPN Networks',
+      'TNO Telecom',
+      'Dutch Optics Centre',
+      'SURFnet',
+      'Amsterdam Internet Exchange'
+    ],
+    hovered: false
+  },
+  {
+    id: 6,
+    title: 'eXtended Reality',
+    description: 'XR, or \'eXtended Reality\' is both a technology in its own right, as well as a term used for a combination of other reality-altering technologies; combinations of virtual reality, augmented reality and mixed reality could all constitute XR.',
+    image: '/public/tile_XR.png',
+    subChapters: [
+      'Enriching XR by combining technologies',
+      'Virtual social interactions are getting more advanced',
+      'New gear for new realities',
+      'An increasing number of ethical concerns',
+      'A fragmented ecosystem'
+    ],
+    keyTrends: [
+      'Enriching XR by combining technologies',
+      'Virtual social interactions are getting more advanced',
+      'New gear for new realities',
+      'An increasing number of ethical concerns',
+      'A fragmented ecosystem'
+    ],
+    dutchTechnologies: [
+      'TNO XR Lab',
+      'Dutch VR Days',
+      'XR Base Amsterdam',
+      'VirtualDutch',
+      'AR/VR Next'
+    ],
+    hovered: false
+  }
+])
+
+
+const activeSection = ref<Section | null>(null)
+const scrollContainer = ref<HTMLElement | null>(null)
+const progress = ref(0)
+
+const openSection = (section: Section) => {
+  activeSection.value = section
+  progress.value = 0
+  document.body.style.overflow = 'hidden'
+
+  nextTick(() => {
+    if (scrollContainer.value) {
+      const index = sections.value.findIndex(s => s.id === section.id)
+      if (index !== -1) {
+        scrollContainer.value.scrollTo({
+          left: index * scrollContainer.value.clientWidth,
+          behavior: 'smooth'
+        })
+      }
+    }
+  })
+}
+
+const closeSection = () => {
+  activeSection.value = null
+  document.body.style.overflow = ''
+}
+
+const updateProgress = () => {
+  if (!scrollContainer.value) return
+  
+  const { scrollLeft, scrollWidth, clientWidth } = scrollContainer.value
+  
+  requestAnimationFrame(() => {
+    progress.value = (scrollLeft / (scrollWidth - clientWidth)) * 100
+  })
+}
+
+const scroll = (direction: 'left' | 'right') => {
+  if (!scrollContainer.value) return
+  
+  const scrollAmount = scrollContainer.value.clientWidth
+  scrollContainer.value.scrollBy({
+    left: direction === 'left' ? -scrollAmount : scrollAmount,
+    behavior: 'smooth'
+  })
+}
+
+const setHovered = (section: Section, value: boolean) => {
+  section.hovered = value
+}
+</script>
 
 <style scoped>
 .hide-scrollbar {

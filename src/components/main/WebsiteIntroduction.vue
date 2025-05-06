@@ -1,3 +1,64 @@
+<template>
+  <section class="relative min-h-screen bg-transparent flex items-center justify-center flex-col">
+    <div class="content-wrapper">
+      <div class="text-content">
+        <span class="subtitle text-blue-500"></span>
+        
+        <h1 class="title">
+          {{ introData.title }}
+          <span class="text-blue-600">{{ introData.title2 }}</span>
+        </h1>
+        
+        <p class="description">
+          {{ introData.description }}
+        </p>
+        
+        <div class="features-list">
+          <div v-for="(feature, index) in introData.features" 
+               :key="index"
+               class="feature-item">
+            <span class="bullet">•</span>
+            {{ feature }}
+          </div>
+        </div>
+      </div>
+      
+      <div class="image-wrapper flex flex-col items-center space-y-4 mt-6">
+        <div class="image-container">
+          <transition name="fade" mode="out-in">
+            <img 
+              :key="currentImageIndex"
+              :src="images[currentImageIndex]" 
+              :alt="`Slide ${currentImageIndex + 1}`"
+              class="report-image" 
+            />
+          </transition>
+        </div>
+        <div>
+          <a 
+            href="https://www.surf.nl/en/tech-trends"
+            class="inline-block bg-green-100 text-green-800 px-3 py-1.5 rounded-full shadow-md transition-all duration-300 hover:bg-white hover:bg-green-200 transition"
+          >
+            Download Full Report
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bubble -->
+    <div class="transition-all duration-700 delay-500 opacity-100">
+      <a href="#chapters" class="inline-flex items-center animate-bounce bg-blue-100 text-blue-800 px-3 py-1.5 rounded-full text-sm font-medium hover:bg-blue-200 transition">
+        <span class="mr-2">Translate your vision into real impact</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            class="w-4 h-4 animate-bounce">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </a>
+    </div>
+
+  </section>
+</template>
+
 <script>
 export default {
   data() {
@@ -36,68 +97,6 @@ export default {
   }
 }
 </script>
-
-<template>
-    <section class="relative min-h-screen bg-transparent flex items-center justify-center flex-col">
-      <div class="content-wrapper">
-        <div class="text-content">
-          <span class="subtitle text-blue-500"></span>
-          
-          <h1 class="title">
-            {{ introData.title }}
-            <span class="text-blue-600">{{ introData.title2 }}</span>
-          </h1>
-          
-          <p class="description">
-            {{ introData.description }}
-          </p>
-          
-          <div class="features-list">
-            <div v-for="(feature, index) in introData.features" 
-                 :key="index"
-                 class="feature-item">
-              <span class="bullet">•</span>
-              {{ feature }}
-            </div>
-          </div>
-        </div>
-        
-        <div class="image-wrapper flex flex-col items-center space-y-4 mt-6">
-          <div class="image-container">
-            <transition name="fade" mode="out-in">
-              <img 
-                :key="currentImageIndex"
-                :src="images[currentImageIndex]" 
-                :alt="`Slide ${currentImageIndex + 1}`"
-                class="report-image" 
-              />
-            </transition>
-          </div>
-          <div>
-            <a 
-              href="https://www.surf.nl/en/tech-trends"
-              class="inline-block bg-green-100 text-green-800 px-3 py-1.5 rounded-full shadow-md transition-all duration-300 hover:bg-white hover:bg-green-200 transition"
-            >
-              Download Full Report
-            </a>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Bubble -->
-      <div class="transition-all duration-700 delay-500 opacity-100">
-        <a href="#chapters" class="inline-flex items-center animate-bounce bg-blue-100 text-blue-800 px-3 py-1.5 rounded-full text-sm font-medium hover:bg-green-200 transition">
-          <span class="mr-2">Translate your vision into real impact</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-              class="w-4 h-4 animate-bounce">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </a>
-      </div>
-
-    </section>
-  </template>
-  
 
 <style scoped>
 .content-wrapper {

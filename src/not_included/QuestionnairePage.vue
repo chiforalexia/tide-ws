@@ -17,9 +17,9 @@
   
   <script>
   // Import components here
-  import Navbar from '../components/Navbar.vue';
-  import Footer from '../components/Footer.vue';
-  import Questionnaire from '../components/Questionaire.vue'
+  import Navbar from '../components/common/Navbar.vue';
+  import Footer from '../components/common/Footer.vue';
+  import Questionnaire from '../components/not_included/Questionaire.vue'
 
   
   export default {

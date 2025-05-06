@@ -13,7 +13,7 @@
         Get personalized recommendations tailored to your educational or research institution's unique needs and values.
       </p>
 
-      <router-link to="/questionnaire">
+      <router-link to="/survey">
         <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all">
           Get Your Personalized Report
         </button>

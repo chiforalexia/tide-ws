@@ -12,24 +12,24 @@
         <!-- Logo Section -->
         <router-link
           to="/"
-          class="flex items-center space-x-3 pt-1 md:pt-2"
+          class="flex items-center pt-1 md:pt-2"
         >
-        <div class="relative flex items-start">
-            <img src="/surf_logo.svg" alt="SURF Logo" class="w-36 h-auto" />
-            <h1 class="text-2xl font-bold absolute top-2 left-32">Roadmap</h1>
+        <div class="relative  flex items-start top-4">
+            <img src="/surf_logo.svg" alt="SURF Logo" class="w-36 h-auto z-10" />
+            <span class="text-2xl bg-white rounded-xl py-1 px-3 pl-8 font-bold absolute left-20 -z-10">Roadmap</span>
         </div>
 
         </router-link>
 
         <!-- Floating Menu Bubble (Desktop) -->
         <div
-          class="hidden md:flex items-center bg-white rounded-xl custom-shadow px-4 py-3 space-x-10 transition-all duration-300 hover:scale-105 min-w-[520px] justify-center"
+          class="hidden md:flex items-center bg-white rounded-xl custom-shadow px-3 py-1 space-x-10 transition-all duration-300 hover:scale-105  justify-center"
         >
-          <!-- <a
-            href="#technologies"
+          <a
+            href="/survey"
             class="font-medium hover:text-primary transition-colors link-underline"
-            >Technologies</a
-          >-->
+            >Personalized Report</a
+          >
           <a 
             href="/success-stories"
             class="font-medium hover:text-primary transition-colors link-underline"
@@ -42,7 +42,7 @@
           > -->
           <a 
             href="/roadmap"
-            class="font-medium hover:text-primary transition-colors link-underline"
+            class="font-medium hover:text-primary transition-colors"
             ><button class="w-full btn">Explore the Roadmap</button></a>
         </div>
 
@@ -179,7 +179,7 @@ header.py-5 {
 
 /* Button style */
 .btn {
-  background-color: #007bff;
+  background-color: black;
   color: white;
   padding: 10px 20px;
   border-radius: 6px;

@@ -1,65 +1,3 @@
-<script setup>
-import { ref, computed } from 'vue'
-
-const stories = [
-    {
-        id: 1,
-        institution: 'University of Amsterdam',
-        subtitle: 'UvA AI Chat',
-        image: '/roeterseiland.jpg',
-        imageAlt: 'UvA AI Chat',
-        outcomes: [
-            'Improved student writing support and ease of use',
-            'Strong privacy safeguards through anonymised input',
-            'Full university control over access and usage'
-        ],
-        quote: '"If we want an AI solution that is in line with our moral values as a university, it is important to have a strong negotiating position with Microsoft."',
-        author: '— Danny van den Berg, UvA ICT'
-    },
-    {
-    id: 2,
-    institution: 'Delft University of Technology',
-    subtitle: 'XR Zone Integration',
-    image: '/tudelft.jpg',  // Path to the image related to XR Zone
-    imageAlt: 'TU Delft XR Zone',
-    outcomes: [
-        'Enhanced immersive learning experiences for students across disciplines',
-        'Increased collaboration between researchers and industry leaders in the XR field',
-        'Pioneering new research in augmented and virtual reality technologies'
-    ],
-    quote: '"By integrating the XR Zone into our research and teaching spaces, we are leading the way in digital transformation at TU Delft."',
-    author: '— Arno Freeke, XR Zone Coordinator'
-    },
-
-    {
-        id: 3,
-        institution: 'VISTA College',
-        subtitle: 'XR Lab',
-        image: 'VR.jpg',
-        imageAlt: 'VISTA College XR Lab',
-        outcomes: [
-            'Outcome #1',
-            'Outcome #2',
-            'Outcome #3'
-        ],
-        quote: '',
-        author: ''
-    }
-]
-
-const selectedStoryId = ref(1)
-
-const selectedStory = computed(() =>
-    stories.find(story => story.id === selectedStoryId.value)
-)
-</script>
-
-<script>
-export default {
-    name: 'SuccessStories',
-};
-</script>
-
 <template>
     <section class="py-16 px-4 max-w-7xl mx-auto">
         <div class="text-center mb-12">
@@ -155,3 +93,66 @@ export default {
         </div>
     </section>
 </template>
+
+<script setup>
+import { ref, computed } from 'vue'
+
+const stories = [
+    {
+        id: 1,
+        institution: 'University of Amsterdam',
+        subtitle: 'UvA AI Chat',
+        image: '/roeterseiland.jpg',
+        imageAlt: 'UvA AI Chat',
+        outcomes: [
+            'Improved student writing support and ease of use',
+            'Strong privacy safeguards through anonymised input',
+            'Full university control over access and usage'
+        ],
+        quote: '"If we want an AI solution that is in line with our moral values as a university, it is important to have a strong negotiating position with Microsoft."',
+        author: '— Danny van den Berg, UvA ICT'
+    },
+    {
+    id: 2,
+    institution: 'Delft University of Technology',
+    subtitle: 'XR Zone Integration',
+    image: '/tudelft.jpg',  // Path to the image related to XR Zone
+    imageAlt: 'TU Delft XR Zone',
+    outcomes: [
+        'Enhanced immersive learning experiences for students across disciplines',
+        'Increased collaboration between researchers and industry leaders in the XR field',
+        'Pioneering new research in augmented and virtual reality technologies'
+    ],
+    quote: '"By integrating the XR Zone into our research and teaching spaces, we are leading the way in digital transformation at TU Delft."',
+    author: '— Arno Freeke, XR Zone Coordinator'
+    },
+
+    {
+        id: 3,
+        institution: 'VISTA College',
+        subtitle: 'XR Lab',
+        image: 'VR.jpg',
+        imageAlt: 'VISTA College XR Lab',
+        outcomes: [
+            'Outcome #1',
+            'Outcome #2',
+            'Outcome #3'
+        ],
+        quote: '',
+        author: ''
+    }
+]
+
+const selectedStoryId = ref(1)
+
+const selectedStory = computed(() =>
+    stories.find(story => story.id === selectedStoryId.value)
+)
+</script>
+
+<script>
+export default {
+    name: 'SuccessStories',
+};
+</script>
+

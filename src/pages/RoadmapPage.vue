@@ -10,31 +10,25 @@
            <implementationPhases />
         </section>
   
-        <section id="features" class="pt-40">
-          <!-- Add your features section content here -->
+        <!-- <section id="features" class="pt-40">
+      
            <Template />
-        </section>
+        </section> -->
       </div>
     </div>
   </template>
   
   <script>
   // Import components here
-  import Navbar from '../components/Navbar.vue';
-  import Footer from '../components/Footer.vue';
-  //import ImplementationPhases from '../components/ImplementationPhases.vue'
-  import Template from '../components/Template.vue';
-  import implementationPhases from '../components/implementatinphases.vue'
-
- 
+  import Navbar from '../components/common/Navbar.vue';
+  import Footer from '../components/common/Footer.vue';
+  import implementationPhases from '../components/roadmap/ImplementationPhases.vue'
   
   export default {
     name: 'RoadmapPage',
     components: { //Add components here
       Navbar,
       Footer,
-      //ImplementationPhases,
-      Template,
       implementationPhases,
 
     },
