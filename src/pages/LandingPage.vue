@@ -17,6 +17,11 @@
         <ImageGrid />
       </section>
 
+      <!-- Personal Report -->
+      <section id="getpersonalreport">
+        <GetPersonalReport />
+      </section>
+
       <!-- Roadmap Introduction Section-->
       <section id="roadinfo">
         <RoadmapIntro />
@@ -32,12 +37,13 @@
 
 <script>
 // Import components here
-import Hero from '../components/Hero.vue';
-import Photoscroll from '../components/Photoscroll.vue';
-import ImageGrid from '../components/ImageGrid.vue';
-import SuccessStories from '../components/SuccessStories.vue';
-import WebsiteIntroduction from '../components/Website_introduction.vue';
-import RoadmapIntro from '../components/RoadmapIntro.vue';
+import Hero from '../components/main/Hero.vue';
+import Photoscroll from '../components/main/Photoscroll.vue';
+import ImageGrid from '../components/main/ImageGrid.vue';
+import SuccessStories from '../components/succes_stories/SuccessStories.vue';
+import WebsiteIntroduction from '../components/main/WebsiteIntroduction.vue';
+import RoadmapIntro from '../components/main/RoadmapIntro.vue';
+import GetPersonalReport from '../components/main/GetPersonalReport.vue';
 
 export default {
   name: 'LandingPage',
@@ -48,6 +54,7 @@ export default {
     SuccessStories,
     WebsiteIntroduction,
     RoadmapIntro,
+    GetPersonalReport,
 
   },
 };
