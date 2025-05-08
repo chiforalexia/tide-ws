@@ -14,8 +14,7 @@
                     </a>
                 </div>
                 <p class="text-sm">
-                    Guiding institutions through successful technology adoption with collaborative tools and expert
-                    knowledge.
+                    Guiding institutions through strategic future planning and successful technology adoption.
                 </p>
                 <div class="flex items-center gap-4 mt-4">
                     <!-- LinkedIn -->
@@ -61,7 +60,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M12 2C8 2 5 5 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-4-3-7-7-7z" />
                         </svg>
-                        <span>123 Sample Street, Amsterdam</span>
+                        <span>123 Sample Street, Utrecht</span>
                     </li>
                     <li class="flex items-start gap-2">
                         <!-- Email -->
@@ -70,7 +69,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
-                        <span>info@example.nl</span>
+                        <span>info@surf.nl</span>
                     </li>
                     <li class="flex items-start gap-2">
                         <!-- Phone -->
@@ -84,24 +83,14 @@
                 </ul>
 
             </div>
-
-            <!-- Quick Links -->
-            <div>
-                <h4 class="text-gray-900 font-semibold mb-4">Quick Links</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><router-link to="/roadmap" class="hover:text-blue-600">Knowledge Hub</router-link></li>
-                    <li><router-link to="/success-stories" class="hover:text-blue-600">Success Stories</router-link></li>
-                    <li><a href="#" class="hover:text-blue-600">Community Portal</a></li>
-                </ul>
-            </div>
         </div>
 
         <div class="border-t mt-10 pt-6 text-sm flex flex-col md:flex-row justify-between text-gray-500">
             <p>© 2025 SURF. All rights reserved.</p>
             <div class="flex space-x-4 mt-2 md:mt-0">
-                <a href="#" class="hover:text-blue-600">Privacy Policy</a>
+                <a href="https://www.surf.nl/en/privacy-statement-surf-bv" class="hover:text-blue-600">Privacy</a>
                 <a href="#" class="hover:text-blue-600">Terms of Service</a>
-                <a href="#" class="hover:text-blue-600">Cookie Policy</a>
+                <a href="https://www.surf.nl/en/cookie-statement" class="hover:text-blue-600">Cookies</a>
             </div>
         </div>
     </footer>
