@@ -92,10 +92,10 @@
                     ×
                   </button>
 
-                  <div class="flex flex-col md:flex-row justify-between items-start gap-6">
+                    <div class="flex flex-col md:flex-row justify-between items-start gap-6">
                     <!-- Text -->
                     <div class="md:w-2/3 text-gray-800 text-base leading-relaxed">
-                      <p>{{ phases[activePhase].justification }}</p>
+                      <div v-html="phases[activePhase].justification"></div>
                     </div>
 
                     <!-- Image -->
@@ -108,10 +108,6 @@
                     </div>
                   </div>
                 </div>
-
-
-
-
 
                 <div class="grid md:grid-cols-3 gap-8">
                   <!-- Activities, Indicators, Stakeholders -->
@@ -343,8 +339,16 @@ const phases = ref([
       'You’ve built a baseline of institutional readiness',
       'Key stakeholders are informed and ready to co-design the future'
     ],
-    justification: `We chose the "Exploration" phase because it's a critical step in understanding the core problem and aligning stakeholders around initial solutions. This phase corresponds to steps 1 and 2 in the "Seven-Step Forecasting Funnel", where we define the problem and set the scope for the solution.`,
-    justificationImage: '/public/forecasting_funnel.png',
+    justification: `
+  <p>Begin with the <strong>Exploration</strong> phase because it marks the transition from observing trends to making sense of them. This phase aligns with Steps 1 to 4 of the Seven-Step Forecasting Funnel:</p>
+  <ul class="list-disc pl-6 mt-2">
+    <li><strong>Steps 1 & 2:</strong> Captured in the SURF Tech Trends Report -these involve identifying emerging signals and synthesizing them into trends.</li>
+    <li><strong>Step 3:</strong> Encourages you to explore uncertainties and map plausible outcomes.</li>
+    <li><strong>Step 4:</strong> Focuses on building future scenarios that describe how trends and uncertainties could shape your institution.</li>
+  </ul>
+  <p class="mt-4">By starting here, you move from awareness to foresight - laying the foundation for meaningful planning and innovation.</p>
+`,
+justificationImage: '/phases_resources/images/forecasting_funnel.png',
   },
 
   {

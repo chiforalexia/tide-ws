@@ -40,11 +40,11 @@
                 class="w-full h-full object-cover transition-transform duration-300"
                 :class="{ 'scale-110': section.hovered }"
               />
-              <!-- Black overlay
-              <div 
-                class="absolute inset-0 bg-black transition-opacity duration-300"
-                :class="section.hovered ? 'opacity-70' : 'opacity-50'"
-              ></div>-->
+              <!-- Black overlay hover -->
+              <div
+                class="absolute inset-0 bg-black transition-all duration-300 ease-in-out"
+                :class="section.hovered ? 'opacity-40' : 'opacity-10'"
+              ></div>
               
               <!-- Gradient fade overlay -->
               <div 
@@ -57,17 +57,17 @@
             <!-- Content block that slides up -->
             <div 
               class="absolute inset-x-0 bottom-0 transform transition-all duration-300"
-              :class="section.hovered ? 'translate-y-0' : 'translate-y-8'"
+              :class="section.hovered ? 'translate-y-1' : 'translate-y-8'"
             >
               <!-- Content -->
-              <div class="px-6 py-4">
+              <div class="px-6 py-3">
                 <h3 class="text-white text-xl md:text-2xl font-bold mb-7">{{ section.title }}</h3>
                 <!-- Subtitle and description - only visible on hover -->
                 <div 
                   class="overflow-hidden transition-all duration-300"
                   :class="section.hovered ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'"
                 >
-                  <p class="text-white text-sm mb-4">{{ section.description }}</p>
+                  <p class="text-white text-sm mb-2">{{ section.description }}</p>
                   <div class="text-right">
                     <button class="px-2 py-2 border-2 border-white text-white rounded-full bg-transparent hover:bg-white hover:text-black transition-colors duration-300"
                     >
@@ -99,15 +99,6 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
         </button>
 
-        <!-- Download Chapter button
-        <a 
-          :href= "section.link"
-          class="absolute top-4 right-4 px-4 py-2 bg-blue-600 text-white rounded-full text-sm hover:bg-blue-700 transition z-50"
-        >
-          Download Chapter
-        </a> -->
-
-
         <div 
           ref="scrollContainer" 
           class="flex-1 flex overflow-x-auto snap-x snap-mandatory hide-scrollbar"
@@ -122,18 +113,8 @@
               <!-- Header with larger image -->
               <div class="flex items-start gap-8">
                 <div class="flex-1">
-                  <h2 class="text-5xl font-bold text-gray-800 mb-6">{{ section.title }}</h2>
+                  <h2 class="text-5xl font-bold text-gray-800 py-6 ">{{ section.title }}</h2>
                   <p class="text-gray-600 text-xl leading-relaxed">{{ section.description }}</p>
-
-              <!-- Download Chapter button -->
-              <div class="mt-6 flex justify-start">
-                <a 
-                  href="https://www.surf.nl/files/2023-02/sf_trendrapport_h1.pdf"
-                  class="inline-block bg-black text-white px-5 py-2 rounded-xl shadow-md transition-all duration-300 hover:bg-white hover:text-black border border-black"
-                >
-                  Download Chapter
-                </a>
-              </div>
 
                 </div>
                 <img 
@@ -148,9 +129,10 @@
                 <!-- Left column with subchapters -->
                 <div class="md:col-span-2 space-y-6">
                   <!-- Subchapters Box -->
-                  <div class="bg-gray-50 rounded-xl p-8 shadow-sm">
+                  <div class="bg-gray-50 rounded-xl p-8 shadow-lg border border-blue-500">
                     <div class="flex items-center gap-3 mb-6">
-                      <Cpu class="w-6 h-6 text-blue-500" />
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" /></svg>
                       <h3 class="text-2xl font-semibold text-gray-800">Subchapters</h3>
                     </div>
                     <ul class="space-y-4">
@@ -168,28 +150,12 @@
 
                 <!-- Right column with Key Trends and Dutch Technologies -->
                 <div class="space-y-6">
-                  <!-- Key Trends Box -->
-                  <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
-                    <div class="flex items-center gap-2 mb-4">
-                      <Lightbulb class="w-5 h-5 text-orange-500" />
-                      <h3 class="text-xl font-semibold text-gray-800">Key Trends</h3>
-                    </div>
-                    <ul class="space-y-3">
-                      <li 
-                        v-for="(trend, idx) in section.keyTrends" 
-                        :key="idx"
-                        class="flex items-center text-gray-700"
-                      >
-                        <div class="w-2 h-2 rounded-full bg-orange-500 mr-3"></div>
-                        {{ trend }}
-                      </li>
-                    </ul>
-                  </div>
 
                   <!-- Dutch Technologies Box -->
-                  <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+                  <div class="bg-gray-50 rounded-xl p-6 shadow-lg border border-green-500">
                     <div class="flex items-center gap-2 mb-4">
-                      <Flag class="w-5 h-5 text-green-500" />
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-green-500">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/></svg>
                       <h3 class="text-xl font-semibold text-gray-800">Dutch Technologies</h3>
                     </div>
                     <ul class="space-y-3">
@@ -219,8 +185,9 @@
           >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" /></svg>
-
-          </button>
+                  
+        
+        </button>
           <!-- progress bar -->
           <div class="w-20 md:w-24 h-1.5 bg-white rounded-full overflow-hidden">
             <div 
@@ -237,6 +204,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
 
           </button>
+
         </div>
       </div>
     </div>
