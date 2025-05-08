@@ -6,7 +6,7 @@
 
     <div class="container mx-auto px-6 py-16 max-w-full text-center relative z-10">
       <!-- Main content -->
-      <h1 class="text-7xl font-bold mb-16 text-left custom-font">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-16 text-left custom-font">
         Discover the
         <span class="block">Right Tech</span> 
         <span class="block">Trends for</span> <span style="color: #FFC294;">Your</span> Institution
@@ -15,7 +15,7 @@
         Get a personalized Tech Trends Report tailored to your unique needs, budget, and values!
       </p>
 
-      <router-link to="/questionnaire">
+      <router-link to="/survey">
         <button class="bg-white text-blue-700 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all">
           To the Report questionnaire
         </button>
