@@ -2,7 +2,7 @@
   <div>
     <!-- Header -->
     <h1 class="text-5xl font-extrabold text-center mb-2 text-black-800">
-      Implementation Phases
+      Implementation Roadmap
       <div class="text-xl text-grey-200 mt-3">
         We invite you to translate the tech trends for your institution
       </div>
