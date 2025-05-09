@@ -11,7 +11,7 @@
       </h1>
 
       <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto transition-all duration-700 opacity-100 translate-y-0 delay-200">
-        A collaborative platform designed to guide institutions through adopting new technologies, fostering knowledge sharing, and enabling successful implementation.
+        A platform designed to guide institutions through adopting new technologies, fostering knowledge sharing, and enabling successful implementation.
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 transition-all duration-700 opacity-100 translate-y-0 delay-300">

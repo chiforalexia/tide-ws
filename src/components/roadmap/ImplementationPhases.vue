@@ -92,7 +92,7 @@
                     ×
                   </button>
 
-                  <div class="flex flex-col md:flex-row justify-between items-start gap-6">
+                    <div class="flex flex-col md:flex-row justify-between items-start gap-6">
                     <!-- Text -->
                     <div class="md:w-2/3 text-gray-800 text-base leading-relaxed">
                       <div v-html="phases[activePhase].justification"></div>
@@ -108,10 +108,6 @@
                     </div>
                   </div>
                 </div>
-
-
-
-
 
                 <div class="grid md:grid-cols-3 gap-8">
                   <!-- Activities, Indicators, Stakeholders -->
@@ -355,7 +351,6 @@ const phases = ref([
   <p class="mt-4">By starting here, you move from awareness to foresight - laying the foundation for meaningful planning and innovation.</p>
 `,
 justificationImage: '/phases_resources/images/forecasting_funnel.png',
-
   },
 
   {
