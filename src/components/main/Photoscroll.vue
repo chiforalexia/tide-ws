@@ -34,7 +34,7 @@ const photos = [
 <template>
 
 
-<div class="container mx-auto px-4 mb-10">
+<div class="container mx-auto px-4 mb-10 pb-32">
       <!-- Title section -->
       <div class="text-center">
         <!-- Badge -->
@@ -83,7 +83,7 @@ const photos = [
   width: 100%;
   max-width: 1250px;
   padding: 1rem;
-  margin: 0 auto; /* Center the gallery horizontally */
+  margin: 0 auto;
 }
 
 .photos-container {
@@ -91,21 +91,27 @@ const photos = [
   gap: 1rem;
   width: 100%;
   aspect-ratio: 16/9;
-  max-height: 60vh;
+}
+
+/* Only limit height on larger screens */
+@media (min-width: 768px) {
+  .photos-container {
+    max-height: 60vh;
+  }
 }
 
 .photo-item {
-  flex: calc(100% / 4); /* Divide into 4 columns */
+  flex: calc(100% / 4);
   position: relative;
   transition: all 0.5s ease;
 }
 
 .photo-item:hover {
-  flex: calc((100% / 4) * 2); /* Expand on hover */
+  flex: calc((100% / 4) * 2);
 }
 
 .photo-item:not(:hover) {
-  flex: calc((100% / 4) * 0.8); /* Shrink when not hovered */
+  flex: calc((100% / 4) * 0.8);
 }
 
 .photo-wrapper {

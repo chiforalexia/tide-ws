@@ -275,6 +275,7 @@ const phases = ref([
           'Bring together people from different functions, disciplines, and backgrounds to broaden perspectives.',
           'Innovation thrives in diverse groups where assumptions are challenged and fresh ideas emerge.'
         ]
+
       },
       {
         activity: 'Run a silent brainstorm with the Tech Trends in mind',
