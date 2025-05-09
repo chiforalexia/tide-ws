@@ -128,8 +128,8 @@ const stories = [
             'Increased collaboration between researchers and industry leaders in the XR field',
             'Pioneering new research in augmented and virtual reality technologies'
         ],
-        quote: '"By integrating the XR Zone into our research and teaching spaces, we are leading the way in digital transformation at TU Delft."',
-        author: '— Arno Freeke, XR Zone Coordinator',
+        quote: '',
+        author: '',
         link: 'https://newmediacentre.tudelft.nl/xr/'
     },
     {
@@ -146,7 +146,7 @@ const stories = [
         ],
         quote: '',
         author: '',
-        link: ''
+        link: 'https://mbodigitaal.nl/2023/10/trots-op-xr-als-bestendigd-onderdeel-van-het-curriculum-xr-is-geen-uitstapje/'
     }
 ]
 

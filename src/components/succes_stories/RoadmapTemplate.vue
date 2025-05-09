@@ -5,8 +5,8 @@ const selectedTrack = ref('All Tracks')
 
 const tracks = [
   'All Tracks',
-  'Assessment & Planning',
-  'Stakeholder Engagement',
+  'Exploration',
+  'Strategic Planning',
   'Pilot Implementation',
   'Full Deployment',
   'Evaluation & Optimization'
@@ -14,7 +14,7 @@ const tracks = [
 
 const roadmapItems = [
   {
-    track: 'Assessment & Planning',
+    track: 'Exploration',
     items: [
       {
         name: 'Initial LLM Testing',
@@ -43,7 +43,7 @@ const roadmapItems = [
     ]
   },
   {
-    track: 'Stakeholder Engagement',
+    track: 'Strategic Planning',
     items: [
       {
         name: 'Stakeholder Buy-in',
@@ -127,8 +127,8 @@ const getStatusColor = (status) => {
 
 const getTrackColor = (track) => {
   switch(track) {
-    case 'Assessment & Planning': return '#DCF2E5'
-    case 'Stakeholder Engagement': return '#DCF2E5'
+    case 'Exploration': return '#DCF2E5'
+    case 'Strategic Planning': return '#DCF2E5'
     case 'Pilot Implementation': return '#DFF4FF'
     case 'Full Deployment': return '#DFF4FF'
     case 'Evaluation & Optimization': return '#FFE6D2'
