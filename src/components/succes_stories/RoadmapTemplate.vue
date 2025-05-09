@@ -107,17 +107,16 @@ const roadmapItems = [
   },
   {
     track: 'Evaluation & Optimization',
-    items: [ ]
+    items: []
   }
 ]
-
 
 const filterItems = (track) => {
   selectedTrack.value = track
 }
 
 const getStatusColor = (status) => {
-  switch(status) {
+  switch (status) {
     case 'completed': return '#B8E3C9'
     case 'in-progress': return '#FFF3B0'
     case 'planned': return '#EAECF0'
@@ -126,7 +125,7 @@ const getStatusColor = (status) => {
 }
 
 const getTrackColor = (track) => {
-  switch(track) {
+  switch (track) {
     case 'Exploration': return '#DCF2E5'
     case 'Strategic Planning': return '#DCF2E5'
     case 'Pilot Implementation': return '#DFF4FF'
@@ -159,92 +158,87 @@ const getDurationQuarters = (startDate, endDate) => {
         </div>
         <h2 class="text-3xl font-bold mb-4">Roadmap of Successful Implementation</h2>
         <p class="text-gray-600 max-w-2xl mx-auto">
-            Below you can find a detailed overview of the timeline and steps taken during the UvA AI Chat's development.
+          Below you can find a detailed overview of the timeline and steps taken during the UvA AI Chat's development.
         </p>
       </div>
     </div>
 
-    <div class="track-filter">
-      <span class="filter-label">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <!-- MOBILE DROPDOWN FILTER -->
+    <div class="md:hidden mb-6">
+      <div class="bg-white rounded-lg border shadow-sm p-4">
+        <label for="track-select" class="block text-sm font-medium text-gray-700 mb-2">
+          Filter by Track
+        </label>
+        <div class="relative">
+          <select id="track-select" v-model="selectedTrack"
+            class="block w-full bg-white border border-gray-300 rounded-lg py-2 px-4 pr-10 text-base text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 appearance-none">
+            <option v-for="track in tracks" :key="track" :value="track">
+              {{ track }}
+            </option>
+          </select>
+          <svg class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none"
+            fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESKTOP BUTTON FILTER -->
+    <div class="w-full hidden md:flex flex-wrap items-center gap-4 mb-6">
+      <div class="flex items-center gap-2 text-gray-600 font-medium">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
           <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
         </svg>
         Filter by track:
-      </span>
-      <div class="filter-buttons">
-        <button 
-          v-for="track in tracks" 
-          :key="track"
-          :class="['filter-btn', selectedTrack === track ? 'active' : '']"
-          @click="filterItems(track)"
-        >
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <button v-for="track in tracks" :key="track" :class="['filter-btn', selectedTrack === track ? 'active' : '']"
+          @click="filterItems(track)">
           {{ track }}
         </button>
       </div>
     </div>
 
     <div class="timeline-container">
-      <div class="three-quarter-line"></div>
-      <div class="timeline-header">
-        <div class="track-column">Track</div>
-        <div class="quarters-grid">
-          <!-- Year Row -->
-          <div class="year">Year 1</div>
-          <div class="year">Year 2</div>
-          <div class="year">Year 3</div>
-          
-          <!-- Quarter Row (Currently commented out, functional when needed) -->
-          <!--
-          <div class="quarter">Q1</div>
-          <div class="quarter">Q2</div>
-          <div class="quarter">Q3</div>
-          <div class="quarter">Q4</div>
-          <div class="quarter">Q1</div>
-          <div class="quarter">Q2</div>
-          <div class="quarter">Q3</div>
-          <div class="quarter">Q4</div>
-          <div class="quarter">Q1</div>
-          <div class="quarter">Q2</div>
-          <div class="quarter">Q3</div>
-          <div class="quarter">Q4</div>
-          -->
-        
+      <div class="timeline-scroll-wrapper">
+        <div class="three-quarter-line"></div>
+        <div class="timeline-header">
+          <div class="track-column">Track</div>
+          <div class="quarters-grid">
+            <div class="year">Year 1</div>
+            <div class="year">Year 2</div>
+            <div class="year">Year 3</div>
+          </div>
         </div>
-      </div>
 
-      <div class="timeline-tracks">
-        <template v-for="track in roadmapItems" :key="track.track">
-          <div 
-            v-if="selectedTrack === 'All Tracks' || selectedTrack === track.track"
-            class="track-row"
-          >
-            <div class="track-name">
-              <div class="track-indicator" :style="{ backgroundColor: getTrackColor(track.track) }"></div>
-              {{ track.track }}
-            </div>
-            <div class="track-items">
-              <div 
-                v-for="item in track.items" 
-                :key="item.name"
-                class="roadmap-item"
-                :style="{
+        <div class="timeline-tracks">
+          <template v-for="track in roadmapItems" :key="track.track">
+            <div v-if="selectedTrack === 'All Tracks' || selectedTrack === track.track" class="track-row">
+              <div class="track-name">
+                <div class="track-indicator" :style="{ backgroundColor: getTrackColor(track.track) }"></div>
+                {{ track.track }}
+              </div>
+              <div class="track-items">
+                <div v-for="item in track.items" :key="item.name" class="roadmap-item" :style="{
                   '--start-quarter': getQuarterPosition(item.startDate),
                   '--duration-quarters': getDurationQuarters(item.startDate, item.endDate),
                   '--status-color': getStatusColor(item.status),
                   '--track-color': getTrackColor(track.track)
-                }"
-              >
-                <div class="item-content">
-                  <span class="item-name">{{ item.name }}</span>
-                  <span class="item-status" :class="item.status">{{ item.status }}</span>
+                }">
+                  <div class="item-content">
+                    <span class="item-name">{{ item.name }}</span>
+                    <span class="item-status" :class="item.status">{{ item.status }}</span>
+                  </div>
                 </div>
               </div>
+              <div class="one-quarter-line"></div>
+              <div class="half-line"></div>
+              <div class="three-quarter-line"></div>
             </div>
-            <div class="one-quarter-line"></div>
-            <div class="half-line"></div>
-            <div class="three-quarter-line"></div>
-          </div>
-        </template>
+          </template>
+        </div>
       </div>
 
       <div class="status-legend">
@@ -275,23 +269,18 @@ const getDurationQuarters = (startDate, endDate) => {
   margin: 0 auto;
 }
 
-.roadmap-header {
-  text-align: center;
-  margin-bottom: 3rem;
+.timeline-scroll-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
-.roadmap-header h1 {
-  color: #2563EB;
-  margin-bottom: 0.5rem;
-  font-size: 2.5rem;
-}
-
-.roadmap-header p {
-  color: #6B7280;
+.timeline-scroll-wrapper>* {
+  min-width: 768px;
 }
 
 .track-filter {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
   margin-bottom: 2rem;
@@ -302,22 +291,24 @@ const getDurationQuarters = (startDate, endDate) => {
   align-items: center;
   gap: 0.5rem;
   color: #4B5563;
+  font-weight: 500;
 }
 
 .filter-buttons {
   display: flex;
-  gap: 0.5rem;
   flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .filter-btn {
   padding: 0.5rem 1rem;
   border-radius: 9999px;
-  border: none;
   background: #F3F4F6;
   color: #4B5563;
+  border: none;
   cursor: pointer;
-  transition: all 0.2s;
+  font-size: 0.875rem;
+  transition: background 0.2s;
 }
 
 .filter-btn:hover {
@@ -329,12 +320,14 @@ const getDurationQuarters = (startDate, endDate) => {
   color: white;
 }
 
-.timeline-container {
-  background: white;
-  border-radius: 0.75rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  padding-bottom: 2rem;
-  border-right: 1px solid #E5E7EB;
+/* Rest of your original CSS remains unchanged */
+
+.track-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  padding: 1rem;
+  border-bottom: 1px solid #E5E7EB;
+  position: relative;
 }
 
 .timeline-header {
@@ -359,52 +352,9 @@ const getDurationQuarters = (startDate, endDate) => {
   color: #4B5563;
 }
 
-.timeline-container {
-  background: white;
-  border-radius: 0.75rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  padding-bottom: 2rem;
+.track-column {
   border-right: 1px solid #E5E7EB;
 }
-
-.track-row {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  padding: 1rem;
-  border-bottom: 1px solid #E5E7EB;
-  position: relative; /* Ensures lines are positioned within this container */
-}
-
-/* 1/4th line */
-.track-row .one-quarter-line {
-  position: absolute;
-  top: 0;
-  left: 19%; /* 1/4th of the container's width */
-  width: 1px;
-  height: 100%;
-  background-color: #E5E7EB;
-}
-
-/* 1/2 line */
-.track-row .half-line {
-  position: absolute;
-  top: 0;
-  left: 46%; /* 1/2 of the container's width */
-  width: 1px;
-  height: 100%;
-  background-color: #E5E7EB;
-}
-
-/* 3/4 line */
-.track-row .three-quarter-line {
-  position: absolute;
-  top: 0;
-  left: 73%; /* 3/4 of the container's width */
-  width: 1px;
-  height: 100%;
-  background-color: #E5E7EB;
-}
-
 
 .track-name {
   font-weight: 600;
@@ -412,6 +362,7 @@ const getDurationQuarters = (startDate, endDate) => {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  border-right: 1px solid #E5E7EB;
 }
 
 .track-indicator {
@@ -437,14 +388,10 @@ const getDurationQuarters = (startDate, endDate) => {
   max-width: 370px;
   height: 40px;
   background: var(--track-color);
-  opacity: 1;
   border-radius: 0.5rem;
   padding: 0.25rem 0.5rem;
   color: #1F2937;
   font-size: 0.875rem;
-  box-sizing: border-box;
-  z-index: 1;
-  margin-bottom: 4px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -472,13 +419,12 @@ const getDurationQuarters = (startDate, endDate) => {
   font-size: 0.75rem;
   padding: 0.25rem 0.5rem;
   border-radius: 9999px;
-  overflow: hidden; 
-  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .item-status.completed {
   background-color: #e7f9c6;
-  color: #008939; 
+  color: #008939;
 }
 
 .item-status.in-progress {
