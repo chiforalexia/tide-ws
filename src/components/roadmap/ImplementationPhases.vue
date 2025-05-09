@@ -234,8 +234,9 @@ const phases = ref([
     title: 'Exploration',
     description: `Look outward. Look inward. Start shaping what’s next. Uncover the trends shaping your environment—and assess your institutional readiness to innovate. This phase is about scanning, sense-making, and stakeholder discovery.`,
     activities: [
-      'Explore emerging trends and disruptions with tools like PESTEL, Scenario Planning, and Horizon Scanning.',
-      'Localize insights from the SURF Tech Trends Report to your institutional context.',
+      'Dive into the SURF Tech Trends Report',
+      'Explore emerging trends and disruptions with tools like PESTEL and Horizon Scanning.',
+      'Create Future Scenarios.',
       'Evaluate internal readiness using innovation maturity models and cultural diagnostics.',
       'Map stakeholders to identify who needs to be engaged—and when.'
     ],
@@ -257,7 +258,7 @@ const phases = ref([
         citation: 'This resource is from ...'
       },
       {
-        title: 'Innovation Maturity Models (Tidd & Bessant, Ch. 3)',
+        title: 'Innovation Maturity Models',
         type: 'Document',
         description: 'This tool helps evaluate how ready your organization is for innovation and change. Use it to assess strengths and weaknesses before launching new projects.',
         tips: [
@@ -267,7 +268,8 @@ const phases = ref([
         ],
         url: '/resources/maturity-models.pdf',
         time: '2 hours',
-        people: 'Leadership team or innovation office (2–4 people)'
+        people: 'Leadership team or innovation office (2–4 people)',
+        citation:'(Tidd & Bessant, Ch. 3)'
       },
       {
         title: 'PESTEL Analysis',
