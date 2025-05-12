@@ -1,19 +1,20 @@
 <template>
   <div>
     <!-- Header -->
+    <!-- Header -->
     <h1 class="text-5xl font-extrabold text-center mb-2 text-black-800">
       Implementation Roadmap
-      <div class="text-xl text-grey-200 mt-3">
-        We invite you to translate the tech trends for your institution
-      </div>
-      <div class="text-2xl text-blue-600 mt-2">Start exploring</div>
     </h1>
-    <!-- Subtitle paragraph -->
+
+    <!-- Paragraph -->
     <p class="text-sm text-gray-500 max-w-3xl mx-auto mt-6 text-center leading-relaxed">
-      With the SURF Tech Trends Report in hand, you’ve taken the first step: gaining insight into the signals shaping the future of education and research. These aren’t instructions but an invitation to reflect, translate, and act. 
-      <br/><br/>
-      You’re not expected to follow a fixed path, but to create one, using these phases as support.
+      With the SURF Tech Trends Report in hand, you’ve taken the first step: gaining insight into the signals shaping the future of education and research. These aren’t instructions but an invitation to reflect, translate, and act.
     </p>
+
+    <!-- Blue subtitle at the bottom -->
+    <div class="text-xl text-blue-600 mt-6 text-center">
+      You’re not expected to follow a fixed path, but to create one, using these phases as support.
+    </div>
 
     <div class="min-h-screen bg-gray-50 flex">
       <!-- Sidebar -->
