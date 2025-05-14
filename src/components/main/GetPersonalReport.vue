@@ -1,32 +1,36 @@
 <template>
-  <div class="relative h-[60vh] bg-blue-700 text-white overflow-hidden pb-10">
-    <div class="absolute top-17 -right-2 w-72 h-72 md:w-96 md:h-96 pointer-events-none">
-      <img src="/Rocket2.svg" alt="Rocket2" class="w-full h-full object-contain" />
+  <div class="relative h-[60vh] bg-blue-700 text-white overflow-visible pb-10 flex items-center justify-center">
+    <!-- Rocket Image: Positioned on the right -->
+    <div class="absolute right-2 -top-5 h-96 w-auto sm:h-96 sm:right-2 lg:h-full lg:right-6 z-10 rotate-[10deg]">
+      <img src="/TIDE_rocket1.svg" alt="Rocket image" class="w-full h-full object-contain" />
     </div>
 
-    <div class="container mx-auto px-6 py-16 max-w-full text-center relative z-10">
-      <!-- Main content -->
-      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-16 text-left custom-font">
+    <!-- Centered Content -->
+    <div class="relative z-20 text-center px-4 max-w-3xl">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white m-10 custom-font">
         Discover the
         <span class="block">Right Tech</span> 
-        <span class="block">Trends for</span> <span style="color: #FFC294;">Your</span> Institution
+        <span class="block">Trends for</span>
+        <span style="color: #e67300;">Your</span> Institution
       </h1>
-      <p class="text-xl text-white/90 mb-10 text-center">
-        Get a personalized Tech Trends Report tailored to your unique needs, budget, and values!
+      
+      <p class="text-md text-white sm:text-md md:text-xl text-white/90 mb-5">
+        Get a personalized Tech Trends Report tailored to your unique needs and values!
       </p>
 
       <router-link to="/survey">
-        <button class="bg-white text-blue-700 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all">
-          To the Report questionnaire
+        <button class="bg-white text-blue-700 hover:bg-gray-100 hover:scale-1.10 font-semibold py-4 px-8 rounded-lg transition-all">
+          To the Report Survey
         </button>
       </router-link>
 
-      <p class="text-xs italic text-white/90 text-center py-1">
-        in 5 minutes to your own report
+      <p class="text-xs text-white italic text-white/90 text-center py-1">
+        in less than 5 minutes to your own report
       </p>
     </div>
   </div>
 </template>
+
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');

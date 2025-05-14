@@ -3,8 +3,8 @@
     <div class="space-y-8">
       <!-- Header Section -->
       <div class="flex flex-col items-center text-center space-y-4">
-        <h1 class="text-3xl font-bold">Tech Trend Results</h1>
-        <p class="text-gray-600 max-w-xl">
+        <h1 class="text-4xl font-bold">Tech Trend Results</h1>
+        <p class="text-gray-600 text-2xl  max-w-xl">
           <span v-if="readiness === 'watch'">Monitor these technologies for potential future impact.</span>
           <span v-else-if="readiness === 'plan'">Begin testing these technologies in controlled environments.</span>
           <span v-else-if="readiness === 'act'">Technologies ready for implementation in production environments.</span>

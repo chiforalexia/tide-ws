@@ -1,26 +1,25 @@
 <template>
   <div>
     <!-- Header -->
-    <!-- Header -->
     <h1 class="text-5xl font-extrabold text-center mb-2 text-black-800">
-      Implementation Roadmap
+      Integration Roadmap
     </h1>
 
     <!-- Paragraph -->
-    <p class="text-sm text-gray-500 max-w-3xl mx-auto mt-6 text-center leading-relaxed">
-      With the SURF Tech Trends Report in hand, you’ve taken the first step: gaining insight into the signals shaping the future of education and research. These aren’t instructions but an invitation to reflect, translate, and act.
+    <p class="text-xl text-gray-600 max-w-3xl mx-auto mt-6 text-center leading-relaxed">
+      With the SURF Tech Trends Report in hand, you’ve taken the first step: <span class="font-bold"> gaining insight into the signals shaping the future of education and research.</span>  These aren’t instructions but an invitation to reflect, translate, and act.
     </p>
 
     <!-- Blue subtitle at the bottom -->
-    <div class="text-xl text-blue-600 mt-6 text-center">
+    <div class="text-lg text-blue-600 m-8 text-center">
       You’re not expected to follow a fixed path, but to create one, using these phases as support.
     </div>
 
-    <div class="min-h-screen bg-gray-50 flex">
+    <div class="min-h-screen sidebar-bg flex">
       <!-- Sidebar -->
       <div
         :class="[
-          'transition-all duration-500 relative bg-white border-r border-gray-200',
+          'transition-all duration-500 relative border-r border-gray-200',
           collapsed ? 'w-20' : 'w-72',
           'group'
         ]"
@@ -130,7 +129,7 @@
                     <!-- Activities -->
                     <div>
                       <div class="flex items-center gap-2 mb-4">
-                        <svg class="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" stroke-width="2.2"
+                        <svg class="w-7 h-7 text-blue-700" fill="none" stroke="currentColor" stroke-width="2.2"
                           viewBox="0 0 28 28" stroke-linecap="round" stroke-linejoin="round">
                           <path d="M6 9h16M6 14h16M6 19h16" />
                         </svg>
@@ -141,7 +140,7 @@
                         <li v-for="(activity, i) in phases[activePhase].activities" :key="i">
                           <div class="flex items-start gap-3 mb-2">
                             <span
-                              class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 text-sm font-bold"
+                              class="w-8 h-8 rounded-full phases_bubble flex items-center justify-center flex-shrink-0 text-sm font-bold"
                             >
                               {{ i + 1 }}
                             </span>
@@ -171,7 +170,7 @@
                     <!-- Indicators -->
                     <div>
                       <div class="flex items-center gap-2 mb-4">
-                        <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" stroke-width="2"
+                        <svg class="w-6 h-6 surf-green" fill="none" stroke="currentColor" stroke-width="2"
                           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
                           <path d="M9 11l3 3L22 4" />
                           <circle cx="12" cy="12" r="10" />
@@ -217,7 +216,7 @@
                   <!-- Resources -->
                   <div class="bg-gray-50 p-6 rounded-xl shadow-lg border border-blue-200 h-fit">
                     <div class="flex items-center gap-2 mb-6">
-                      <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" stroke-width="2"
+                      <svg class="w-6 h-6 secondary-text" fill="none" stroke="currentColor" stroke-width="2"
                         viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M4 4h12l4 4v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
                         <polyline points="16 4 16 8 20 8" />
@@ -964,6 +963,11 @@ justification: `<p><strong>The Evaluation & Optimization phase also belongs to t
 
 .sidebar {
   transition: width 0.7s ease;
+  background-color: #EAECF0
+}
+
+.sidebar-bg {
+  background-color: #EAECF0
 }
 
 .sidebar:hover {

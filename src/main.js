@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
 import './assets/styles/tailwind.css';  // Make sure Tailwind CSS is loaded
+import './assets/styles/style.css';  
 import App from './index.vue';  // Main component to mount
 import { createRouter, createWebHistory } from 'vue-router';  // Import Vue Router
 import RoadmapPage from './pages/RoadmapPage.vue';  // Import other pages

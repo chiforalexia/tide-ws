@@ -95,7 +95,7 @@
   
         <!-- Only type shown on card -->
         <div class="mb-2">
-          <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-blue-700">
+          <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium resources_bubble">
             {{ resource.type }}
           </span>
         </div>
@@ -105,7 +105,7 @@
         <div class="flex justify-end mt-2">
           <button
             @click.stop="showLearnMore = true"
-            class="inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none h-7 px-3 text-xs bg-blue-50 border-blue-100 text-blue-600 hover:bg-blue-100 border"
+            class="inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none h-7 px-3 text-xs  phases_bubble border-blue-100 hover:bg-blue-100 border"
           >
             Learn How
           </button>

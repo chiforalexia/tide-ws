@@ -3,22 +3,22 @@
     <!-- Hero Section Content -->
     <div class="text-center text-gray-800 px-6 py-12 max-w-4xl mx-auto z-10 relative">
       <div class="transition-all duration-700 opacity-100 translate-y-0">
-        <span class="text-xl font-bold text-blue-500">Institutional Technology Adoption</span>
+        <span class="text-xl primary-text font-bold text-blue-500">Institutional Technology Adoption</span>
       </div>
 
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 transition-all duration-700 opacity-100 translate-y-0 delay-100">
-        Your Roadmap  <span class="text-blue-600">into the Future</span>
-      </h1>
+      <div class="text-4xl md:text-5xl lg:text-6xl font-extrabold font-customfont mb-6 transition-all duration-700 opacity-100 translate-y-0 delay-100">
+        Your Roadmap  <span class="text-blue-700 ">into the Future</span>
+      </div>
 
       <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto transition-all duration-700 opacity-100 translate-y-0 delay-200">
         A platform designed to guide institutions through adopting new technologies, fostering knowledge sharing, and enabling successful implementation.
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 transition-all duration-700 opacity-100 translate-y-0 delay-300">
-        <router-link to="/survey" class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-full">
+        <router-link to="/survey" class="bg-blue-700 hover:bg-blue-600 text-white py-3 px-8 rounded-full">
           Personalize your Report
         </router-link>
-        <router-link to="/roadmap" class="border-blue-600 text-blue-600 hover:bg-blue-50 py-3 px-8 rounded-full border-2">
+        <router-link to="/roadmap" class="border-blue-700 text-blue-700 hover:bg-blue-100 py-3 px-8 rounded-full border-2">
           Explore the Roadmap
         </router-link>
         <!-- <button class="">See Success Stories</button> -->
@@ -26,10 +26,10 @@
 
 
       <div class="transition-all duration-700 delay-500 opacity-100">
-        <a href="#website-introduction" class="inline-flex items-center bg-green-100 text-green-800 px-3 py-1.5 rounded-full text-sm font-medium hover:bg-green-200 transition">
+        <a href="#website-introduction" class="inline-flex bubble">
           <span class="mr-2">Discover the process</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-              class="w-4 h-4 animate-bounce">
+              class="w-4 h-4 animate-bounce item-center justify-center">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
         </a>
@@ -73,7 +73,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
-const text = "FROM REPORT TO REALITY—STEP INTO THE FUTURE OF TECH • ";
+const text = "FROM REPORT TO REALITY—STEP INTO THE FUTURE  • ";
 const repeatCount = 48; 
 const repeatedText = text.repeat(repeatCount);
 
@@ -100,11 +100,11 @@ onMounted(() => {
 }
 
 .road-bg {
-  fill: #0000FF; /* Blue wave */
+  fill: oklch(48.8% 0.243 264.376); /* Blue wave */
 }
 
 .road-white {
-  fill: white; /* White wave */
+  fill: #F4F6F8; /* White wave */
 }
 
 .wave-wrapper {
@@ -116,7 +116,7 @@ onMounted(() => {
   max-width: 1400px; /* Make sure wave doesn't stretch too wide */
   height: 425px; /* Adjust height for the wave */
   z-index: -1;
-  overflow: hidden; /* Prevent horizontal scrolling */
+  /* overflow: hidden; /* Prevent horizontal scrolling */
   mask-image: linear-gradient(to right, transparent 0%, black 128px, black calc(100% - 200px), transparent 100%); /* Smooth fade */
 }
 
