@@ -349,7 +349,7 @@ const phases = ref([
     time: '30 min',
     people: 'Individual or team',
     exampleimage: '/public/phases_resources/images/tech_trends_report.png',
-    citation: 'Was in the slides from Copenhagen'
+    citation: 'SURF. (2023). SURF Tech Trends 2023. https://www.surf.nl/en/tech-trends'
   },
   {
     title: 'Silent Brainstorm',
@@ -365,7 +365,7 @@ const phases = ref([
     time: '5–10 min',
     people: 'Individual or team',
     exampleimage: '/public/phases_resources/images/silent_brainstorm.png',
-    citation: 'Was in the slides from Copenhagen'
+    citation: ''
   },
   {
     title: 'Futures Triangle',
@@ -381,7 +381,7 @@ const phases = ref([
     time: '45 min',
     people: 'Individual or team',
     exampleimage: '/public/phases_resources/images/futures_triangle.png',
-    citation: 'Was in the slides from Copenhagen'
+    citation: 'Inayatullah, S. (2023). The Futures Triangle: Origins and Iterations. World Futures Review, 15(2–4), 112–121. https://doi.org/10.1177/19467567231203162'
   },
   {
     title: 'PESTEL Analysis',
@@ -395,8 +395,8 @@ const phases = ref([
     url: '/resources/pestel-analysis.pdf',
     time: '1.5–2 hours',
     people: 'Team (3–5 people)',
-    exampleimage: '/public/phases_resources/images/pestel_analysis.png',
-    citation: 'Standard foresight and strategic analysis method'
+    exampleimage: '/public/phases_resources/images/pestle_analysis.png',
+    citation: 'Aguilar, F. J. (1967). Scanning the business environment. Macmillan. https://bac-lac.on.worldcat.org/oclc/301680659'
   },
   {
     title: 'Axes of Uncertainty',
@@ -495,15 +495,10 @@ const phases = ref([
   }
     ],
     justification: `
-  <p>Begin with the <strong>Exploration</strong> phase because it marks the transition from observing trends to making sense of them. This phase aligns with Steps 1 to 4 of the Seven-Step Forecasting Funnel:</p>
-  <ul class="list-disc pl-6 mt-2">
-    <li><strong>Steps 1 & 2:</strong> Captured in the SURF Tech Trends Report -these involve identifying emerging signals and synthesizing them into trends.</li>
-    <li><strong>Step 3:</strong> Encourages you to explore uncertainties and map plausible outcomes.</li>
-    <li><strong>Step 4:</strong> Focuses on building future scenarios that describe how trends and uncertainties could shape your institution.</li>
-  </ul>
+  <p>Begin with the <strong>Exploration</strong> phase because it marks the transition from observing trends to making sense of them.</p>
   <p class="mt-4">By starting here, you move from awareness to foresight - laying the foundation for meaningful planning and innovation.</p>
 `,
-justificationImage: '/phases_resources/images/forecasting_funnel.png',
+justificationImage: "",
   },
 
   {
@@ -657,8 +652,8 @@ justificationImage: '/phases_resources/images/forecasting_funnel.png',
     url: '/resources/team-tools.pdf'
   }
 ],
-justification: '<p><strong>The Strategic Planning </strong>phase is the second phase because it brings foresight back to your organisation’s context. It connects directly to <strong>Step 5 and Step 6 of the Seven-Step Funnel</strong> — identifying opportunities and threats from your scenarios (Step 5) and assessing your organisation’s capability gaps to act on them (Step 6). This phase ensures your strategic response is both ambitious and achievable within your operational reality.</p>',
-    justificationImage: '/phases_resources/images/forecasting_funnel.png',
+justification: '<p><strong>The Strategic Planning </strong>phase is the second phase because it brings foresight back to your organisation’s context. It is about identifying opportunities and threats from your scenarios and assessing your organisation’s capability gaps to act on them. This phase ensures your strategic response is both ambitious and achievable within your operational reality.</p>',
+    justificationImage: '',
   },
   {
   title: 'Pilot Experimentation',
