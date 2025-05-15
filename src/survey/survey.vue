@@ -104,7 +104,7 @@ const subvalues = {
 }
 
 const valueColors = {
-  autonomy: 'text-purple-700',
+  autonomy: 'secondary-text',
   justice: 'text-blue-700',
   humanity: 'text-green-700'
 }
@@ -182,3 +182,11 @@ function submitForm() {
   })
 }
 </script>
+
+<style>
+
+.autonomy {
+  color: #E67300;
+}
+
+</style>

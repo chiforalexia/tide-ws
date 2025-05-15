@@ -1,3 +1,116 @@
+<template>
+  <div class="roadmap-container">
+    <div class="roadmap-header">
+      <div class="text-center mb-12">
+        <div class="bubble">
+          Case Study
+        </div>
+        <h2 class="text-3xl font-bold mb-4">Roadmap of Successful Implementation</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Below you can find a detailed overview of the timeline and steps taken during the UvA AI Chat's development.
+        </p>
+      </div>
+    </div>
+
+    <!-- MOBILE DROPDOWN FILTER -->
+    <div class="md:hidden mb-6">
+      <div class="bg-white rounded-lg border shadow-sm p-4">
+        <label for="track-select" class="block text-sm font-medium text-gray-700 mb-2">
+          Filter by Track
+        </label>
+        <div class="relative">
+          <select id="track-select" v-model="selectedTrack"
+            class="block w-full bg-white border border-gray-300 rounded-lg py-2 px-4 pr-10 text-base text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 appearance-none">
+            <option v-for="track in tracks" :key="track" :value="track">
+              {{ track }}
+            </option>
+          </select>
+          <svg class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none"
+            fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESKTOP BUTTON FILTER -->
+    <div class="w-full hidden md:flex flex-wrap items-center gap-4 mb-6">
+      <div class="flex items-center gap-2 text-gray-600 font-medium">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2">
+          <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+        </svg>
+        Filter by track:
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <button v-for="track in tracks" :key="track" :class="['filter-btn', selectedTrack === track ? 'active' : '']"
+          @click="filterItems(track)">
+          {{ track }}
+        </button>
+      </div>
+    </div>
+
+    <div class="timeline-container">
+      <div class="timeline-scroll-wrapper">
+        <div class="three-quarter-line"></div>
+        <div class="timeline-header">
+          <div class="track-column">Track</div>
+          <div class="quarters-grid">
+            <div class="year">Year 1</div>
+            <div class="year">Year 2</div>
+            <div class="year">Year 3</div>
+          </div>
+        </div>
+
+        <div class="timeline-tracks">
+          <template v-for="track in roadmapItems" :key="track.track">
+            <div v-if="selectedTrack === 'All Tracks' || selectedTrack === track.track" class="track-row">
+              <div class="track-name">
+                <div class="track-indicator" :style="{ backgroundColor: getTrackColor(track.track) }"></div>
+                {{ track.track }}
+              </div>
+              <div class="track-items">
+                <div v-for="item in track.items" :key="item.name" class="roadmap-item" :style="{
+                  '--start-quarter': getQuarterPosition(item.startDate),
+                  '--duration-quarters': getDurationQuarters(item.startDate, item.endDate),
+                  '--status-color': getStatusColor(item.status),
+                  '--track-color': getTrackColor(track.track)
+                }">
+                  <div class="item-content">
+                    <span class="item-name">{{ item.name }}</span>
+                    <span class="item-status" :class="item.status">{{ item.status }}</span>
+                  </div>
+                </div>
+              </div>
+              <div class="one-quarter-line"></div>
+              <div class="half-line"></div>
+              <div class="three-quarter-line"></div>
+            </div>
+          </template>
+        </div>
+      </div>
+
+      <div class="status-legend">
+        <h3>Status Legend</h3>
+        <div class="legend-items">
+          <div class="legend-item">
+            <span class="legend-dot completed"></span>
+            <span>Completed</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot in-progress"></span>
+            <span>In Progress</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot planned"></span>
+            <span>Planned</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
 <script setup>
 import { ref } from 'vue'
 
@@ -148,119 +261,6 @@ const getDurationQuarters = (startDate, endDate) => {
   return endPos - startPos + 1
 }
 </script>
-
-<template>
-  <div class="roadmap-container">
-    <div class="roadmap-header">
-      <div class="text-center mb-12">
-        <div class="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm mb-4">
-          Case Study
-        </div>
-        <h2 class="text-3xl font-bold mb-4">Roadmap of Successful Implementation</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">
-          Below you can find a detailed overview of the timeline and steps taken during the UvA AI Chat's development.
-        </p>
-      </div>
-    </div>
-
-    <!-- MOBILE DROPDOWN FILTER -->
-    <div class="md:hidden mb-6">
-      <div class="bg-white rounded-lg border shadow-sm p-4">
-        <label for="track-select" class="block text-sm font-medium text-gray-700 mb-2">
-          Filter by Track
-        </label>
-        <div class="relative">
-          <select id="track-select" v-model="selectedTrack"
-            class="block w-full bg-white border border-gray-300 rounded-lg py-2 px-4 pr-10 text-base text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 appearance-none">
-            <option v-for="track in tracks" :key="track" :value="track">
-              {{ track }}
-            </option>
-          </select>
-          <svg class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none"
-            fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-          </svg>
-        </div>
-      </div>
-    </div>
-
-    <!-- DESKTOP BUTTON FILTER -->
-    <div class="w-full hidden md:flex flex-wrap items-center gap-4 mb-6">
-      <div class="flex items-center gap-2 text-gray-600 font-medium">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2">
-          <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
-        </svg>
-        Filter by track:
-      </div>
-      <div class="flex flex-wrap gap-2">
-        <button v-for="track in tracks" :key="track" :class="['filter-btn', selectedTrack === track ? 'active' : '']"
-          @click="filterItems(track)">
-          {{ track }}
-        </button>
-      </div>
-    </div>
-
-    <div class="timeline-container">
-      <div class="timeline-scroll-wrapper">
-        <div class="three-quarter-line"></div>
-        <div class="timeline-header">
-          <div class="track-column">Track</div>
-          <div class="quarters-grid">
-            <div class="year">Year 1</div>
-            <div class="year">Year 2</div>
-            <div class="year">Year 3</div>
-          </div>
-        </div>
-
-        <div class="timeline-tracks">
-          <template v-for="track in roadmapItems" :key="track.track">
-            <div v-if="selectedTrack === 'All Tracks' || selectedTrack === track.track" class="track-row">
-              <div class="track-name">
-                <div class="track-indicator" :style="{ backgroundColor: getTrackColor(track.track) }"></div>
-                {{ track.track }}
-              </div>
-              <div class="track-items">
-                <div v-for="item in track.items" :key="item.name" class="roadmap-item" :style="{
-                  '--start-quarter': getQuarterPosition(item.startDate),
-                  '--duration-quarters': getDurationQuarters(item.startDate, item.endDate),
-                  '--status-color': getStatusColor(item.status),
-                  '--track-color': getTrackColor(track.track)
-                }">
-                  <div class="item-content">
-                    <span class="item-name">{{ item.name }}</span>
-                    <span class="item-status" :class="item.status">{{ item.status }}</span>
-                  </div>
-                </div>
-              </div>
-              <div class="one-quarter-line"></div>
-              <div class="half-line"></div>
-              <div class="three-quarter-line"></div>
-            </div>
-          </template>
-        </div>
-      </div>
-
-      <div class="status-legend">
-        <h3>Status Legend</h3>
-        <div class="legend-items">
-          <div class="legend-item">
-            <span class="legend-dot completed"></span>
-            <span>Completed</span>
-          </div>
-          <div class="legend-item">
-            <span class="legend-dot in-progress"></span>
-            <span>In Progress</span>
-          </div>
-          <div class="legend-item">
-            <span class="legend-dot planned"></span>
-            <span>Planned</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
 
 <style scoped>
 .roadmap-container {

@@ -1,45 +1,11 @@
-<script setup>
-const photos = [
-  {
-    id: 1,
-    src: './public/Generative AI Erasmus University.jpg.avif',
-    title: 'Generative AI model',
-    link: 'https://www.eur.nl/en/news/erasmus-university-trains-first-generative-ai-model-social-science-and-humanities',
-    description: 'learn about the Generative AI model build at the Erasmus University',
-  },
-  {
-    id: 2,
-    src: './public/tile_AI.png',
-    title: 'SURF Futuring',
-    link: 'https://www.surf.nl/en/themes/futuring',
-    description: 'learn more about SURF Futuring and their mission',
-  },
-  {
-    id: 3,
-    src: './public/House of AI.png',
-    title: 'House of AI',
-    link: 'https://www.surf.nl/en/themes/futuring',
-    description: 'explore a virtual network of AI labs',
-  },
-  {
-    id: 4,
-    src: './public/EDGE.jpg',
-    title: 'EDGE Research Center',
-    link: 'https://www.utwente.nl/en/edge/',
-    description: 'read all about Twente Universities EDGE Research',
-  }
-];
-</script>
-
 <template>
 
-
-<div class="container mx-auto px-4 mb-10 pb-32">
+<div class="container mx-auto px-4 mb-10 ">
       <!-- Title section -->
       <div class="text-center">
         <!-- Badge -->
         <div class="text-center">
-            <div class="inline-block bg-green-100 text-green-800 px-4 py-1 rounded-full text-sm mb-4">
+            <div class="bubble">
                 Stories
             </div>
         </div>
@@ -77,6 +43,39 @@ const photos = [
     </div>
   </section>
 </template>
+
+<script setup>
+const photos = [
+  {
+    id: 1,
+    src: './public/Generative AI Erasmus University.jpg.avif',
+    title: 'Generative AI model',
+    link: 'https://www.eur.nl/en/news/erasmus-university-trains-first-generative-ai-model-social-science-and-humanities',
+    description: 'learn about the Generative AI model build at the Erasmus University',
+  },
+  {
+    id: 2,
+    src: './public/tile_AI.png',
+    title: 'SURF Futuring',
+    link: 'https://www.surf.nl/en/themes/futuring',
+    description: 'learn more about SURF Futuring and their mission',
+  },
+  {
+    id: 3,
+    src: './public/House of AI.png',
+    title: 'House of AI',
+    link: 'https://www.surf.nl/en/themes/futuring',
+    description: 'explore a virtual network of AI labs',
+  },
+  {
+    id: 4,
+    src: './public/EDGE.jpg',
+    title: 'EDGE Research Center',
+    link: 'https://www.utwente.nl/en/edge/',
+    description: 'read all about Twente Universities EDGE Research',
+  }
+];
+</script>
 
 <style scoped>
 .photo-gallery {

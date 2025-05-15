@@ -8,7 +8,7 @@
             class="transition-all duration-700 delay-100"
             :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
           >
-            <span class="inline-block bg-green-100 text-green-800 px-4 py-1 rounded-full text-sm mb-4">
+            <span class="bubble">
               Discover Our Roadmap
             </span>
             <h2 class="text-3xl md:text-4xl font-bold mb-6">
@@ -33,7 +33,7 @@
             :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
           >
             <div class="card">
-              <h3 class="text-xl font-semibold mb-6">Implementation Phases</h3>
+              <h3 class="text-xl font-semibold mb-6">Integration Phases</h3>
               <div class="space-y-4">
                 <div
                   v-for="(step, index) in steps"
@@ -43,7 +43,8 @@
                   @click="setActiveStep(index)"
                 >
                   <div
-                    :class="step.color + ' w-10 h-10 rounded-full flex items-center justify-center text-white font-semibold mr-4 flex-shrink-0'"
+                    :class="step.color + ' w-10 h-10 rounded-full flex items-center justify-center intro_phases_bubble font-semibold mr-4 flex-shrink-0',
+                    activeStep === index ? 'active_phases_bubble' : 'inactive_phases_bubble'"
                   >
                     {{ step.id }}
                   </div>
@@ -77,11 +78,11 @@
   import { useRouter } from 'vue-router'
   
   const steps = [
-    { id: 1, title: 'Exploration', color: 'bg-blue-100 text-blue-600' },
-    { id: 2, title: 'Strategic Planning', color: 'bg-blue-100 text-blue-600' },
-    { id: 3, title: 'Pilot Implementation', color: 'bg-blue-100 text-blue-600' },
-    { id: 4, title: 'Full Deployment', color: 'bg-blue-100 text-blue-600' },
-    { id: 5, title: 'Evaluation & Optimization', color: 'bg-blue-100 text-blue-600' },
+    { id: 1, title: 'Exploration', color: 'bg-blue-600 text-white' },
+    { id: 2, title: 'Strategic Planning', color: 'bg-blue-600 text-white' },
+    { id: 3, title: 'Pilot Implementation', color: 'bg-blue-600 text-white' },
+    { id: 4, title: 'Full Deployment', color: 'bg-blue-600 text-white' },
+    { id: 5, title: 'Evaluation & Optimization', color: 'bg-blue-600 text-white' } 
   ]
   
   const activeStep = ref(0)
@@ -118,16 +119,16 @@
   </script>
   
   <style scoped>
-  .btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #005dc1;
-  }
+
+.active_phases_bubble {
+  background-color: #E67300;
+  color: #DFF4FF;  
+}
+
+.inactive_phases_bubble {
+  background-color: #C15500;
+  color: #DFF4FF;  
+}
+
   </style>
   

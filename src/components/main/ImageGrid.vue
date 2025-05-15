@@ -5,7 +5,7 @@
       <!-- Title section -->
       <div class="text-center">
         <!-- Badge -->
-        <div class="inline-block bg-green-100 text-green-800 px-4 py-1 rounded-full text-sm mb-4">
+        <div class="bubble">
           Technologies
         </div>
 
@@ -16,7 +16,7 @@
 
         <!-- Subtitle -->
         <p class="text-gray-600 max-w-2xl mx-auto">
-          From AI to Quantum and beyond, explore how emerging technologies are shaping the future of research and innovation in the Netherlands.
+          From AI to Quantum and beyond, explore how emerging technologies are shaping the future of research and innovation in the Netherlands through the SURF Tech Trends Report.
         </p>
       </div>
     </div>

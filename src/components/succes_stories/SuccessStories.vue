@@ -1,11 +1,11 @@
 <template>
     <section class="py-16 px-4 max-w-7xl mx-auto">
         <div class="text-center mb-12">
-            <div class="inline-block bg-green-100 text-green-800 px-4 py-1 rounded-full text-sm mb-4">
+            <div class="bubble">
                 Success Stories
             </div>
-            <h2 class="text-3xl font-bold mb-4">Real Results from SURF Members</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">
+            <h2 class="text-4xl font-bold mb-4">Real Results from SURF Members</h2>
+            <p class="text-gray-600 text-xl  max-w-2xl mx-auto">
                 Get inspired and see how other institutions successfully implement new technologies.
             </p>
         </div>
