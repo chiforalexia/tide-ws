@@ -4,10 +4,9 @@
             <div class="inline-block bg-green-100 text-green-800 px-4 py-1 rounded-full text-sm mb-4">
                 Success Stories
             </div>
-            <h2 class="text-3xl font-bold mb-4">Real Results from SURF Community Members</h2>
+            <h2 class="text-3xl font-bold mb-4">Real Results from SURF Members</h2>
             <p class="text-gray-600 max-w-2xl mx-auto">
-                Discover how institutions like yours successfully implemented new technologies through the SURF
-                Communities platform.
+                Get inspired and see how other institutions successfully implement new technologies.
             </p>
         </div>
 
@@ -81,12 +80,17 @@
                         <p class="font-bold text-gray-600">{{ selectedStory.author }}</p>
 
                         <div class="mt-6 flex justify-end">
-                            <button
-                                class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                                Read Full Case Study
-                            </button>
+                            <a :href="selectedStory.link"
+                                class="inline-flex items-center gap-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                                target="_blank" rel="noopener">
+                                Read More
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6 M10 14L21 3m0 0h-6m6 0v6" />
+                                </svg>
+                            </a>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -110,23 +114,24 @@ const stories = [
             'Full university control over access and usage'
         ],
         quote: '"If we want an AI solution that is in line with our moral values as a university, it is important to have a strong negotiating position with Microsoft."',
-        author: '— Danny van den Berg, UvA ICT'
+        author: '— Danny van den Berg, UvA ICT',
+        link: 'https://www.folia.nl/en/actueel/164740/uva-created-its-own-chatgpt-for-students-and-teachers-is-it-safer-than-the-original'
     },
     {
-    id: 2,
-    institution: 'Delft University of Technology',
-    subtitle: 'XR Zone Integration',
-    image: '/tudelft.jpg',  // Path to the image related to XR Zone
-    imageAlt: 'TU Delft XR Zone',
-    outcomes: [
-        'Enhanced immersive learning experiences for students across disciplines',
-        'Increased collaboration between researchers and industry leaders in the XR field',
-        'Pioneering new research in augmented and virtual reality technologies'
-    ],
-    quote: '"By integrating the XR Zone into our research and teaching spaces, we are leading the way in digital transformation at TU Delft."',
-    author: '— Arno Freeke, XR Zone Coordinator'
+        id: 2,
+        institution: 'TU Delft',
+        subtitle: 'New Media Centre XR Zone',
+        image: '/tudelft.jpg',  // Path to the image related to XR Zone
+        imageAlt: 'TU Delft XR Zone',
+        outcomes: [
+            'Enhanced immersive learning experiences for students across disciplines',
+            'Increased collaboration between researchers and industry leaders in the XR field',
+            'Pioneering new research in augmented and virtual reality technologies'
+        ],
+        quote: '',
+        author: '',
+        link: 'https://newmediacentre.tudelft.nl/xr/'
     },
-
     {
         id: 3,
         institution: 'VISTA College',
@@ -134,12 +139,14 @@ const stories = [
         image: 'VR.jpg',
         imageAlt: 'VISTA College XR Lab',
         outcomes: [
-            'Outcome #1',
-            'Outcome #2',
-            'Outcome #3'
+            'Developed a dedicated XR Lab as a central initiative',
+            'Built a scalable framework for integrating XR into educational practice',
+            "Positioned the XR Lab as a key pillar in VISTA's new Center of Teaching and Learning",
+            'Strengthened regional collaboration with partners'
         ],
         quote: '',
-        author: ''
+        author: '',
+        link: 'https://mbodigitaal.nl/2023/10/trots-op-xr-als-bestendigd-onderdeel-van-het-curriculum-xr-is-geen-uitstapje/'
     }
 ]
 
@@ -155,4 +162,3 @@ export default {
     name: 'SuccessStories',
 };
 </script>
-

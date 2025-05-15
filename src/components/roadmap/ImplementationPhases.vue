@@ -1,13 +1,20 @@
 <template>
   <div>
     <!-- Header -->
+    <!-- Header -->
     <h1 class="text-5xl font-extrabold text-center mb-2 text-black-800">
-      Implementation Phases
-      <div class="text-xl text-grey-200 mt-3">
-        We invite you to translate the tech trends for your institution
-      </div>
-      <div class="text-2xl text-blue-600 mt-2">Click to explore</div>
+      Implementation Roadmap
     </h1>
+
+    <!-- Paragraph -->
+    <p class="text-sm text-gray-500 max-w-3xl mx-auto mt-6 text-center leading-relaxed">
+      With the SURF Tech Trends Report in hand, you’ve taken the first step: gaining insight into the signals shaping the future of education and research. These aren’t instructions but an invitation to reflect, translate, and act.
+    </p>
+
+    <!-- Blue subtitle at the bottom -->
+    <div class="text-xl text-blue-600 mt-6 text-center">
+      You’re not expected to follow a fixed path, but to create one, using these phases as support.
+    </div>
 
     <div class="min-h-screen bg-gray-50 flex">
       <!-- Sidebar -->
@@ -92,10 +99,10 @@
                     ×
                   </button>
 
-                  <div class="flex flex-col md:flex-row justify-between items-start gap-6">
+                    <div class="flex flex-col md:flex-row justify-between items-start gap-6">
                     <!-- Text -->
                     <div class="md:w-2/3 text-gray-800 text-base leading-relaxed">
-                      <p>{{ phases[activePhase].justification }}</p>
+                      <div v-html="phases[activePhase].justification"></div>
                     </div>
 
                     <!-- Image -->
@@ -109,13 +116,17 @@
                   </div>
                 </div>
 
-
-
-
-
                 <div class="grid md:grid-cols-3 gap-8">
                   <!-- Activities, Indicators, Stakeholders -->
                   <div class="md:col-span-2 space-y-10">
+                    <!-- Phase Description -->
+                    <div>
+                      <h2 class="text-2xl font-bold text-gray-800 mb-4">Phase Overview</h2>
+                      <p class="text-gray-700 leading-relaxed">
+                        {{ phases[activePhase].description }}
+                      </p>
+                    </div>
+
                     <!-- Activities -->
                     <div>
                       <div class="flex items-center gap-2 mb-4">
@@ -126,19 +137,33 @@
                         <h3 class="text-xl font-semibold text-gray-800">Key Activities</h3>
                       </div>
 
-                      <ul class="space-y-4">
-                        
-                        <li
-                          v-for="(activity, i) in phases[activePhase].activities"
-                          :key="i"
-                          class="flex items-start gap-3"
-                        >
-                          <span
-                            class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 text-sm font-bold"
-                          >
-                            {{ i + 1 }}
-                          </span>
-                          <span class="text-gray-700">{{ activity }}</span>
+                      <ul class="space-y-2">
+                        <li v-for="(activity, i) in phases[activePhase].activities" :key="i">
+                          <div class="flex items-start gap-3 mb-2">
+                            <span
+                              class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 text-sm font-bold"
+                            >
+                              {{ i + 1 }}
+                            </span>
+                            <span class="text-gray-800 font-medium text-lg">{{ activity.activity }}</span>
+                          </div>
+
+                          <!-- Sub-bullets / details -->
+                          <ul class="pl-12 space-y-2 list-disc text-gray-600">
+                            <li v-for="(detail, j) in activity.details" :key="j">
+                              {{ detail }}
+                            </li>
+                          </ul>
+
+                          <!-- Tools (if available) -->
+                          <div v-if="activity.tools && activity.tools.length" class="pl-16 mt-3">
+                            <h4 class="font-semibold text-gray-600 mb-1">Tools:</h4>
+                            <ul class="list-disc space-y-1 text-gray-500 text-sm pl-4">
+                              <li v-for="(tool, k) in activity.tools" :key="k">
+                                {{ tool }}
+                              </li>
+                            </ul>
+                          </div>
                         </li>
                       </ul>
                     </div>
@@ -236,128 +261,342 @@ const toggleSidebar = () => {
 const phases = ref([
   {
     title: 'Exploration',
-    description: `Look outward. Look inward. Start shaping what’s next. Uncover the trends shaping your environment—and assess your institutional readiness to innovate. This phase is about scanning, sense-making, and stakeholder discovery.`,
+    description: `Move from observing trends to making sense of them. In this phase, you’ll explore how signals of change intersect with your institution’s mission, culture, and operational context. The goal is to surface possibilities, imagine futures, and lay the groundwork for focused strategic planning.`,
     activities: [
-      'Explore emerging trends and disruptions with tools like PESTEL, Scenario Planning, and Horizon Scanning.',
-      'Localize insights from the SURF Tech Trends Report to your institutional context.',
-      'Evaluate internal readiness using innovation maturity models and cultural diagnostics.',
-      'Map stakeholders to identify who needs to be engaged—and when.'
-    ],
-    stakeholderEngagement: `Use the Stakeholder Mapping Tool to identify influence patterns and engagement priorities. Bring diverse voices into exploration workshops to build momentum and trust from the start.`,
-    resources: [
       {
-        title: 'SURF Tech Trends Report',
-        type: 'Document',
-        description: 'This report provides an in-depth analysis of emerging technologies. Use it to spark discussions on future possibilities and inform strategic decisions.',
-        tips: [
-          'Leverage this as a conversation starter during strategic meetings or innovation sessions.',
-          'Use it to identify new technology opportunities and assess how they could impact your industry in the next 3-5 years.',
-          'Regularly review and share it with leadership teams to ensure your organization stays aligned with global trends.'
-        ],
-        url: '/resources/surf-tech-trends.pdf',
-        time: '3 hours',
-        people: 'Individual or small strategy team (1–3 people)',
-        exampleimage: '/public/phases_resources/images/forecasting_funnel.png',
-        citation: 'This resource is from ...'
+        activity: 'Familiarise yourself with the SURF Tech Trends Report',
+        details: [
+          'Review the report thoroughly and combine its insights with your own expertise and knowledge of your institution.',
+          'Start identifying signals of change relevant to your mission, culture, and strategy.'
+        ]
       },
       {
-        title: 'Innovation Maturity Models (Tidd & Bessant, Ch. 3)',
-        type: 'Document',
-        description: 'This tool helps evaluate how ready your organization is for innovation and change. Use it to assess strengths and weaknesses before launching new projects.',
-        tips: [
-          'Apply it before launching new initiatives to understand where your organization stands and what needs improvement.',
-          'Use it to create an innovation action plan with targeted improvements in leadership, culture, and processes.',
-          'Revisit periodically to measure progress and realign your innovation strategies.'
-        ],
-        url: '/resources/maturity-models.pdf',
-        time: '2 hours',
-        people: 'Leadership team or innovation office (2–4 people)'
+        activity: 'Assemble a cross-functional team',
+        details: [
+          'Bring together people from different functions, disciplines, and backgrounds to broaden perspectives.',
+          'Innovation thrives in diverse groups where assumptions are challenged and fresh ideas emerge.'
+        ]
+
       },
       {
-        title: 'PESTEL Analysis',
-        type: 'Framework',
-        tips: [
-          'Conduct a PESTEL analysis at the start of a new strategic planning cycle.',
-          'Integrate this tool into your risk management processes to anticipate potential challenges.',
-          'Use it alongside SWOT analysis for a more comprehensive view of both internal and external factors.'
-        ],
-        url: '/resources/pestel-analysis.pdf',
-        time: '1.5–2 hours',
-        people: 'Cross-functional team (3–5 people)'
+        activity: 'Run a silent brainstorm with the Tech Trends in mind',
+        details: [
+          'Each participant writes down as many future possibilities, ideas, or risks as possible without discussion.',
+          'Focus on capturing volume and variety—no judgment, just curiosity.'
+        ]
       },
       {
-        title: 'SWOT, Horizon Scanning, Scenario Planning',
-        type: 'Framework',
-        description: 'These frameworks are designed to surface external signals and pressures, enabling you to plan for multiple future scenarios. Great for brainstorming and visioning in group settings.',
-        tips: [
-          'Use SWOT to assess internal capabilities and external threats.',
-          'Conduct Horizon Scanning regularly to identify emerging trends and weak signals that could disrupt your strategy.',
-          'Implement Scenario Planning workshops to help teams think creatively about various future possibilities and develop flexible strategies.'
-        ],
-        url: '/resources/scenario-tools.pdf',
-        time: '3–5 hours (depending on depth)',
-        people: 'Workshop group (5–8 people)'
+        activity: 'Map initial stakeholders',
+        details: [
+          'Identify individuals, groups, and partners who might influence or be impacted by future initiatives.',
+          'Create a preliminary map to guide engagement in upcoming phases.'
+        ]
       },
       {
-        title: 'Readiness Assessment Template',
-        type: 'Document',
-        description: 'This template helps assess your organization’s preparedness for change across key dimensions. Ideal for planning major organizational shifts or new initiatives.',
-        tips: [
-          'Use this template when planning any major transformation, whether adopting new technology or shifting organizational culture.',
-          'Gather input from key stakeholders to get a comprehensive view of organizational readiness.',
-          'Reassess readiness periodically as part of your change management strategy.'
-        ],
-        url: '/resources/readiness-assessment-template.pdf',
-        time: '2–3 hours',
-        people: 'Change management team or leadership (3–6 people)'
+        activity: 'Conduct a PESTEL Analysis',
+        details: [
+          'Explore Political, Economic, Social, Technological, Environmental, and Legal drivers of change.',
+          'Identify broader trends and emerging signals shaping your sector.'
+        ]
       },
       {
-        title: 'Stakeholder Mapping Tool',
-        type: 'Interactive',
-        description: 'This tool helps you map stakeholder relationships and their engagement pathways. Essential for ensuring alignment and fostering effective communication during complex projects.',
-        tips: [
-          'Use it in the early stages of project planning to identify and categorize key stakeholders.',
-          'Regularly update the map as stakeholder dynamics evolve, ensuring continuous engagement and buy-in.',
-          'Leverage it for risk management by identifying stakeholders who could be sources of support or opposition.'
-        ],
-        url: '/resources/stakeholder-mapping-tool.html',
-        time: '1.5 hours',
-        people: 'Project lead + team (2–4 people)'
+        activity: 'Use the Futures Triangle tool',
+        details: [
+          'Map the pull of the future, push of the present, and weight of the past on your institution’s trajectory.',
+          'Helps to frame opportunities and constraints realistically.'
+        ]
       },
       {
-        title: 'Foresight Framework – Context Maps / Progression Curves / Janus Cones',
-        type: 'Perspective',
-        description: 'These perspective tools allow you to map broad trends and visualize how signals might evolve into future scenarios. Great for making informed long-term strategic decisions.',
-        tips: [
-          'Use Context Maps to visualize how various signals (social, technological, environmental) interconnect and influence each other.',
-          'Apply Progression Curves to anticipate the development trajectory of trends or technologies.',
-          'Use Janus Cones during scenario planning to explore alternative futures and the range of possible outcomes for your business.'
-        ],
-        url: '/resources/foresight-framework-tools.pdf',
-        time: '3–4 hours',
-        people: 'Foresight or strategic planning group (3–6 people)'
+        activity: 'Establish axes matrix for scenario development',
+        details: [
+          'Identify two key uncertainties to build your scenarios around.',
+          'Leverage group insights and diverse perspectives to select relevant, impactful axes.'
+        ]
+      },
+      {
+        activity: 'Develop four plausible scenarios',
+        details: [
+          'Use your axes to craft four distinct, plausible futures.',
+          'These narratives will help stress-test strategies and surface opportunities and risks later.'
+        ]
+      },
+      {
+        activity: 'Document the process',
+        details: [
+          'Capture key assumptions, discussion points, ideas, and early signals.',
+          'This documentation becomes a critical input for decision-making in later phases.'
+        ]
       }
     ],
+    stakeholderEngagement: `Engage a diverse, cross-functional group from the outset. Early stakeholder mapping helps identify who to involve, inform, or consult as the process progresses, strengthening insights and ownership of future strategy.`,
     indicators: [
-      'You’ve mapped external and internal landscapes',
-      'You’ve built a baseline of institutional readiness',
-      'Key stakeholders are informed and ready to co-design the future'
+      'You’ve completed a structured ideation and futures exploration process.',
+      'Four plausible, well-defined scenarios are documented.',
+      'Key stakeholders are mapped for future engagement.',
+      'The external operating environment is clearly understood through PESTEL and Futures Triangle analysis.'
     ],
-    justification: `We chose the "Exploration" phase because it's a critical step in understanding the core problem and aligning stakeholders around initial solutions. This phase corresponds to steps 1 and 2 in the "Seven-Step Forecasting Funnel", where we define the problem and set the scope for the solution.`,
-    justificationImage: '/public/forecasting_funnel.png',
+    resources: [
+    {
+    title: 'Tech Trends Report',
+    type: 'Document',
+    description: 'This report serves as your go-to reference for spotting early signals and understanding technological developments that could shape the future of education and research.',
+    tips: [
+      'Use the report as a first reference when identifying relevant signals, trends, and emerging technologies for your context.',
+      'Bring it into strategic discussions or innovation workshops to frame conversations around where technology is heading.',
+      'Evaluate how the trends outlined could impact your institution within the next years.',
+      'Share key insights with leadership and innovation teams to keep decision-making aligned with sector-wide developments.'
+    ],
+    url: '/resources/personalisation-page.pdf',
+    time: '30 min',
+    people: 'Individual or team',
+    exampleimage: '/public/phases_resources/images/tech_trends_report.png',
+    citation: 'SURF. (2023). SURF Tech Trends 2023. https://www.surf.nl/en/tech-trends'
+  },
+  {
+    title: 'Silent Brainstorm',
+    type: 'Activity',
+    description: 'In this activity, you\'ll independently generate ideas by combining insights from the SURF Tech Trends Report with your own background, experiences, and observations.',
+    tips: [
+      'Get a blank canvas or physical wall space.',
+      'Use Post-it notes (physical or digital) to write down every idea that comes to mind — one idea per note.',
+      'Start by reviewing the trends and signals from the SURF Tech Trends Report and reflect on how they might intersect with your context.',
+      'Write down every idea — no filtering, no judging. Even half-formed, unusual, or provocative thoughts are valuable here.'
+    ],
+    url: '/resources/silent-brainstorm.pdf',
+    time: '5–10 min',
+    people: 'Individual or team',
+    exampleimage: '/public/phases_resources/images/silent_brainstorm.png',
+    citation: ''
+  },
+  {
+    title: 'Futures Triangle',
+    type: 'Activity',
+    description: 'Explore the forces influencing possible futures for your organization or sector by mapping key trends and drivers onto a Futures Triangle framework.',
+    tips: [
+      'Draw a triangle and label the points: Pull of the Future, Push of the Present, and Weight of the Past.',
+      'Use the Tech Trends Report to identify strong ‘pulls’ and reflect on operational and contextual forces.',
+      'Write each idea on a Post-it and place it in the relevant corner of the triangle.',
+      'Look for tensions or areas of alignment between forces.'
+    ],
+    url: '/resources/futures-triangle.pdf',
+    time: '45 min',
+    people: 'Individual or team',
+    exampleimage: '/public/phases_resources/images/futures_triangle.png',
+    citation: 'Inayatullah, S. (2023). The Futures Triangle: Origins and Iterations. World Futures Review, 15(2–4), 112–121. https://doi.org/10.1177/19467567231203162'
+  },
+  {
+    title: 'PESTEL Analysis',
+    type: 'Framework',
+    description: 'Analyze the Political, Economic, Social, Technological, Environmental, and Legal factors influencing your environment to identify risks, opportunities, and strategic context.',
+    tips: [
+      'Conduct a PESTEL analysis at the start of a new strategy cycle.',
+      'Integrate it into risk management processes.',
+      'Combine with SWOT for a complete internal and external assessment.'
+    ],
+    url: '/resources/pestel-analysis.pdf',
+    time: '1.5–2 hours',
+    people: 'Team (3–5 people)',
+    exampleimage: '/public/phases_resources/images/pestle_analysis.png',
+    citation: 'Aguilar, F. J. (1967). Scanning the business environment. Macmillan. https://bac-lac.on.worldcat.org/oclc/301680659'
+  },
+  {
+    title: 'Axes of Uncertainty',
+    type: 'Framework',
+    description: 'A strategic foresight tool to identify and map critical uncertainties that could shape your future operating environment.',
+    tips: [
+      'Review external trends and drivers from the Tech Trends Report and your operational context.',
+      'Identify factors with both high impact and high uncertainty.',
+      'Select the two most significant uncertainties and map them as X and Y axes on a matrix.',
+      'Label the extremes of each axis.',
+      'Use this matrix as a foundation for scenario building.'
+    ],
+    url: '/resources/axes-of-uncertainty.pdf',
+    time: '45–60 min',
+    people: 'Cross-functional or strategic foresight team (3–5 people)',
+    exampleimage: '/public/phases_resources/images/axes_uncertainty.png',
+    citation: 'Best practice foresight tool (Voros, 2003; Schwartz, 1991)'
+  },
+  {
+    title: 'Horizon Scanning',
+    type: 'Framework',
+    description: 'A systematic approach to identifying early signals of change, emerging trends, and weak signals that may impact your organization’s future environment.',
+    tips: [
+      'Regularly scan academic, industry, news, and innovation sources.',
+      'Use STEEP/PESTEL categories to organize findings.',
+      'Track both mainstream and outlier signals.',
+      'Log insights in a shared document for pattern spotting.'
+    ],
+    url: '/resources/horizon-scanning.pdf',
+    time: '1–2 hours',
+    people: 'Foresight team or innovation leads',
+    exampleimage: '/public/phases_resources/images/horizon_scanning.png',
+    citation: 'Standard foresight methodology (Curry & Hodgson, 2008; Hines & Bishop, 2006)'
+  },
+  {
+    title: 'Building Scenarios',
+    type: 'Framework',
+    description: 'A collaborative activity where you develop detailed, plausible future narratives based on the four quadrants generated by your Axes of Uncertainty matrix.',
+    tips: [
+      'Start with the completed Axes of Uncertainty matrix.',
+      'For each quadrant, imagine what the world might look like.',
+      'Build a short scenario narrative considering implications for your institution and sector.',
+      'Use prompts like: “What opportunities might arise?” and “What challenges could emerge?”'
+    ],
+    url: '/resources/building-scenarios.pdf',
+    time: '1.5–2 hours',
+    people: 'Cross-functional or strategy team (3–5 people)',
+    exampleimage: '/public/phases_resources/images/scenario_building.png',
+    citation: 'Best practice scenario planning method (Schwartz, 1991; Wilkinson & Kupers, 2013)'
+  },
+  {
+    title: 'Readiness Assessment Template',
+    type: 'Document',
+    description: 'A template that helps assess your organization’s preparedness for change across key dimensions. Ideal for planning major organizational shifts or new initiatives.',
+    tips: [
+      'Use when preparing for significant transformations.',
+      'Gather input from diverse stakeholders for a rounded perspective.',
+      'Reassess periodically as part of ongoing change management.'
+    ],
+    url: '/resources/readiness-assessment.pdf',
+    time: '2–3 hours',
+    people: 'Change management team or leadership (3–6 people)',
+    exampleimage: '/public/phases_resources/images/readiness_assessment.png',
+    citation: 'Standard organizational change practice'
+  },
+  {
+    title: 'Stakeholder Mapping',
+    type: 'Activity',
+    description: 'This tool helps you map stakeholder relationships and their engagement pathways. Essential for ensuring alignment and fostering effective communication during complex projects.',
+    tips: [
+      'Use early in project planning to identify key actors and their influence.',
+      'Update regularly as stakeholder dynamics evolve.',
+      'Include it in risk assessments to identify potential blockers and champions.'
+    ],
+    url: '/resources/stakeholder-mapping.pdf',
+    time: '1 hour',
+    people: 'Team (2–4 people)',
+    exampleimage: '/public/phases_resources/images/stakeholder_mapping.png',
+    citation: 'Common foresight and change management tool'
+  },
+  {
+    title: 'Futures/Implications Analysis Wheel',
+    type: 'Framework',
+    description: 'A structured tool for identifying first-, second-, and third-order consequences of a trend, event, or decision, helping organizations anticipate ripple effects and unintended outcomes.',
+    tips: [
+      'Place a key trend or decision in the center of the wheel.',
+      'List first-order impacts, then branch out to second- and third-order consequences.',
+      'Encourage creative, non-linear thinking to surface unexpected outcomes.',
+      'Use this to uncover risks and opportunities you might miss at first glance.'
+    ],
+    url: '/resources/implications-analysis-wheel.pdf',
+    time: '1 hour',
+    people: 'Team',
+    exampleimage: '/public/phases_resources/images/implications_wheel.png',
+    citation: 'Adapted from foresight and risk assessment practices (Fahey & Randall, 1998; Rohrbeck et al., 2015)'
+  }
+    ],
+    justification: `
+  <p>Begin with the <strong>Exploration</strong> phase because it marks the transition from observing trends to making sense of them.</p>
+  <p class="mt-4">By starting here, you move from awareness to foresight - laying the foundation for meaningful planning and innovation.</p>
+`,
+justificationImage: "",
   },
 
   {
-    title: 'Strategic Planning',
-description: `From insight to action. Choose your future—then plan for it. Build a bold innovation strategy that aligns with your vision and resources. Prioritize projects, rehearse future challenges, and set the stage for execution.`,
-activities: [
-  'Use Cost-Impact Mapping and the Innovation Portfolio Matrix to assess and prioritize opportunities.',
-  'Align efforts to institutional vision and strategic priorities.',
-  'Sharpen your innovation story with foresight tools like White Spots and VOICE Stars.',
-  'Engage diverse stakeholders in scenario rehearsals and decision-making.'
-],
-stakeholderEngagement: `Use tools like Change Paths and Buddy Checks to rehearse scenarios with leadership and cross-functional teams. This builds commitment and aligns diverse priorities early.`,
-resources: [
+  title: 'Strategic Planning',
+  subtitle: 'From foresight to action — translating scenarios into strategic options, innovation opportunities, and implementation plans.',
+  description: `From insight to action. Choose your future—then plan for it. Build a bold innovation strategy that aligns with your vision and resources. Prioritize projects, rehearse future challenges, and set the stage for execution.`,
+  note: `Each tool is placed where it delivers the most value in this process. However, tools can be pulled up again as needed to revisit assumptions, explore new ideas, or stress-test evolving decisions.`,
+  
+  whatYouAreDoing: `Now that you’ve explored and assessed possible future scenarios for your institution, it’s time to translate those insights into concrete strategic options, innovation initiatives, and risk responses. This phase is about shaping a bold, future-fit innovation strategy that aligns with your institutional vision, navigates uncertainties, and prepares you for multiple plausible futures.`,
+  
+  activities: [
+    {
+      activity: 'Translate scenarios into strategic opportunities',
+      details: [
+        'Identify future strategic initiatives, innovation ideas, and responses to emerging risks and opportunities uncovered in your foresight work.'
+      ],
+      tools: [
+        'White Spots — to surface overlooked opportunities and gaps exposed by your scenarios.',
+        'Backcasting — to map pathways from desirable future outcomes back to present-day action points.'
+      ]
+    },
+    {
+      activity: 'Assess and prioritize initiatives',
+      details: [
+        'Use frameworks to balance radical and incremental innovation and evaluate where to invest resources.'
+      ],
+      tools: [
+        'Innovation Portfolio Matrix — map projects based on risk and impact.',
+        'Cost-Impact Mapping — visualize quick wins vs. big bets.',
+        'Crowd Clovers — crowdsource feedback on initiative feasibility and desirability.'
+      ]
+    },
+    {
+      activity: 'Evaluate your innovation readiness',
+      details: [
+        'Assess your institution’s current innovation capability, culture, governance, and resourcing to ensure your proposed strategy is both ambitious and executable.'
+      ],
+      tools: [
+        'Innovation Maturity Models — map current maturity (e.g., nascent, developing, established, leading).',
+        'SWOT-TOWS — assess internal strengths and weaknesses against external opportunities and threats.',
+        'Must-Win Battles — identify critical priorities and capability gaps to address before moving forward.'
+      ]
+    },
+    {
+      activity: 'Sharpen your innovation narrative',
+      details: [
+        'Refine your future vision and spotlight bold, unconventional ideas in your current strategy.'
+      ],
+      tools: [
+        'VOICE Stars — assess initiatives by Vision, Opportunity, Impact, Culture fit, and Execution readiness.',
+        'Dark Horse Prototypes — showcase radical or unconventional ideas worth testing.',
+        'Paper Mockups — visualize future service, product, or strategy concepts quickly and cheaply.'
+      ]
+    },
+    {
+      activity: 'Align innovation with institutional strategy',
+      details: [
+        'Ensure initiatives are aligned with your institution’s mission, values, and long-term objectives.'
+      ],
+      tools: [
+        'Strategic Alignment Rubrics — score initiatives against institutional priorities and strategic fit.'
+      ]
+    },
+    {
+      activity: 'Engage stakeholders through scenario rehearsals',
+      details: [
+        'Use tools to test assumptions, build commitment, and stress-test strategic choices with leadership and operational teams.'
+      ],
+      tools: [
+        'Wind Tunnelling — assess how initiatives perform under different future scenarios.',
+        'Change Paths — map likely implementation journeys and resistance points.',
+        'Buddy Checks — peer-review strategy drafts and initiative portfolios before final decisions.'
+      ]
+    },
+    {
+      activity: 'Document decisions and invite feedback',
+      details: [
+        'Thoroughly capture rationale, priorities, and uncertainties.',
+        'Leave structured opportunities for ongoing feedback and iteration.'
+      ],
+      tools: [
+        'Decision Logs — record key strategy decisions and underlying reasoning.',
+        'Feedback Forms — structured templates for gathering input post-workshops and rehearsals.',
+        'Retrospective Sessions — reflect on the process and adjust course where needed.'
+      ]
+    }
+  ],
+  
+  stakeholderEngagement: `Use tools like Change Paths and Buddy Checks to rehearse scenarios with leadership and cross-functional teams. This builds commitment and aligns diverse priorities early.`,
+
+  indicators: [
+    'Strategic initiatives and innovation projects are prioritized with clear rationale and alignment to institutional goals.',
+    'Innovation maturity has been assessed and gaps are addressed.',
+    'Leadership teams are aligned around a shared innovation roadmap shaped by scenario insights.',
+    'Teams are mobilized with a clear, inspiring narrative of where the institution is headed — and why.'
+  ],
+  resources: [
   {
     title: 'Innovation Portfolio Matrix',
     type: 'Framework',
@@ -379,17 +618,6 @@ resources: [
       'Pair with stakeholder input to validate the value perception across roles.'
     ],
     url: '/resources/cost-impact-mapping.pdf'
-  },
-  {
-    title: 'Decision-Making Frameworks (Scoring, MoSCoW)',
-    type: 'Framework',
-    description: 'These frameworks provide structured ways to prioritize options—by scoring, classifying (e.g., Must-have, Should-have), or weighting criteria. They help teams make decisions objectively, especially under uncertainty or tension.',
-    tips: [
-      'Use during cross-team sessions to reduce bias and create shared accountability.',
-      'Agree on decision criteria in advance to avoid anchoring on pet projects.',
-      'Combine quantitative and qualitative scoring to capture both logic and intuition.'
-    ],
-    url: '/resources/decision-frameworks.pdf'
   },
   {
     title: 'Strategic Alignment Rubrics',
@@ -425,22 +653,60 @@ resources: [
     url: '/resources/team-tools.pdf'
   }
 ],
-indicators: [
-  'Innovation projects are prioritized with clear value and strategic fit',
-  'Leaders are aligned around a shared innovation roadmap',
-  'Teams are energized by a clear, compelling narrative of where you\'re headed'
-],
-justification: `Explanation .....`,
-    justificationImage: '/public/forecasting_funnel.png',
+justification: '<p><strong>The Strategic Planning </strong>phase is the second phase because it brings foresight back to your organisation’s context. It is about identifying opportunities and threats from your scenarios and assessing your organisation’s capability gaps to act on them. This phase ensures your strategic response is both ambitious and achievable within your operational reality.</p>',
+    justificationImage: '',
   },
   {
-  title: 'Pilot Implementation',
+  title: 'Pilot Experimentation',
   description: `Build fast. Learn faster. Make innovation real. Launch your pilot. Build the systems, teams, and habits that will drive real-world impact—while learning and adapting as you go.`,
   activities: [
-    'Form an implementation team and use the Planning Template to define timelines, roles, and resources.',
-    'Use the Fidelity-Flexibility Tracker to balance design goals with real-world conditions.',
-    'Apply agile approaches to stay flexible, learn quickly, and iterate fast.',
-    'Use change management strategies to keep teams engaged and resistance low.'
+    {
+      activity: 'Form an implementation team',
+      details: [
+        'Assemble a dedicated group with clear roles, responsibilities, and decision-making authority.',
+        'Use the Planning Template to define timelines, resource needs, and governance structures.'
+      ],
+      tools: [
+        'Planning Template'
+      ]
+    },
+    {
+      activity: 'Balance design goals with real-world conditions',
+      details: [
+        'Track where you must stay true to core principles vs. where adaptation is acceptable.',
+        'Continuously monitor constraints and opportunities on the ground.'
+      ],
+      tools: [
+        'Fidelity-Flexibility Tracker'
+      ]
+    },
+    {
+      activity: 'Apply agile implementation approaches',
+      details: [
+        'Break the pilot into short, iterative sprints or cycles.',
+        'Hold regular stand-ups and retrospectives to quickly surface issues and pivot as needed.'
+      ],
+      tools: [
+        'Agile Sprint Framework',
+        'Iteration Feedback Loops'
+      ]
+    },
+    {
+      activity: 'Use change management strategies to maintain engagement',
+      details: [
+        'Communicate frequently and transparently about pilot progress, successes, and lessons learned.',
+        'Identify and address sources of resistance proactively.'
+      ],
+      tools: [
+        'Change Management Playbook',
+        'Pulse Surveys'
+      ]
+    }
+  ],
+  indicators: [
+    'Your pilot is live and actively supported',
+    'Feedback is flowing and being used to adapt in real-time',
+    'You’re building visible momentum and buy-in'
   ],
   stakeholderEngagement: `Stakeholders become co-pilots. Engage frontline users in prototyping, feedback loops, and iterative design. Their insights drive success and build long-term ownership.`,
   resources: [
@@ -522,120 +788,161 @@ justification: `Explanation .....`,
       url: '/resources/feedback-survey.html'
     }
   ],
-  indicators: [
-    'Your pilot is live and actively supported',
-    'Feedback is flowing and being used to adapt in real-time',
-    'You’re building visible momentum and buy-in'
-  ],
-justification: `Explanation .....`,
+justification: `<p><strong>The Pilot Implementation </strong> phase corresponds to the <strong>Actioning step in the Seven-Step Funnel.</strong> This is where selected initiatives and strategic choices move from planning to real-world testing. Pilots help validate assumptions, surface operational challenges, and build organisational confidence before scaling up full implementation.</p>`,
     justificationImage: '/public/phases_resources/images/forecasting_funnel.png',
 },
 
 {
   title: 'Full Deployment',
-  description: `Scale success. Anchor innovation in the system. Refine, formalize, and roll out your solution organization-wide. Focus on coordination, consistency, and strong support systems.`,
+  description: `Scale success. Anchor innovation in the system. Roll out your solution with consistency, structure, and strong support systems—turning pilot success into everyday practice.`,
   activities: [
-    'Finalize deployment plans based on pilot insights',
-    'Train staff and empower users with tailored support',
-    'Ensure logistics, resources, and technical support are in place',
-    'Track adoption and performance continuously'
-  ],
-  stakeholderEngagement: `Create moments of recognition. Celebrate champions, highlight user stories, and maintain open channels for feedback and troubleshooting.`,
-  resources: [
     {
-      title: 'Deployment Checklist',
-      type: 'Document',
-      description: 'A detailed list to ensure nothing critical is missed when scaling from pilot to organization-wide rollout. Keeps teams aligned and confident during complex transitions.',
-      tips: [
-        'Use as a living document—update in real-time as deployment evolves.',
-        'Assign clear owners for each checklist item to ensure accountability.',
-        'Include both technical and cultural readiness items (e.g., team sentiment, narrative alignment).'
+      activity: 'Finalize Deployment Plans',
+      details: [
+        'Confirm final rollout timelines, team responsibilities, and communication protocols.',
+        'Incorporate lessons learned from the pilot to adjust risk mitigation strategies.'
       ],
-      url: '/resources/deployment-checklist.pdf'
+      tools: [
+        'Risk Mitigation Matrix'
+      ]
     },
     {
-      title: 'User Guide',
-      type: 'PDF',
-      description: 'Step-by-step guidance tailored to different user roles. Reduces confusion and supports confident adoption across diverse stakeholders.',
-      tips: [
-        'Create separate guides for power users, frontline staff, and supervisors.',
-        'Use screenshots and plain language to make the guide intuitive.',
-        'Offer it both as a PDF and embedded in support systems for easy access.'
+      activity: 'Train and Support Users',
+      details: [
+        'Develop and deliver tailored training sessions and materials for different user groups.',
+        'Ensure clear, up-to-date documentation is available through multiple channels.'
       ],
-      url: '/resources/user-guide.pdf'
     },
     {
-      title: 'Support Documentation',
-      type: 'Wiki',
-      description: 'A centralized and searchable knowledge base for FAQs, troubleshooting, and training updates. Critical for sustaining smooth operations post-launch.',
-      tips: [
-        'Assign a documentation owner to keep content updated and relevant.',
-        'Include a feedback option so users can flag unclear or outdated entries.',
-        'Use analytics to see which pages are most visited—this reveals where users need help.'
+      activity: 'Coordinate Logistics and Support',
+      details: [
+        'Confirm infrastructure, staffing, and tech support readiness prior to go-live.',
+        'Set up clear escalation processes for operational issues.'
       ],
-      url: '/resources/support-docs.html'
+
+    },
+    {
+      activity: 'Track Adoption and Resolve Issues',
+      details: [
+        'Monitor real-time usage data and feedback to identify adoption trends.',
+        'Use issue tracking systems to quickly resolve problems and adjust support as needed.'
+      ],
+
     }
   ],
   indicators: [
-    'Your solution is embedded across teams and departments',
-    'Users are confident, trained, and supported',
-    'Systems are in place for smooth long-term operation'
-  ], 
-justification: `Explanation .....`,
-    justificationImage: '/public/forecasting_funnel.png',
+    'Deployment has reached all intended teams and functions',
+    'Users report confidence and clarity through feedback or training completion rates',
+    'Minimal disruption during transition, with responsive support in place',
+    'Performance and usage data show active adoption'
+  ],
+  stakeholderEngagement: `Maintain clear communication channels so everyone knows where to get help or give feedback. Share wins, updates, and milestones through internal comms, showcases, or quick demos to sustain excitement and transparency.`,
+  resources: [
+  {
+    title: 'Deployment Checklist',
+    type: 'Document',
+    description: 'A detailed list to ensure nothing critical is missed when scaling from pilot to organization-wide rollout. Keeps teams aligned and confident during complex transitions.',
+    tips: [
+      'Use this as a living document—update it in real-time as deployment evolves.',
+      'Assign clear owners for each checklist item to ensure accountability.',
+      'Include both technical and cultural readiness items such as team sentiment and narrative alignment.',
+      'Review and adjust the checklist after each major milestone for continuous improvement.'
+    ],
+    url: '/resources/deployment-checklist.pdf',
+    time: '1–2 hours',
+    people: 'Deployment team (3–6 people)',
+    exampleimage: '/public/phases_resources/images/deployment_checklist.png',
+    citation: 'Internal deployment best practices'
+  },
+  {
+    title: 'User Guide',
+    type: 'Website',
+    description: 'Step-by-step guidance tailored to different user roles. Reduces confusion and supports confident adoption across diverse stakeholders.',
+    tips: [
+      'Create separate guides for power users, frontline staff, and supervisors.',
+      'Use screenshots, video walkthroughs, and plain language to make the guide intuitive and accessible.',
+      'Offer it both as a downloadable PDF and embedded directly into your support systems.',
+      'Keep the guide regularly updated based on feedback from end users.'
+    ],
+    url: 'https://whatfix.com/blog/user-guides/',
+    time: '2–3 hours to prepare',
+    people: 'Individual or Documentation team',
+    exampleimage: '/public/phases_resources/images/user_guide.png',
+    citation: 'Whatfix Blog (2023)'
+  }
+  ],
+justification: `<p><strong>The Full Deployment phase is part of the Actioning step in the Seven-Step Funnel.</strong> It involves scaling successful pilot projects into broader, institution-wide initiatives. This phase ensures new solutions are fully integrated into operations, with clear ownership, resources, and governance in place.</p>`,
+    justificationImage: '/phases_resources/images/forecasting_funnel.png',
 },
 {
   title: 'Evaluation & Optimization',
-  description: `Improve. Scale. Repeat. Use evidence to optimize performance and drive continuous improvement. Document learnings to support institutional learning and future foresight.`,
+  description: `Improve. Scale. Repeat. Once deployed, it's time to evaluate impact, adapt based on feedback, and build a foundation for future improvement.`,
   activities: [
-    'Evaluate outcomes with defined KPIs and dashboards',
-    'Gather feedback from users, stakeholders, and partners',
-    'Identify quick optimizations—and larger pivots where needed',
-    'Document lessons learned to strengthen your innovation capacity'
-  ],
-  stakeholderEngagement: `Bring your community back into the loop. Share what you have learned, invite critique, and celebrate progress. This is how you build a culture of innovation.`,
-  resources: [
     {
-      title: 'Evaluation Framework Template',
-      type: 'Template',
-      description: 'A guided structure to assess pilot or project results—covering inputs, activities, outcomes, and systemic impact. Designed to support evidence-based reflection and reporting.',
-      tips: [
-        'Co-design evaluation questions with users and funders to ensure relevance.',
-        'Include unintended outcomes—both positive and negative—for richer insight.',
-        'Use in both formal reviews and informal team debriefs.'
-      ],
-      url: '/resources/evaluation-framework-template.pdf'
+      activity: 'Gather Qualitative Feedback',
+      details: [
+        'Conduct surveys, interviews, or roundtables to surface deeper insights and improvement opportunities.'
+      ]
     },
     {
-      title: 'Analytics Dashboard',
-      type: 'Interactive Tool',
-      description: 'Real-time visualizations of key metrics, adoption trends, and engagement levels. Supports continuous insight and agile responses.',
-      tips: [
-        'Use dashboard alerts to flag emerging risks or performance dips.',
-        'Segment data by user group or region to identify localized patterns.',
-        'Share dashboard snapshots in regular team updates to encourage data-driven decisions.'
-      ],
-      url: '/resources/analytics-dashboard.html'
+      activity: 'Implement Improvements',
+      details: [
+        'Address quick wins based on initial feedback.',
+        'Prioritize and plan for bigger changes where needed.',
+        'Document all updates and decisions in a structured way.'
+      ]
     },
     {
-      title: 'Improvement Log',
-      type: 'Document',
-      description: 'A structured space to record changes, the reasons behind them, and what happened as a result. Vital for organizational learning and accountability.',
-      tips: [
-        'Log both big changes and small tweaks—micro-adjustments can have ripple effects.',
-        'Use the log in retrospectives to reflect on decision-making quality.',
-        'Review periodically to spot recurring issues or successful strategies.'
-      ],
-      url: '/resources/improvement-log.pdf'
+      activity: 'Capture and Share Lessons Learned',
+      details: [
+        'Feed key insights and outcomes back into your institutional processes, playbooks, and training materials.',
+        'Use these lessons to inform and strengthen future innovation initiatives.'
+      ]
     }
   ],
   indicators: [
-    'You have made data-driven improvements',
-    'You are capturing and sharing lessons learned',
-    'Your institution is building innovation muscle for the next cycle'
+    'Data shows performance gains or clear gaps for improvement',
+    'Users feel heard and involved in refinement',
+    'Adjustments lead to improved usability, adoption, or outcomes',
+    'Lessons are accessible and used to inform new initiatives'
   ],
-justification: `Explanation .....`,
-    justificationImage: '/public/forecasting_funnel.png',
+  stakeholderEngagement: `Close the loop by sharing what you’ve learned and how you’re improving. Invite critique and create safe spaces for honest feedback and refinement ideas.`,
+  resources: [
+  {
+    title: 'After Action Review (AAR) Template',
+    type: 'Template',
+    description: 'The Asana After Action Review (AAR) Template is a structured tool designed to help teams reflect on a completed project or initiative by identifying what went well, what didn’t, and how to improve going forward.',
+    tips: [
+      'Use the pre-built task list for setting up and running an AAR meeting.',
+      'Prompt your team for input on goals, outcomes, successes, and challenges.',
+      'Assign follow-up actions and document lessons learned for future reference.',
+      'Customize the template within Asana to suit your team’s workflow and project context.'
+    ],
+    url: 'https://asana.com/resources/after-action-review-template',
+    time: '30–45 min',
+    people: 'Team',
+    exampleimage: '/public/phases_resources/images/aar_template.png',
+    citation: 'Asana resource template'
+  },
+  {
+    title: 'Feedback Survey',
+    type: 'Document',
+    description: 'A structured method for collecting insights from users, stakeholders, or partners about their experience with a solution, process, or rollout. Helps identify blind spots and surface opportunities for improvement.',
+    tips: [
+      'Use both quantitative (e.g., rating scales) and qualitative (e.g., open-text) questions for a well-rounded view.',
+      'Send surveys at key moments: post-deployment, after training, or during adoption milestones.',
+      'Segment responses by role, team, or usage level to tailor your improvements.',
+      'Analyze both trends in aggregate scores and rich insights from open comments.'
+    ],
+    url: 'https://www.forbes.com/councils/forbestechcouncil/2023/03/01/16-effective-strategies-to-collect-feedback-on-new-internal-tech/',
+    time: '15–30 min',
+    people: 'Individual or team',
+    exampleimage: '/public/phases_resources/images/feedback_survey.png',
+    citation: 'Forbes Tech Council (2023)'
+  }
+  ],
+justification: `<p><strong>The Evaluation & Optimization phase also belongs to the Actioning step in the Seven-Step Funnel.</strong> It focuses on continuously measuring the impact of implemented initiatives, capturing lessons learned, and refining approaches. This phase keeps your strategy agile and responsive as conditions evolve.</p>`,
+    justificationImage: '/phases_resources/images/forecasting_funnel.png',
 }
 ]);
 </script>
