@@ -43,7 +43,8 @@
                   @click="setActiveStep(index)"
                 >
                   <div
-                    :class="step.color + ' w-10 h-10 rounded-full flex items-center justify-center phases_bubble font-semibold mr-4 flex-shrink-0'"
+                    :class="step.color + ' w-10 h-10 rounded-full flex items-center justify-center intro_phases_bubble font-semibold mr-4 flex-shrink-0',
+                    activeStep === index ? 'active_phases_bubble' : 'inactive_phases_bubble'"
                   >
                     {{ step.id }}
                   </div>
@@ -118,6 +119,16 @@
   </script>
   
   <style scoped>
+
+.active_phases_bubble {
+  background-color: #E67300;
+  color: #DFF4FF;  
+}
+
+.inactive_phases_bubble {
+  background-color: #C15500;
+  color: #DFF4FF;  
+}
 
   </style>
   

@@ -23,13 +23,13 @@
   
           <!-- Bubbles -->
           <div class="flex flex-wrap gap-2 mt-2 mb-4">
-            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-700">
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium type">
               {{ resource.type }}
             </span>
-            <span v-if="resource.time" class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-yellow-100 text-grey-700">
+            <span v-if="resource.time" class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium time">
               {{ resource.time }}
             </span>
-            <span v-if="resource.people" class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-green-100 text-green-700">
+            <span v-if="resource.people" class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium people">
               {{ resource.people }}
             </span>
           </div>
@@ -70,7 +70,7 @@
             <a
               :href="resource.url"
               target="_blank"
-              class="text-white text-xs bg-green-500 hover:bg-green-600 px-3 py-2 rounded-md transition-colors"
+              class="text-white text-xs surf_green px-3 py-2 rounded-md transition-colors"
             >
               Download Resource
             </a>
@@ -156,5 +156,32 @@ const closeOverlay = () => {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+
+
+.type{
+  background-color: #DFF4FF;
+  color: #004C97;
+}
+
+.time{
+  background-color: #FFE6D2;
+  color: #C15500;
+}
+
+.people{
+  background-color: #DCF2E5;
+  color: #006731;
+}
+
+.surf_green{
+  background-color: #17A95D;
+  color: white;
+}
+
+.surf_green:hover{
+  background-color: #008939;
+  color: white;
 }
 </style>
