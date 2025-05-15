@@ -11,12 +11,12 @@
 
         <!-- Main title -->
         <h2 class="text-3xl md:text-4xl font-bold mb-2">
-          Explore the Future of Technology
+          SURF Tech Trends
         </h2>
 
         <!-- Subtitle -->
         <p class="text-gray-600 max-w-2xl mx-auto">
-          From AI to Quantum and beyond, explore how emerging technologies are shaping the future of research and innovation in the Netherlands through the SURF Tech Trends Report.
+          Explore how emerging technologies are shaping the future of research and innovation through the Chapters of the Tech Trends Report.
         </p>
       </div>
     </div>

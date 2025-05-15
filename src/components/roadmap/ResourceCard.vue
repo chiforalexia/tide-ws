@@ -70,10 +70,11 @@
             <a
               :href="resource.url"
               target="_blank"
-              class="text-white text-xs surf_green px-3 py-2 rounded-md transition-colors"
+              class="download-btn"
             >
               Download Resource
             </a>
+
             <p v-if="resource.citation" class="text-xs text-gray-500 italic mt-2 sm:mt-0">
               {{ resource.citation }}
             </p>
@@ -175,13 +176,4 @@ const closeOverlay = () => {
   color: #006731;
 }
 
-.surf_green{
-  background-color: #17A95D;
-  color: white;
-}
-
-.surf_green:hover{
-  background-color: #008939;
-  color: white;
-}
 </style>
