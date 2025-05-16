@@ -57,7 +57,7 @@
         <!-- Submit -->
         <button
           type="submit"
-          class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-md shadow transition"
+          class="btn-blue"
           :disabled="Object.values(selectedSubvalues).flat().length > 3"
         >
           Get My Report

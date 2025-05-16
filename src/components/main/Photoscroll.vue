@@ -12,7 +12,7 @@
 
         <!-- Main title -->
         <h2 class="text-3xl md:text-4xl font-bold mb-2">
-          Get inspired
+          Get <span style="color: #E67300;">inspired</span>
         </h2>
 
         <!-- Subtitle -->

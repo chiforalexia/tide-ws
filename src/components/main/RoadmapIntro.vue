@@ -19,12 +19,14 @@
               The detailed roadmap breaks down the technology adoption and integration process into manageable 
               phases, providing clear guidance and resources for each step of your journey.
             </p>
-            <button @click="navigateToRoadmap" class="flex bg-blue-700 hover:bg-blue-600 text-white py-3 px-8 rounded-full items-center">
+
+            <button @click="navigateToRoadmap" class="btn-blue">
               Explore Full Roadmap
               <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 transition-transform" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M10 19l5-5-5-5" />
               </svg>
             </button>
+
           </div>
   
           <!-- Right: Roadmap Steps -->

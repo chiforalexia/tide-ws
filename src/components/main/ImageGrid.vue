@@ -11,7 +11,7 @@
 
         <!-- Main title -->
         <h2 class="text-3xl md:text-4xl font-bold mb-2">
-          SURF Tech Trends
+          SURF <span style="color: #E67300;">Tech Trends</span>
         </h2>
 
         <!-- Subtitle -->
