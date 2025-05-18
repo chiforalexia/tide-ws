@@ -9,22 +9,24 @@
             :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
           >
             <span class="bubble">
-              Discover Our Roadmap
+              Discover The Roadmap
             </span>
             <h2 class="text-3xl md:text-4xl font-bold mb-6">
               A Step-by-Step Guide to
-              <span class="primary-text">Successful Implementation</span>
+              <span class="text-blue-700">Successful Implementation</span>
             </h2>
             <p class="text-lg mb-8">
-              Our detailed roadmap breaks down the technology adoption process into manageable 
+              The detailed roadmap breaks down the technology adoption and integration process into manageable 
               phases, providing clear guidance and resources for each step of your journey.
             </p>
-            <button @click="navigateToRoadmap" class="flex btn items-center">
+
+            <button @click="navigateToRoadmap" class="btn-blue">
               Explore Full Roadmap
               <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 transition-transform" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M10 19l5-5-5-5" />
               </svg>
             </button>
+
           </div>
   
           <!-- Right: Roadmap Steps -->

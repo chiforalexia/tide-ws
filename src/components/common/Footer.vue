@@ -82,6 +82,16 @@
             </li>
           </ul>
         </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-gray-900 font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2 text-sm">
+              <li><router-link to="/roadmap" class="hover:text-blue-600">Knowledge Hub</router-link></li>
+                <!--<li><router-link to="/success-stories" class="hover:text-blue-600">Success Stories</router-link></li>
+              <li><a href="#" class="hover:text-blue-600">Community Portal</a></li>-->
+            </ul>
+        </div>
       </div>
   
       <div class="border-t mt-10 pt-6 text-sm flex flex-col md:flex-row justify-between text-gray-500">

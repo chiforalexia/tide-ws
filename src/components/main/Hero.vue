@@ -11,14 +11,14 @@
       </div>
 
       <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto transition-all duration-700 opacity-100 translate-y-0 delay-200">
-        A platform designed to guide institutions through adopting new technologies, fostering knowledge sharing, and enabling successful implementation.
+        A platform designed to guide institutions through adopting new technologies, knowledge sharing, and enabling successful implementation.
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 transition-all duration-700 opacity-100 translate-y-0 delay-300">
-        <router-link to="/survey" class="bg-blue-700 hover:bg-blue-600 text-white py-3 px-8 rounded-full">
+        <router-link to="/survey" class="bg-blue-700 hover:bg-blue-600 text-white py-3 px-8 rounded-lg flex items-center transition-colors duration-300">
           Personalize your Report
         </router-link>
-        <router-link to="/roadmap" class="border-blue-700 text-blue-700 hover:bg-blue-100 py-3 px-8 rounded-full border-2">
+        <router-link to="/roadmap" class="border-blue-700 text-blue-700 hover:bg-blue-100 py-3 px-8 rounded-lg flex items-center transition-colors duration-300 border-2">
           Explore the Roadmap
         </router-link>
         <!-- <button class="">See Success Stories</button> -->

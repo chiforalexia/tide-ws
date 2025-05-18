@@ -7,11 +7,11 @@
         <!-- Institution Size -->
         <div>
           <label class="block text-lg font-semibold text-gray-700 mb-2">
-            How far ahead are you planning?  
-            <span class="text-sm text-gray-500">(We’ll suggest technologies based on your timeline)</span>
+            How far ahead into the future are you planning?<br />  
+            <span class="text-sm text-gray-500">(We will suggest technologies based on your planning horizon)</span>
           </label>
           <select v-model="size" class="w-full border border-gray-300 px-4 py-2 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-            <option disabled value="">-- Select your timeline --</option>
+            <option disabled value="">-- Select your timeframe --</option>
             <option value="small">0-3 years</option>
             <option value="medium">3-5 years</option>
             <option value="large">5+ years</option>
@@ -29,17 +29,21 @@
               <h3 :class="valueColors[category] + ' font-large font-extrabold mr-2'">
                 {{ category.charAt(0).toUpperCase() + category.slice(1) }}
               </h3>
-              <button @click.prevent="openInfoBox === category ? openInfoBox = null : openInfoBox = category" class="text-blue-600 hover:text-blue-800" aria-label="Info">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z" />
-                </svg>
-              </button>
+              <span
+                @click.prevent="openInfoBox === category ? openInfoBox = null : openInfoBox = category"
+                class="info-bubble"
+                aria-label="Info"
+              >
+                i
+              </span>
+
             </div>
 
-            <div v-if="openInfoBox === category" class="relative bg-white border border-gray-300 p-6 rounded-lg shadow-xl mb-4 z-10">
-              <button @click="openInfoBox = null" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-xl font-bold" aria-label="Close">&times;</button>
-              <p class="text-gray-800 whitespace-pre-line">{{ valueInfo[category] }}</p>
+            <div v-if="openInfoBox === category" class="info-box">
+              <button @click="openInfoBox = null" class="close-btn " aria-label="Close">&times;</button>
+              <p>{{ valueInfo[category] }}</p>
             </div>
+
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
               <label v-for="subvalue in subvalues[category]" :key="subvalue">
@@ -53,7 +57,7 @@
         <!-- Submit -->
         <button
           type="submit"
-          class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-md shadow transition"
+          class="btn-blue"
           :disabled="Object.values(selectedSubvalues).flat().length > 3"
         >
           Get My Report

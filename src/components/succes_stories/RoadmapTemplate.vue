@@ -43,8 +43,12 @@
         Filter by track:
       </div>
       <div class="flex flex-wrap gap-2">
-        <button v-for="track in tracks" :key="track" :class="['filter-btn', selectedTrack === track ? 'active' : '']"
-          @click="filterItems(track)">
+        <button
+          v-for="track in tracks"
+          :key="track"
+          :class="['filter-btn', selectedTrack === track ? 'active' : '', track === 'All Tracks' ? 'all-tracks-btn' : '']"
+          @click="filterItems(track)"
+        >
           {{ track }}
         </button>
       </div>
@@ -70,12 +74,17 @@
                 {{ track.track }}
               </div>
               <div class="track-items">
-                <div v-for="item in track.items" :key="item.name" class="roadmap-item" :style="{
-                  '--start-quarter': getQuarterPosition(item.startDate),
-                  '--duration-quarters': getDurationQuarters(item.startDate, item.endDate),
-                  '--status-color': getStatusColor(item.status),
-                  '--track-color': getTrackColor(track.track)
-                }">
+                <div
+                  v-for="item in track.items"
+                  :key="item.name"
+                  class="roadmap-item"
+                  :style="{
+                    '--start-quarter': getQuarterPosition(item.startDate),
+                    '--duration-quarters': getDurationQuarters(item.startDate, item.endDate),
+                    '--status-color': getStatusColor(item.status),
+                    '--track-color': getTrackColor(track.track)
+                  }"
+                >
                   <div class="item-content">
                     <span class="item-name">{{ item.name }}</span>
                     <span class="item-status" :class="item.status">{{ item.status }}</span>
@@ -316,11 +325,9 @@ const getDurationQuarters = (startDate, endDate) => {
 }
 
 .filter-btn.active {
-  background: #2563EB;
+  background: #1D4ED8;
   color: white;
 }
-
-/* Rest of your original CSS remains unchanged */
 
 .track-row {
   display: grid;
