@@ -125,9 +125,9 @@
               </div>
 
               <!-- Main content grid -->
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Left column with subchapters -->
-                <div class="md:col-span-2 space-y-6">
+                <div class="space-y-6">
                   <!-- Subchapters Box -->
                   <div class="bg-gray-50 rounded-xl p-8 shadow-lg border border-blue-500">
                     <div class="flex items-center gap-3 mb-6">
@@ -149,18 +149,18 @@
                 </div>
 
                 <!-- Right column with Key Trends and Dutch Technologies -->
-                <div class="space-y-6">
+                <div class="space-y-10">
 
-                  <!-- Dutch Technologies Box -->
+                  <!-- Technologies Box -->
                   <div class="bg-gray-50 rounded-xl p-6 shadow-lg border border-green-500">
                     <div class="flex items-center gap-2 mb-4">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-green-500">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/></svg>
-                      <h3 class="text-xl font-semibold text-gray-800">Dutch Technologies</h3>
+                      <h3 class="text-xl font-semibold text-gray-800">Initiatives included in the Report</h3>
                     </div>
                     <ul class="space-y-3">
                       <li 
-                        v-for="(tech, idx) in section.dutchTechnologies" 
+                        v-for="(tech, idx) in section.Technologies" 
                         :key="idx"
                         class="flex items-center text-gray-700"
                       >
@@ -220,6 +220,7 @@ interface Section {
   description: string
   image: string
   subChapters: string[]
+  Technologies: string[]
   hovered: boolean
 }
 
@@ -236,19 +237,12 @@ const sections = ref<Section[]>([
       'Towards trustworthy AI',
       'More accessible computing and models'
     ],
-    keyTrends: [
-      'Towards ‘Frankenmodels’',
-      'More efficient approaches towards AI systems',
-      'New ways to access data',
-      'Towards trustworthy AI',
-      'More accessible computing and models'
-    ],
-    dutchTechnologies: [
-      'TU Delft AI Labs',
-      'Philips Healthcare AI',
-      'ING AI Solutions',
-      'TNO AI Research',
-      'Amsterdam AI Hub'
+    Technologies: [
+      'DeepMind’s Flamingo model',
+      'Towards AI-specific hardware',
+      'ODISSEI Secure Supercomputer',
+      'Algorithm registers',
+      'Facilitating model design with autoML'
     ],
     hovered: false
   },
@@ -264,19 +258,12 @@ const sections = ref<Section[]>([
       'Unconventional paradigms for computing',
       'High-end computing in qualitative research fields'
     ],
-    keyTrends: [
-      'Computing continuum',
-      'Energy sustainability in digital infrastructures',
-      'Protect sovereignty in digital infrastructure',
-      'Unconventional paradigms for computing',
-      'High-end computing in qualitative research fields'
-    ],
-    dutchTechnologies: [
-      'SURF Supercomputing',
-      'Dutch National Supercomputer',
-      'Amsterdam Data Hub',
-      'Green IT Amsterdam',
-      'Delft Quantum Computing'
+    Technologies: [
+      'Urgent computing',
+      'Digital and green transition picking up in Netherlands / Europe',
+      'Geographical chips act',
+      'Machine learning enhanced scientific computing',
+      'Community specific project calls'
     ],
     hovered: false
   },
@@ -292,19 +279,12 @@ const sections = ref<Section[]>([
       'Error correction techniques',
       'Quantum curiosity'
     ],
-    keyTrends: [
-      'Quantum Key Distribution (QKD) gaining momentum',
-      'Quantum Computing in the Cloud',
-      'Hybrid quantum/classical computing',
-      'Error correction techniques',
-      'Quantum curiosity'
-    ],
-    dutchTechnologies: [
-      'QuTech Delft',
-      'Quantum Delta NL',
-      'QphoX',
-      'Orange Quantum Systems',
-      'Quantum.Amsterdam'
+    Technologies: [
+      'Quantum Key Distribution: The Future Of Secure Communication',
+      'Tools and tutorials for quantum computing',
+      'NVIDIA Announces Hybrid Quantum-Classical Computing Platform',
+      'Machine learning enhanced scientific computing',
+      'Community specific project calls'
     ],
     hovered: false
   },
@@ -320,19 +300,12 @@ const sections = ref<Section[]>([
       'Run code anywhere',
       'Robotic Automation'
     ],
-    keyTrends: [
-      'Cloud-Edge Continuum',
-      'Digital Twins',
-      'Actual real-time data streams',
-      'Run code anywhere',
-      'Robotic Automation'
-    ],
-    dutchTechnologies: [
-      'SURF Edge Lab',
-      'KPN Edge Cloud',
-      'Dutch Edge Forum',
-      'Smart Industry NL',
-      'EdgeLab Amsterdam'
+    Technologies: [
+      'How IoT is helping to create smart university campuses',
+      'Digital twin: Empowering power systems with real-time training and predictive simulation',
+      'Real-time attention span tracking in online education',
+      'Leveraging containers for reproducible psychological research',
+      'The rise of robots-as-a-service'
     ],
     hovered: false
   },
@@ -347,18 +320,11 @@ const sections = ref<Section[]>([
       'Edge and campus architecture',
       'Next generation networks'
     ],
-    keyTrends: [
-      'Big Tech and networking',
-      'Intelligent networks',
-      'Edge and campus architecture',
-      'Next generation networks'
-    ],
-    dutchTechnologies: [
-      'KPN Networks',
-      'TNO Telecom',
-      'Dutch Optics Centre',
-      'SURFnet',
-      'Amsterdam Internet Exchange'
+    Technologies: [
+      'Big tech conquers internet infrastructure',
+      'Creating a Smarter Network',
+      'The AI driven campus architecture',
+      'ITU-T Technical Report - Use Case: Huge Scientific Data Applications (HSD)',
     ],
     hovered: false
   },
@@ -374,19 +340,12 @@ const sections = ref<Section[]>([
       'An increasing number of ethical concerns',
       'A fragmented ecosystem'
     ],
-    keyTrends: [
-      'Enriching XR by combining technologies',
-      'Virtual social interactions are getting more advanced',
-      'New gear for new realities',
-      'An increasing number of ethical concerns',
-      'A fragmented ecosystem'
-    ],
-    dutchTechnologies: [
-      'TNO XR Lab',
-      'Dutch VR Days',
-      'XR Base Amsterdam',
-      'VirtualDutch',
-      'AR/VR Next'
+    Technologies: [
+      'Generative AI for possible digital world creation',
+      'Virtual campuses are opening',
+      'Build your XR training scenario with Interhaptics',
+      'The future of advertising in AR/VR',
+      'Rapid growth in technologies accelerate development of Metaverse'
     ],
     hovered: false
   }
@@ -457,4 +416,14 @@ const setHovered = (section: Section, value: boolean) => {
 .transform {
   will-change: transform;
 }
+
+.surf-green {
+  color: #17A95D;
+}
+
+.surf-blue {
+  color: #0072C6;
+}
+
+
 </style>
