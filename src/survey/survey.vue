@@ -12,9 +12,9 @@
           </label>
           <select v-model="size" class="w-full border border-gray-300 px-4 py-2 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
             <option disabled value="">-- Select your timeframe --</option>
-            <option value="small">0-3 years</option>
-            <option value="medium">3-5 years</option>
-            <option value="large">5+ years</option>
+            <option value="0-3">0-3 years</option>
+            <option value="3-5">3-5 years</option>
+            <option value="5+">5+ years</option>
           </select>
           <p v-if="showError && !size" class="text-red-600 text-sm mt-1">Please select a timeline.</p>
         </div>
@@ -79,25 +79,25 @@ const size = ref('')
 const openInfoBox = ref(null)
 const showError = ref(false)
 const selectedSubvalues = reactive({
-  autonomy: [],
-  justice: [],
-  humanity: [],
+  Autonomy: [],
+  Justice: [],
+  Humanity: [],
 })
 const router = useRouter()
 
 const subvalues = {
-  autonomy: [
+  Autonomy: [
     'Self-determination of pupils and students',
     'Safeguarding of private life and personal data',
     'Independence of education',
     'Freedom of education',
   ],
-  justice: [
+  Justice: [
     'Inclusivity',
     'Equality',
     'Integrity',
   ],
-  humanity: [
+  Humanity: [
     'Respect',
     'Health, well-being',
     'Safety',
@@ -108,18 +108,18 @@ const subvalues = {
 }
 
 const valueColors = {
-  autonomy: 'secondary-text',
-  justice: 'text-blue-700',
-  humanity: 'text-green-700'
+  Autonomy: 'secondary-text',
+  Justice: 'text-blue-700',
+  Humanity: 'text-green-700'
 }
 
 const valueInfo = {
-  justice: `Justice comprises concepts such as equality, inclusivity and integrity. Education should offer equal opportunities to all, without disadvantaging or excluding any specific group. Social or cultural background and gender should not influence how pupils and students are treated. This means that all pupils and students should be treated without prior judgement, not just by their teachers, but also by algorithms. Equality is paramount in education.
+  Justice: `Justice comprises concepts such as equality, inclusivity and integrity. Education should offer equal opportunities to all, without disadvantaging or excluding any specific group. Social or cultural background and gender should not influence how pupils and students are treated. This means that all pupils and students should be treated without prior judgement, not just by their teachers, but also by algorithms. Equality is paramount in education.
 
 • Inclusivity in education means that it is open to all students. Everyone may take part, belong and be taught how to participate in society.
 
 • Integrity means, among other things, that education is trusted, transparent and verifiable, as are the data and systems that are used. Integrity also means that public resources are used for the purpose for which they are intended, while taking into account sustainability, to do justice to future generations.`,
-  humanity: `Humanity means having consideration for the human aspect in the education sector. It comprises social cohesion, meaningful contact, respect, safety, health and well-being, and self-development.
+  Humanity: `Humanity means having consideration for the human aspect in the education sector. It comprises social cohesion, meaningful contact, respect, safety, health and well-being, and self-development.
 
 • Educational institutions are places for social connection, encounters and meaningful contact.
 
@@ -130,7 +130,7 @@ const valueInfo = {
 • The human perspective is paramount in education: not a single decision should be taken or opinion expressed about a student that is based purely on data analysis.
 
 • Education encourages self-development: the expression of the individual character of students in relation to the world.`,
-  autonomy: `The literal meaning of autonomy is to live under your own laws. Autonomy comprises values such as self-determination, the safeguarding of personal privacy and educational independence and freedom.
+  Autonomy: `The literal meaning of autonomy is to live under your own laws. Autonomy comprises values such as self-determination, the safeguarding of personal privacy and educational independence and freedom.
 
 • Students have the right to self-determination: they have sufficient freedom to choose the type of education that suits them and they have autonomy over their development and choices.
 
@@ -142,9 +142,9 @@ const valueInfo = {
 }
 
 const sizeToReadiness = {
-  small: 'act',
-  medium: 'plan',
-  large: 'watch',
+  '0-3': 'act',
+  '3-5': 'plan',
+  '5+': 'watch',
 }
 
 function submitForm() {
@@ -179,7 +179,7 @@ function submitForm() {
     path: '/result',
     query: {
       size: size.value,
-      values: Object.keys(selectedSubvalues).filter(key => selectedSubvalues[key].length).join(','),
+      values: Object.keys(selectedSubvalues).filter(key => selectedSubvalues[key].length).join(', '),
       readiness,
       pages: uniquePages.join(','),
     },
