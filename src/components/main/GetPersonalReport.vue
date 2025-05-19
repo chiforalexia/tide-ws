@@ -18,11 +18,17 @@
         Get a personalized Tech Trends Report tailored to your unique needs and values!
       </p>
 
-      <router-link to="/survey">
-        <button class="bg-white text-blue-700 hover:bg-gray-100 hover:scale-1.10 font-semibold py-4 px-8 rounded-lg transition-all">
+      <router-link to="/survey" style="display: block; width: fit-content; margin: 0 auto;">
+        <button
+          class="bg-white text-blue-700 hover:bg-blue-100 hover:text-blue-800 py-3 px-8 rounded-lg flex items-center transition-colors duration-300"
+        >
           To the Report Survey
+          <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 transition-transform" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 19l5-5-5-5" />
+          </svg>
         </button>
       </router-link>
+
 
       <p class="text-xs text-white italic text-white/90 text-center py-1">
         in less than 5 minutes to your own report

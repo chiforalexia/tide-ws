@@ -23,6 +23,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #17A95D;
 }
 
+
 /* Buttons
 button {
   font-family: 'Nunito', sans-serif;
@@ -52,6 +53,34 @@ button:hover {
   background-color: #0077C8;
   scale: 1.10;
   transition: ease-in-out 0.3s; 
+}
+
+/*Blue on site button */
+.btn-blue {
+  display: flex;
+  align-items: center;
+  background-color: #1D4ED8; /* blue-700 */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-blue:hover {
+  background-color: #2563EB; /* blue-600 */
+}
+
+/*Green download button*/
+.download-btn {
+  background-color:#17A95D;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color:#008939;;
 }
 
 /* Section Bubbles */
@@ -88,7 +117,12 @@ button:hover {
 
 .phases_bubble {
   background-color: #DFF4FF;
-  color: #004C97;  
+  color: oklch(48.8% 0.243 264.376);  
+}
+
+.intro_phases_bubble {
+  background-color: #DFF4FF;
+  color: oklch(48.8% 0.243 264.376);  
 }
 
 
@@ -126,7 +160,7 @@ p {
 }
 
 .primary-text {
-  color: #0077C8;
+  color: #004C97;
 }
 
 /* Secondary Colors */
@@ -152,6 +186,10 @@ p {
   color: #B2B6BE;
 }
 
+.text-medium {
+  color: #5E6873;
+}
+
 .bg-light {
   background-color: #F4F6F8;
 }
@@ -160,3 +198,58 @@ p {
   border-radius: 10px;
 }
 
+.info-bubble {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;            
+  border: 1px solid #9ca3af;        
+  font-size: 0.75rem;               
+  font-weight: 600;
+  color: #6b7280;                   
+  background-color: white;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+  user-select: none;
+}
+
+.info-bubble:hover {
+  color: #2563eb;                
+  border-color: #2563eb;
+}
+
+.info-box {
+  position: relative;
+  background-color: #f3f4f6; 
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+.info-box p {
+  color: #374151; 
+  white-space: pre-line;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+.info-box .close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #6b7280;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: color 0.2s ease;
+}
+
+.info-box .close-btn:hover {
+  color: #374151;
+}
