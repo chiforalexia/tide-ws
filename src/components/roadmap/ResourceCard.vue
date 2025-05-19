@@ -7,7 +7,7 @@
     >
       <div class="bg-white rounded-lg max-w-4xl w-full shadow-xl overflow-hidden relative">
         <!-- Corrected gradient -->
-        <div class="h-1.5 w-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+        <div class="h-1.5 w-full gradient-bar"></div>
   
         <div class="p-6">
           <button
@@ -174,6 +174,10 @@ const closeOverlay = () => {
 .people{
   background-color: #DCF2E5;
   color: #006731;
+}
+
+.gradient-bar {
+  background: linear-gradient(to right, #3B82F6, #17A95D);
 }
 
 </style>
