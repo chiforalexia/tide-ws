@@ -358,7 +358,7 @@ const phases = ref([
     citation: 'SURF. (2023). SURF Tech Trends 2023. https://www.surf.nl/en/tech-trends'
   },
   {
-    title: 'Silent Brainstorm',
+    title: 'Brainstorm using the Futures Wheel',
     type: 'Activity',
     description: 'In this activity, you\'ll independently generate ideas by combining insights from the SURF Tech Trends Report with your own background, experiences, and observations.',
     tips: [
