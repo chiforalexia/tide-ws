@@ -171,6 +171,22 @@
       author: '',
       link: 'https://mbodigitaal.nl/2023/10/trots-op-xr-als-bestendigd-onderdeel-van-het-curriculum-xr-is-geen-uitstapje/',
     },
+    {
+        id: 4,
+        institution: 'Delft University of Technology',
+        subtitle: 'Mondai | House of AI',
+        image: '/mondai.jpg',
+        imageAlt: 'Mondai | House of AI',
+        outcomes: [
+        'Created a hybrid AI campus network in Delft and Rotterdam',
+        'Connected researchers, students, companies and public organisations in a shared AI community',
+        'Applied AI research to solve real-world business and societal challenges',
+        'Organised events and meetups to spark new ideas and partnerships',
+        'Made AI expertise and talent easily accessible for regional organisations'
+    ],
+        quote: '"We are boosting the development of AI applications in seven strategic domains that are relevant for both TU Deflt and the South Holland region"',
+        author: 'Joost Poort',
+    }
   ]
   
   const selectedStoryId = ref(1)
