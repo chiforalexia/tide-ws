@@ -332,8 +332,7 @@ const phases = ref([
       ]
     }
     ],
-    stakeholderEngagement: ['Engage a diverse group from the outset. Cross-functional participation strengthens the quality of insights and builds ownership for future strategy.',
-  'Early stakeholder mapping ensures you know who to involve, inform, or consult as the process moves forward.'],
+    stakeholderEngagement: 'Engage a diverse group from the outset. Cross-functional participation strengthens the quality of insights and builds ownership for future strategy. Early stakeholder mapping ensures you know who to involve, inform, or consult as the process moves forward.',
     indicators: [
       'You’ve completed a structured ideation and futures exploration process.',
       'Four plausible, well-defined scenarios are documented.',
@@ -343,15 +342,14 @@ const phases = ref([
     resources: [
     {
     title: 'Tech Trends Report',
-    type: 'Document',
-    description: 'This report serves as your go-to reference for spotting early signals and understanding technological developments that could shape the future of education and research.',
+    description: ' This report serves as your go-to reference for spotting early signals and understanding technological developments that could shape the future of education and research. Use it as the starting point when scanning for trends and opportunities, and to inform your organization’s strategic conversations and innovation priorities.',
     tips: [
       'Use the report as a first reference when identifying relevant signals, trends, and emerging technologies for your context.',
       'Bring it into strategic discussions or innovation workshops to frame conversations around where technology is heading.',
-      'Evaluate how the trends outlined could impact your institution within the next years.',
-      'Share key insights with leadership and innovation teams to keep decision-making aligned with sector-wide developments.'
+      'With the help of this roadmap, evaluate how the trends outlined could impact your institution within the next years.',
+      'Share key insights with leadership and innovation teams.'
     ],
-    url: '/resources/personalisation-page.pdf',
+    url: '',
     time: '30 min',
     people: 'Individual or team',
     exampleimage: '/public/phases_resources/images/tech_trends_report.png',
@@ -359,23 +357,21 @@ const phases = ref([
   },
   {
     title: 'Brainstorm using the Futures Wheel',
-    type: 'Activity',
-    description: 'In this activity, you\'ll independently generate ideas by combining insights from the SURF Tech Trends Report with your own background, experiences, and observations.',
+    description: 'In this activity, you\'ll generate ideas using a Futures Wheel, combining insights from the SURF Tech Trends Report with your own experiences and observations. The aim is to surface bold, surprising, or unconventional ideas.',
     tips: [
-      'Get a blank canvas or physical wall space.',
-      'Use Post-it notes (physical or digital) to write down every idea that comes to mind — one idea per note.',
-      'Start by reviewing the trends and signals from the SURF Tech Trends Report and reflect on how they might intersect with your context.',
-      'Write down every idea — no filtering, no judging. Even half-formed, unusual, or provocative thoughts are valuable here.'
+      'Use a clear space, such as a blank wall, digital board, or virtual collaboration tool.',
+      'Start by placing a central trend or signal from the SURF Tech Trends Report in the center of the wheel. Individually  write down immediate impacts or consequences of that trend on Post-its (physical or virtual) and place them around the center. From each first-order impact, branch out to explore second and third order consequences.',
+      'Include your personal experiences, sector insights, cultural dynamics, and practical realities. Focus on quantity over quality. No idea is too bold, incomplete, or far-fetched at this stage.',
+      'Once the wheel is populated, you or the group can reflect on surprising patterns, contradictions, or unexpected opportunities that emerge.',
     ],
     url: '/resources/silent-brainstorm.pdf',
     time: '5–10 min',
     people: 'Individual or team',
     exampleimage: '/public/phases_resources/images/silent_brainstorm.png',
-    citation: ''
+    citation: 'Jerome C.  Glenn, & Gordon, T. J. (2009). Futures Research Methodology (3.0). The Millennium Project. https://millennium-project.org/publications/futures-research-methodology-version-3-0-2/'
   },
   {
     title: 'Futures Triangle',
-    type: 'Activity',
     description: 'Explore the forces influencing possible futures for your organization or sector by mapping key trends and drivers onto a Futures Triangle framework.',
     tips: [
       'Draw a triangle and label the points: Pull of the Future, Push of the Present, and Weight of the Past.',
@@ -383,27 +379,13 @@ const phases = ref([
       'Write each idea on a Post-it and place it in the relevant corner of the triangle.',
       'Look for tensions or areas of alignment between forces.'
     ],
-    url: '/resources/futures-triangle.pdf',
+    url: 'https://journals.sagepub.com/doi/10.1177/19467567231203162',
     time: '45 min',
     people: 'Individual or team',
     exampleimage: '/public/phases_resources/images/futures_triangle.png',
     citation: 'Inayatullah, S. (2023). The Futures Triangle: Origins and Iterations. World Futures Review, 15(2–4), 112–121. https://doi.org/10.1177/19467567231203162'
   },
-  {
-    title: 'PESTEL Analysis',
-    type: 'Framework',
-    description: 'Analyze the Political, Economic, Social, Technological, Environmental, and Legal factors influencing your environment to identify risks, opportunities, and strategic context.',
-    tips: [
-      'Conduct a PESTEL analysis at the start of a new strategy cycle.',
-      'Integrate it into risk management processes.',
-      'Combine with SWOT for a complete internal and external assessment.'
-    ],
-    url: '/resources/pestel-analysis.pdf',
-    time: '1.5–2 hours',
-    people: 'Team (3–5 people)',
-    exampleimage: '/public/phases_resources/images/pestle_analysis.png',
-    citation: 'Aguilar, F. J. (1967). Scanning the business environment. Macmillan. https://bac-lac.on.worldcat.org/oclc/301680659'
-  },
+
   {
     title: 'Axes of Uncertainty',
     type: 'Framework',
@@ -417,7 +399,7 @@ const phases = ref([
     ],
     url: '/resources/axes-of-uncertainty.pdf',
     time: '45–60 min',
-    people: 'Cross-functional or strategic foresight team (3–5 people)',
+    people: 'Team (3–5 people)',
     exampleimage: '/public/phases_resources/images/axes_uncertainty.png',
     citation: 'Best practice foresight tool (Voros, 2003; Schwartz, 1991)'
   },
@@ -433,7 +415,7 @@ const phases = ref([
     ],
     url: '/resources/horizon-scanning.pdf',
     time: '1–2 hours',
-    people: 'Foresight team or innovation leads',
+    people: 'Team (3–5 people)',
     exampleimage: '/public/phases_resources/images/horizon_scanning.png',
     citation: 'Standard foresight methodology (Curry & Hodgson, 2008; Hines & Bishop, 2006)'
   },
@@ -464,7 +446,7 @@ const phases = ref([
     ],
     url: '/resources/readiness-assessment.pdf',
     time: '2–3 hours',
-    people: 'Change management team or leadership (3–6 people)',
+    people: 'Team (3–5 people)',
     exampleimage: '/public/phases_resources/images/readiness_assessment.png',
     citation: 'Standard organizational change practice'
   },
@@ -479,7 +461,7 @@ const phases = ref([
     ],
     url: '/resources/stakeholder-mapping.pdf',
     time: '1 hour',
-    people: 'Team (2–4 people)',
+    people: 'Team (3–5 people)',
     exampleimage: '/public/phases_resources/images/stakeholder_mapping.png',
     citation: 'Common foresight and change management tool'
   },
@@ -495,7 +477,7 @@ const phases = ref([
     ],
     url: '/resources/implications-analysis-wheel.pdf',
     time: '1 hour',
-    people: 'Team',
+    people: 'Team (3–5 people)',
     exampleimage: '/public/phases_resources/images/implications_wheel.png',
     citation: 'Adapted from foresight and risk assessment practices (Fahey & Randall, 1998; Rohrbeck et al., 2015)'
   }
@@ -962,7 +944,6 @@ Use internal comms, showcases, or quick demos to maintain excitement and transpa
     citation: 'Forbes Tech Council (2023)'
   }
   ],
-justification: `<p><strong>The Evaluation & Optimization phase also belongs to the Actioning step in the Seven-Step Funnel.</strong> It focuses on continuously measuring the impact of implemented initiatives, capturing lessons learned, and refining approaches. This phase keeps your strategy agile and responsive as conditions evolve.</p>`,
     justificationImage: '/phases_resources/images/forecasting_funnel.png',
 }
 ]);

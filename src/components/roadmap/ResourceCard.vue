@@ -23,9 +23,6 @@
   
           <!-- Bubbles -->
           <div class="flex flex-wrap gap-2 mt-2 mb-4">
-            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium type">
-              {{ resource.type }}
-            </span>
             <span v-if="resource.time" class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium time">
               {{ resource.time }}
             </span>
@@ -97,7 +94,7 @@
         <!-- Only type shown on card -->
         <div class="mb-2">
           <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium resources_bubble">
-            {{ resource.type }}
+            {{ resource.people }}
           </span>
         </div>
   
@@ -172,8 +169,8 @@ const closeOverlay = () => {
 }
 
 .people{
-  background-color: #DCF2E5;
-  color: #006731;
+  background-color: #DFF4FF;
+  color: #004C97;
 }
 
 .gradient-bar {
