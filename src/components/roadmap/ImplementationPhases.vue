@@ -149,9 +149,9 @@
 
                           <!-- Sub-bullets / details -->
                           <ul class="pl-12 space-y-2 list-disc text-gray-600">
-                            <ul class="pl-12 space-y-2 list-disc text-gray-600">
                             <li v-for="(detail, j) in activity.details" :key="j" v-html="detail"></li>
                           </ul>
+
 
                           <!-- Tools (if available) -->
                           <div v-if="activity.tools && activity.tools.length" class="pl-16 mt-3">
