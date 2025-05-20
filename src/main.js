@@ -8,6 +8,7 @@ import LandingPage from './pages/LandingPage.vue';
 import SuccessStoriesPage from './pages/SuccessStoriesPage.vue';
 import SurveyPage from './survey/survey.vue';
 import ResultPage from './survey/result.vue';
+import KnowledgeHub from './pages/KnowledgeHub.vue';
 
 
 // Define the routes
@@ -17,6 +18,7 @@ const routes = [
   { path: '/success-stories', component: SuccessStoriesPage }, // Success stories page route
   { path: '/survey', component: SurveyPage }, // Survey page route
   { path: '/result', component: ResultPage }, // Result page route
+  { path: '/knowledge-hub', component: KnowledgeHub }, // Knowledge Hub page route
 ];
 
 // Create the router instance

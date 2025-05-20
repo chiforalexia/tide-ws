@@ -87,9 +87,7 @@
         <div>
           <h4 class="text-gray-900 font-semibold mb-4">Quick Links</h4>
             <ul class="space-y-2 text-sm">
-              <li><router-link to="/roadmap" class="hover:text-blue-600">Knowledge Hub</router-link></li>
-                <!--<li><router-link to="/success-stories" class="hover:text-blue-600">Success Stories</router-link></li>
-              <li><a href="#" class="hover:text-blue-600">Community Portal</a></li>-->
+              <li><router-link to="/knowledge-hub" class="hover:text-blue-600">Knowledge Hub</router-link></li>
             </ul>
         </div>
       </div>

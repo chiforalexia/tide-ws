@@ -1,17 +1,19 @@
 <template>
   <div>
     <!-- Header -->
-    <h1 class="text-5xl font-extrabold text-center mb-2 text-black-800">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center m-2 text-black-800">
       Integration Roadmap
     </h1>
 
-    <!-- Paragraph -->
-    <p class="text-xl text-gray-600 max-w-3xl mx-auto mt-6 text-center leading-relaxed">
-      With the SURF Tech Trends Report in hand, you’ve taken the first step: <span class="font-bold"> gaining insight into the signals shaping the future of education and research.</span>  These aren’t instructions but an invitation to reflect, translate, and act.
+    <p class=" sm:text-lg md:text-xl text-gray-600 max-w-3xl m-4 text-center mx-auto">
+      With the SURF Tech Trends Report in hand, you’ve taken the first step: 
+      <span class="font-bold">
+        gaining insight into the signals shaping the future of education and research.
+      </span> 
+      These aren’t instructions but an invitation to reflect, translate, and act.
     </p>
 
-    <!-- Blue subtitle at the bottom -->
-    <div class="text-lg text-blue-600 m-8 text-center">
+    <div class="text-sm sm:text-base md:text-lg text-blue-600 m-8 text-center">
       You’re not expected to follow a fixed path, but to create one, using these phases as support.
     </div>
 
