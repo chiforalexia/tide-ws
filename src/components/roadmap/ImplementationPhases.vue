@@ -657,40 +657,31 @@ justificationImage: "",
       'Engage broader staff via Crowd Clovers to gather feedback and generate commitment from the ground up.'
     ],
     url: '/resources/team-tools.pdf'
-  }
-],
-justification: '<p><strong>The Strategic Planning </strong>phase is the second phase because it brings foresight back to your organisation’s context. It is about identifying opportunities and threats from your scenarios and assessing your organisation’s capability gaps to act on them. This phase ensures your strategic response is both ambitious and achievable within your operational reality.</p>',
-    justificationImage: '',
+  }],
   },
   {
   title: 'Pilot Experimentation',
-  description: `Build fast. Learn faster. Make innovation real. Launch your pilot. Build the systems, teams, and habits that will drive real-world impact—while learning and adapting as you go.`,
+  description: `Build fast. Learn faster. Make innovation real. 
+Launch your pilot. Build the systems, teams, and habits that will drive real-world impact while learning and adapting as you go.`,
+
+  justification: `The Pilot Experimentation phase moves selected initiatives from concept to practice. We recognize that how, and when you pilot new initiatives depends on available resources, staffing, and institutional priorities. The steps below are intended as inspiration and conversation starters to shape your own approach.`,
+
   activities: [
     {
-      activity: 'Form an implementation team',
+      activity: 'Form a Pilot Team',
       details: [
-        'Assemble a dedicated group with clear roles, responsibilities, and decision-making authority.',
-        'Use the Planning Template to define timelines, resource needs, and governance structures.'
+        'Bring together a cross-functional group and consider defining clear roles, responsibilities, and timelines.',
+        'Use simple planning tools (such as a Project Plan Template) that suit your team\'s working style and available capacity.'
       ],
       tools: [
-        'Planning Template'
+        'Project Plan Template'
       ]
     },
     {
-      activity: 'Balance design goals with real-world conditions',
+      activity: 'Adopt a Flexible, Learning-Focused Approach',
       details: [
-        'Track where you must stay true to core principles vs. where adaptation is acceptable.',
-        'Continuously monitor constraints and opportunities on the ground.'
-      ],
-      tools: [
-        'Fidelity-Flexibility Tracker'
-      ]
-    },
-    {
-      activity: 'Apply agile implementation approaches',
-      details: [
-        'Break the pilot into short, iterative sprints or cycles.',
-        'Hold regular stand-ups and retrospectives to quickly surface issues and pivot as needed.'
+        'Stay adaptable, whether through agile methods, phased rollouts, or informal iteration.',
+        'The goal is to prioritize learning over perfection.'
       ],
       tools: [
         'Agile Sprint Framework',
@@ -698,23 +689,37 @@ justification: '<p><strong>The Strategic Planning </strong>phase is the second p
       ]
     },
     {
-      activity: 'Use change management strategies to maintain engagement',
+      activity: 'Develop Shared, Goal-Oriented Metrics',
       details: [
-        'Communicate frequently and transparently about pilot progress, successes, and lessons learned.',
-        'Identify and address sources of resistance proactively.'
+        'Develop goal-oriented evaluation metrics and systems for regular feedback.'
       ],
       tools: [
-        'Change Management Playbook',
-        'Pulse Surveys'
+        'Evaluation Metrics Framework',
+        'Feedback Loops'
+      ]
+    },
+    {
+      activity: 'Connect with Peers',
+      details: [
+        'Where possible, invite other institutions, networks, or sector partners into conversations about similar pilots.',
+        'Share experiences, challenges, and approaches for mutual learning.'
+      ],
+      tools: [
+        'Peer Learning Sessions',
+        'Knowledge Exchange Workshops'
       ]
     }
   ],
+
+  stakeholderEngagement: `Stakeholders become co-pilots. Engage frontline users in prototyping, feedback loops, and iterative design. Their insights could drive success, and build long-term ownership.`,
+
   indicators: [
-    'Your pilot is live and actively supported',
-    'Feedback is flowing and being used to adapt in real-time',
-    'You’re building visible momentum and buy-in'
+    'A clear, resourced, and context-appropriate pilot plan is in place.',
+    'Your pilot is live and actively supported.',
+    'Feedback is being gathered.',
+    'Lessons are shared internally, and where possible, with peer institutions.'
   ],
-  stakeholderEngagement: `Stakeholders become co-pilots. Engage frontline users in prototyping, feedback loops, and iterative design. Their insights drive success and build long-term ownership.`,
+
   resources: [
     {
       title: 'Implementation Planning Template',
@@ -794,55 +799,57 @@ justification: '<p><strong>The Strategic Planning </strong>phase is the second p
       url: '/resources/feedback-survey.html'
     }
   ],
-justification: `<p><strong>The Pilot Implementation </strong> phase corresponds to the <strong>Actioning step in the Seven-Step Funnel.</strong> This is where selected initiatives and strategic choices move from planning to real-world testing. Pilots help validate assumptions, surface operational challenges, and build organisational confidence before scaling up full implementation.</p>`,
-    justificationImage: '/public/phases_resources/images/forecasting_funnel.png',
+    justificationImage: "",
 },
 
 {
   title: 'Full Deployment',
-  description: `Scale success. Anchor innovation in the system. Roll out your solution with consistency, structure, and strong support systems—turning pilot success into everyday practice.`,
+  justification: `The Full Deployment phase marks a significant step in moving from successful pilot to broader institutional integration. Every institution has its own rhythm and way of embedding change, so while these steps offer a helpful starting framework, you’ll know best how to shape them within your own culture, priorities, and decision-making processes.`,
+
+  description: `From Pilots to Practice: Embedding Innovation.
+This phase is about rolling out the solution across the organization with consistency, structure, and strong support systems.`,
+
   activities: [
     {
       activity: 'Finalize Deployment Plans',
       details: [
-        'Confirm final rollout timelines, team responsibilities, and communication protocols.',
-        'Incorporate lessons learned from the pilot to adjust risk mitigation strategies.'
-      ],
-      tools: [
-        'Risk Mitigation Matrix'
+        'Review rollout details, timelines, and mitigation strategies.',
+        'Adjust them to reflect what you’ve learned in pilots and what is realistic for your environment.'
       ]
     },
     {
       activity: 'Train and Support Users',
       details: [
-        'Develop and deliver tailored training sessions and materials for different user groups.',
-        'Ensure clear, up-to-date documentation is available through multiple channels.'
-      ],
+        'Provide the right guidance and training in ways that work for your teams, whether through tailored sessions, self-guided materials, or informal peer learning.'
+      ]
     },
     {
       activity: 'Coordinate Logistics and Support',
       details: [
-        'Confirm infrastructure, staffing, and tech support readiness prior to go-live.',
-        'Set up clear escalation processes for operational issues.'
-      ],
-
+        'Confirm that infrastructure, staffing, and support mechanisms are ready for a smooth scale-up.'
+      ]
     },
     {
       activity: 'Track Adoption and Resolve Issues',
       details: [
-        'Monitor real-time usage data and feedback to identify adoption trends.',
-        'Use issue tracking systems to quickly resolve problems and adjust support as needed.'
-      ],
-
+        'Set up mechanisms to track progress and surface challenges early, whether through formal dashboards or regular team check-ins.',
+        'Focus on responsiveness and learning as you go.'
+      ]
     }
   ],
+
   indicators: [
-    'Deployment has reached all intended teams and functions',
-    'Users report confidence and clarity through feedback or training completion rates',
-    'Minimal disruption during transition, with responsive support in place',
-    'Performance and usage data show active adoption'
+    'Deployment has reached all intended teams and functions.',
+    'Users feel supported and well-informed — measured through whatever feedback or check-in practices your organization values.',
+    'Minimal disruption occurs, with issues addressed quickly and transparently.',
+    'Performance and usage data show active adoption.'
   ],
-  stakeholderEngagement: `Maintain clear communication channels so everyone knows where to get help or give feedback. Share wins, updates, and milestones through internal comms, showcases, or quick demos to sustain excitement and transparency.`,
+
+  stakeholderEngagement: `Maintain Clear Communication Channels.
+Ensure everyone knows where to get help or give feedback.
+
+Share Wins and Updates.
+Use internal comms, showcases, or quick demos to maintain excitement and transparency.`, 
   resources: [
   {
     title: 'Deployment Checklist',
@@ -877,42 +884,48 @@ justification: `<p><strong>The Pilot Implementation </strong> phase corresponds 
     citation: 'Whatfix Blog (2023)'
   }
   ],
-justification: `<p><strong>The Full Deployment phase is part of the Actioning step in the Seven-Step Funnel.</strong> It involves scaling successful pilot projects into broader, institution-wide initiatives. This phase ensures new solutions are fully integrated into operations, with clear ownership, resources, and governance in place.</p>`,
     justificationImage: '/phases_resources/images/forecasting_funnel.png',
 },
 {
   title: 'Evaluation & Optimization',
+  justification: "This phase offers a structure for reflecting on the outcomes of your initiatives while also keeping an eye on long-term alignment with your organizational vision and ongoing future readiness. These steps aren’t meant to prescribe exactly how you should proceed. Rather, they serve as a conversation starter to help you consider how evaluation, improvement, and foresight could be approached within your context.",
   description: `Improve. Scale. Repeat. Once deployed, it's time to evaluate impact, adapt based on feedback, and build a foundation for future improvement.`,
   activities: [
     {
-      activity: 'Gather Qualitative Feedback',
+      activity: 'Gather Feedback',
       details: [
-        'Conduct surveys, interviews, or roundtables to surface deeper insights and improvement opportunities.'
+        'Consider how you might gather insights from those involved.',
+        'This could include surveys, interviews, informal conversations, or performance data – whichever tools suit your culture and project.'
+      ]
+    },
+    {
+      activity: 'Monitor Alignment with Vision & Strategic Priorities',
+      details: [
+        'It can be valuable to check whether initiatives are still aligned with your long-term ambitions. '
       ]
     },
     {
       activity: 'Implement Improvements',
       details: [
-        'Address quick wins based on initial feedback.',
-        'Prioritize and plan for bigger changes where needed.',
-        'Document all updates and decisions in a structured way.'
+        'Document all updates in a structured way.',
+        'Decide what quick fixes you want to make and what deserves a bigger conversation. ',
+        'Future readiness often benefits from regular, light-touch conversations, rather than large, infrequent reviews. '
       ]
     },
     {
       activity: 'Capture and Share Lessons Learned',
       details: [
-        'Feed key insights and outcomes back into your institutional processes, playbooks, and training materials.',
-        'Use these lessons to inform and strengthen future innovation initiatives.'
+        'Think about the best way for your team to share what’s been learned.',
+        'An After-Action Review or Retrospect are useful tools that helps with structured reflection, encourages open dialogue, and helps in documenting insights that can inform future initiatives.'
       ]
     }
   ],
   indicators: [
-    'Data shows performance gains or clear gaps for improvement',
+    'Clarity on what’s working, what’s not, and what needs adjustment.',
     'Users feel heard and involved in refinement',
-    'Adjustments lead to improved usability, adoption, or outcomes',
-    'Lessons are accessible and used to inform new initiatives'
+    'Insights and learnings feeding back into future initiatives.',
   ],
-  stakeholderEngagement: `Close the loop by sharing what you’ve learned and how you’re improving. Invite critique and create safe spaces for honest feedback and refinement ideas.`,
+  stakeholderEngagement: ['Close the Loop - Share back what you’ve learned and how you’re improving.', 'Invite Critique - Create safe spaces for honest feedback and refinement ideas.', 'Keep Futuring in the Conversation - Regularly check in on how current initiatives fit with your anticipated future and emerging challenges.'],
   resources: [
   {
     title: 'After Action Review (AAR) Template',
