@@ -149,9 +149,8 @@
 
                           <!-- Sub-bullets / details -->
                           <ul class="pl-12 space-y-2 list-disc text-gray-600">
-                            <li v-for="(detail, j) in activity.details" :key="j">
-                              {{ detail }}
-                            </li>
+                            <ul class="pl-12 space-y-2 list-disc text-gray-600">
+                            <li v-for="(detail, j) in activity.details" :key="j" v-html="detail"></li>
                           </ul>
 
                           <!-- Tools (if available) -->
@@ -260,25 +259,33 @@ const toggleSidebar = () => {
 const phases = ref([
   {
     title: 'Exploration',
-    description: `Move from observing trends to making sense of them. In this phase, you’ll explore how signals of change intersect with your institution’s mission, culture, and operational context. The goal is to surface possibilities, imagine futures, and lay the groundwork for focused strategic planning.`,
+    description: 'Now it’s time to move from observing trends to making sense of them. The goal isn’t to predict what will happen, but to surface a range of possibilities and begin imagining futures that inform smarter, more resilient strategies. The goal is to discover possibilities, imagine futures, and lay the groundwork for focused strategic planning.',
     activities: [
       {
         activity: 'Familiarise yourself with the SURF Tech Trends Report',
         details: [
-          'Review the report thoroughly and combine its insights with your own expertise and knowledge of your institution.',
-          'Start identifying signals of change relevant to your mission, culture, and strategy.'
+          'Begin by reviewing the report and combining its insights with your own expertise and institutional knowledge.',
         ]
       },
       {
         activity: 'Assemble a cross-functional team',
         details: [
-          'Bring together people from different functions, disciplines, and backgrounds to broaden perspectives.',
-          'Innovation thrives in diverse groups where assumptions are challenged and fresh ideas emerge.'
+          `Foresight and innovation thrive in diverse groups. Bring together a mix of perspectives to challenge assumptions and reveal blind spots. Your team might include:`,
+          `<ul class="list-disc pl-6 mt-2 space-y-1">
+            <li>Academic leadership (e.g. program directors)</li>
+            <li>Researchers</li>
+            <li>IT managers and digital transformation leads</li>
+            <li>Student representatives</li>
+            <li>Operations, finance, or facilities managers</li>
+            <li>Learning technologists or instructional designers</li>
+            <li>HR or organizational development specialists</li>
+            <li>Communications and marketing staff</li>
+            <li>External stakeholders or partners (if appropriate)</li>
+          </ul>`
         ]
-
       },
       {
-        activity: 'Run a silent brainstorm with the Tech Trends in mind',
+        activity: 'Brainstorm using a Futures Wheel with the Tech Trends in Mind',
         details: [
           'Each participant writes down as many future possibilities, ideas, or risks as possible without discussion.',
           'Focus on capturing volume and variety—no judgment, just curiosity.'
@@ -287,47 +294,44 @@ const phases = ref([
       {
         activity: 'Map initial stakeholders',
         details: [
-          'Identify individuals, groups, and partners who might influence or be impacted by future initiatives.',
-          'Create a preliminary map to guide engagement in upcoming phases.'
+          ' Identify the individuals, groups, or partners who might be impacted by or have influence over future',
+          'Create a preliminary map to shape meaningful engagement throughout the process.'
         ]
       },
       {
-        activity: 'Conduct a PESTEL Analysis',
+        activity: 'Futures Triangle',
         details: [
-          'Explore Political, Economic, Social, Technological, Environmental, and Legal drivers of change.',
-          'Identify broader trends and emerging signals shaping your sector.'
-        ]
-      },
-      {
-        activity: 'Use the Futures Triangle tool',
-        details: [
-          'Map the pull of the future, push of the present, and weight of the past on your institution’s trajectory.',
+          'Use this tool to map the pull of the future, push of the present, and weight of the past on your institution’s trajectory.',
           'Helps to frame opportunities and constraints realistically.'
         ]
       },
       {
-        activity: 'Establish axes matrix for scenario development',
-        details: [
-          'Identify two key uncertainties to build your scenarios around.',
-          'Leverage group insights and diverse perspectives to select relevant, impactful axes.'
-        ]
-      },
-      {
-        activity: 'Develop four plausible scenarios',
-        details: [
-          'Use your axes to craft four distinct, plausible futures.',
-          'These narratives will help stress-test strategies and surface opportunities and risks later.'
-        ]
-      },
-      {
-        activity: 'Document the process',
-        details: [
-          'Capture key assumptions, discussion points, ideas, and early signals.',
-          'This documentation becomes a critical input for decision-making in later phases.'
-        ]
-      }
+      activity: 'Select a Framing Method for Scenario Development',
+      details: [
+        `There are multiple ways to structure scenarios. Choose an approach that fits your context, resources, and goals:`,
+        `<ul class="list-disc pl-6 mt-2 space-y-1">
+          <li><strong>Axes of Uncertainty:</strong> establishing two critical uncertainties as axes, creating a matrix to define four possible futures.</li>
+          <li><strong>Trend Clusters:</strong> combining groups of trends and drivers to build scenario narratives.</li>
+          <li><strong>Impact vs. Uncertainty Mapping:</strong> categorizing factors by their potential impact and unpredictability.</li>
+          <li><strong>Wildcard Event Scenarios:</strong> constructing futures around sudden, disruptive events.</li>
+        </ul>`
+      ]
+    },
+    {
+      activity: 'Develop a Set of Plausible Scenarios',
+      details: [
+        `Whether you use axes, trend clusters, or another method, aim to craft three to four distinct, plausible narratives. These should be stories about how the future might unfold under different conditions, not predictions.`
+      ]
+    },
+    {
+      activity: 'Document the Process',
+      details: [
+        `Thoroughly capture assumptions, discussion points, and early signals. This documentation becomes a valuable input for strategic decision-making and alignment in later phases.`
+      ]
+    }
     ],
-    stakeholderEngagement: `Engage a diverse, cross-functional group from the outset. Early stakeholder mapping helps identify who to involve, inform, or consult as the process progresses, strengthening insights and ownership of future strategy.`,
+    stakeholderEngagement: ['Engage a diverse group from the outset. Cross-functional participation strengthens the quality of insights and builds ownership for future strategy.',
+  'Early stakeholder mapping ensures you know who to involve, inform, or consult as the process moves forward.'],
     indicators: [
       'You’ve completed a structured ideation and futures exploration process.',
       'Four plausible, well-defined scenarios are documented.',
@@ -494,21 +498,21 @@ const phases = ref([
     citation: 'Adapted from foresight and risk assessment practices (Fahey & Randall, 1998; Rohrbeck et al., 2015)'
   }
     ],
-    justification: `
-  <p>Begin with the <strong>Exploration</strong> phase because it marks the transition from observing trends to making sense of them.</p>
-  <p class="mt-4">By starting here, you move from awareness to foresight - laying the foundation for meaningful planning and innovation.</p>
-`,
+    justification: "This phase marks the shift from simply noticing trends to actively making sense of them. Starting here moves your organization from awareness to actionable foresight. It’s about exploring how signals of change intersect with your institution’s mission, culture, and operational realities. Through this process you will uncover opportunities and tensions worth addressing. This roadmap will help you create a foundation for informed, future-ready decisions.",
 justificationImage: "",
   },
 
   {
   title: 'Strategic Planning',
   subtitle: 'From foresight to action — translating scenarios into strategic options, innovation opportunities, and implementation plans.',
-  description: `From insight to action. Choose your future—then plan for it. Build a bold innovation strategy that aligns with your vision and resources. Prioritize projects, rehearse future challenges, and set the stage for execution.`,
-  note: `Each tool is placed where it delivers the most value in this process. However, tools can be pulled up again as needed to revisit assumptions, explore new ideas, or stress-test evolving decisions.`,
   
-  whatYouAreDoing: `Now that you’ve explored and assessed possible future scenarios for your institution, it’s time to translate those insights into concrete strategic options, innovation initiatives, and risk responses. This phase is about shaping a bold, future-fit innovation strategy that aligns with your institutional vision, navigates uncertainties, and prepares you for multiple plausible futures.`,
-  
+  justification: `The Strategic Planning phase is the second phase because it brings foresight back to an organisation’s context. It is about identifying opportunities and threats from your scenarios and assessing an organisation’s capability gaps to act on them. This phase ensures your strategic response is both ambitious and achievable within the operational reality. Rather than offering a rigid formula, this phase invites you to collectively explore which pathways are most relevant, ambitious, and feasible for your organization.`,
+
+  description: ['From foresight to action: translating scenarios into strategic options, innovation opportunities, and implementation plans.',
+"Note: Each tool suggested here is placed where it typically adds value, but you know your organization’s context best. Feel free to revisit, adapt, or reorder tools as needed to fit your usual planning structure."],
+
+  whatYouAreDoing: `Now that you’ve explored plausible future scenarios for your institution, this phase focuses on translating those insights into actionable, strategic priorities. This phase is about shaping a bold, future-fit innovation strategy that aligns with your institutional vision, navigates uncertainties, and prepares you for multiple plausible futures.`,
+
   activities: [
     {
       activity: 'Translate scenarios into strategic opportunities',
@@ -526,8 +530,9 @@ justificationImage: "",
         'Use frameworks to balance radical and incremental innovation and evaluate where to invest resources.'
       ],
       tools: [
-        'Innovation Portfolio Matrix — map projects based on risk and impact.',
+        'Innovation Portfolio Matrix — map new projects based on risk and impact.',
         'Cost-Impact Mapping — visualize quick wins vs. big bets.',
+        'Decision-Making Frameworks (e.g., Scoring, MoSCoW) — structured prioritization of options.',
         'Crowd Clovers — crowdsource feedback on initiative feasibility and desirability.'
       ]
     },
@@ -537,7 +542,7 @@ justificationImage: "",
         'Assess your institution’s current innovation capability, culture, governance, and resourcing to ensure your proposed strategy is both ambitious and executable.'
       ],
       tools: [
-        'Innovation Maturity Models — map current maturity (e.g., nascent, developing, established, leading).',
+        'Innovation Maturity Models — map current maturity (e.g., developing, established, leading).',
         'SWOT-TOWS — assess internal strengths and weaknesses against external opportunities and threats.',
         'Must-Win Battles — identify critical priorities and capability gaps to address before moving forward.'
       ]
@@ -545,12 +550,12 @@ justificationImage: "",
     {
       activity: 'Sharpen your innovation narrative',
       details: [
-        'Refine your future vision and spotlight bold, unconventional ideas in your current strategy.'
+        'Refine your future vision, and spotlight bold, unconventional ideas in your current strategy.'
       ],
       tools: [
         'VOICE Stars — assess initiatives by Vision, Opportunity, Impact, Culture fit, and Execution readiness.',
         'Dark Horse Prototypes — showcase radical or unconventional ideas worth testing.',
-        'Paper Mockups — visualize future service, product, or strategy concepts quickly and cheaply.'
+        'Paper Mock-ups — visualize future service, product, or strategy concepts quickly and cheaply.'
       ]
     },
     {
@@ -586,15 +591,17 @@ justificationImage: "",
       ]
     }
   ],
-  
-  stakeholderEngagement: `Use tools like Change Paths and Buddy Checks to rehearse scenarios with leadership and cross-functional teams. This builds commitment and aligns diverse priorities early.`,
+
+  stakeholderEngagement: `Engage stakeholders through scenario rehearsals. Use tools like Wind Tunnelling, Change Paths and Buddy Checks to test assumptions, build commitment, and stress-test strategic choices with leadership and operational teams.`,
 
   indicators: [
     'Strategic initiatives and innovation projects are prioritized with clear rationale and alignment to institutional goals.',
-    'Innovation maturity has been assessed and gaps are addressed.',
+    'Innovation maturity has been assessed, and gaps are addressed.',
     'Leadership teams are aligned around a shared innovation roadmap shaped by scenario insights.',
-    'Teams are mobilized with a clear, inspiring narrative of where the institution is headed — and why.'
+    'Teams are mobilized with a clear, inspiring narrative of where the institution is headed, and why.'
   ],
+
+  finalNote: `These key steps are intended as conversation starters, not rigid steps. Every institution integrates change differently. What matters is creating a plan that works for your people, aligns with your culture, and builds on your existing strengths. Use what resonates, and adapt the rest.`,
   resources: [
   {
     title: 'Innovation Portfolio Matrix',
