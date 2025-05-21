@@ -120,11 +120,26 @@
                 <div class="grid md:grid-cols-3 gap-8">
                   <!-- Activities, Indicators, Stakeholders -->
                   <div class="md:col-span-2 space-y-10">
+                    <!-- Phase Subtitle -->
+                    <div v-if="phases[activePhase].subtitle">
+                      <h3 class="text-lg font-semibold text-gray-600 mb-2">
+                        {{ phases[activePhase].subtitle }}
+                      </h3>
+                    </div>
+
                     <!-- Phase Description -->
                     <div>
                       <h2 class="text-2xl font-bold text-gray-800 mb-4">Phase Overview</h2>
                       <p class="text-gray-700 leading-relaxed">
                         {{ phases[activePhase].description }}
+                      </p>
+                    </div>
+
+                    <!-- Optional Note Box -->
+                    <div v-if="phases[activePhase].note" class="bg-indigo-50 border-l-4 border-indigo-400 p-4 rounded-lg space-y-1">
+                      <h3 class="text-lg font-semibold text-indigo-700">Note</h3>
+                      <p class="text-m italic text-gray-600 leading-relaxed">
+                        {{ phases[activePhase].note }}
                       </p>
                     </div>
 
@@ -135,7 +150,7 @@
                           viewBox="0 0 28 28" stroke-linecap="round" stroke-linejoin="round">
                           <path d="M6 9h16M6 14h16M6 19h16" />
                         </svg>
-                        <h3 class="text-xl font-semibold text-gray-800">Key Activities</h3>
+                        <h3 class="text-xl font-semibold text-black-800">Key Activities</h3>
                       </div>
 
                       <ul class="space-y-2">
@@ -269,7 +284,8 @@ const toggleSidebar = () => {
 const phases = ref([
   {
     title: 'Exploration',
-    description: 'Now it’s time to move from observing trends to making sense of them. The goal isn’t to predict what will happen, but to surface a range of possibilities and begin imagining futures that inform smarter, more resilient strategies. The goal is to discover possibilities, imagine futures, and lay the groundwork for focused strategic planning.',
+    subtitle: "Making Sense of Emerging Trends",
+    description: 'Move from observing trends to making sense of them. This phase surfaces possibilities and helps imagine futures that can inform resilient, actionable strategies. It lays the groundwork for focused, future-ready planning.',
     activities: [
       {
         activity: 'Familiarise yourself with the SURF Tech Trends Report',
@@ -360,7 +376,7 @@ const phases = ref([
     url: '',
     time: '30 min',
     people: 'Individual or team',
-    exampleimage: '/public/phases_resources/images/tech_trends_report.png',
+    exampleimage: '/public/report_cover.png',
     citation: 'SURF. (2023). SURF Tech Trends 2023. https://www.surf.nl/en/tech-trends'
   },
   {
@@ -375,7 +391,7 @@ const phases = ref([
     url: '/resources/silent-brainstorm.pdf',
     time: '5–10 min',
     people: 'Individual or team',
-    exampleimage: '/public/phases_resources/images/silent_brainstorm.png',
+    exampleimage: '/public/phases_resources/images/futures_wheel.png',
     citation: 'Jerome C.  Glenn, & Gordon, T. J. (2009). Futures Research Methodology (3.0). The Millennium Project. https://millennium-project.org/publications/futures-research-methodology-version-3-0-2/'
   },
   {
@@ -393,7 +409,6 @@ const phases = ref([
     exampleimage: '/public/phases_resources/images/futures_triangle.png',
     citation: 'Inayatullah, S. (2023). The Futures Triangle: Origins and Iterations. World Futures Review, 15(2–4), 112–121. https://doi.org/10.1177/19467567231203162'
   },
-
   {
     title: 'Axes of Uncertainty',
     description: 'This tool will help you identify and map critical uncertainties that could shape your future operating environment. You’ll select two high-impact, high-uncertainty factors and place them on intersecting axes to frame four plausible future scenarios.',
@@ -443,12 +458,12 @@ justificationImage: "",
 
   {
   title: 'Strategic Planning',
-  subtitle: 'From foresight to action — translating scenarios into strategic options, innovation opportunities, and implementation plans.',
+  subtitle: 'From foresight to action - translating scenarios into strategic options, innovation opportunities, and implementation plans.',
   
   justification: `The Strategic Planning phase is the second phase because it brings foresight back to an organisation’s context. It is about identifying opportunities and threats from your scenarios and assessing an organisation’s capability gaps to act on them. This phase ensures your strategic response is both ambitious and achievable within the operational reality. Rather than offering a rigid formula, this phase invites you to collectively explore which pathways are most relevant, ambitious, and feasible for your organization.`,
 
-  description: ['From foresight to action: translating scenarios into strategic options, innovation opportunities, and implementation plans.',
-"Note: Each tool suggested here is placed where it typically adds value, but you know your organization’s context best. Feel free to revisit, adapt, or reorder tools as needed to fit your usual planning structure."],
+  description: 'Now that you’ve explored plausible future scenarios for your institution, this phase focuses on translating those insights into actionable, strategic priorities. This phase is about shaping an innovation strategy that is fit for the future by aligning with your institutional vision, navigating uncertainties, and preparing you for multiple plausible futures.',
+note: "These keys steps are intended as conversation starters, not rigid steps. Every institution integrates change differently. What matters is creating a plan that works for your people, aligns with your culture, and builds on your existing strengths. Use what resonates and adapt the rest.",
 
   activities: [
     {
@@ -469,7 +484,6 @@ justificationImage: "",
       tools: [
         'Innovation Portfolio Matrix — map new projects based on risk and impact.',
         'Cost-Impact Mapping — visualize quick wins vs. big bets.',
-        'Decision-Making Frameworks (e.g., Scoring, MoSCoW) — structured prioritization of options.',
         'Crowd Clovers — crowdsource feedback on initiative feasibility and desirability.'
       ]
     },
@@ -643,7 +657,7 @@ justificationImage: "",
     ],
     url: 'https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf',
     time: '1–2 hours',
-    people: 'Team or department (5–10 people)',
+    people: 'Team activity',
     exampleimage: '',
     citation: 'Carleton, T., Cockayne, W., & Tahvanainen, A.-J. (2013). Playbook for Strategic Foresight and Innovation. https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf'
   },
@@ -658,7 +672,7 @@ justificationImage: "",
     ],
     url: 'https://link.springer.com/chapter/10.1007/978-3-658-25074-4_7',
     time: '1–2 hours',
-    people: 'Workshop group (5–8 people)',
+    people: 'Team activity (5–8 people)',
     exampleimage: '',
     citation: 'Van der Heijden, K. (2005). Scenarios: The Art of Strategic Conversation. Wiley; Luoto, L., & Lonkila, A. (2018). The Use of SWOT Analysis for Future Scenarios: A Case Study of Privacy and Emerging Technologies. In *Envisioning Uncertain Futures* (pp. 105–131). Springer VS, Wiesbaden. https://doi.org/10.1007/978-3-658-25074-4_7'
   },
@@ -782,8 +796,8 @@ justificationImage: "",
   },
   {
   title: 'Pilot Experimentation',
-  description: `Build fast. Learn faster. Make innovation real. 
-Launch your pilot. Build the systems, teams, and habits that will drive real-world impact while learning and adapting as you go.`,
+  subtitle: 'Build fast. Learn faster. Make innovation real.',
+  description: 'Launch your pilot. Build the systems, teams, and habits that will drive real-world impact while learning and adapting as you go.',
 
   justification: `The Pilot Experimentation phase moves selected initiatives from concept to practice. We recognize that how, and when you pilot new initiatives depends on available resources, staffing, and institutional priorities. The steps below are intended as inspiration and conversation starters to shape your own approach.`,
 
@@ -870,10 +884,10 @@ Launch your pilot. Build the systems, teams, and habits that will drive real-wor
 
 {
   title: 'Full Deployment',
-  justification: `The Full Deployment phase marks a significant step in moving from successful pilot to broader institutional integration. Every institution has its own rhythm and way of embedding change, so while these steps offer a helpful starting framework, you’ll know best how to shape them within your own culture, priorities, and decision-making processes.`,
-
-  description: `From Pilots to Practice: Embedding Innovation.
-This phase is about rolling out the solution across the organization with consistency, structure, and strong support systems.`,
+  subtitle: "From Pilots to Practice: Embedding Innovation.",
+  justification: 'The Full Deployment phase marks a significant step in moving from successful pilot to broader institutional integration. Every institution has its own rhythm and way of embedding change, so while these steps offer a helpful starting framework, you’ll know best how to shape them within your own culture, priorities, and decision-making processes.',
+note: "While this roadmap provides a useful starting point, every institution has its own approach to embedding change. Feel free to use these steps as inspiration but adapt them to fit your culture, goals, and processes.",
+  description: 'This phase is about moving from successful pilots to consistent, organization-wide adoption. It focuses on rolling out your solution with clear structure, strong support systems, and thoughtful communication.',
 
   activities: [
     {
@@ -906,7 +920,7 @@ This phase is about rolling out the solution across the organization with consis
 
   indicators: [
     'Deployment has reached all intended teams and functions.',
-    'Users feel supported and well-informed — measured through whatever feedback or check-in practices your organization values.',
+    'Feedback and check-in practices show that users feel supported and well-informed.',
     'Minimal disruption occurs, with issues addressed quickly and transparently.',
     'Performance and usage data show active adoption.'
   ],
@@ -928,7 +942,7 @@ This phase is about rolling out the solution across the organization with consis
     ],
     url: '',
     time: '30-45 min',
-    people: '',
+    people: 'Idividual or team',
     exampleimage: '',
     citation: ''
   },
@@ -952,8 +966,9 @@ This phase is about rolling out the solution across the organization with consis
 },
 {
   title: 'Evaluation & Optimization',
+  subtitle: "Improve. Scale. Repeat.",
   justification: "This phase offers a structure for reflecting on the outcomes of your initiatives while also keeping an eye on long-term alignment with your organizational vision and ongoing future readiness. These steps aren’t meant to prescribe exactly how you should proceed. Rather, they serve as a conversation starter to help you consider how evaluation, improvement, and foresight could be approached within your context.",
-  description: `Improve. Scale. Repeat. Once deployed, it's time to evaluate impact, adapt based on feedback, and build a foundation for future improvement.`,
+  description: 'Once deployed, it\'s time to evaluate impact, adapt based on feedback, and build a foundation for future improvement.',
   activities: [
     {
       activity: 'Gather Feedback',
