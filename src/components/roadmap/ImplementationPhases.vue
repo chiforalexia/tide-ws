@@ -210,9 +210,17 @@
                         </svg>
                         <h3 class="text-xl font-semibold text-gray-800">Stakeholder Engagement</h3>
                       </div>
-                      <p class="text-gray-700">{{ phases[activePhase].stakeholderEngagement }}</p>
+
+                      <!-- Render list if array, paragraph if string -->
+                      <div class="text-gray-700">
+                        <ul v-if="Array.isArray(phases[activePhase].stakeholderEngagement)" class="list-disc pl-5 space-y-1">
+                          <li v-for="(item, index) in phases[activePhase].stakeholderEngagement" :key="index">{{ item }}</li>
+                        </ul>
+                        <p v-else>{{ phases[activePhase].stakeholderEngagement }}</p>
+                      </div>
                     </div>
-                  </div>
+                    </div>
+
 
                   <!-- Resources -->
                   <div class="bg-gray-50 p-6 rounded-xl shadow-lg border border-blue-200 h-fit">
@@ -410,7 +418,7 @@ const phases = ref([
       'Build a short scenario narrative for each, considering implications for your institution, stakeholders, and sector. Use prompts like: “What opportunities might arise?” and “What challenges could emerge?”'],
     url: '/resources/building-scenarios.pdf',
     time: '1.5–2 hours',
-    people: 'Cross-functional or strategy team (3–5 people)',
+    people: 'Team (3–5 people)',
     exampleimage: '/public/phases_resources/images/scenario_building.png',
     citation: ['SchSchwartz, P. (1997). The Art of the Long View. Doubleday/Currency.wartz, P. (1996). The Art of the Long View: Planning for the Future in an Uncertain World. Currency)','Jerome C.  Glenn, & Gordon, T. J. (2009). Futures Research Methodology (3.0). The Millennium Project. https://millennium-project.org/publications/futures-research-methodology-version-3-0-2/'],
   },
@@ -786,9 +794,7 @@ Launch your pilot. Build the systems, teams, and habits that will drive real-wor
         'Bring together a cross-functional group and consider defining clear roles, responsibilities, and timelines.',
         'Use simple planning tools (such as a Project Plan Template) that suit your team\'s working style and available capacity.'
       ],
-      tools: [
-        'Project Plan Template'
-      ]
+     
     },
     {
       activity: 'Adopt a Flexible, Learning-Focused Approach',
@@ -796,20 +802,14 @@ Launch your pilot. Build the systems, teams, and habits that will drive real-wor
         'Stay adaptable, whether through agile methods, phased rollouts, or informal iteration.',
         'The goal is to prioritize learning over perfection.'
       ],
-      tools: [
-        'Agile Sprint Framework',
-        'Iteration Feedback Loops'
-      ]
+    
     },
     {
       activity: 'Develop Shared, Goal-Oriented Metrics',
       details: [
         'Develop goal-oriented evaluation metrics and systems for regular feedback.'
       ],
-      tools: [
-        'Evaluation Metrics Framework',
-        'Feedback Loops'
-      ]
+      
     },
     {
       activity: 'Connect with Peers',
@@ -817,14 +817,11 @@ Launch your pilot. Build the systems, teams, and habits that will drive real-wor
         'Where possible, invite other institutions, networks, or sector partners into conversations about similar pilots.',
         'Share experiences, challenges, and approaches for mutual learning.'
       ],
-      tools: [
-        'Peer Learning Sessions',
-        'Knowledge Exchange Workshops'
-      ]
+     
     }
   ],
 
-  stakeholderEngagement: `Stakeholders become co-pilots. Engage frontline users in prototyping, feedback loops, and iterative design. Their insights could drive success, and build long-term ownership.`,
+  stakeholderEngagement: 'Stakeholders become co-pilots. Engage frontline users in prototyping, feedback loops, and iterative design. Their insights could drive success, and build long-term ownership.',
 
   indicators: [
     'A clear, resourced, and context-appropriate pilot plan is in place.',
@@ -835,82 +832,38 @@ Launch your pilot. Build the systems, teams, and habits that will drive real-wor
 
   resources: [
     {
-      title: 'Implementation Planning Template',
-      type: 'Document',
-      description: 'A comprehensive document to structure your pilot—from scope and timelines to ownership and deliverables. It lays the groundwork for coordinated action and accountability.',
-      tips: [
-        'Co-create the plan with key implementers to foster ownership from day one.',
-        'Include risk assumptions and mitigation strategies to stay ahead of roadblocks.',
-        'Revisit and revise the template at major checkpoints to reflect evolving realities.'
-      ],
-      url: '/resources/implementation-planning-template.pdf'
-    },
+    title: 'Pilot Project Plan Template',
+    type: 'Pilot Experimentation',
+    description: 'A Pilot Project Plan is a practical, structured document your team creates to outline how an innovation will be tested in a real-world setting. Many institutions already have processes or formats for this but if you are looking for a refresher you can adapt this template.',
+    tips: [
+      'Pilot objectives and intended outcomes.',
+      'Scope and boundaries of the pilot.',
+      'Roles, responsibilities, and ownership.',
+      'Key deliverables and milestones.',
+      'Assumptions, risks, and mitigation strategies.',
+      'Evaluation criteria and data collection plan.'
+    ],
+    url: '',
+    time: '1.5 hrs (90 mins)',
+    people: 'Team activity',
+    exampleimage: '',
+    citation: ''
+  },
     {
-      title: 'Agile Sprint Board / Gantt Chart',
-      type: 'Tool',
-      description: 'Visual tools to organize your pilot into manageable sprints or timelines. They help teams track progress, surface blockers, and stay focused on short-term deliverables without losing sight of the big picture.',
-      tips: [
-        'Use sprint boards in daily stand-ups to maintain momentum and shared awareness.',
-        'Update the board collaboratively to encourage transparency and team autonomy.',
-        'Combine with a Gantt chart for executive reporting and cross-team coordination.'
-      ],
-      url: '/resources/agile-board-gantt-chart.pdf'
-    },
-    {
-      title: 'Pilot Evaluation Metrics',
-      type: 'Framework',
-      description: 'A framework to define and track what success looks like for your pilot. Includes inputs, outcomes, and learning indicators to assess impact and guide improvements.',
-      tips: [
-        'Co-define success metrics with users and stakeholders to reflect what really matters.',
-        'Balance quantitative and qualitative data to capture nuanced learnings.',
-        'Use real-time data dashboards or check-ins to adapt without waiting until the end.'
-      ],
-      url: '/resources/pilot-evaluation-metrics.pdf'
-    },
-    {
-      title: 'Fidelity-Flexibility Tracker',
-      type: 'Tool',
-      description: 'This tool helps pilot teams decide when to stick to original plans (fidelity) versus when to adapt based on field realities (flexibility). It supports real-time learning and contextual decision-making.',
-      tips: [
-        'Use during retrospectives or after critical incidents to reflect on needed pivots.',
-        'Score key practices weekly to track if the pilot is drifting or innovating with purpose.',
-        'Discuss as a team to normalize adaptation as a strength, not a failure.'
-      ],
-      url: '/resources/fidelity-flexibility-tracker.pdf'
-    },
-    {
-      title: 'Change Management Toolkit',
-      type: 'Toolkit',
-      description: 'A suite of templates and guidance for engaging teams, managing resistance, and building readiness. Focuses on communication, training, and alignment across roles.',
-      tips: [
-        'Tailor messaging to different stakeholder groups—what excites one may worry another.',
-        'Map out emotional journeys of users and support staff to anticipate pain points.',
-        'Use quick pulse surveys and informal check-ins to track engagement and morale.'
-      ],
-      url: '/resources/change-management-toolkit.pdf'
-    },
-    {
-      title: 'Training Materials',
-      type: 'PDF',
-      description: 'Foundational materials that prepare users and teams for the pilot. Helps build confidence, reduce friction, and ensure consistent knowledge across the rollout.',
-      tips: [
-        'Deliver training in short, digestible modules to support busy teams.',
-        'Follow up with live Q&A or peer coaching for applied understanding.',
-        'Embed storytelling or real scenarios to make materials more relatable and sticky.'
-      ],
-      url: '/resources/training-materials.pdf'
-    },
-    {
-      title: 'Feedback Survey',
-      type: 'Form',
-      description: 'A structured way to gather feedback from users, implementers, and partners. Supports rapid learning and iteration based on real-world input.',
-      tips: [
-        'Keep surveys short and focused to maximize completion and relevance.',
-        'Include open-ended prompts to surface unanticipated insights.',
-        'Close the loop—share what you learned and what you’re changing as a result.'
-      ],
-      url: '/resources/feedback-survey.html'
-    }
+  title: 'Agile Sprint Board / Gantt Chart',
+  type: 'Pilot Experimentation',
+  description: 'Visual tools to organize your pilot into manageable sprints or timelines. They help teams track progress, surface blockers, and stay focused on short-term deliverables without losing sight of the big picture.',
+  tips: [
+    'Use sprint boards in daily stand-ups to maintain momentum and shared awareness.',
+    'Update the board collaboratively to encourage transparency and team autonomy.',
+    'Combine with a Gantt chart for executive reporting and cross-team coordination.'
+  ],
+  url: 'https://www.teamgantt.com/downloads/excel-gantt-chart-template',
+  time: '1 - 2 hours',
+  people: 'Team activity',
+  exampleimage: '',
+  citation: ''
+}
   ],
     justificationImage: "",
 },
@@ -958,44 +911,42 @@ This phase is about rolling out the solution across the organization with consis
     'Performance and usage data show active adoption.'
   ],
 
-  stakeholderEngagement: `Maintain Clear Communication Channels.
-Ensure everyone knows where to get help or give feedback.
-
-Share Wins and Updates.
-Use internal comms, showcases, or quick demos to maintain excitement and transparency.`, 
+  stakeholderEngagement: [
+  'Maintain clear communication channels. Ensure everyone knows where to get help or give feedback.',
+  'Share wins and updates. Use internal comms, showcases, or quick demos to maintain excitement and transparency.'
+],
   resources: [
-  {
+    {
     title: 'Deployment Checklist',
-    type: 'Document',
+    type: 'Full Deployment',
     description: 'A detailed list to ensure nothing critical is missed when scaling from pilot to organization-wide rollout. Keeps teams aligned and confident during complex transitions.',
     tips: [
-      'Use this as a living document—update it in real-time as deployment evolves.',
+      'Use as a living document: update your existing project plan or scale up your pilot plan by integrating the feedback and lessons learned from the pilot phase.',
+      'Ensure that all aspects of scaling are covered, from logistics to resource allocation and training.',
       'Assign clear owners for each checklist item to ensure accountability.',
-      'Include both technical and cultural readiness items such as team sentiment and narrative alignment.',
-      'Review and adjust the checklist after each major milestone for continuous improvement.'
+      'Include both technical and cultural readiness items (e.g., team sentiment, narrative alignment).'
     ],
-    url: '/resources/deployment-checklist.pdf',
-    time: '1–2 hours',
-    people: 'Deployment team (3–6 people)',
-    exampleimage: '/public/phases_resources/images/deployment_checklist.png',
-    citation: 'Internal deployment best practices'
+    url: '',
+    time: '30-45 min',
+    people: '',
+    exampleimage: '',
+    citation: ''
   },
   {
-    title: 'User Guide',
-    type: 'Website',
-    description: 'Step-by-step guidance tailored to different user roles. Reduces confusion and supports confident adoption across diverse stakeholders.',
-    tips: [
-      'Create separate guides for power users, frontline staff, and supervisors.',
-      'Use screenshots, video walkthroughs, and plain language to make the guide intuitive and accessible.',
-      'Offer it both as a downloadable PDF and embedded directly into your support systems.',
-      'Keep the guide regularly updated based on feedback from end users.'
-    ],
-    url: 'https://whatfix.com/blog/user-guides/',
-    time: '2–3 hours to prepare',
-    people: 'Individual or Documentation team',
-    exampleimage: '/public/phases_resources/images/user_guide.png',
-    citation: 'Whatfix Blog (2023)'
-  }
+  title: 'User Guide',
+  type: 'Full Deployment',
+  description: 'Step-by-step guidance tailored to different user roles. Reduces confusion and supports confident adoption across diverse stakeholders.',
+  tips: [
+    'Create separate guides for power users, frontline staff, and supervisors.',
+    'Use screenshots and plain language to make the guide intuitive.',
+    'Offer it both as a PDF and embedded in support systems for easy access.'
+  ],
+  url: 'https://whatfix.com/blog/user-guides/',
+  time: '1 hour',
+  people: 'Individual or team',
+  exampleimage: 'no pic',
+  citation: 'Olmstead, L. (2023, August 2). How to Create a User Guide (Examples, Tips, Tools). The Whatfix Blog | Drive Digital Adoption. https://whatfix.com/blog/user-guides/'
+}
   ],
     justificationImage: '/phases_resources/images/forecasting_funnel.png',
 },
@@ -1041,39 +992,23 @@ Use internal comms, showcases, or quick demos to maintain excitement and transpa
   stakeholderEngagement: ['Close the Loop - Share back what you’ve learned and how you’re improving.', 'Invite Critique - Create safe spaces for honest feedback and refinement ideas.', 'Keep Futuring in the Conversation - Regularly check in on how current initiatives fit with your anticipated future and emerging challenges.'],
   resources: [
   {
-    title: 'After Action Review (AAR) Template',
-    type: 'Template',
-    description: 'The Asana After Action Review (AAR) Template is a structured tool designed to help teams reflect on a completed project or initiative by identifying what went well, what didn’t, and how to improve going forward.',
-    tips: [
-      'Use the pre-built task list for setting up and running an AAR meeting.',
-      'Prompt your team for input on goals, outcomes, successes, and challenges.',
-      'Assign follow-up actions and document lessons learned for future reference.',
-      'Customize the template within Asana to suit your team’s workflow and project context.'
-    ],
-    url: 'https://asana.com/resources/after-action-review-template',
-    time: '30–45 min',
-    people: 'Team',
-    exampleimage: '/public/phases_resources/images/aar_template.png',
-    citation: 'Asana resource template'
-  },
-  {
-    title: 'Feedback Survey',
-    type: 'Document',
-    description: 'A structured method for collecting insights from users, stakeholders, or partners about their experience with a solution, process, or rollout. Helps identify blind spots and surface opportunities for improvement.',
-    tips: [
-      'Use both quantitative (e.g., rating scales) and qualitative (e.g., open-text) questions for a well-rounded view.',
-      'Send surveys at key moments: post-deployment, after training, or during adoption milestones.',
-      'Segment responses by role, team, or usage level to tailor your improvements.',
-      'Analyze both trends in aggregate scores and rich insights from open comments.'
-    ],
-    url: 'https://www.forbes.com/councils/forbestechcouncil/2023/03/01/16-effective-strategies-to-collect-feedback-on-new-internal-tech/',
-    time: '15–30 min',
-    people: 'Individual or team',
-    exampleimage: '/public/phases_resources/images/feedback_survey.png',
-    citation: 'Forbes Tech Council (2023)'
-  }
+  title: 'After Action Review (AAR)',
+  type: 'Evaluation & Optimization',
+  description: 'A structured process for reflecting on a completed project or initiative to assess its effectiveness and identify lessons learned. Originally developed by the U.S. Army, AARs have been widely adopted in various sectors for continuous improvement.',
+  tips: [
+    'What was supposed to happen?',
+    'What actually happened?',
+    'Why was there a difference?',
+    'How can we avoid such mistakes in the future?',
+    'What can we learn from this?'
   ],
-    justificationImage: '/phases_resources/images/forecasting_funnel.png',
+  url: 'https://hbr.org/2023/01/a-better-approach-to-after-action-reviews',
+  time: '30 - 60 min',
+  people: 'Team',
+  exampleimage: 'no pic',
+  citation: 'Baškarada, S., McKay, T., & McKenna, T. (2013). Technology deployment process model. *Operations Management Research, 6*(3–4), 105–118. https://doi.org/10.1007/s12063-013-0082-5'
+}
+  ],
 }
 ]);
 </script>
