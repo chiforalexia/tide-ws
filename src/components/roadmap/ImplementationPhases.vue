@@ -419,11 +419,11 @@ const phases = ref([
       "Label the extremes of each axis (e.g., 'High AI adoption' vs. 'Low AI adoption').",
       'Use this matrix as a foundation for scenario building in the next step.'
     ],
-    url: '/resources/axes-of-uncertainty.pdf',
+    url: 'https://medium.com/swlh/how-futurists-cope-with-uncertainty-a4fbdff4b8c6',
     time: '45–60 min',
     people: 'Team (3–5 people)',
     exampleimage: '/public/phases_resources/images/axes_uncertainty.png',
-    citation: 'Schwartz, P. (1997). The Art of the Long View. Doubleday/Currency.'
+    citation: 'Webb, A. (2020, March 16). How Futurists Cope With Uncertainty. The Startup. https://medium.com/swlh/how-futurists-cope-with-uncertainty-a4fbdff4b8c6; Schwartz, P. (1997). The Art of the Long View. Doubleday/Currency.'
   },
   {
     title: 'Developing Scenarios',
@@ -431,11 +431,11 @@ const phases = ref([
     tips: [
       'Start with the completed Axes of Uncertainty matrix. For each quadrant, imagine what the world might look like if both uncertainties play out in those positions.',
       'Build a short scenario narrative for each, considering implications for your institution, stakeholders, and sector. Use prompts like: “What opportunities might arise?” and “What challenges could emerge?”'],
-    url: '/resources/building-scenarios.pdf',
+    url: 'https://millennium-project.org/publications/futures-research-methodology-version-3-0-2/',
     time: '1.5–2 hours',
     people: 'Team (3–5 people)',
     exampleimage: '/public/phases_resources/images/scenario_building.png',
-    citation: ['SchSchwartz, P. (1997). The Art of the Long View. Doubleday/Currency.wartz, P. (1996). The Art of the Long View: Planning for the Future in an Uncertain World. Currency)','Jerome C.  Glenn, & Gordon, T. J. (2009). Futures Research Methodology (3.0). The Millennium Project. https://millennium-project.org/publications/futures-research-methodology-version-3-0-2/'],
+    citation: 'SchSchwartz, P. (1997). The Art of the Long View. Doubleday/Currency.wartz, P. (1996). The Art of the Long View: Planning for the Future in an Uncertain World. Currency); Jerome C.  Glenn, & Gordon, T. J. (2009). Futures Research Methodology (3.0). The Millennium Project. https://millennium-project.org/publications/futures-research-methodology-version-3-0-2/',
   },
   {
     title: 'Innovation Readiness Assessment',
