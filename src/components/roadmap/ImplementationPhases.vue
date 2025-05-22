@@ -311,7 +311,7 @@ const phases = ref([
         ]
       },
       {
-        activity: 'Brainstorm using a Futures Wheel with the Tech Trends in Mind',
+        activity: 'Brainstorm using a Futures Wheel with the Tech Trends in mind',
         details: [
           'Each participant writes down as many future possibilities, ideas, or risks as possible without discussion.',
           'Focus on capturing volume and variety—no judgment, just curiosity.'
