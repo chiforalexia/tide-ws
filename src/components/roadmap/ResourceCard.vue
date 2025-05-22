@@ -17,16 +17,16 @@
             ✕
           </button>
   
-          <h3 class="text-xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+          <h3 class="text-xl font-bold people bg-clip-text text-transparent">
             {{ resource.title }}
           </h3>
   
           <!-- Bubbles -->
           <div class="flex flex-wrap gap-2 mt-2 mb-4">
-            <span v-if="resource.time" class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium time">
+            <span v-if="resource.time" class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium people">
               {{ resource.time }}
             </span>
-            <span v-if="resource.people" class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium people">
+            <span v-if="resource.people" class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium time">
               {{ resource.people }}
             </span>
           </div>
@@ -38,7 +38,7 @@
           <!-- Conditional layout for tips + image -->
           <div v-if="resource.exampleimage" class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 items-start">
             <!-- Tips box -->
-            <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400 text-sm text-gray-600">
+            <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-500 text-sm text-gray-600">
               <h4 class="font-semibold mb-2 text-gray-700">Tips for Using This Resource:</h4>
               <ul class="list-disc pl-5 space-y-1">
                 <li v-for="(tip, index) in resource.tips" :key="index">{{ tip }}</li>
@@ -53,7 +53,7 @@
   
           <!-- Full-width tips if no image -->
           <div v-else class="mt-6">
-            <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-400 text-sm text-gray-600 w-full">
+            <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-500 text-sm text-gray-600 w-full">
               <h4 class="font-semibold mb-2 text-gray-700">Tips for Using This Resource:</h4>
               <ul class="list-disc pl-5 space-y-1">
                 <li v-for="(tip, index) in resource.tips" :key="index">{{ tip }}</li>
@@ -87,7 +87,7 @@
       @click="showLearnMore = true"
     >
       <div class="flex flex-col h-full">
-        <h4 class="font-medium text-gray-800 group-hover:text-blue-600 transition-colors mb-2">
+        <h4 class="font-medium text-gray-800 group-hover:text-blue-700 transition-colors mb-2">
           {{ resource.title }}
         </h4>
   
@@ -103,7 +103,7 @@
         <div class="flex justify-end mt-2">
           <button
             @click.stop="showLearnMore = true"
-            class="inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none h-7 px-3 text-xs  phases_bubble border-blue-100 hover:bg-blue-100 border"
+            class="inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none h-7 px-3 text-xs people"
           >
             Learn How
           </button>
@@ -163,6 +163,14 @@ const closeOverlay = () => {
   color: #004C97;
 }
 
+.surf-light-blue {
+  color: #DFF4FF;
+  background-color: #DFF4FF;
+}
+
+.text-surf-dark-blue{
+  color: #004C97;
+}
 .time{
   background-color: #FFE6D2;
   color: #C15500;

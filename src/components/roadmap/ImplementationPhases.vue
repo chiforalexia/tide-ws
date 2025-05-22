@@ -165,9 +165,9 @@
                           </div>
 
                           <!-- Sub-bullets / details -->
-                          <ul class="pl-12 space-y-2 list-disc text-gray-600">
-                            <li v-for="(detail, j) in activity.details" :key="j" v-html="detail"></li>
-                          </ul>
+                          <div class="pl-12 space-y-2 text-gray-600">
+                            <div v-for="(detail, j) in activity.details" :key="j" v-html="detail"></div>
+                          </div>
 
 
                           <!-- Tools (if available) -->

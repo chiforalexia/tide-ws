@@ -72,15 +72,20 @@ button:hover {
 
 /*Green download button*/
 .download-btn {
-  background-color:#17A95D;
+  background-color: #17A95D;
   color: white;
   padding: 10px 20px;
   border-radius: 6px;
   transition: background-color 0.3s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
 }
 
 .download-btn:hover {
-  background-color:#008939;;
+  background-color:#008939;
 }
 
 /* Section Bubbles */
