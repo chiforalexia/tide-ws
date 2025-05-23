@@ -44,7 +44,7 @@
               @click="activePhase = index"
               :class="[
                 'transition-all duration-300 flex items-center px-3 py-3 rounded-xl cursor-pointer shadow-md border w-full hover:scale-[1.02] hover:shadow-lg',
-                activePhase === index ? 'bg-blue-50 border-blue-500 ring-2 ring-blue-200' : 'bg-white border-gray-200',
+                activePhase === index ? 'surf-blue-100-background border-blue-500 ring-2 ring-surf-blue-200' : 'bg-white border-gray-200',
                 collapsed ? 'justify-center w-10 h-10 p-0 rounded-full' : ''
               ]"
             >
@@ -136,8 +136,8 @@
                     </div>
 
                     <!-- Optional Note Box -->
-                    <div v-if="phases[activePhase].note" class="border-l-4 border-surf-200-green p-4 rounded-lg background-surf space-y-1 ring-1 ring-surf-200-green">
-                      <h3 class="text-lg font-semibold surf-500-green ">Note</h3>
+                    <div v-if="phases[activePhase].note" class="border-l-4 border-surf-orange-400 p-4 rounded-lg background-surf-orange-100 space-y-1 ring-1 ring-surf-orange-400">
+                      <h3 class="text-lg font-semibold surf-orange-500 ">Note</h3>
                       <p class="text-m italic text-gray-600 leading-relaxed">
                         {{ phases[activePhase].note }}
                       </p>
@@ -238,7 +238,7 @@
 
 
                   <!-- Resources -->
-                  <div class="bg-gray-50 p-6 rounded-xl shadow-lg border border-surf-blue-100 h-fit">
+                  <div class="bg-gray-50 p-6 rounded-xl shadow-lg border border-surf-blue-200 h-fit">
                     <div class="flex items-center gap-2 mb-6">
                       <svg class="w-6 h-6 secondary-text" fill="none" stroke="currentColor" stroke-width="2"
                         viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
@@ -1055,29 +1055,27 @@ note: "While this roadmap provides a useful starting point, every institution ha
   padding-top: 4rem; /* Adjust this to lower the menu */
 }
 
-.surf-500-green {
+/*SURF specific colors*/
+
+.surf-orange-500 {
   color: #C15500;
 }
-.surf-100-background{
+.surf-blue-100-background{
   background-color: #DFF4FF;
 }
-
-.border-surf-blue-100 {
+.border-surf-blue-200 {
   border-color: #B3E5FF;
 }
-
-.border-surf-200-green {
+.border-surf-orange-400 {
   border-left-color: #FF9A4E;
 }
-.background-surf {
+.background-surf-orange-100 {
   background-color: #FFE6D2;
 }
-
-.ring-surf-200-green {
+.ring-surf-orange-400 {
   --tw-ring-color: #FF9A4E;
 }
-
-.ring-surf-200-blue {
-  --tw-ring-color: #FF9A4E;
+.ring-surf-blue-200 {
+  --tw-ring-color: #DFF4FF;
 }
 </style>
