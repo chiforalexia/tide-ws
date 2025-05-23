@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="bg-white">
     <!-- Header -->
-    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center m-2 text-black-800">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center m-2 text-blue-700 custom-font">
       Integration Roadmap
     </h1>
 
@@ -1029,6 +1029,12 @@ note: "While this roadmap provides a useful starting point, every institution ha
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+
+.custom-font {
+  font-family: 'Special Gothic Expanded One', sans-serif;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.7s ease;
