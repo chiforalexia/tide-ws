@@ -69,7 +69,7 @@
               target="_blank"
               class="download-btn"
             >
-              Download Resource
+              Access Resource
             </a>
 
             <p v-if="resource.citation" class="text-xs text-gray-500 italic mt-2 sm:mt-0">
