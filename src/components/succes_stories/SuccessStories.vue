@@ -186,6 +186,7 @@
     ],
         quote: '"We are boosting the development of AI applications in seven strategic domains that are relevant for both TU Deflt and the South Holland region"',
         author: 'Joost Poort',
+        link: 'https://mondai.tudelftcampus.nl/en/',
     }
   ]
   
