@@ -17,16 +17,16 @@
 
         <li><strong class="text-lg text-black">SURF Tech Trends</strong>
           <ul class="list-disc list-inside ml-6 mt-2 space-y-2 text-blue-600">
-            <li><a href="https://www.surf.nl/en/tech-trends" class="underline hover:text-blue-800">SURF Tech Trends Report</a></li>
+            <li><a href="https://www.surf.nl/en/tech-trends" class="underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">SURF Tech Trends Report</a></li>
           </ul>
         </li>
 
         <li><strong class="text-lg text-black">Get Inspired</strong>
           <ul class="list-disc list-inside ml-6 mt-2 space-y-2 text-blue-600">
             <li><a href="https://www.eur.nl/en/news/erasmus-university-trains-first-generative-ai-model-social-science-and-humanities" class="underline hover:text-blue-800">Generative AI Model</a></li>
-            <li><a href="https://www.surf.nl/en/themes/futuring" class="underline hover:text-blue-800">SURF Futuring</a></li>
-            <li><a href="https://example.com/resource3" class="underline hover:text-blue-800">House of AI</a></li>
-            <li><a href="https://www.utwente.nl/en/edge/" class="underline hover:text-blue-800">EDGE Research Center</a></li>
+            <li><a href="https://www.surf.nl/en/themes/futuring" class="underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">SURF Futuring</a></li>
+            <li><a href="https://example.com/resource3" class="underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">House of AI</a></li>
+            <li><a href="https://www.utwente.nl/en/edge/" class="underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">EDGE Research Center</a></li>
           </ul>
         </li>
       </ul>
@@ -41,8 +41,8 @@
         <li>
           <strong class="text-lg text-black">Background</strong>
           <ul class="list-disc list-inside ml-6 mt-2 space-y-2 text-blue-600">
-            <li><a href="https://www.sciencedirect.com/science/article/pii/S0016328725000114" class="underline hover:text-blue-800">Internal Foresight Activities</a></li>
-            <li><a href="https://www.sciencedirect.com/science/article/pii/S0040162516306035" class="underline hover:text-blue-800">Nature of Strategic Foresight</a></li>
+            <li><a href="https://www.sciencedirect.com/science/article/pii/S0016328725000114" class="underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">Internal Foresight Activities</a></li>
+            <li><a href="https://www.sciencedirect.com/science/article/pii/S0040162516306035" class="underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">Nature of Strategic Foresight</a></li>
           </ul>
         </li>
 
@@ -50,9 +50,9 @@
         <li>
           <strong class="text-lg text-black">Exploration</strong>
           <ul class="list-disc list-inside ml-6 mt-2 space-y-2 text-blue-600">
-            <li><a href="https://example.com/resource1" class="underline hover:text-blue-800">Tech Scouting Tools</a></li>
-            <li><a href="https://example.com/resource2" class="underline hover:text-blue-800">Trend Reports</a></li>
-            <li><a href="https://example.com/resource3" class="underline hover:text-blue-800">Stakeholder Workshops</a></li>
+            <li><a href="https://example.com/resource1" class="underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">Tech Scouting Tools</a></li>
+            <li><a href="https://example.com/resource2" class="underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">Trend Reports</a></li>
+            <li><a href="https://example.com/resource3" class="underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">Stakeholder Workshops</a></li>
           </ul>
         </li>
 
@@ -60,8 +60,8 @@
         <li>
           <strong class="text-lg text-black">Strategic Planning</strong>
           <ul class="list-disc list-inside ml-6 mt-2 space-y-2 text-blue-600">
-            <li><a href="https://example.com/resource4" class="underline hover:text-blue-800">Roadmapping Templates</a></li>
-            <li><a href="https://example.com/resource5" class="underline hover:text-blue-800">Budget Planning Tools</a></li>
+            <li><a href="https://example.com/resource4" class="underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">Roadmapping Templates</a></li>
+            <li><a href="https://example.com/resource5" class="underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">Budget Planning Tools</a></li>
           </ul>
         </li>
 
@@ -69,8 +69,8 @@
         <li>
           <strong class="text-lg text-black">Pilot Experimentation</strong>
           <ul class="list-disc list-inside ml-6 mt-2 space-y-2 text-blue-600">
-            <li><a href="https://example.com/resource6" class="underline hover:text-blue-800">Testbed Platforms</a></li>
-            <li><a href="https://example.com/resource7" class="underline hover:text-blue-800">Experiment Log Templates</a></li>
+            <li><a href="https://example.com/resource6" class="underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">Testbed Platforms</a></li>
+            <li><a href="https://example.com/resource7" class="underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">Experiment Log Templates</a></li>
           </ul>
         </li>
 
@@ -78,7 +78,7 @@
         <li>
           <strong class="text-lg text-black">Full Deployment</strong>
           <ul class="list-disc list-inside ml-6 mt-2 space-y-2 text-blue-600">
-            <li><a href="https://example.com/resource8" class="underline hover:text-blue-800">Implementation Guidelines</a></li>
+            <li><a href="https://example.com/resource8" class="underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">Implementation Guidelines</a></li>
           </ul>
         </li>
 
@@ -86,8 +86,8 @@
         <li>
           <strong class="text-lg text-black">Evaluation & Optimization</strong>
           <ul class="list-disc list-inside ml-6 mt-2 space-y-2 text-blue-600">
-            <li><a href="https://example.com/resource9" class="underline hover:text-blue-800">Feedback Loops</a></li>
-            <li><a href="https://example.com/resource10" class="underline hover:text-blue-800">KPI Dashboards</a></li>
+            <li><a href="https://example.com/resource9" class="underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">Feedback Loops</a></li>
+            <li><a href="https://example.com/resource10" class="underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">KPI Dashboards</a></li>
           </ul>
         </li>
       </ul>
@@ -100,10 +100,10 @@
 
         <li>
           <ul class="list-disc list-inside ml-6 mt-2 space-y-2 text-blue-600">
-            <li><a href="https://www.eur.nl/en/news/erasmus-university-trains-first-generative-ai-model-social-science-and-humanities" class="underline hover:text-blue-800">Generative AI Model</a></li>
-            <li><a href="https://www.surf.nl/en/themes/futuring" class="underline hover:text-blue-800">SURF Futuring</a></li>
-            <li><a href="https://example.com/resource3" class="underline hover:text-blue-800">House of AI</a></li>
-            <li><a href="https://www.utwente.nl/en/edge/" class="underline hover:text-blue-800">EDGE Research Center</a></li>
+            <li><a href="https://www.eur.nl/en/news/erasmus-university-trains-first-generative-ai-model-social-science-and-humanities" class="underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">Generative AI Model</a></li>
+            <li><a href="https://www.surf.nl/en/themes/futuring" class="underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">SURF Futuring</a></li>
+            <li><a href="https://example.com/resource3" class="underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">House of AI</a></li>
+            <li><a href="https://www.utwente.nl/en/edge/" class="underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">EDGE Research Center</a></li>
           </ul>
         </li>
       </ul>
