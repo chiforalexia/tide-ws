@@ -35,7 +35,17 @@
     <!-- Roadmap Resources Section -->
     <section>
       <h2 class="text-2xl font-bold text-black mt-6">Roadmap Page</h2>
-      <ul class="space-y-6 text-blue-600 ml-6">
+      <ul class="space-y-6">
+
+        <!-- Background -->
+        <li>
+          <strong class="text-lg text-black">Background</strong>
+          <ul class="list-disc list-inside ml-6 mt-2 space-y-2 text-blue-600">
+            <li><a href="https://www.sciencedirect.com/science/article/pii/S0016328725000114" class="underline hover:text-blue-800">Internal Foresight Activities</a></li>
+            <li><a href="https://www.sciencedirect.com/science/article/pii/S0040162516306035" class="underline hover:text-blue-800">Nature of Strategic Foresight</a></li>
+          </ul>
+        </li>
+
         <!-- Exploration -->
         <li>
           <strong class="text-lg text-black">Exploration phase</strong>
