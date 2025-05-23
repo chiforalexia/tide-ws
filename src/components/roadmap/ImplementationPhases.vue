@@ -136,8 +136,8 @@
                     </div>
 
                     <!-- Optional Note Box -->
-                    <div v-if="phases[activePhase].note" class="bg-indigo-50 border-l-4 border-indigo-400 p-4 rounded-lg space-y-1">
-                      <h3 class="text-lg font-semibold text-indigo-700">Note</h3>
+                    <div v-if="phases[activePhase].note" class="border-l-4 border-surf-200-green p-4 rounded-lg background-surf space-y-1 ring-1 ring-surf-200-green">
+                      <h3 class="text-lg font-semibold surf-500-green ">Note</h3>
                       <p class="text-m italic text-gray-600 leading-relaxed">
                         {{ phases[activePhase].note }}
                       </p>
@@ -238,7 +238,7 @@
 
 
                   <!-- Resources -->
-                  <div class="bg-gray-50 p-6 rounded-xl shadow-lg border border-blue-200 h-fit">
+                  <div class="bg-gray-50 p-6 rounded-xl shadow-lg border border-surf-blue-100 h-fit">
                     <div class="flex items-center gap-2 mb-6">
                       <svg class="w-6 h-6 secondary-text" fill="none" stroke="currentColor" stroke-width="2"
                         viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
@@ -1053,5 +1053,31 @@ note: "While this roadmap provides a useful starting point, every institution ha
 
 .space-y-6 {
   padding-top: 4rem; /* Adjust this to lower the menu */
+}
+
+.surf-500-green {
+  color: #C15500;
+}
+.surf-100-background{
+  background-color: #DFF4FF;
+}
+
+.border-surf-blue-100 {
+  border-color: #B3E5FF;
+}
+
+.border-surf-200-green {
+  border-left-color: #FF9A4E;
+}
+.background-surf {
+  background-color: #FFE6D2;
+}
+
+.ring-surf-200-green {
+  --tw-ring-color: #FF9A4E;
+}
+
+.ring-surf-200-blue {
+  --tw-ring-color: #FF9A4E;
 }
 </style>
