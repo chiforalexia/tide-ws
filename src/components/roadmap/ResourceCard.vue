@@ -17,16 +17,16 @@
             ✕
           </button>
   
-          <h3 class="text-xl font-bold people bg-clip-text text-transparent">
+          <h3 class="text-xl font-bold time bg-clip-text text-transparent">
             {{ resource.title }}
           </h3>
   
           <!-- Bubbles -->
           <div class="flex flex-wrap gap-2 mt-2 mb-4">
-            <span v-if="resource.time" class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium people">
+            <span v-if="resource.time" class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium time">
               {{ resource.time }}
             </span>
-            <span v-if="resource.people" class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium time">
+            <span v-if="resource.people" class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium people">
               {{ resource.people }}
             </span>
           </div>
@@ -103,7 +103,7 @@
         <div class="flex justify-end mt-2">
           <button
             @click.stop="showLearnMore = true"
-            class="inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none h-7 px-3 text-xs people"
+            class="inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none h-7 px-3 text-xs time"
           >
             Learn How
           </button>
@@ -163,20 +163,12 @@ const closeOverlay = () => {
   color: #004C97;
 }
 
-.surf-light-blue {
-  color: #DFF4FF;
-  background-color: #DFF4FF;
-}
-
-.text-surf-dark-blue{
-  color: #004C97;
-}
-.time{
+.people{
   background-color: #FFE6D2;
   color: #C15500;
 }
 
-.people{
+.time{
   background-color: #DFF4FF;
   color: #004C97;
 }
