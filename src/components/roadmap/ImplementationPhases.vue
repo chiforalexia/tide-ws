@@ -373,7 +373,7 @@ const phases = ref([
       'With the help of this roadmap, evaluate how the trends outlined could impact your institution within the next years.',
       'Share key insights with leadership and innovation teams.'
     ],
-    url: '',
+    url: 'https://www.surf.nl/files/2023-02/sf_trendrapport_v10_compressed.pdf',
     time: '30 min',
     people: 'Individual or team',
     exampleimage: '/public/report_cover.png',
@@ -388,7 +388,7 @@ const phases = ref([
       'Include your personal experiences, sector insights, cultural dynamics, and practical realities. Focus on quantity over quality. No idea is too bold, incomplete, or far-fetched at this stage.',
       'Once the wheel is populated, you or the group can reflect on surprising patterns, contradictions, or unexpected opportunities that emerge.',
     ],
-    url: '/resources/silent-brainstorm.pdf',
+    url: 'https://millennium-project.org/publications/futures-research-methodology-version-3-0-2/',
     time: '5–10 min',
     people: 'Individual or team',
     exampleimage: '/public/phases_resources/images/futures_wheel.png',
@@ -876,7 +876,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
   time: '1 - 2 hours',
   people: 'Team activity',
   exampleimage: '',
-  citation: ''
+  citation: ' Excel Gantt Chart Template. (n.d.). Retrieved May 23, 2025, from https://www.teamgantt.com/downloads/excel-gantt-chart-template'
 }
   ],
     justificationImage: "",
