@@ -6,7 +6,7 @@
   
         <!-- sections -->
         <section id="process" class="pt-40">
-          <!-- Add your process section content here -->
+            <HeroRdm />
            <implementationPhases />
         </section>
   
@@ -23,6 +23,7 @@
   import Navbar from '../components/common/Navbar.vue';
   import Footer from '../components/common/Footer.vue';
   import implementationPhases from '../components/roadmap/ImplementationPhases.vue'
+  import HeroRdm from '../components/roadmap/HeroRdm.vue';
   
   export default {
     name: 'RoadmapPage',
@@ -30,6 +31,7 @@
       Navbar,
       Footer,
       implementationPhases,
+      HeroRdm,
 
     },
   };
