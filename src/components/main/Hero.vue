@@ -6,7 +6,7 @@
         <span class="text-xl primary-text font-bold text-blue-500">Institutional Technology Adoption</span>
       </div>
 
-      <div class="text-4xl md:text-5xl lg:text-6xl font-extrabold font-customfont mb-6 transition-all duration-700 opacity-100 translate-y-0 delay-100">
+      <div class="text-4xl md:text-5xl lg:text-6xl font-extrabold custom-font mb-6 transition-all duration-700 opacity-100 translate-y-0 delay-100">
         Your Roadmap  <span class="text-blue-700 ">into the Future</span>
       </div>
 
@@ -89,6 +89,12 @@ onMounted(() => {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+
+.custom-font {
+  font-family: 'Special Gothic Expanded One', sans-serif;
+}
+
 /* Hero section content */
 .hero {
   background: transparent;

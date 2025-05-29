@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white">
-    <!-- Header -->
+    <!-- Header
     <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center m-2 text-blue-700 custom-font">
       Integration Roadmap
     </h1>
@@ -15,7 +15,7 @@
 
     <div class="text-sm sm:text-base md:text-lg text-blue-600 m-8 text-center">
       You’re not expected to follow a fixed path, but to create one, using these phases as support.
-    </div>
+    </div>-->
 
     <div class="min-h-screen sidebar-bg flex">
       <!-- Sidebar -->
@@ -269,6 +269,7 @@
 </template>
 
 <script setup lang="ts">
+import HeroRdm from './HeroRdm.vue';
 import { ref, computed} from 'vue';
 import ResourceCard from './ResourceCard.vue';
 
