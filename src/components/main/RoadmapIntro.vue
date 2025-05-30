@@ -16,7 +16,7 @@
               <span class="text-blue-700">Successful Implementation</span>
             </h2>
             <p class="text-lg mb-8">
-              The detailed roadmap breaks down the technology adoption and integration process into manageable 
+              The detailed Roadmap breaks down the technology adoption and integration process into manageable 
               phases, providing clear guidance and resources for each step of your journey.
             </p>
 
