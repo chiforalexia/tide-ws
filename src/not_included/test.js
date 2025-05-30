@@ -33,4 +33,3 @@ async function loadExcel(excelFileUrl, excelTableRef, hotInstance) {
     console.error("Error loading Excel file:", error);
   }
 }
-

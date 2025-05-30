@@ -1,8 +1,9 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted } from "vue";
 
 // The text to animate
-const text = "FOR YOUR COFFEE, TEA, CEREAL, SMOOTHIES, PROTEIN SHAKES, LUNCHBOX, AND MORE... THE BEST TECH SOLUTIONS ";
+const text =
+  "FOR YOUR COFFEE, TEA, CEREAL, SMOOTHIES, PROTEIN SHAKES, LUNCHBOX, AND MORE... THE BEST TECH SOLUTIONS ";
 const repeatedText = text.repeat(33);
 
 const startOffset = ref(0);
@@ -19,11 +20,24 @@ onMounted(() => {
 
 <template>
   <div class="wave-wrapper absolute bottom-0 left-0 w-full z-0">
-    <svg class="wave-svg" viewBox="0 0 1200 250" preserveAspectRatio="xMidYMid meet">
+    <svg
+      class="wave-svg"
+      viewBox="0 0 1200 250"
+      preserveAspectRatio="xMidYMid meet"
+    >
       <defs>
-        <path id="wave-path" d="M0,100 C200,50 400,150 600,100 S1000,50 1200,100" />
-        <path id="road-path" d="M0,100 C200,50 400,150 600,100 S1000,50 1200,100 L1200,250 L0,250 Z" />
-        <path id="lower-road-path" d="M0,123 C200,73 400,173 600,123 S1000,73 1200,123 L1200,250 L0,250 Z" />
+        <path
+          id="wave-path"
+          d="M0,100 C200,50 400,150 600,100 S1000,50 1200,100"
+        />
+        <path
+          id="road-path"
+          d="M0,100 C200,50 400,150 600,100 S1000,50 1200,100 L1200,250 L0,250 Z"
+        />
+        <path
+          id="lower-road-path"
+          d="M0,123 C200,73 400,173 600,123 S1000,73 1200,123 L1200,250 L0,250 Z"
+        />
       </defs>
 
       <use href="#road-path" class="road-bg" />
@@ -40,10 +54,11 @@ onMounted(() => {
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted } from "vue";
 
 // The text to animate
-const text = "FOR YOUR COFFEE, TEA, CEREAL, SMOOTHIES, PROTEIN SHAKES, LUNCHBOX, AND MORE... THE BEST TECH SOLUTIONS ";
+const text =
+  "FOR YOUR COFFEE, TEA, CEREAL, SMOOTHIES, PROTEIN SHAKES, LUNCHBOX, AND MORE... THE BEST TECH SOLUTIONS ";
 const repeatedText = text.repeat(3);
 const startOffset = ref(0);
 
@@ -58,13 +73,12 @@ onMounted(() => {
 </script>
 
 <style scoped>
-
 /* Import font */
-@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Outline&family=Bungee+Tint&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Outline&family=Bungee+Tint&display=swap");
 
 .wave-wrapper {
   position: absolute;
-  bottom: -50px;  /* Adjust this value as needed */
+  bottom: -50px; /* Adjust this value as needed */
   left: 0;
   width: 100%;
   height: 250px;
@@ -86,11 +100,10 @@ onMounted(() => {
 }
 
 .wave-text {
-  font-family: 'Bungee', sans-serif;
+  font-family: "Bungee", sans-serif;
   fill: #ffffff;
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 1.5px;
 }
-
 </style>

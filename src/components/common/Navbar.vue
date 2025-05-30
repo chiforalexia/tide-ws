@@ -2,48 +2,50 @@
   <header
     :class="[
       'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-      isScrolled
-        ? 'py-2 bg-white/80 backdrop-blur-lg'
-        : 'py-5 bg-transparent'
+      isScrolled ? 'py-2 bg-white/80 backdrop-blur-lg' : 'py-5 bg-transparent',
     ]"
   >
     <div class="container max-w-7xl mx-auto px-4 sm:px-6">
       <div class="flex items-center justify-between">
         <!-- Logo Section -->
-        <router-link
-          to="/"
-          class="flex items-center pt-1 md:pt-2"
-        >
-        <div class="relative  flex items-start top-4">
-            <img src="/surf_logo.svg" alt="SURF Logo" class="w-36 h-auto z-10" />
-            <span class="text-2xl bg-white rounded-xl py-1 px-3 pl-8 font-bold absolute left-20 -z-10">Roadmap</span>
-        </div>
-
+        <router-link to="/" class="flex items-center pt-1 md:pt-2">
+          <div class="relative flex items-start top-4">
+            <img
+              src="/surf_logo.svg"
+              alt="SURF Logo"
+              class="w-36 h-auto z-10"
+            />
+            <span
+              class="text-2xl bg-white rounded-xl py-1 px-3 pl-8 font-bold absolute left-20 -z-10"
+              >Roadmap</span
+            >
+          </div>
         </router-link>
 
         <!-- Floating Menu Bubble (Desktop) -->
         <div
-          class="hidden md:flex items-center bg-white rounded-xl custom-shadow px-3 py-1 space-x-10 transition-all duration-300 hover:scale-105  justify-center"
+          class="hidden md:flex items-center bg-white rounded-xl custom-shadow px-3 py-1 space-x-10 transition-all duration-300 hover:scale-105 justify-center"
         >
           <a
             href="/survey"
             class="font-medium hover:text-primary transition-colors link-underline"
             >Personalized Report</a
           >
-          <a 
+          <a
             href="/success-stories"
             class="font-medium hover:text-primary transition-colors link-underline"
             >Success Stories</a
-            >
+          >
           <!-- <a
             href="#features"
             class="font-medium hover:text-primary transition-colors link-underline"
             >Features</a
           > -->
-          <a 
+          <a
             href="/roadmap"
             class="font-medium hover:text-primary transition-colors"
-            ><button class="w-full btn">Explore the Roadmap</button></a>
+            ><button class="w-full btn">Explore the Roadmap</button></a
+          >
         </div>
 
         <!-- Mobile Menu Button -->
@@ -195,7 +197,9 @@ header.py-5 {
 }
 
 .custom-shadow {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 @keyframes fadeIn {

@@ -1,249 +1,302 @@
 // src/survey/trends.js
 
 export const trends = [
+  // Artificial Intelligence
+  {
+    name: "Towards 'Franken models'",
+    chapter: "Artificial Intelligence",
+    pages: [11, 12],
+    readiness: "act",
+    values: ["autonomy", "justice", "humanity"],
+    subvalues: ["Equality", "Integrity", "Inclusivity"],
+  },
+  {
+    name: "More efficient approaches towards AI systems",
+    chapter: "Artificial Intelligence",
+    pages: [13, 14],
+    readiness: "plan",
+    values: ["autonomy", "justice"],
+    subvalues: ["Independence of education", "Integrity"],
+  },
+  {
+    name: "New ways to access data",
+    chapter: "Artificial Intelligence",
+    pages: [15, 16],
+    readiness: "plan",
+    values: ["autonomy", "justice"],
+    subvalues: ["Independence of education", "Equality", "Integrity"],
+  },
+  {
+    name: "Towards trustworthy AI",
+    chapter: "Artificial Intelligence",
+    pages: [17, 18],
+    readiness: "plan",
+    values: ["autonomy", "justice", "humanity"],
+    subvalues: [
+      "Independence of education",
+      "Safeguarding of private life and personal data",
+      "Equality",
+      "Integrity",
+      "Respect",
+      "Safety",
+    ],
+  },
+  {
+    name: "More accessible computing and models",
+    chapter: "Artificial Intelligence",
+    pages: [19, 20],
+    readiness: "plan",
+    values: ["autonomy", "justice"],
+    subvalues: ["Independence of education", "Equality", "Integrity"],
+  },
 
-    // Artificial Intelligence
-    {
-        name: "Towards 'Franken models'",
-        chapter: "Artificial Intelligence",
-        pages: [11, 12],
-        readiness: "act",
-        values: ["autonomy", "justice", "humanity"],
-        subvalues: ["Equality", "Integrity", "Inclusivity"]
-    },
-    {
-        name: "More efficient approaches towards AI systems",
-        chapter: "Artificial Intelligence",
-        pages: [13, 14],
-        readiness: "plan",
-        values: ["autonomy", "justice"],
-        subvalues: ["Independence of education", "Integrity"]
-    },
-      {
-        name: "New ways to access data",
-        chapter: "Artificial Intelligence",
-        pages: [15, 16],
-        readiness: "plan",
-        values: ["autonomy", "justice"],
-        subvalues: ["Independence of education", "Equality", "Integrity"]
-      },
-      {
-        name: "Towards trustworthy AI",
-        chapter: "Artificial Intelligence",
-        pages: [17, 18],
-        readiness: "plan",
-        values: ["autonomy", "justice", "humanity"],
-        subvalues: ["Independence of education", "Safeguarding of private life and personal data", "Equality", "Integrity", "Respect", "Safety"]
-      },
-      {
-        name: "More accessible computing and models",
-        chapter: "Artificial Intelligence",
-        pages: [19, 20],
-        readiness: "plan",
-        values: ["autonomy", "justice"],
-        subvalues: ["Independence of education", "Equality", "Integrity"]
-      },
+  // Edge
+  {
+    name: "Cloud-Edge Continuum",
+    chapter: "Edge",
+    pages: [24, 25],
+    readiness: "act",
+    values: ["autonomy", "justice"],
+    subvalues: ["Safeguarding of private life and personal data", "Integrity"],
+  },
+  {
+    name: "Digital Twins",
+    chapter: "Edge",
+    pages: [26, 27],
+    readiness: "plan",
+    values: ["autonomy", "justice"],
+    subvalues: ["Safeguarding of private life and personal data", "Integrity"],
+  },
+  {
+    name: "Actual real-time data streams",
+    chapter: "Edge",
+    pages: [28, 29],
+    readiness: "plan",
+    values: ["autonomy", "justice", "humanity"],
+    subvalues: [
+      "Safeguarding of private life and personal data",
+      "Self-determination of pupils and students",
+      "Integrity",
+    ],
+  },
+  {
+    name: "Run code anywhere",
+    chapter: "Edge",
+    pages: [30, 31],
+    readiness: "act",
+    values: ["justice"],
+    subvalues: [
+      "Safeguarding of private life and personal data",
+      "Self-determination of pupils and students",
+      "Integrity",
+    ],
+  },
+  {
+    name: "Robotic Automation",
+    chapter: "Edge",
+    pages: [32, 33],
+    readiness: "watch",
+    values: ["justice", "humanity"],
+    subvalues: ["Equality", "Integrity", "Safety", "Personal development"],
+  },
 
-      // Edge
-      {
-        name: "Cloud-Edge Continuum",
-        chapter: "Edge",
-        pages: [24, 25],
-        readiness: "act",
-        values: ["autonomy", "justice"],
-        subvalues: ["Safeguarding of private life and personal data", "Integrity"]
-      },
-      {
-        name: "Digital Twins",
-        chapter: "Edge",
-        pages: [26, 27],
-        readiness: "plan",
-        values: ["autonomy", "justice"],
-        subvalues: ["Safeguarding of private life and personal data", "Integrity"]
-      },
-      {
-        name: "Actual real-time data streams",
-        chapter: "Edge",
-        pages: [28, 29],
-        readiness: "plan",
-        values: ["autonomy", "justice", "humanity"],
-        subvalues: ["Safeguarding of private life and personal data", "Self-determination of pupils and students", "Integrity"]
-      },
-      {
-        name: "Run code anywhere",
-        chapter: "Edge",
-        pages: [30, 31],
-        readiness: "act",
-        values: ["justice"],
-        subvalues: ["Safeguarding of private life and personal data", "Self-determination of pupils and students", "Integrity"]
-      },
-      {
-        name: "Robotic Automation",
-        chapter: "Edge",
-        pages: [32, 33],
-        readiness: "watch",
-        values: ["justice", "humanity"],
-        subvalues: ["Equality", "Integrity", "Safety", "Personal development"]
-      },
+  // Advanced Computing
+  {
+    name: "Computing continuum",
+    chapter: "Advanced Computing",
+    pages: [37, 38],
+    readiness: "act",
+    values: ["justice", "humanity"],
+    subvalues: ["Integrity", "Safety"],
+  },
+  {
+    name: "Energy sustainability in digital infrastructures",
+    chapter: "Advanced Computing",
+    pages: [39, 40],
+    readiness: "plan",
+    values: ["justice", "humanity"],
+    subvalues: ["Integrity", "Personal development"],
+  },
+  {
+    name: "Protect sovereignty in digital infrastructure",
+    chapter: "Advanced Computing",
+    pages: [41, 42],
+    readiness: "act",
+    values: ["autonomy"],
+    subvalues: [
+      "Self-determination of pupils and students",
+      "Independence of education",
+    ],
+  },
+  {
+    name: "Unconventional paradigms for computing",
+    chapter: "Advanced Computing",
+    pages: [43, 44],
+    readiness: "watch",
+    values: ["autonomy", "justice", "humanity"],
+    subvalues: [
+      "Independence of education",
+      "Integrity",
+      "Personal development",
+    ],
+  },
+  {
+    name: "High-end computing in qualitative research fields",
+    chapter: "Advanced Computing",
+    pages: [45, 46],
+    readiness: "act",
+    values: ["autonomy", "justice"],
+    subvalues: [
+      "Freedom of education",
+      "Safeguarding of private life and personal data",
+      "Inclusivity",
+      "Equality",
+    ],
+  },
 
-      // Advanced Computing
-      {
-        name: "Computing continuum",
-        chapter: "Advanced Computing",
-        pages: [37, 38],
-        readiness: "act",
-        values: ["justice", "humanity"],
-        subvalues: ["Integrity", "Safety"]
-      },
-      {
-        name: "Energy sustainability in digital infrastructures",
-        chapter: "Advanced Computing",
-        pages: [39, 40],
-        readiness: "plan",
-        values: ["justice", "humanity"],
-        subvalues: ["Integrity", "Personal development"]
-      },
-      {
-        name: "Protect sovereignty in digital infrastructure",
-        chapter: "Advanced Computing",
-        pages: [41, 42],
-        readiness: "act",
-        values: ["autonomy"],
-        subvalues: ["Self-determination of pupils and students", "Independence of education"]
-      },
-      {
-        name: "Unconventional paradigms for computing",
-        chapter: "Advanced Computing",
-        pages: [43, 44],
-        readiness: "watch",
-        values: ["autonomy","justice", "humanity"],
-        subvalues: ["Independence of education", "Integrity", "Personal development"]
-      },
-      {
-        name: "High-end computing in qualitative research fields",
-        chapter: "Advanced Computing",
-        pages: [45, 46],
-        readiness: "act",
-        values: ["autonomy","justice"],
-        subvalues: ["Freedom of education", "Safeguarding of private life and personal data", "Inclusivity", "Equality"]
-      },
+  // Network
+  {
+    name: "Big Tech and networking",
+    chapter: "Network",
+    pages: [50, 51],
+    readiness: "act",
+    values: ["autonomy", "justice"],
+    subvalues: [
+      "Self-determination of pupils and students",
+      "Self determination",
+      "Independence of education",
+      "Safeguarding of private life and personal data",
+      "Integrity",
+    ],
+  },
+  {
+    name: "Intelligent networks",
+    chapter: "Network",
+    pages: [52, 53],
+    readiness: "act",
+    values: ["autonomy", "justice"],
+    subvalues: [
+      "Self-determination of pupils and students",
+      "Self determination",
+      "Independence of education",
+      "Safeguarding of private life and personal data",
+      "Integrity",
+    ],
+  },
+  {
+    name: "Edge and campus arhitecture",
+    chapter: "Network",
+    pages: [54, 55],
+    readiness: "plan",
+    values: ["autonomy"],
+    subvalues: ["Independence of education"],
+  },
+  {
+    name: "Next generation networks",
+    chapter: "Network",
+    pages: [56, 57],
+    readiness: "watch",
+    values: ["autonomy", "justice"],
+    subvalues: ["Freedom of education", "Independence", "Integrity"],
+  },
 
-      // Network
-      {
-        name: "Big Tech and networking",
-        chapter: "Network",
-        pages: [50, 51],
-        readiness: "act",
-        values: ["autonomy","justice"],
-        subvalues: ["Self-determination of pupils and students", "Self determination", "Independence of education", "Safeguarding of private life and personal data", "Integrity"]
-      },
-      {
-        name: "Intelligent networks",
-        chapter: "Network",
-        pages: [52, 53],
-        readiness: "act",
-        values: ["autonomy","justice"],
-        subvalues: ["Self-determination of pupils and students", "Self determination", "Independence of education", "Safeguarding of private life and personal data", "Integrity"]
-      },
-      {
-        name: "Edge and campus arhitecture",
-        chapter: "Network",
-        pages: [54, 55],
-        readiness: "plan",
-        values: ["autonomy"],
-        subvalues: ["Independence of education"]
-      },
-      {
-        name: "Next generation networks",
-        chapter: "Network",
-        pages: [56, 57],
-        readiness: "watch",
-        values: ["autonomy","justice"],
-        subvalues: ["Freedom of education", "Independence", "Integrity"]
-      },
+  // Quantum
+  {
+    name: "Quantum Key Distribution (QKD) gaining momentum",
+    chapter: "Quantum",
+    pages: [62, 63],
+    readiness: "act",
+    values: ["autonomy", "justice"],
+    subvalues: ["Safeguarding of private life and personal data", "Integrity"],
+  },
+  {
+    name: "Quantum computing in the cloud",
+    chapter: "Quantum",
+    pages: [64, 65],
+    readiness: "act",
+    values: ["autonomy", "justice", "humanity"],
+    subvalues: [
+      "Self-determination of pupils and students",
+      "Inclusivity",
+      "Integrity",
+      "Personal development",
+    ],
+  },
+  {
+    name: "Hybrid quantum/classical computing",
+    chapter: "Quantum",
+    pages: [66, 67],
+    readiness: "act",
+    values: ["justice"],
+    subvalues: ["Inclusivity", "Integrity"],
+  },
+  {
+    name: "Error correction techniques",
+    chapter: "Quantum",
+    pages: [68, 69],
+    readiness: "watch",
+    values: ["justice"],
+    subvalues: ["Integrity"],
+  },
+  {
+    name: "Quantum curiosity",
+    chapter: "Quantum",
+    pages: [70, 71],
+    readiness: "act",
+    values: ["justice"],
+    subvalues: ["Equality"],
+  },
 
-      // Quantum
-      {
-        name: "Quantum Key Distribution (QKD) gaining momentum",
-        chapter: "Quantum",
-        pages: [62, 63],
-        readiness: "act",
-        values: ["autonomy","justice"],
-        subvalues: ["Safeguarding of private life and personal data", "Integrity"]
-      },
-      {
-        name: "Quantum computing in the cloud",
-        chapter: "Quantum",
-        pages: [64, 65],
-        readiness: "act",
-        values: ["autonomy","justice", "humanity"],
-        subvalues: ["Self-determination of pupils and students", "Inclusivity", "Integrity", "Personal development"]
-      },
-      {
-        name: "Hybrid quantum/classical computing",
-        chapter: "Quantum",
-        pages: [66, 67],
-        readiness: "act",
-        values: ["justice"],
-        subvalues: ["Inclusivity", "Integrity"]
-      },
-      {
-        name: "Error correction techniques",
-        chapter: "Quantum",
-        pages: [68, 69],
-        readiness: "watch",
-        values: ["justice"],
-        subvalues: ["Integrity"]
-      },
-      {
-        name: "Quantum curiosity",
-        chapter: "Quantum",
-        pages: [70, 71],
-        readiness: "act",
-        values: ["justice"],
-        subvalues: ["Equality"]
-      },
-
-      //eXtended Reality
-      {
-        name: "Enriching XR by combining technologies",
-        chapter: "eXtended Reality",
-        pages: [75, 76],
-        readiness: "plan",
-        values: ["humanity"],
-        subvalues: ["Social cohesion", "Safety", "Health, well-being"]
-      },
-      {
-        name: "Virtual social interactions are getting more advanced",
-        chapter: "eXtended Reality",
-        pages: [77, 78],
-        readiness: "watch",
-        values: ["justice", "humanity"],
-        subvalues: ["Inclusivity", "Meaningful contact"]
-      },
-      {
-        name: "New gear for new realities",
-        chapter: "eXtended Reality",
-        pages: [79, 80],
-        readiness: "act",
-        values: ["autonomy","justice","humanity"],
-        subvalues: ["Freedom of education", "Inclusivity", "Personal development", "Safety", "Health, well-being"]
-      },
-      {
-        name: "An increasing number of ethical concerns",
-        chapter: "eXtended Reality",
-        pages: [81, 82],
-        readiness: "plan",
-        values: ["autonomy", "justice", "humanity"],
-        subvalues: ["Safeguarding of private life and personal data", "Equality", "Integrity", "Safety"]
-      },
-      {
-        name: "A fragmented ecosystem",
-        chapter: "eXtended Reality",
-        pages: [83, 84],
-        readiness: "act",
-        values: ["autonomy", "justice"],
-        subvalues: ["Independence of education", "Freedom of education"]
-      }
-  ]
-  
+  //eXtended Reality
+  {
+    name: "Enriching XR by combining technologies",
+    chapter: "eXtended Reality",
+    pages: [75, 76],
+    readiness: "plan",
+    values: ["humanity"],
+    subvalues: ["Social cohesion", "Safety", "Health, well-being"],
+  },
+  {
+    name: "Virtual social interactions are getting more advanced",
+    chapter: "eXtended Reality",
+    pages: [77, 78],
+    readiness: "watch",
+    values: ["justice", "humanity"],
+    subvalues: ["Inclusivity", "Meaningful contact"],
+  },
+  {
+    name: "New gear for new realities",
+    chapter: "eXtended Reality",
+    pages: [79, 80],
+    readiness: "act",
+    values: ["autonomy", "justice", "humanity"],
+    subvalues: [
+      "Freedom of education",
+      "Inclusivity",
+      "Personal development",
+      "Safety",
+      "Health, well-being",
+    ],
+  },
+  {
+    name: "An increasing number of ethical concerns",
+    chapter: "eXtended Reality",
+    pages: [81, 82],
+    readiness: "plan",
+    values: ["autonomy", "justice", "humanity"],
+    subvalues: [
+      "Safeguarding of private life and personal data",
+      "Equality",
+      "Integrity",
+      "Safety",
+    ],
+  },
+  {
+    name: "A fragmented ecosystem",
+    chapter: "eXtended Reality",
+    pages: [83, 84],
+    readiness: "act",
+    values: ["autonomy", "justice"],
+    subvalues: ["Independence of education", "Freedom of education"],
+  },
+];

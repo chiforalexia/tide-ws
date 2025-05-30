@@ -1,41 +1,38 @@
 <template>
-
-<div class="container mx-auto px-4 mb-10 ">
-      <!-- Title section -->
+  <div class="container mx-auto px-4 mb-10">
+    <!-- Title section -->
+    <div class="text-center">
+      <!-- Badge -->
       <div class="text-center">
-        <!-- Badge -->
-        <div class="text-center">
-            <div class="bubble">
-                Stories
-            </div>
-        </div>
-
-        <!-- Main title -->
-        <h2 class="text-3xl md:text-4xl font-bold mb-2">
-          Get <span style="color: #E67300;">Inspired</span>
-        </h2>
-
-        <!-- Subtitle -->
-        <p class="text-gray-600 max-w-2xl mx-auto">
-          Explore the Future of Technology: From AI to Quantum and beyond, explore how emerging technologies are shaping the future of research and innovation in the Netherlands.
-        </p>
+        <div class="bubble">Stories</div>
       </div>
+
+      <!-- Main title -->
+      <h2 class="text-3xl md:text-4xl font-bold mb-2">
+        Get <span style="color: #e67300">Inspired</span>
+      </h2>
+
+      <!-- Subtitle -->
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Explore the Future of Technology: From AI to Quantum and beyond, explore
+        how emerging technologies are shaping the future of research and
+        innovation in the Netherlands.
+      </p>
     </div>
+  </div>
 
   <!-- Photo gallery section -->
   <section class="photo-gallery">
     <div class="photos-container">
-      <div
-        v-for="photo in photos"
-        :key="photo.id"
-        class="photo-item"
-      >
+      <div v-for="photo in photos" :key="photo.id" class="photo-item">
         <div class="photo-wrapper">
           <a :href="photo.link" target="_blank" class="photo-link">
-            <img :src="photo.src" :alt="photo.title">
+            <img :src="photo.src" :alt="photo.title" />
             <div class="photo-title">
               <h3>{{ photo.title }}</h3>
-              <p class="text-sm text-gray-300">Click to {{photo.description}}</p>
+              <p class="text-sm text-gray-300">
+                Click to {{ photo.description }}
+              </p>
             </div>
           </a>
         </div>
@@ -48,32 +45,33 @@
 const photos = [
   {
     id: 1,
-    src: './public/Generative AI Erasmus University.jpg.avif',
-    title: 'Generative AI model',
-    link: 'https://www.eur.nl/en/news/erasmus-university-trains-first-generative-ai-model-social-science-and-humanities',
-    description: 'learn about the Generative AI model build at the Erasmus University',
+    src: "./public/Generative AI Erasmus University.jpg.avif",
+    title: "Generative AI model",
+    link: "https://www.eur.nl/en/news/erasmus-university-trains-first-generative-ai-model-social-science-and-humanities",
+    description:
+      "learn about the Generative AI model build at the Erasmus University",
   },
   {
     id: 2,
-    src: './public/tile_AI.png',
-    title: 'SURF Futuring',
-    link: 'https://www.surf.nl/en/themes/futuring',
-    description: 'learn more about SURF Futuring and their mission',
+    src: "./public/tile_AI.png",
+    title: "SURF Futuring",
+    link: "https://www.surf.nl/en/themes/futuring",
+    description: "learn more about SURF Futuring and their mission",
   },
   {
     id: 3,
-    src: './public/House of AI.png',
-    title: 'House of AI',
-    link: 'https://www.surf.nl/en/themes/futuring',
-    description: 'explore a virtual network of AI labs',
+    src: "./public/House of AI.png",
+    title: "House of AI",
+    link: "https://www.surf.nl/en/themes/futuring",
+    description: "explore a virtual network of AI labs",
   },
   {
     id: 4,
-    src: './public/EDGE.jpg',
-    title: 'EDGE Research Center',
-    link: 'https://www.utwente.nl/en/edge/',
-    description: 'read all about Twente Universities EDGE Research',
-  }
+    src: "./public/EDGE.jpg",
+    title: "EDGE Research Center",
+    link: "https://www.utwente.nl/en/edge/",
+    description: "read all about Twente Universities EDGE Research",
+  },
 ];
 </script>
 
@@ -183,4 +181,3 @@ const photos = [
   }
 }
 </style>
-

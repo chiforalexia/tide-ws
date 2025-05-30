@@ -1,28 +1,31 @@
 /* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap");
 
 /* Global Styles */
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  background-color: #F4F6F8;
-  color: #050E1D;
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: #f4f6f8;
+  color: #050e1d;
   margin: 0;
   padding: 0;
 }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Nunito', sans-serif;
-  color: #050E1D;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito", sans-serif;
+  color: #050e1d;
 }
-
 
 /* Color Palette */
 
 .surf-green {
-  color: #17A95D;
+  color: #17a95d;
 }
-
 
 /* Buttons
 button {
@@ -40,7 +43,6 @@ button:hover {
   background-color: #008939;
 } */
 
-
 .btn {
   background-color: black;
   color: white;
@@ -50,16 +52,16 @@ button:hover {
 }
 
 .btn:hover {
-  background-color: #0077C8;
-  scale: 1.10;
-  transition: ease-in-out 0.3s; 
+  background-color: #0077c8;
+  scale: 1.1;
+  transition: ease-in-out 0.3s;
 }
 
 /*Blue on site button */
 .btn-blue {
   display: flex;
   align-items: center;
-  background-color: #1D4ED8; /* blue-700 */
+  background-color: #1d4ed8; /* blue-700 */
   color: white;
   padding: 10px 20px;
   border-radius: 6px;
@@ -67,12 +69,12 @@ button:hover {
 }
 
 .btn-blue:hover {
-  background-color: #2563EB; /* blue-600 */
+  background-color: #2563eb; /* blue-600 */
 }
 
 /*Green download button*/
 .download-btn {
-  background-color: #17A95D;
+  background-color: #17a95d;
   color: white;
   padding: 10px 20px;
   border-radius: 6px;
@@ -85,52 +87,48 @@ button:hover {
 }
 
 .download-btn:hover {
-  background-color:#008939;
+  background-color: #008939;
 }
 
 /* Section Bubbles */
 
 .bubble {
   display: inline-flex;
-  background-color: #DCF2E5; 
-  color: #006731;            
+  background-color: #dcf2e5;
+  color: #006731;
 
-  padding: 0.25rem 1rem;     /* py-1 px-4 */
-  border-radius: 9999px;     /* full rounding */
-  font-size: 0.875rem;       /* text-sm (14px) */
-  margin-bottom: 1rem;       /* mb-4 */
+  padding: 0.25rem 1rem; /* py-1 px-4 */
+  border-radius: 9999px; /* full rounding */
+  font-size: 0.875rem; /* text-sm (14px) */
+  margin-bottom: 1rem; /* mb-4 */
 }
 
-.bubble:hover{
-  background-color: #B8E3C9; 
-  color: #006731;           
+.bubble:hover {
+  background-color: #b8e3c9;
+  color: #006731;
   cursor: pointer;
-
 }
 
 .resources_bubble {
-  background-color: #FFE6D2;
-  color: #C15500;  
-
+  background-color: #ffe6d2;
+  color: #c15500;
 }
 
 .resources_bubble:hover {
-  background-color: #FFC294; 
-  color: #C15500;  
+  background-color: #ffc294;
+  color: #c15500;
   cursor: pointer;
 }
 
 .phases_bubble {
-  background-color: #DFF4FF;
-  color: oklch(48.8% 0.243 264.376);  
+  background-color: #dff4ff;
+  color: oklch(48.8% 0.243 264.376);
 }
 
 .intro_phases_bubble {
-  background-color: #DFF4FF;
-  color: oklch(48.8% 0.243 264.376);  
+  background-color: #dff4ff;
+  color: oklch(48.8% 0.243 264.376);
 }
-
-
 
 /* Links */
 
@@ -146,7 +144,7 @@ a:hover {
 
 /* Card / Container Styles */
 .card {
-  background: #EAECF0;
+  background: #eaecf0;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
@@ -155,27 +153,27 @@ a:hover {
 /* Paragraph Styles */
 p {
   font-size: 16px;
-  color: #5E6873;
+  color: #5e6873;
 }
 
 /* Primary Colors */
 .primary-bg {
-  background-color: #0077C8;
+  background-color: #0077c8;
   color: white;
 }
 
 .primary-text {
-  color: #004C97;
+  color: #004c97;
 }
 
 /* Secondary Colors */
 .secondary-bg {
-  background-color: #FFC294;
-  color: #050E1D;
+  background-color: #ffc294;
+  color: #050e1d;
 }
 
 .secondary-text {
-  color: #E67300;
+  color: #e67300;
 }
 
 /* Utility Classes */
@@ -188,15 +186,15 @@ p {
 }
 
 .text-light {
-  color: #B2B6BE;
+  color: #b2b6be;
 }
 
 .text-medium {
-  color: #5E6873;
+  color: #5e6873;
 }
 
 .bg-light {
-  background-color: #F4F6F8;
+  background-color: #f4f6f8;
 }
 
 .border-radius {
@@ -209,25 +207,27 @@ p {
   justify-content: center;
   width: 20px;
   height: 20px;
-  border-radius: 9999px;            
-  border: 1px solid #9ca3af;        
-  font-size: 0.75rem;               
+  border-radius: 9999px;
+  border: 1px solid #9ca3af;
+  font-size: 0.75rem;
   font-weight: 600;
-  color: #6b7280;                   
+  color: #6b7280;
   background-color: white;
   cursor: pointer;
-  transition: color 0.2s, border-color 0.2s;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
   user-select: none;
 }
 
 .info-bubble:hover {
-  color: #2563eb;                
+  color: #2563eb;
   border-color: #2563eb;
 }
 
 .info-box {
   position: relative;
-  background-color: #f3f4f6; 
+  background-color: #f3f4f6;
   padding: 1.5rem;
   border-radius: 0.75rem;
   box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.05);
@@ -235,7 +235,7 @@ p {
 }
 
 .info-box p {
-  color: #374151; 
+  color: #374151;
   white-space: pre-line;
   line-height: 1.6;
   font-size: 1rem;

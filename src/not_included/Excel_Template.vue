@@ -3,7 +3,9 @@
     <!-- Title section -->
     <div class="text-center mb-6">
       <!-- Badge -->
-      <div class="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm mb-4">
+      <div
+        class="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm mb-4"
+      >
         Roadmap Template
       </div>
 
@@ -14,7 +16,8 @@
 
       <!-- Subtitle -->
       <p class="text-gray-600 max-w-2xl mx-auto">
-        Get started with a technology implementation roadmap, adjustable to your institution's needs.
+        Get started with a technology implementation roadmap, adjustable to your
+        institution's needs.
       </p>
     </div>
 
@@ -24,7 +27,9 @@
 
       <!-- Download button for the Excel file -->
       <a :href="excelDownloadLink" download="YourExcelFile.xlsx">
-        <button class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-full mt-6">
+        <button
+          class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-full mt-6"
+        >
           Download Excel File
         </button>
       </a>
@@ -42,8 +47,10 @@ export default {
   data() {
     // Links must be changed after committed to main or changing the excel itself
     return {
-      excelFileUrl: "https://github.com/chiforalexia/tide-ws/raw/refs/heads/Ella/Example-web%201.xlsx",
-      excelDownloadLink: "https://github.com/chiforalexia/tide-ws/raw/refs/heads/Ella/Example-web%201.xlsx",
+      excelFileUrl:
+        "https://github.com/chiforalexia/tide-ws/raw/refs/heads/Ella/Example-web%201.xlsx",
+      excelDownloadLink:
+        "https://github.com/chiforalexia/tide-ws/raw/refs/heads/Ella/Example-web%201.xlsx",
       hotInstance: null,
     };
   },
@@ -74,14 +81,19 @@ export default {
         const workbook = XLSX.read(arrayBuffer, { type: "array" });
         const sheetName = workbook.SheetNames[0];
         const sheet = workbook.Sheets[sheetName];
-        const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1, defval: "" });
+        const jsonData = XLSX.utils.sheet_to_json(sheet, {
+          header: 1,
+          defval: "",
+        });
 
         console.log("Workbook loaded:", workbook);
         console.log("Sheet name:", sheetName);
         console.log("Parsed Excel Data:", jsonData);
 
         if (jsonData.length <= 1 || jsonData[0].length <= 1) {
-          console.warn("Excel data appears to be empty or has no headers. Falling back to mock data.");
+          console.warn(
+            "Excel data appears to be empty or has no headers. Falling back to mock data.",
+          );
           this.renderMockData();
           return;
         }
@@ -104,8 +116,8 @@ export default {
         filters: true,
         dropdownMenu: true,
         licenseKey: "non-commercial-and-evaluation",
-        width: '100%',
-        stretchH: 'all',
+        width: "100%",
+        stretchH: "all",
         rowHeight: 35,
         autoColumnSize: true,
         manualColumnResize: true,
@@ -118,12 +130,12 @@ export default {
       const data = [
         ["Alex", "Developer", "2023-01-01"],
         ["Morgan", "Designer", "2023-02-15"],
-        ["Taylor", "Manager", "2023-03-10"]
+        ["Taylor", "Manager", "2023-03-10"],
       ];
       this.renderHandsontable(data, headers);
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
