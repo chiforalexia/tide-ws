@@ -4,7 +4,7 @@
         <div class="bubble">
           Success Stories
         </div>
-        <h2 class="text-4xl font-bold mb-4">Real Results from SURF Members</h2>
+        <h2 class="text-4xl font-bold mb-4"> <span class = "primary-text">Real Results</span> from SURF Members</h2>
         <p class="text-gray-600 text-xl max-w-2xl mx-auto">
           Get inspired and see how other institutions successfully implement new technologies.
         </p>
