@@ -1,7 +1,8 @@
 <template>
   <div class="max-w-3xl mx-auto py-32">
     <div class="bg-white shadow-xl rounded-xl p-8 space-y-6 border">
-      <h1 class="text-3xl font-extrabold text-gray-800 mb-4">Personalize your Tech Trends Report</h1>
+      <h1 class="text-3xl font-extrabold text-gray-800 mb-4"> 
+        <span class="primary-text">Personalize</span> your Tech Trends Report</h1>
       <form @submit.prevent="submitForm" class="space-y-8">
 
         <!-- Institution Size -->
