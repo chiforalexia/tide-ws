@@ -35,7 +35,7 @@
             :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'"
           >
             <div class="card">
-              <h3 class="text-xl font-semibold mb-6">Integration Phases</h3>
+              <h3 class="text-xl font-semibold mb-6">Implementation Phases</h3>
               <div class="space-y-4">
                 <div
                   v-for="(step, index) in steps"
