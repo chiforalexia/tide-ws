@@ -95,6 +95,78 @@
           <a :href="resource.url" target="_blank" class="download-btn">
             Download Resource
           </a>
+    <!-- Overlay -->
+    <div
+      v-if="showLearnMore"
+      class="fixed inset-0 bg-gray-800 bg-opacity-60 z-50 flex items-center justify-center"
+      @click.self="closeOverlay"
+    >
+      <div class="bg-white rounded-lg max-w-4xl w-full shadow-xl overflow-hidden relative">
+        <!-- Corrected gradient -->
+        <div class="h-1.5 w-full gradient-bar"></div>
+  
+        <div class="p-6">
+          <button
+            @click="closeOverlay"
+            class="absolute top-4 right-4 bg-gray-100 p-2 rounded-full hover:bg-gray-200 transition-colors"
+          >
+            ✕
+          </button>
+  
+          <h3 class="text-xl font-bold time bg-clip-text text-transparent">
+            {{ resource.title }}
+          </h3>
+  
+          <!-- Bubbles -->
+          <div class="flex flex-wrap gap-2 mt-2 mb-4">
+            <span v-if="resource.time" class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium time">
+              {{ resource.time }}
+            </span>
+            <span v-if="resource.people" class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium people">
+              {{ resource.people }}
+            </span>
+          </div>
+  
+          <p class="text-gray-600 mb-4">
+            {{ resource.description }}
+          </p>
+  
+          <!-- Conditional layout for tips + image -->
+          <div v-if="resource.exampleimage" class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 items-start">
+            <!-- Tips box -->
+            <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-500 text-sm text-gray-600">
+              <h4 class="font-semibold mb-2 text-gray-700">Tips for Using This Resource:</h4>
+              <ul class="list-disc pl-5 space-y-1">
+                <li v-for="(tip, index) in resource.tips" :key="index">{{ tip }}</li>
+              </ul>
+            </div>
+  
+            <!-- Example image -->
+            <div>
+              <img :src="resource.exampleimage" alt="Example usage" class="rounded-lg shadow-md w-full object-cover max-h-64" />
+            </div>
+          </div>
+  
+          <!-- Full-width tips if no image -->
+          <div v-else class="mt-6">
+            <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-500 text-sm text-gray-600 w-full">
+              <h4 class="font-semibold mb-2 text-gray-700">Tips for Using This Resource:</h4>
+              <ul class="list-disc pl-5 space-y-1">
+                <li v-for="(tip, index) in resource.tips" :key="index">{{ tip }}</li>
+              </ul>
+            </div>
+          </div>
+  
+  
+          <!-- Download + Citation -->
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-6 p-4 border-t border-gray-100 bg-gray-50 gap-2 rounded-lg">
+            <a
+              :href="resource.url"
+              target="_blank"
+              class="download-btn"
+            >
+              Access Resource
+            </a>
 
           <p
             v-if="resource.citation"

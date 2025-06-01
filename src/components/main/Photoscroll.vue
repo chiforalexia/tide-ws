@@ -60,10 +60,10 @@ const photos = [
   },
   {
     id: 3,
-    src: "./public/House of AI.png",
-    title: "House of AI",
-    link: "https://www.surf.nl/en/themes/futuring",
-    description: "explore a virtual network of AI labs",
+    src: './public/House of AI.png',
+    title: 'House of AI',
+    link: 'https://mondai.tudelftcampus.nl/en/',
+    description: 'explore a virtual network of AI labs',
   },
   {
     id: 4,
