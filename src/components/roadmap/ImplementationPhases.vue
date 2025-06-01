@@ -568,7 +568,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
     url: 'https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf',
     time: '30–60 min',
     people: 'Team activity',
-    exampleimage: '',
+    exampleimage: '/public/phases_resources/images/white_spots.png',
     citation: 'Carleton, T., Cockayne, W., & Tahvanainen, A.-J. (2013). Playbook for Strategic Foresight and Innovation, p.45. https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf'
   },
   {
@@ -615,7 +615,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
     url: 'https://www.businessmodelinnovatie.nl/vision-canvas/',
     time: '1 hour',
     people: 'Team activity',
-    exampleimage: '',
+    exampleimage: '/public/phases_resources/images/five_bold_steps.png',
     citation: 'The Grove Consultants International. (2024). Strategic Visioning Process Outline. https://www.thegrove.com/sv-process-overview-download; Fransen, R. (2020, July 15). Vision Canvas | Business Model Innovatie | Five Bold Steps Canvas. https://www.businessmodelinnovatie.nl/vision-canvas/'
   },
   {
@@ -659,7 +659,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
     url: 'https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf',
     time: '1–2 hours',
     people: 'Team activity',
-    exampleimage: '',
+    exampleimage: '/public/phases_resources/images/crowd_clovers.png',
     citation: 'Carleton, T., Cockayne, W., & Tahvanainen, A.-J. (2013). Playbook for Strategic Foresight and Innovation. https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf'
   },
   {
@@ -705,7 +705,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
     url: 'https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf',
     time: '30–60 min',
     people: 'Team activity',
-    exampleimage: '',
+    exampleimage: '/public/phases_resources/images/voice_stars.png',
     citation: 'Carleton, T., Cockayne, W., & Tahvanainen, A.-J. (2013). *Playbook for Strategic Foresight and Innovation*. https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf'
   },
   {
@@ -756,7 +756,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
   url: 'https://www.undp.org/sites/g/files/zskgke326/files/2022-07/UNDP-RBAP-Foresight-Playbook-Appendix-2022_0.pdf',
   time: '2–3 hours',
   people: 'Team activity (up to 20)',
-  exampleimage: 'yes',
+  exampleimage: '/public/phases_resources/images/wind_tunneling.png',
   citation: 'UNDP. (2022). *UNDP RBAP: Foresight Playbook* (p. 47). https://www.undp.org/sites/g/files/zskgke326/files/2022-07/UNDP-RBAP-Foresight-Playbook-Appendix-2022_0.pdf'
 },
 {
@@ -773,7 +773,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
   url: 'https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf',
   time: '15 min',
   people: 'Team activity',
-  exampleimage: '',
+  exampleimage: '/public/phases_resources/images/buddy_checks.png',
   citation: 'Carleton, T., Cockayne, W., & Tahvanainen, A.-J. (2013). Playbook for Strategic Foresight and Innovation. https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf'
 },
 {
@@ -790,7 +790,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
   url: 'https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf',
   time: '30 min',
   people: 'Team activity',
-  exampleimage: '',
+  exampleimage: '/public/phases_resources/images/change_paths.png',
   citation: 'Carleton, T., Cockayne, W., & Tahvanainen, A.-J. (2013). Playbook for Strategic Foresight and Innovation. https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf'
 }
 ],
