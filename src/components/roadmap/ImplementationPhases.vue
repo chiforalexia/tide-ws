@@ -423,7 +423,7 @@ const phases = ref([
     url: 'https://medium.com/swlh/how-futurists-cope-with-uncertainty-a4fbdff4b8c6',
     time: '45–60 min',
     people: 'Team (3–5 people)',
-    exampleimage: '/public/phases_resources/images/axes_uncertainty.png',
+    exampleimage: '/public/phases_resources/images/axes.jpg',
     citation: 'Webb, A. (2020, March 16). How Futurists Cope With Uncertainty. The Startup. https://medium.com/swlh/how-futurists-cope-with-uncertainty-a4fbdff4b8c6; Schwartz, P. (1997). The Art of the Long View. Doubleday/Currency.'
   },
   {
@@ -435,7 +435,7 @@ const phases = ref([
     url: 'https://millennium-project.org/publications/futures-research-methodology-version-3-0-2/',
     time: '1.5–2 hours',
     people: 'Team (3–5 people)',
-    exampleimage: '/public/phases_resources/images/scenario_building.png',
+    exampleimage: "",
     citation: 'SchSchwartz, P. (1997). The Art of the Long View. Doubleday/Currency.wartz, P. (1996). The Art of the Long View: Planning for the Future in an Uncertain World. Currency); Jerome C.  Glenn, & Gordon, T. J. (2009). Futures Research Methodology (3.0). The Millennium Project. https://millennium-project.org/publications/futures-research-methodology-version-3-0-2/',
   },
   {
@@ -449,7 +449,7 @@ const phases = ref([
     url: 'https://www.awolimburg.nl/userfiles/files/meetinstrumenten/2024-07-18-mira-instrument.pdf',
     time: '2–3 hours',
     people: 'Team (3–5 people)',
-    exampleimage: '/public/phases_resources/images/readiness_assessment.png',
+    exampleimage: '',
     citation: 'Maastricht University. (2024). Maastricht Innovation Readiness Aanpak (MIRA). https://www.awolimburg.nl/nl/projecten/innovation-readiness'
   },
     ],
@@ -599,7 +599,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
     url: 'https://scott-smith-f83k.squarespace.com/s/Scenario-Readiness-Canvas-A4.pdf',
     time: '',
     people: 'Team activity',
-    exampleimage: '',
+    exampleimage: '/public/phases_resources/images/scenario_readiness_canvas.png',
     citation: 'Smith, S., & Ashby, M. (2020). How To Future: Leading and Sense-making in an Age of Hyperchange. Kogan Page Inspire. https://www.howtofuture.com'
   },
   {
@@ -674,7 +674,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
     url: 'https://link.springer.com/chapter/10.1007/978-3-658-25074-4_7',
     time: '1–2 hours',
     people: 'Team activity (5–8 people)',
-    exampleimage: '',
+    exampleimage: '/public/phases_resources/images/SWOT.png',
     citation: 'Van der Heijden, K. (2005). Scenarios: The Art of Strategic Conversation. Wiley; Luoto, L., & Lonkila, A. (2018). The Use of SWOT Analysis for Future Scenarios: A Case Study of Privacy and Emerging Technologies. In *Envisioning Uncertain Futures* (pp. 105–131). Springer VS, Wiesbaden. https://doi.org/10.1007/978-3-658-25074-4_7'
   },
   {
