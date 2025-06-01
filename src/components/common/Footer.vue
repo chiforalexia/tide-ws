@@ -136,49 +136,37 @@
         </ul>
       </div>
 
-      <!-- Quick Links -->
-      <div>
-        <h4 class="text-gray-900 font-semibold mb-4">Quick Links</h4>
-        <ul class="space-y-2 text-sm">
-          <li>
-            <router-link to="/knowledge-hub" class="hover:text-blue-600"
-              >Knowledge Hub</router-link
-            >
-          </li>
-        </ul>
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-gray-900 font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2 text-sm">
+              <li><router-link to="/knowledge-hub" class="hover:text-blue-600">Knowledge Hub</router-link></li>
+            </ul>
+        </div>
       </div>
-    </div>
-
-    <div
-      class="border-t mt-10 pt-6 text-sm flex flex-col md:flex-row justify-between text-gray-500"
-    >
-      <p>© 2025 SURF. All rights reserved.</p>
-      <div class="flex space-x-4 mt-2 md:mt-0">
-        <a
-          href="https://www.surf.nl/en/privacy-statement-surf-bv"
-          class="hover:text-blue-600"
-          >Privacy</a
-        >
-        <a href="#" class="hover:text-blue-600">Terms of Service</a>
-        <a
-          href="https://www.surf.nl/en/cookie-statement"
-          class="hover:text-blue-600"
-          >Cookies</a
-        >
+  
+      <div class="border-t mt-10 pt-6 text-sm flex flex-col md:flex-row justify-between text-gray-500">
+        <p>© 2025 SURF. All rights reserved.</p>
+        <div class="flex space-x-4 mt-2 md:mt-0">
+          <a href="https://www.surf.nl/en/privacy-statement-surf-bv" class="hover:text-blue-600" target="_blank" rel="noopener"
+          >Privacy</a>
+          <a href="https://www.surf.nl/en/cookie-statement" class="hover:text-blue-600"target="_blank" rel="noopener"
+          >Cookies</a>
+        </div>
       </div>
-    </div>
-  </footer>
-</template>
-
-<script>
-export default {
-  name: "Footer",
-};
-</script>
-
-<style scoped>
-/* Custom styles for the Footer section */
-.hero {
-  background: #f9fafa;
-}
-</style>
+    </footer>
+  </template>
+  
+  <script>
+  export default {
+    name: 'Footer',
+  };
+  </script>
+  
+  <style scoped>
+  /* Custom styles for the Footer section */
+  .hero {
+    background: #f9fafa;
+  }
+  </style>
+  

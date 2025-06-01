@@ -2,9 +2,11 @@
   <div class="roadmap-container">
     <div class="roadmap-header">
       <div class="text-center mb-12">
-        <div class="bubble">Case Study</div>
-        <h2 class="text-3xl font-bold mb-4">
-          Roadmap of Successful Implementation
+        <div class="bubble">
+          Case Study
+        </div>
+        <h2 class="text-3xl font-bold mb-4">Roadmap of Successful 
+          <span style= "color: #E67300">Implementation</span>
         </h2>
         <p class="text-gray-600 max-w-2xl mx-auto">
           Below you can find a detailed overview of the timeline and steps taken
@@ -12,6 +14,7 @@
         </p>
       </div>
     </div>
+
 
     <!-- MOBILE DROPDOWN FILTER -->
     <div class="md:hidden mb-6">
