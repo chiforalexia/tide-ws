@@ -1,4 +1,4 @@
-
+ <!-- Resource cards component -->
 <template>
     <!-- Overlay -->
     <div

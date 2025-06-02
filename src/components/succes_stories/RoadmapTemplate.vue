@@ -1,3 +1,4 @@
+ <!-- Roadmap example component -->
 <template>
   <div class="roadmap-container">
     <div class="roadmap-header">
@@ -16,7 +17,7 @@
     </div>
 
 
-    <!-- MOBILE DROPDOWN FILTER -->
+    <!-- Mobile dropdown -->
     <div class="md:hidden mb-6">
       <div class="bg-white rounded-lg border shadow-sm p-4">
         <label
@@ -52,7 +53,7 @@
       </div>
     </div>
 
-    <!-- DESKTOP BUTTON FILTER -->
+    <!-- Filter option -->
     <div class="w-full hidden md:flex flex-wrap items-center gap-4 mb-6">
       <div class="flex items-center gap-2 text-gray-600 font-medium">
         <svg

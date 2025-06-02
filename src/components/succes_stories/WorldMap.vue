@@ -1,3 +1,4 @@
+ <!-- World map component -->
 <template>
     <div id="map"
         class="hidden sm:block max-w-5xl mx-auto h-[600px] border-[0.5vw] border-[#385e8a] p-[1vw] m-[3vw] z-[2]"></div>

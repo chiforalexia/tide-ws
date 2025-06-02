@@ -1,8 +1,9 @@
+<!-- Survey Introduction section -->
 <template>
   <div
     class="relative h-[60vh] bg-blue-700 text-white overflow-visible pb-10 flex items-center justify-center"
   >
-    <!-- Rocket Image: Positioned on the right -->
+    <!-- Rocket Image -->
     <div
       class="absolute right-2 -top-5 h-96 w-auto sm:h-96 sm:right-2 lg:h-full lg:right-6 z-10 rotate-[10deg]"
     >
@@ -13,7 +14,7 @@
       />
     </div>
 
-    <!-- Centered Content -->
+    <!-- Content -->
     <div class="relative z-20 text-center px-4 max-w-3xl">
       <h1
         class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white m-10 custom-font"
@@ -29,6 +30,7 @@
         values!
       </p>
 
+       <!-- Button leading to Survey -->
       <router-link
         to="/survey"
         style="display: block; width: fit-content; margin: 0 auto"

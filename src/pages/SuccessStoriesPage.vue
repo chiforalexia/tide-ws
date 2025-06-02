@@ -2,16 +2,13 @@
   <div>
     <!-- Main Content Section -->
     <div class="min-h-screen">
-      <!-- sections -->
-      <section id="process" class="pt-40">
-        <!-- Add your process section content here -->
-        <SuccessStories />
-      </section>
 
-      <section id="features">
-        <!-- Add your features section content here -->
+      <!-- Sections -->
+      <section class="pt-40">
+        <SuccessStories />
         <Roadmap-template />
       </section>
+
     </div>
   </div>
 </template>
@@ -35,7 +32,3 @@ export default {
 };
 </script>
 
-<style>
-/* Global styles */
-/* @import './assets/styles/style.css';  Adjust the path as needed */
-</style>

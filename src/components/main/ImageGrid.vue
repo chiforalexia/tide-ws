@@ -1,3 +1,4 @@
+ <!-- Tech Trends Chapters section -->
 <template>
   <section id="technologies" class="py-24">
     <div class="container mx-auto px-4 mb-12">

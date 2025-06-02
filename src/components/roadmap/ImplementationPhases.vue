@@ -1,3 +1,4 @@
+ <!-- Roadmap content page -->
 <template>
   <div class="bg-white">
     <!-- Header
@@ -44,7 +45,7 @@
               @click="activePhase = index"
               :class="[
                 'transition-all duration-300 flex items-center px-3 py-3 rounded-xl cursor-pointer shadow-md border w-full hover:scale-[1.02] hover:shadow-lg',
-                activePhase === index ? 'surf-blue-100-background border-blue-500 ring-2 ring-surf-blue-200' : 'bg-white border-gray-200',
+                activePhase === index ? 'surf-blue-100-background border-blue-500 ring-5 ring-surf-blue-200' : 'bg-white border-gray-200',
                 collapsed ? 'justify-center w-10 h-10 p-0 rounded-full' : ''
               ]"
             >
@@ -287,6 +288,8 @@ const phases = ref([
     title: 'Exploration',
     subtitle: "Making Sense of Emerging Trends",
     description: 'Move from observing trends to making sense of them. This phase surfaces possibilities and helps imagine futures that can inform resilient, actionable strategies. It lays the groundwork for focused, future-ready planning.',
+    note: "With the SURF Tech Trends Report in hand, you’ve taken the first step: gaining insight into the signals shaping the future of education and research. These aren’t instructions but an invitation to reflect, translate, and act.",
+
     activities: [
       {
         activity: 'Familiarise yourself with the SURF Tech Trends Report',

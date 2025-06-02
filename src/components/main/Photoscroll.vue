@@ -1,3 +1,4 @@
+ <!-- Resources and links section -->
 <template>
   <div class="container mx-auto px-4 mb-10">
     <!-- Title section -->

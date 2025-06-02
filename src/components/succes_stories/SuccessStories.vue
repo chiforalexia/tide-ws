@@ -1,3 +1,4 @@
+ <!-- Success stories content page -->
 <template>
     <section class="py-16 px-4 max-w-7xl mx-auto">
       <div class="text-center mb-12">

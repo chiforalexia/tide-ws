@@ -1,3 +1,4 @@
+ <!-- Website introduction section -->
 <template>
   <section
     class="relative bg-transparent flex items-center justify-center flex-col px-6"
@@ -5,7 +6,7 @@
     <div
       class="max-w-6xl w-full flex flex-col lg:flex-row items-center justify-between gap-12"
     >
-      <!-- Text Content -->
+      <!-- Content -->
       <div class="flex-1 max-w-xl text-left lg:text-left space-y-6">
         <h1 class="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
           From Insight to Implementation:
@@ -46,15 +47,6 @@
       </div>
     </div>
 
-    <!-- CTA Bubble
-    <div class="mt-12">
-      <a href="#chapters" class="inline-flex items-center animate-bounce bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-200 transition">
-        <span class="mr-2">Translate your vision into real impact</span>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
-      </a>
-    </div> -->
   </section>
 </template>
 
