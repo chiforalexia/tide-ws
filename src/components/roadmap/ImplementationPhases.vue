@@ -103,18 +103,10 @@
 
                     <div class="flex flex-col md:flex-row justify-between items-start gap-6">
                     <!-- Text -->
-                    <div class="md:w-2/3 text-gray-800 text-base leading-relaxed">
+                    <div class="w-full text-gray-800 text-base leading-relaxed">
                       <div v-html="phases[activePhase].justification"></div>
                     </div>
 
-                    <!-- Image -->
-                    <div v-if="phases[activePhase].justificationImage" class="md:w-1/3 flex-shrink-0">
-                      <img
-                        :src="phases[activePhase].justificationImage"
-                        alt="Justification Image"
-                        class="w-full max-w-xs rounded-lg shadow-md"
-                      />
-                    </div>
                   </div>
                 </div>
 
@@ -571,7 +563,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
     url: 'https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf',
     time: '30–60 min',
     people: 'Team activity',
-    exampleimage: '/public/phases_resources/images/white_spots.png',
+    exampleimage: '',
     citation: 'Carleton, T., Cockayne, W., & Tahvanainen, A.-J. (2013). Playbook for Strategic Foresight and Innovation, p.45. https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf'
   },
   {
@@ -602,7 +594,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
     url: 'https://scott-smith-f83k.squarespace.com/s/Scenario-Readiness-Canvas-A4.pdf',
     time: '',
     people: 'Team activity',
-    exampleimage: '/public/phases_resources/images/scenario_readiness_canvas.png',
+    exampleimage: '',
     citation: 'Smith, S., & Ashby, M. (2020). How To Future: Leading and Sense-making in an Age of Hyperchange. Kogan Page Inspire. https://www.howtofuture.com'
   },
   {
@@ -618,7 +610,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
     url: 'https://www.businessmodelinnovatie.nl/vision-canvas/',
     time: '1 hour',
     people: 'Team activity',
-    exampleimage: '/public/phases_resources/images/five_bold_steps.png',
+    exampleimage: '',
     citation: 'The Grove Consultants International. (2024). Strategic Visioning Process Outline. https://www.thegrove.com/sv-process-overview-download; Fransen, R. (2020, July 15). Vision Canvas | Business Model Innovatie | Five Bold Steps Canvas. https://www.businessmodelinnovatie.nl/vision-canvas/'
   },
   {
@@ -662,7 +654,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
     url: 'https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf',
     time: '1–2 hours',
     people: 'Team activity',
-    exampleimage: '/public/phases_resources/images/crowd_clovers.png',
+    exampleimage: '',
     citation: 'Carleton, T., Cockayne, W., & Tahvanainen, A.-J. (2013). Playbook for Strategic Foresight and Innovation. https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf'
   },
   {
@@ -676,8 +668,8 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
     ],
     url: 'https://link.springer.com/chapter/10.1007/978-3-658-25074-4_7',
     time: '1–2 hours',
-    people: 'Team activity (5–8 people)',
-    exampleimage: '/public/phases_resources/images/SWOT.png',
+    people: 'Team activity',
+    exampleimage: '/public/phases_resources/images/SWOT.jpg',
     citation: 'Van der Heijden, K. (2005). Scenarios: The Art of Strategic Conversation. Wiley; Luoto, L., & Lonkila, A. (2018). The Use of SWOT Analysis for Future Scenarios: A Case Study of Privacy and Emerging Technologies. In *Envisioning Uncertain Futures* (pp. 105–131). Springer VS, Wiesbaden. https://doi.org/10.1007/978-3-658-25074-4_7'
   },
   {
@@ -708,7 +700,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
     url: 'https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf',
     time: '30–60 min',
     people: 'Team activity',
-    exampleimage: '/public/phases_resources/images/voice_stars.png',
+    exampleimage: '',
     citation: 'Carleton, T., Cockayne, W., & Tahvanainen, A.-J. (2013). *Playbook for Strategic Foresight and Innovation*. https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf'
   },
   {
@@ -759,7 +751,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
   url: 'https://www.undp.org/sites/g/files/zskgke326/files/2022-07/UNDP-RBAP-Foresight-Playbook-Appendix-2022_0.pdf',
   time: '2–3 hours',
   people: 'Team activity (up to 20)',
-  exampleimage: '/public/phases_resources/images/wind_tunneling.png',
+  exampleimage: '',
   citation: 'UNDP. (2022). *UNDP RBAP: Foresight Playbook* (p. 47). https://www.undp.org/sites/g/files/zskgke326/files/2022-07/UNDP-RBAP-Foresight-Playbook-Appendix-2022_0.pdf'
 },
 {
@@ -776,7 +768,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
   url: 'https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf',
   time: '15 min',
   people: 'Team activity',
-  exampleimage: '/public/phases_resources/images/buddy_checks.png',
+  exampleimage: '',
   citation: 'Carleton, T., Cockayne, W., & Tahvanainen, A.-J. (2013). Playbook for Strategic Foresight and Innovation. https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf'
 },
 {
@@ -793,7 +785,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
   url: 'https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf',
   time: '30 min',
   people: 'Team activity',
-  exampleimage: '/public/phases_resources/images/change_paths.png',
+  exampleimage: '',
   citation: 'Carleton, T., Cockayne, W., & Tahvanainen, A.-J. (2013). Playbook for Strategic Foresight and Innovation. https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf'
 }
 ],
@@ -962,7 +954,7 @@ note: "While this roadmap provides a useful starting point, every institution ha
   url: 'https://whatfix.com/blog/user-guides/',
   time: '1 hour',
   people: 'Individual or team',
-  exampleimage: 'no pic',
+  exampleimage: '',
   citation: 'Olmstead, L. (2023, August 2). How to Create a User Guide (Examples, Tips, Tools). The Whatfix Blog | Drive Digital Adoption. https://whatfix.com/blog/user-guides/'
 }
   ],
@@ -1024,7 +1016,7 @@ note: "While this roadmap provides a useful starting point, every institution ha
   url: 'https://hbr.org/2023/01/a-better-approach-to-after-action-reviews',
   time: '30 - 60 min',
   people: 'Team',
-  exampleimage: 'no pic',
+  exampleimage: '',
   citation: 'Baškarada, S., McKay, T., & McKenna, T. (2013). Technology deployment process model. *Operations Management Research, 6*(3–4), 105–118. https://doi.org/10.1007/s12063-013-0082-5'
 }
   ],
