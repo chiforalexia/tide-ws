@@ -62,8 +62,8 @@ var simplemaps_worldmap_mapdata={
     popup_nocss: "no",
     
 		//Advanced settings
-		div: "map",
-    auto_load: "yes",
+		div: "map1",
+    auto_load: "no",
     rotate: "0",
     url_new_tab: "yes",
     images_directory: "default",
@@ -81,119 +81,119 @@ var simplemaps_worldmap_mapdata={
   },
   "AO": {
     "name": "Angola",
-    "description": "Global Innovation Index: 10.22<br>IN.2.3.1: 0.04<br>Percentage of teachers in tertiary education who are female (%): 31.34<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 12.01<br>Inbound mobility rate, both sexes (%): 4.43<br>",
+    "description": "Global Innovation Index: 10.22<br>VC received, value, % GDP: 5.22<br>GERD financed by business, %: 13.22<br>ICT use*: 45.37<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.04<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 12.01<br>Inbound mobility rate, both sexes (%): 4.43<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "AL": {
     "name": "Albania",
-    "description": "Global Innovation Index: 24.54<br>IN.2.3.1: 13.54<br>Percentage of teachers in tertiary education who are female (%): 54.95<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 18.08<br>Inbound mobility rate, both sexes (%): 1.38<br>",
+    "description": "Global Innovation Index: 24.54<br>VC received, value, % GDP: 0.37<br>GERD financed by business, %: 12.08<br>ICT use*: 74.48<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 13.54<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 18.08<br>Inbound mobility rate, both sexes (%): 1.38<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "AE": {
     "name": "United Arab Emirates (the)",
-    "description": "Global Innovation Index: 42.8<br>IN.2.3.1: 26.74<br>Percentage of teachers in tertiary education who are female (%): 32.76<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 24.69<br>Inbound mobility rate, both sexes (%): 45.37<br>",
+    "description": "Global Innovation Index: 42.8<br>VC received, value, % GDP: 29.41<br>GERD financed by business, %: 91.89<br>ICT use*: 92.15<br>QS university ranking, top 3*: 36.37<br>Global corporate R&D investors, top 3, mn USD: 58.81<br>Researchers, FTE/mn pop.: 26.74<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 24.69<br>Inbound mobility rate, both sexes (%): 45.37<br>",
     "color": "#E8A360",
     "hover_color": "#E9A25B",
     "url": ""
   },
   "AR": {
     "name": "Argentina",
-    "description": "Global Innovation Index: 26.42<br>IN.2.3.1: 12.68<br>Percentage of teachers in tertiary education who are female (%): 47.42<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 13.63<br>Inbound mobility rate, both sexes (%): 2.65<br>",
+    "description": "Global Innovation Index: 26.42<br>VC received, value, % GDP: 5.43<br>GERD financed by business, %: 25.54<br>ICT use*: 67.73<br>QS university ranking, top 3*: 35.86<br>Global corporate R&D investors, top 3, mn USD: 40.65<br>Researchers, FTE/mn pop.: 12.68<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 13.63<br>Inbound mobility rate, both sexes (%): 2.65<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "AM": {
     "name": "Armenia",
-    "description": "Global Innovation Index: 29.02<br>IN.2.3.1: 12.16<br>Percentage of teachers in tertiary education who are female (%): 57.27<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 14.65<br>Inbound mobility rate, both sexes (%): 3.88<br>",
+    "description": "Global Innovation Index: 29.02<br>VC received, value, % GDP: 0.51<br>GERD financed by business, %: 20.64<br>ICT use*: 80.7<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 12.16<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 14.65<br>Inbound mobility rate, both sexes (%): 3.88<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "AU": {
     "name": "Australia",
-    "description": "Global Innovation Index: 48.1<br>IN.2.3.1: 59.56<br>Percentage of teachers in tertiary education who are female (%): 46.34<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 17.45<br>Inbound mobility rate, both sexes (%): 20.23<br>",
+    "description": "Global Innovation Index: 48.1<br>VC received, value, % GDP: 27.24<br>GERD financed by business, %: 65.84<br>ICT use*: 89.07<br>QS university ranking, top 3*: 88.16<br>Global corporate R&D investors, top 3, mn USD: 65.28<br>Researchers, FTE/mn pop.: 59.56<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 17.45<br>Inbound mobility rate, both sexes (%): 20.23<br>",
     "color": "#E8A360",
     "hover_color": "#E9A25B",
     "url": ""
   },
   "AT": {
     "name": "Austria",
-    "description": "Global Innovation Index: 50.28<br>IN.2.3.1: 67.12<br>Percentage of teachers in tertiary education who are female (%): 41.32<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 29.95<br>Inbound mobility rate, both sexes (%): 16.51<br>",
+    "description": "Global Innovation Index: 50.28<br>VC received, value, % GDP: 22.65<br>GERD financed by business, %: 61.71<br>ICT use*: 89.51<br>QS university ranking, top 3*: 44.5<br>Global corporate R&D investors, top 3, mn USD: 57.75<br>Researchers, FTE/mn pop.: 67.12<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 29.95<br>Inbound mobility rate, both sexes (%): 16.51<br>",
     "color": "#E78B30",
     "hover_color": "#E88B2D",
     "url": ""
   },
   "AZ": {
     "name": "Azerbaijan",
-    "description": "Global Innovation Index: 21.3<br>IN.2.3.1: 16.91<br>Percentage of teachers in tertiary education who are female (%): 55.96<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 21.38<br>Inbound mobility rate, both sexes (%): 2.38<br>",
+    "description": "Global Innovation Index: 21.3<br>VC received, value, % GDP: 0.0<br>GERD financed by business, %: 38.07<br>ICT use*: 65.63<br>QS university ranking, top 3*: 2.53<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 16.91<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 21.38<br>Inbound mobility rate, both sexes (%): 2.38<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "BI": {
     "name": "Burundi",
-    "description": "Global Innovation Index: 13.21<br>IN.2.3.1: 0.09<br>Percentage of teachers in tertiary education who are female (%): 13.49<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 19.13<br>Inbound mobility rate, both sexes (%): 5.04<br>",
+    "description": "Global Innovation Index: 13.21<br>VC received, value, % GDP: 3.77<br>GERD financed by business, %: 10.9<br>ICT use*: 21.47<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.09<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 19.13<br>Inbound mobility rate, both sexes (%): 5.04<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "BE": {
     "name": "Belgium",
-    "description": "Global Innovation Index: 47.73<br>IN.2.3.1: 70.09<br>Percentage of teachers in tertiary education who are female (%): 47.24<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 17.01<br>Inbound mobility rate, both sexes (%): 9.85<br>",
+    "description": "Global Innovation Index: 47.73<br>VC received, value, % GDP: 17.52<br>GERD financed by business, %: 79.69<br>ICT use*: 78.62<br>QS university ranking, top 3*: 56.78<br>Global corporate R&D investors, top 3, mn USD: 63.72<br>Researchers, FTE/mn pop.: 70.09<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 17.01<br>Inbound mobility rate, both sexes (%): 9.85<br>",
     "color": "#E8A360",
     "hover_color": "#E9A25B",
     "url": ""
   },
   "BJ": {
     "name": "Benin",
-    "description": "Global Innovation Index: 15.44<br>IN.2.3.1: 1.31<br>Percentage of teachers in tertiary education who are female (%): 15.87<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 17.28<br>Inbound mobility rate, both sexes (%): 7.18<br>",
+    "description": "Global Innovation Index: 15.44<br>VC received, value, % GDP: 1.73<br>GERD financed by business, %: 3.84<br>ICT use*: 22.16<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 1.31<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 17.28<br>Inbound mobility rate, both sexes (%): 7.18<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "BF": {
     "name": "Burkina Faso",
-    "description": "Global Innovation Index: 12.76<br>IN.2.3.1: 0.16<br>Percentage of teachers in tertiary education who are female (%): 8.89<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 18.66<br>Inbound mobility rate, both sexes (%): 2.75<br>",
+    "description": "Global Innovation Index: 12.76<br>VC received, value, % GDP: 0.07<br>GERD financed by business, %: 5.94<br>ICT use*: 10.24<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.16<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 18.66<br>Inbound mobility rate, both sexes (%): 2.75<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "BD": {
     "name": "Bangladesh",
-    "description": "Global Innovation Index: 19.11<br>IN.2.3.1: 3.08<br>Percentage of teachers in tertiary education who are female (%): 21.33<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 11.23<br>Inbound mobility rate, both sexes (%): 2.52<br>",
+    "description": "Global Innovation Index: 19.11<br>VC received, value, % GDP: 1.88<br>GERD financed by business, %: 21.57<br>ICT use*: 69.68<br>QS university ranking, top 3*: 10.59<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 3.08<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 11.23<br>Inbound mobility rate, both sexes (%): 2.52<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "BG": {
     "name": "Bulgaria",
-    "description": "Global Innovation Index: 38.49<br>IN.2.3.1: 27.13<br>Percentage of teachers in tertiary education who are female (%): 48.4<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.69<br>Inbound mobility rate, both sexes (%): 4.43<br>",
+    "description": "Global Innovation Index: 38.49<br>VC received, value, % GDP: 4.34<br>GERD financed by business, %: 40.73<br>ICT use*: 84.21<br>QS university ranking, top 3*: 5.33<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 27.13<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.69<br>Inbound mobility rate, both sexes (%): 4.43<br>",
     "color": "#E8BC90",
     "hover_color": "#EBBA88",
     "url": ""
   },
   "BH": {
     "name": "Bahrain",
-    "description": "Global Innovation Index: 27.64<br>IN.2.3.1: 3.73<br>Percentage of teachers in tertiary education who are female (%): 37.99<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 16.65<br>Inbound mobility rate, both sexes (%): 13.41<br>",
+    "description": "Global Innovation Index: 27.64<br>VC received, value, % GDP: 23.47<br>GERD financed by business, %: 26.93<br>ICT use*: 92.69<br>QS university ranking, top 3*: 15.76<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 3.73<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 16.65<br>Inbound mobility rate, both sexes (%): 13.41<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "BA": {
     "name": "Bosnia and Herzegovina",
-    "description": "Global Innovation Index: 25.47<br>IN.2.3.1: 5.25<br>Percentage of teachers in tertiary education who are female (%): 42.57<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.35<br>Inbound mobility rate, both sexes (%): 6.77<br>",
+    "description": "Global Innovation Index: 25.47<br>VC received, value, % GDP: 2.53<br>GERD financed by business, %: 47.84<br>ICT use*: 69.88<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 5.25<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.35<br>Inbound mobility rate, both sexes (%): 6.77<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "BY": {
     "name": "Belarus",
-    "description": "Global Innovation Index: 24.21<br>IN.2.3.1: 13.79<br>Percentage of teachers in tertiary education who are female (%): 59.96<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 33.29<br>Inbound mobility rate, both sexes (%): 2.91<br>",
+    "description": "Global Innovation Index: 24.21<br>VC received, value, % GDP: 0.14<br>GERD financed by business, %: 55.65<br>ICT use*: 79.87<br>QS university ranking, top 3*: 14.3<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 13.79<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 33.29<br>Inbound mobility rate, both sexes (%): 2.91<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
@@ -207,21 +207,21 @@ var simplemaps_worldmap_mapdata={
   },
   "BO": {
     "name": "Bolivia (Plurinational State of)",
-    "description": "Global Innovation Index: 20.25<br>IN.2.3.1: 0.48<br>Percentage of teachers in tertiary education who are female (%): 33.06<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 19.3<br>Inbound mobility rate, both sexes (%): 2.77<br>",
+    "description": "Global Innovation Index: 20.25<br>VC received, value, % GDP: 4.97<br>GERD financed by business, %: 24.4<br>ICT use*: 43.07<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.48<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 19.3<br>Inbound mobility rate, both sexes (%): 2.77<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "BR": {
     "name": "Brazil",
-    "description": "Global Innovation Index: 32.74<br>IN.2.3.1: 8.81<br>Percentage of teachers in tertiary education who are female (%): 45.37<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 15.24<br>Inbound mobility rate, both sexes (%): 0.23<br>",
+    "description": "Global Innovation Index: 32.74<br>VC received, value, % GDP: 29.53<br>GERD financed by business, %: 53.48<br>ICT use*: 74.29<br>QS university ranking, top 3*: 45.68<br>Global corporate R&D investors, top 3, mn USD: 48.9<br>Researchers, FTE/mn pop.: 8.81<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 15.24<br>Inbound mobility rate, both sexes (%): 0.23<br>",
     "color": "#E8BC90",
     "hover_color": "#EBBA88",
     "url": ""
   },
   "BN": {
     "name": "Brunei Darussalam",
-    "description": "Global Innovation Index: 22.77<br>IN.2.3.1: 5.03<br>Percentage of teachers in tertiary education who are female (%): 46.63<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 28.46<br>Inbound mobility rate, both sexes (%): 4.07<br>",
+    "description": "Global Innovation Index: 22.77<br>VC received, value, % GDP: 5.93<br>GERD financed by business, %: 0.0<br>ICT use*: 92.71<br>QS university ranking, top 3*: 17.11<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 5.03<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 28.46<br>Inbound mobility rate, both sexes (%): 4.07<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
@@ -235,7 +235,7 @@ var simplemaps_worldmap_mapdata={
   },
   "BW": {
     "name": "Botswana",
-    "description": "Global Innovation Index: 23.08<br>IN.2.3.1: 5.31<br>Percentage of teachers in tertiary education who are female (%): 40.74<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 18.27<br>Inbound mobility rate, both sexes (%): 2.3<br>",
+    "description": "Global Innovation Index: 23.08<br>VC received, value, % GDP: 0.39<br>GERD financed by business, %: 25.01<br>ICT use*: 63.06<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 5.31<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 18.27<br>Inbound mobility rate, both sexes (%): 2.3<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
@@ -249,42 +249,42 @@ var simplemaps_worldmap_mapdata={
   },
   "CA": {
     "name": "Canada",
-    "description": "Global Innovation Index: 52.91<br>IN.2.3.1: 54.56<br>Percentage of teachers in tertiary education who are female (%): 48.84<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.97<br>Inbound mobility rate, both sexes (%): 10.48<br>",
+    "description": "Global Innovation Index: 52.91<br>VC received, value, % GDP: 66.82<br>GERD financed by business, %: 57.96<br>ICT use*: 77.44<br>QS university ranking, top 3*: 84.85<br>Global corporate R&D investors, top 3, mn USD: 66.76<br>Researchers, FTE/mn pop.: 54.56<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.97<br>Inbound mobility rate, both sexes (%): 10.48<br>",
     "color": "#E78B30",
     "hover_color": "#E88B2D",
     "url": ""
   },
   "CH": {
     "name": "Switzerland",
-    "description": "Global Innovation Index: 67.47<br>IN.2.3.1: 60.36<br>Percentage of teachers in tertiary education who are female (%): 35.6<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 23.48<br>Inbound mobility rate, both sexes (%): 16.92<br>",
+    "description": "Global Innovation Index: 67.47<br>VC received, value, % GDP: 41.62<br>GERD financed by business, %: 81.53<br>ICT use*: 84.28<br>QS university ranking, top 3*: 79.39<br>Global corporate R&D investors, top 3, mn USD: 87.16<br>Researchers, FTE/mn pop.: 60.36<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 23.48<br>Inbound mobility rate, both sexes (%): 16.92<br>",
     "color": "#E67300",
     "hover_color": "#E67300",
     "url": ""
   },
   "CL": {
     "name": "Chile",
-    "description": "Global Innovation Index: 32.62<br>IN.2.3.1: 5.02<br>Percentage of teachers in tertiary education who are female (%): 44.31<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.09<br>Inbound mobility rate, both sexes (%): 0.4<br>",
+    "description": "Global Innovation Index: 32.62<br>VC received, value, % GDP: 15.64<br>GERD financed by business, %: 42.98<br>ICT use*: 87.89<br>QS university ranking, top 3*: 46.32<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 5.02<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.09<br>Inbound mobility rate, both sexes (%): 0.4<br>",
     "color": "#E8BC90",
     "hover_color": "#EBBA88",
     "url": ""
   },
   "CN": {
     "name": "China",
-    "description": "Global Innovation Index: 56.32<br>IN.2.3.1: 17.03<br>Percentage of teachers in tertiary education who are female (%): 44.89<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 27.81<br>Inbound mobility rate, both sexes (%): 0.31<br>",
+    "description": "Global Innovation Index: 56.32<br>VC received, value, % GDP: 40.91<br>GERD financed by business, %: 96.5<br>ICT use*: 84.64<br>QS university ranking, top 3*: 84.24<br>Global corporate R&D investors, top 3, mn USD: 90.99<br>Researchers, FTE/mn pop.: 17.03<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 27.81<br>Inbound mobility rate, both sexes (%): 0.31<br>",
     "color": "#E78B30",
     "hover_color": "#E88B2D",
     "url": ""
   },
   "CI": {
     "name": "Côte d'Ivoire",
-    "description": "Global Innovation Index: 17.49<br>IN.2.3.1: 0.34<br>Percentage of teachers in tertiary education who are female (%): 15.81<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 15.62<br>Inbound mobility rate, both sexes (%): 1.82<br>",
+    "description": "Global Innovation Index: 17.49<br>VC received, value, % GDP: 1.02<br>GERD financed by business, %: 4.98<br>ICT use*: 58.04<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.34<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 15.62<br>Inbound mobility rate, both sexes (%): 1.82<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "CM": {
     "name": "Cameroon",
-    "description": "Global Innovation Index: 14.42<br>IN.2.3.1: 0.28<br>Percentage of teachers in tertiary education who are female (%): 20.63<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 21.34<br>Inbound mobility rate, both sexes (%): 1.42<br>",
+    "description": "Global Innovation Index: 14.42<br>VC received, value, % GDP: 1.38<br>GERD financed by business, %: 10.94<br>ICT use*: 17.3<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.28<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 21.34<br>Inbound mobility rate, both sexes (%): 1.42<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
@@ -305,14 +305,14 @@ var simplemaps_worldmap_mapdata={
   },
   "CO": {
     "name": "Colombia",
-    "description": "Global Innovation Index: 29.18<br>IN.2.3.1: 0.76<br>Percentage of teachers in tertiary education who are female (%): 36.9<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 23.07<br>Inbound mobility rate, both sexes (%): 0.18<br>",
+    "description": "Global Innovation Index: 29.18<br>VC received, value, % GDP: 29.13<br>GERD financed by business, %: 66.08<br>ICT use*: 66.68<br>QS university ranking, top 3*: 40.25<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.76<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 23.07<br>Inbound mobility rate, both sexes (%): 0.18<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "CR": {
     "name": "Costa Rica",
-    "description": "Global Innovation Index: 28.33<br>IN.2.3.1: 3.87<br>Percentage of teachers in tertiary education who are female (%): 44.13<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 13.54<br>Inbound mobility rate, both sexes (%): 2.17<br>",
+    "description": "Global Innovation Index: 28.33<br>VC received, value, % GDP: 0.87<br>GERD financed by business, %: 36.25<br>ICT use*: 79.03<br>QS university ranking, top 3*: 11.03<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 3.87<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 13.54<br>Inbound mobility rate, both sexes (%): 2.17<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
@@ -326,14 +326,14 @@ var simplemaps_worldmap_mapdata={
   },
   "CZ": {
     "name": "Czechia",
-    "description": "Global Innovation Index: 44.04<br>IN.2.3.1: 47.23<br>Percentage of teachers in tertiary education who are female (%): 36.58<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 23.58<br>Inbound mobility rate, both sexes (%): 10.32<br>",
+    "description": "Global Innovation Index: 44.04<br>VC received, value, % GDP: 13.11<br>GERD financed by business, %: 46.05<br>ICT use*: 81.58<br>QS university ranking, top 3*: 31.28<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 47.23<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 23.58<br>Inbound mobility rate, both sexes (%): 10.32<br>",
     "color": "#E8A360",
     "hover_color": "#E9A25B",
     "url": ""
   },
   "DE": {
     "name": "Germany",
-    "description": "Global Innovation Index: 58.08<br>IN.2.3.1: 58.6<br>Percentage of teachers in tertiary education who are female (%): 38.68<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 35.91<br>Inbound mobility rate, both sexes (%): 8.06<br>",
+    "description": "Global Innovation Index: 58.08<br>VC received, value, % GDP: 34.68<br>GERD financed by business, %: 77.66<br>ICT use*: 80.16<br>QS university ranking, top 3*: 72.44<br>Global corporate R&D investors, top 3, mn USD: 90.47<br>Researchers, FTE/mn pop.: 58.6<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 35.91<br>Inbound mobility rate, both sexes (%): 8.06<br>",
     "color": "#E78B30",
     "hover_color": "#E88B2D",
     "url": ""
@@ -347,35 +347,35 @@ var simplemaps_worldmap_mapdata={
   },
   "DK": {
     "name": "Denmark",
-    "description": "Global Innovation Index: 57.11<br>IN.2.3.1: 87.96<br>Percentage of teachers in tertiary education who are female (%): 42.63<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.61<br>Inbound mobility rate, both sexes (%): 9.57<br>",
+    "description": "Global Innovation Index: 57.11<br>VC received, value, % GDP: 41.42<br>GERD financed by business, %: 73.68<br>ICT use*: 92.38<br>QS university ranking, top 3*: 56.34<br>Global corporate R&D investors, top 3, mn USD: 69.81<br>Researchers, FTE/mn pop.: 87.96<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.61<br>Inbound mobility rate, both sexes (%): 9.57<br>",
     "color": "#E78B30",
     "hover_color": "#E88B2D",
     "url": ""
   },
   "DO": {
     "name": "Dominican Republic (the)",
-    "description": "Global Innovation Index: 20.82<br>IN.2.3.1: 5.34<br>Percentage of teachers in tertiary education who are female (%): 42.64<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 13.31<br>Inbound mobility rate, both sexes (%): 2.32<br>",
+    "description": "Global Innovation Index: 20.82<br>VC received, value, % GDP: 6.16<br>GERD financed by business, %: 24.61<br>ICT use*: 70.25<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 5.34<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 13.31<br>Inbound mobility rate, both sexes (%): 2.32<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "DZ": {
     "name": "Algeria",
-    "description": "Global Innovation Index: 16.16<br>IN.2.3.1: 8.25<br>Percentage of teachers in tertiary education who are female (%): 41.65<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 30.35<br>Inbound mobility rate, both sexes (%): 0.57<br>",
+    "description": "Global Innovation Index: 16.16<br>VC received, value, % GDP: 4.75<br>GERD financed by business, %: 8.34<br>ICT use*: 75.38<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 8.25<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 30.35<br>Inbound mobility rate, both sexes (%): 0.57<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "EC": {
     "name": "Ecuador",
-    "description": "Global Innovation Index: 19.33<br>IN.2.3.1: 3.91<br>Percentage of teachers in tertiary education who are female (%): 36.5<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 15.62<br>Inbound mobility rate, both sexes (%): 0.68<br>",
+    "description": "Global Innovation Index: 19.33<br>VC received, value, % GDP: 4.9<br>GERD financed by business, %: 0.25<br>ICT use*: 66.7<br>QS university ranking, top 3*: 8.74<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 3.91<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 15.62<br>Inbound mobility rate, both sexes (%): 0.68<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "EG": {
     "name": "Egypt",
-    "description": "Global Innovation Index: 23.65<br>IN.2.3.1: 8.34<br>Percentage of teachers in tertiary education who are female (%): 44.01<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 11.24<br>Inbound mobility rate, both sexes (%): 1.84<br>",
+    "description": "Global Innovation Index: 23.65<br>VC received, value, % GDP: 16.31<br>GERD financed by business, %: 4.86<br>ICT use*: 67.72<br>QS university ranking, top 3*: 24.66<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 8.34<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 11.24<br>Inbound mobility rate, both sexes (%): 1.84<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
@@ -389,21 +389,21 @@ var simplemaps_worldmap_mapdata={
   },
   "EE": {
     "name": "Estonia",
-    "description": "Global Innovation Index: 52.31<br>IN.2.3.1: 47.21<br>Percentage of teachers in tertiary education who are female (%): 49.09<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 26.3<br>Inbound mobility rate, both sexes (%): 4.73<br>",
+    "description": "Global Innovation Index: 52.31<br>VC received, value, % GDP: 100.0<br>GERD financed by business, %: 63.03<br>ICT use*: 96.35<br>QS university ranking, top 3*: 16.46<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 47.21<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 26.3<br>Inbound mobility rate, both sexes (%): 4.73<br>",
     "color": "#E78B30",
     "hover_color": "#E88B2D",
     "url": ""
   },
   "ET": {
     "name": "Ethiopia",
-    "description": "Global Innovation Index: 12.33<br>IN.2.3.1: 0.76<br>Percentage of teachers in tertiary education who are female (%): 11.71<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 19.86<br>Inbound mobility rate, both sexes (%): 2.13<br>",
+    "description": "Global Innovation Index: 12.33<br>VC received, value, % GDP: 0.01<br>GERD financed by business, %: 1.87<br>ICT use*: 43.18<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.76<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 19.86<br>Inbound mobility rate, both sexes (%): 2.13<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "FI": {
     "name": "Finland",
-    "description": "Global Innovation Index: 59.44<br>IN.2.3.1: 81.28<br>Percentage of teachers in tertiary education who are female (%): 51.03<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 28.58<br>Inbound mobility rate, both sexes (%): 6.85<br>",
+    "description": "Global Innovation Index: 59.44<br>VC received, value, % GDP: 49.21<br>GERD financed by business, %: 71.85<br>ICT use*: 95.27<br>QS university ranking, top 3*: 50.4<br>Global corporate R&D investors, top 3, mn USD: 71.82<br>Researchers, FTE/mn pop.: 81.28<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 28.58<br>Inbound mobility rate, both sexes (%): 6.85<br>",
     "color": "#E78B30",
     "hover_color": "#E88B2D",
     "url": ""
@@ -424,21 +424,21 @@ var simplemaps_worldmap_mapdata={
   },
   "GB": {
     "name": "United Kingdom of Great Britain and Northern Ireland (the)",
-    "description": "Global Innovation Index: 61.05<br>IN.2.3.1: 47.9<br>Percentage of teachers in tertiary education who are female (%): 44.31<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 24.3<br>Inbound mobility rate, both sexes (%): 17.58<br>",
+    "description": "Global Innovation Index: 61.05<br>VC received, value, % GDP: 74.31<br>GERD financed by business, %: 72.42<br>ICT use*: 86.29<br>QS university ranking, top 3*: 99.83<br>Global corporate R&D investors, top 3, mn USD: 83.51<br>Researchers, FTE/mn pop.: 47.9<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 24.3<br>Inbound mobility rate, both sexes (%): 17.58<br>",
     "color": "#E67300",
     "hover_color": "#E67300",
     "url": ""
   },
   "GE": {
     "name": "Georgia",
-    "description": "Global Innovation Index: 30.39<br>IN.2.3.1: 18.24<br>Percentage of teachers in tertiary education who are female (%): 54.11<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 21.33<br>Inbound mobility rate, both sexes (%): 4.01<br>",
+    "description": "Global Innovation Index: 30.39<br>VC received, value, % GDP: 0.39<br>GERD financed by business, %: 2.11<br>ICT use*: 82.83<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 18.24<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 21.33<br>Inbound mobility rate, both sexes (%): 4.01<br>",
     "color": "#E8BC90",
     "hover_color": "#EBBA88",
     "url": ""
   },
   "GH": {
     "name": "Ghana",
-    "description": "Global Innovation Index: 20.03<br>IN.2.3.1: 0.73<br>Percentage of teachers in tertiary education who are female (%): 20.27<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 14.53<br>Inbound mobility rate, both sexes (%): 2.96<br>",
+    "description": "Global Innovation Index: 20.03<br>VC received, value, % GDP: 9.51<br>GERD financed by business, %: 10.18<br>ICT use*: 59.09<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.73<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 14.53<br>Inbound mobility rate, both sexes (%): 2.96<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
@@ -473,7 +473,7 @@ var simplemaps_worldmap_mapdata={
   },
   "GR": {
     "name": "Greece",
-    "description": "Global Innovation Index: 36.15<br>IN.2.3.1: 48.03<br>Percentage of teachers in tertiary education who are female (%): 33.71<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 29.09<br>Inbound mobility rate, both sexes (%): 3.99<br>",
+    "description": "Global Innovation Index: 36.15<br>VC received, value, % GDP: 7.02<br>GERD financed by business, %: 47.37<br>ICT use*: 79.49<br>QS university ranking, top 3*: 26.75<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 48.03<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 29.09<br>Inbound mobility rate, both sexes (%): 3.99<br>",
     "color": "#E8BC90",
     "hover_color": "#EBBA88",
     "url": ""
@@ -487,7 +487,7 @@ var simplemaps_worldmap_mapdata={
   },
   "GT": {
     "name": "Guatemala",
-    "description": "Global Innovation Index: 14.56<br>IN.2.3.1: 0.0<br>Percentage of teachers in tertiary education who are female (%): 30.32<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 10.41<br>Inbound mobility rate, both sexes (%): 2.86<br>",
+    "description": "Global Innovation Index: 14.56<br>VC received, value, % GDP: 0.37<br>GERD financed by business, %: 13.72<br>ICT use*: 48.94<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.0<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 10.41<br>Inbound mobility rate, both sexes (%): 2.86<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
@@ -501,14 +501,14 @@ var simplemaps_worldmap_mapdata={
   },
   "HN": {
     "name": "Honduras",
-    "description": "Global Innovation Index: 16.74<br>IN.2.3.1: 1.74<br>Percentage of teachers in tertiary education who are female (%): 40.67<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 14.47<br>Inbound mobility rate, both sexes (%): 0.91<br>",
+    "description": "Global Innovation Index: 16.74<br>VC received, value, % GDP: 5.5<br>GERD financed by business, %: 26.06<br>ICT use*: 51.99<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 1.74<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 14.47<br>Inbound mobility rate, both sexes (%): 0.91<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "HR": {
     "name": "Croatia",
-    "description": "Global Innovation Index: 36.34<br>IN.2.3.1: 25.74<br>Percentage of teachers in tertiary education who are female (%): 47.62<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 24.08<br>Inbound mobility rate, both sexes (%): 1.01<br>",
+    "description": "Global Innovation Index: 36.34<br>VC received, value, % GDP: 37.96<br>GERD financed by business, %: 47.55<br>ICT use*: 89.05<br>QS university ranking, top 3*: 5.3<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 25.74<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 24.08<br>Inbound mobility rate, both sexes (%): 1.01<br>",
     "color": "#E8BC90",
     "hover_color": "#EBBA88",
     "url": ""
@@ -522,35 +522,35 @@ var simplemaps_worldmap_mapdata={
   },
   "HU": {
     "name": "Hungary",
-    "description": "Global Innovation Index: 39.57<br>IN.2.3.1: 47.52<br>Percentage of teachers in tertiary education who are female (%): 40.2<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.6<br>Inbound mobility rate, both sexes (%): 7.0<br>",
+    "description": "Global Innovation Index: 39.57<br>VC received, value, % GDP: 4.46<br>GERD financed by business, %: 62.56<br>ICT use*: 78.24<br>QS university ranking, top 3*: 18.08<br>Global corporate R&D investors, top 3, mn USD: 50.84<br>Researchers, FTE/mn pop.: 47.52<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.6<br>Inbound mobility rate, both sexes (%): 7.0<br>",
     "color": "#E8BC90",
     "hover_color": "#EBBA88",
     "url": ""
   },
   "ID": {
     "name": "Indonesia",
-    "description": "Global Innovation Index: 30.62<br>IN.2.3.1: 3.88<br>Percentage of teachers in tertiary education who are female (%): 41.26<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 18.47<br>Inbound mobility rate, both sexes (%): 0.11<br>",
+    "description": "Global Innovation Index: 30.62<br>VC received, value, % GDP: 24.02<br>GERD financed by business, %: 9.86<br>ICT use*: 81.21<br>QS university ranking, top 3*: 38.97<br>Global corporate R&D investors, top 3, mn USD: 54.63<br>Researchers, FTE/mn pop.: 3.88<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 18.47<br>Inbound mobility rate, both sexes (%): 0.11<br>",
     "color": "#E8BC90",
     "hover_color": "#EBBA88",
     "url": ""
   },
   "IN": {
     "name": "India",
-    "description": "Global Innovation Index: 38.31<br>IN.2.3.1: 2.48<br>Percentage of teachers in tertiary education who are female (%): 40.01<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 31.41<br>Inbound mobility rate, both sexes (%): 0.13<br>",
+    "description": "Global Innovation Index: 38.31<br>VC received, value, % GDP: 83.05<br>GERD financed by business, %: 50.17<br>ICT use*: 74.15<br>QS university ranking, top 3*: 47.2<br>Global corporate R&D investors, top 3, mn USD: 65.36<br>Researchers, FTE/mn pop.: 2.48<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 31.41<br>Inbound mobility rate, both sexes (%): 0.13<br>",
     "color": "#E8BC90",
     "hover_color": "#EBBA88",
     "url": ""
   },
   "IE": {
     "name": "Ireland",
-    "description": "Global Innovation Index: 49.96<br>IN.2.3.1: 55.38<br>Percentage of teachers in tertiary education who are female (%): 43.16<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 23.49<br>Inbound mobility rate, both sexes (%): 7.88<br>",
+    "description": "Global Innovation Index: 49.96<br>VC received, value, % GDP: 17.25<br>GERD financed by business, %: 68.68<br>ICT use*: 79.36<br>QS university ranking, top 3*: 50.03<br>Global corporate R&D investors, top 3, mn USD: 70.68<br>Researchers, FTE/mn pop.: 55.38<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 23.49<br>Inbound mobility rate, both sexes (%): 7.88<br>",
     "color": "#E8A360",
     "hover_color": "#E9A25B",
     "url": ""
   },
   "IR": {
     "name": "Iran (Islamic Republic of)",
-    "description": "Global Innovation Index: 28.88<br>IN.2.3.1: 15.96<br>Percentage of teachers in tertiary education who are female (%): 28.55<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 44.19<br>Inbound mobility rate, both sexes (%): 0.28<br>",
+    "description": "Global Innovation Index: 28.88<br>VC received, value, % GDP: 3.69<br>GERD financed by business, %: 22.61<br>ICT use*: 78.15<br>QS university ranking, top 3*: 31.24<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 15.96<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 44.19<br>Inbound mobility rate, both sexes (%): 0.28<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
@@ -564,77 +564,77 @@ var simplemaps_worldmap_mapdata={
   },
   "IS": {
     "name": "Iceland",
-    "description": "Global Innovation Index: 48.54<br>IN.2.3.1: 69.1<br>Percentage of teachers in tertiary education who are female (%): 47.56<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 17.15<br>Inbound mobility rate, both sexes (%): 6.57<br>",
+    "description": "Global Innovation Index: 48.54<br>VC received, value, % GDP: 76.37<br>GERD financed by business, %: 64.92<br>ICT use*: 91.61<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 46.55<br>Researchers, FTE/mn pop.: 69.1<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 17.15<br>Inbound mobility rate, both sexes (%): 6.57<br>",
     "color": "#E8A360",
     "hover_color": "#E9A25B",
     "url": ""
   },
   "IL": {
     "name": "Israel",
-    "description": "Global Innovation Index: 52.73<br>IN.2.3.1: 60.27<br>Percentage of teachers in tertiary education who are female (%): 48.12<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 23.45<br>Inbound mobility rate, both sexes (%): 1.72<br>",
+    "description": "Global Innovation Index: 52.73<br>VC received, value, % GDP: 100.0<br>GERD financed by business, %: 55.67<br>ICT use*: 89.34<br>QS university ranking, top 3*: 37.58<br>Global corporate R&D investors, top 3, mn USD: 61.27<br>Researchers, FTE/mn pop.: 60.27<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 23.45<br>Inbound mobility rate, both sexes (%): 1.72<br>",
     "color": "#E78B30",
     "hover_color": "#E88B2D",
     "url": ""
   },
   "IT": {
     "name": "Italy",
-    "description": "Global Innovation Index: 45.33<br>IN.2.3.1: 27.33<br>Percentage of teachers in tertiary education who are female (%): 36.82<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 23.12<br>Inbound mobility rate, both sexes (%): 4.6<br>",
+    "description": "Global Innovation Index: 45.33<br>VC received, value, % GDP: 8.4<br>GERD financed by business, %: 66.69<br>ICT use*: 83.05<br>QS university ranking, top 3*: 53.51<br>Global corporate R&D investors, top 3, mn USD: 69.47<br>Researchers, FTE/mn pop.: 27.33<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 23.12<br>Inbound mobility rate, both sexes (%): 4.6<br>",
     "color": "#E8A360",
     "hover_color": "#E9A25B",
     "url": ""
   },
   "JM": {
     "name": "Jamaica",
-    "description": "Global Innovation Index: 25.67<br>IN.2.3.1: 5.99<br>Percentage of teachers in tertiary education who are female (%): 36.94<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.78<br>Inbound mobility rate, both sexes (%): 2.43<br>",
+    "description": "Global Innovation Index: 25.67<br>VC received, value, % GDP: 5.77<br>GERD financed by business, %: 13.98<br>ICT use*: 61.33<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 5.99<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.78<br>Inbound mobility rate, both sexes (%): 2.43<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "JO": {
     "name": "Jordan",
-    "description": "Global Innovation Index: 27.45<br>IN.2.3.1: 5.68<br>Percentage of teachers in tertiary education who are female (%): 27.69<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 26.36<br>Inbound mobility rate, both sexes (%): 12.27<br>",
+    "description": "Global Innovation Index: 27.45<br>VC received, value, % GDP: 51.28<br>GERD financed by business, %: 31.76<br>ICT use*: 72.75<br>QS university ranking, top 3*: 17.75<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 5.68<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 26.36<br>Inbound mobility rate, both sexes (%): 12.27<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "JP": {
     "name": "Japan",
-    "description": "Global Innovation Index: 54.12<br>IN.2.3.1: 56.81<br>Percentage of teachers in tertiary education who are female (%): 38.7<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 27.7<br>Inbound mobility rate, both sexes (%): 3.84<br>",
+    "description": "Global Innovation Index: 54.12<br>VC received, value, % GDP: 12.01<br>GERD financed by business, %: 97.09<br>ICT use*: 88.4<br>QS university ranking, top 3*: 75.74<br>Global corporate R&D investors, top 3, mn USD: 85.46<br>Researchers, FTE/mn pop.: 56.81<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 27.7<br>Inbound mobility rate, both sexes (%): 3.84<br>",
     "color": "#E78B30",
     "hover_color": "#E88B2D",
     "url": ""
   },
   "KZ": {
     "name": "Kazakhstan",
-    "description": "Global Innovation Index: 25.67<br>IN.2.3.1: 6.73<br>Percentage of teachers in tertiary education who are female (%): 65.15<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 24.79<br>Inbound mobility rate, both sexes (%): 1.79<br>",
+    "description": "Global Innovation Index: 25.67<br>VC received, value, % GDP: 0.42<br>GERD financed by business, %: 58.66<br>ICT use*: 82.85<br>QS university ranking, top 3*: 32.52<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 6.73<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 24.79<br>Inbound mobility rate, both sexes (%): 1.79<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "KE": {
     "name": "Kenya",
-    "description": "Global Innovation Index: 20.99<br>IN.2.3.1: 1.56<br>Percentage of teachers in tertiary education who are female (%): 32.38<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 16.48<br>Inbound mobility rate, both sexes (%): 0.91<br>",
+    "description": "Global Innovation Index: 20.99<br>VC received, value, % GDP: 34.93<br>GERD financed by business, %: 12.93<br>ICT use*: 50.57<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 1.56<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 16.48<br>Inbound mobility rate, both sexes (%): 0.91<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "KG": {
     "name": "Kyrgyzstan",
-    "description": "Global Innovation Index: 20.35<br>IN.2.3.1: 3.0<br>Percentage of teachers in tertiary education who are female (%): 61.92<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 18.19<br>Inbound mobility rate, both sexes (%): 5.74<br>",
+    "description": "Global Innovation Index: 20.35<br>VC received, value, % GDP: 6.46<br>GERD financed by business, %: 8.58<br>ICT use*: 74.16<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 3.0<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 18.19<br>Inbound mobility rate, both sexes (%): 5.74<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "KH": {
     "name": "Cambodia",
-    "description": "Global Innovation Index: 19.89<br>IN.2.3.1: 0.16<br>Percentage of teachers in tertiary education who are female (%): 16.69<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 23.2<br>Inbound mobility rate, both sexes (%): 4.34<br>",
+    "description": "Global Innovation Index: 19.89<br>VC received, value, % GDP: 1.25<br>GERD financed by business, %: 24.05<br>ICT use*: 71.67<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.16<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 23.2<br>Inbound mobility rate, both sexes (%): 4.34<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "KR": {
     "name": "Korea (the Republic of)",
-    "description": "Global Innovation Index: 60.93<br>IN.2.3.1: 95.34<br>Percentage of teachers in tertiary education who are female (%): 34.7<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 30.28<br>Inbound mobility rate, both sexes (%): 1.92<br>",
+    "description": "Global Innovation Index: 60.93<br>VC received, value, % GDP: 26.11<br>GERD financed by business, %: 94.4<br>ICT use*: 87.92<br>QS university ranking, top 3*: 72.84<br>Global corporate R&D investors, top 3, mn USD: 87.07<br>Researchers, FTE/mn pop.: 95.34<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 30.28<br>Inbound mobility rate, both sexes (%): 1.92<br>",
     "color": "#E67300",
     "hover_color": "#E67300",
     "url": ""
@@ -648,21 +648,21 @@ var simplemaps_worldmap_mapdata={
   },
   "KW": {
     "name": "Kuwait",
-    "description": "Global Innovation Index: 28.09<br>IN.2.3.1: 1.69<br>Percentage of teachers in tertiary education who are female (%): 43.92<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 27.95<br>Inbound mobility rate, both sexes (%): 12.11<br>",
+    "description": "Global Innovation Index: 28.09<br>VC received, value, % GDP: 5.53<br>GERD financed by business, %: 1.18<br>ICT use*: 100.0<br>QS university ranking, top 3*: 14.51<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 1.69<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 27.95<br>Inbound mobility rate, both sexes (%): 12.11<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "LA": {
     "name": "Lao People's Democratic Republic (the)",
-    "description": "Global Innovation Index: 17.84<br>IN.2.3.1: 2.93<br>Percentage of teachers in tertiary education who are female (%): 37.67<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 14.85<br>Inbound mobility rate, both sexes (%): 0.43<br>",
+    "description": "Global Innovation Index: 17.84<br>VC received, value, % GDP: 4.77<br>GERD financed by business, %: 19.64<br>ICT use*: 52.47<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 2.93<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 14.85<br>Inbound mobility rate, both sexes (%): 0.43<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "LB": {
     "name": "Lebanon",
-    "description": "Global Innovation Index: 21.54<br>IN.2.3.1: 8.16<br>Percentage of teachers in tertiary education who are female (%): 43.12<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 24.21<br>Inbound mobility rate, both sexes (%): 10.81<br>",
+    "description": "Global Innovation Index: 21.54<br>VC received, value, % GDP: 0.91<br>GERD financed by business, %: 30.58<br>ICT use*: 52.17<br>QS university ranking, top 3*: 27.33<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 8.16<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 24.21<br>Inbound mobility rate, both sexes (%): 10.81<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
@@ -683,7 +683,7 @@ var simplemaps_worldmap_mapdata={
   },
   "LK": {
     "name": "Sri Lanka",
-    "description": "Global Innovation Index: 22.6<br>IN.2.3.1: 0.91<br>Percentage of teachers in tertiary education who are female (%): 52.82<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 13.77<br>Inbound mobility rate, both sexes (%): 0.33<br>",
+    "description": "Global Innovation Index: 22.6<br>VC received, value, % GDP: 0.14<br>GERD financed by business, %: 49.81<br>ICT use*: 74.18<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.91<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 13.77<br>Inbound mobility rate, both sexes (%): 0.33<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
@@ -697,98 +697,98 @@ var simplemaps_worldmap_mapdata={
   },
   "LT": {
     "name": "Lithuania",
-    "description": "Global Innovation Index: 40.06<br>IN.2.3.1: 40.39<br>Percentage of teachers in tertiary education who are female (%): 55.73<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 23.86<br>Inbound mobility rate, both sexes (%): 3.11<br>",
+    "description": "Global Innovation Index: 40.06<br>VC received, value, % GDP: 46.61<br>GERD financed by business, %: 44.6<br>ICT use*: 93.73<br>QS university ranking, top 3*: 17.65<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 40.39<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 23.86<br>Inbound mobility rate, both sexes (%): 3.11<br>",
     "color": "#E8A360",
     "hover_color": "#E9A25B",
     "url": ""
   },
   "LU": {
     "name": "Luxembourg",
-    "description": "Global Innovation Index: 49.09<br>IN.2.3.1: 49.08<br>Percentage of teachers in tertiary education who are female (%): 40.02<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 15.91<br>Inbound mobility rate, both sexes (%): 44.88<br>",
+    "description": "Global Innovation Index: 49.09<br>VC received, value, % GDP: 59.64<br>GERD financed by business, %: 54.65<br>ICT use*: 84.38<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 61.75<br>Researchers, FTE/mn pop.: 49.08<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 15.91<br>Inbound mobility rate, both sexes (%): 44.88<br>",
     "color": "#E8A360",
     "hover_color": "#E9A25B",
     "url": ""
   },
   "LV": {
     "name": "Latvia",
-    "description": "Global Innovation Index: 36.35<br>IN.2.3.1: 22.67<br>Percentage of teachers in tertiary education who are female (%): 56.57<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 19.41<br>Inbound mobility rate, both sexes (%): 5.05<br>",
+    "description": "Global Innovation Index: 36.35<br>VC received, value, % GDP: 10.62<br>GERD financed by business, %: 41.4<br>ICT use*: 92.65<br>QS university ranking, top 3*: 13.8<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 22.67<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 19.41<br>Inbound mobility rate, both sexes (%): 5.05<br>",
     "color": "#E8BC90",
     "hover_color": "#EBBA88",
     "url": ""
   },
   "MA": {
     "name": "Morocco",
-    "description": "Global Innovation Index: 28.79<br>IN.2.3.1: 10.75<br>Percentage of teachers in tertiary education who are female (%): 25.66<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 21.76<br>Inbound mobility rate, both sexes (%): 1.82<br>",
+    "description": "Global Innovation Index: 28.79<br>VC received, value, % GDP: 3.94<br>GERD financed by business, %: 23.78<br>ICT use*: 77.08<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 10.75<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 21.76<br>Inbound mobility rate, both sexes (%): 1.82<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "MD": {
     "name": "Moldova (the Republic of)",
-    "description": "Global Innovation Index: 28.68<br>IN.2.3.1: 7.6<br>Percentage of teachers in tertiary education who are female (%): 56.73<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 23.88<br>Inbound mobility rate, both sexes (%): 2.89<br>",
+    "description": "Global Innovation Index: 28.68<br>VC received, value, % GDP: 10.47<br>GERD financed by business, %: 19.17<br>ICT use*: 77.05<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 7.6<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 23.88<br>Inbound mobility rate, both sexes (%): 2.89<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "MG": {
     "name": "Madagascar",
-    "description": "Global Innovation Index: 17.93<br>IN.2.3.1: 0.19<br>Percentage of teachers in tertiary education who are female (%): 34.18<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 22.84<br>Inbound mobility rate, both sexes (%): 1.7<br>",
+    "description": "Global Innovation Index: 17.93<br>VC received, value, % GDP: 3.32<br>GERD financed by business, %: 16.21<br>ICT use*: 18.49<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.19<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 22.84<br>Inbound mobility rate, both sexes (%): 1.7<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "MX": {
     "name": "Mexico",
-    "description": "Global Innovation Index: 30.45<br>IN.2.3.1: 3.73<br>Percentage of teachers in tertiary education who are female (%): 52.11<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 26.64<br>Inbound mobility rate, both sexes (%): 0.31<br>",
+    "description": "Global Innovation Index: 30.45<br>VC received, value, % GDP: 15.32<br>GERD financed by business, %: 21.08<br>ICT use*: 78.83<br>QS university ranking, top 3*: 42.85<br>Global corporate R&D investors, top 3, mn USD: 49.73<br>Researchers, FTE/mn pop.: 3.73<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 26.64<br>Inbound mobility rate, both sexes (%): 0.31<br>",
     "color": "#E8BC90",
     "hover_color": "#EBBA88",
     "url": ""
   },
   "MK": {
     "name": "North Macedonia",
-    "description": "Global Innovation Index: 29.89<br>IN.2.3.1: 7.25<br>Percentage of teachers in tertiary education who are female (%): 48.5<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 21.23<br>Inbound mobility rate, both sexes (%): 3.42<br>",
+    "description": "Global Innovation Index: 29.89<br>VC received, value, % GDP: 0.03<br>GERD financed by business, %: 32.05<br>ICT use*: 72.45<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 7.25<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 21.23<br>Inbound mobility rate, both sexes (%): 3.42<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "ML": {
     "name": "Mali",
-    "description": "Global Innovation Index: 11.79<br>IN.2.3.1: 0.15<br>Percentage of teachers in tertiary education who are female (%): 18.69<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 17.75<br>Inbound mobility rate, both sexes (%): 0.97<br>",
+    "description": "Global Innovation Index: 11.79<br>VC received, value, % GDP: 1.24<br>GERD financed by business, %: 1.02<br>ICT use*: 0.0<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.15<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 17.75<br>Inbound mobility rate, both sexes (%): 0.97<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "MM": {
     "name": "Myanmar",
-    "description": "Global Innovation Index: 13.77<br>IN.2.3.1: 0.04<br>Percentage of teachers in tertiary education who are female (%): 82.0<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 33.67<br>Inbound mobility rate, both sexes (%): 0.02<br>",
+    "description": "Global Innovation Index: 13.77<br>VC received, value, % GDP: 0.0<br>GERD financed by business, %: 0.0<br>ICT use*: 37.57<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.04<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 33.67<br>Inbound mobility rate, both sexes (%): 0.02<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "ME": {
     "name": "Montenegro",
-    "description": "Global Innovation Index: 28.87<br>IN.2.3.1: 7.45<br>Percentage of teachers in tertiary education who are female (%): 48.59<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.45<br>Inbound mobility rate, both sexes (%): 3.81<br>",
+    "description": "Global Innovation Index: 28.87<br>VC received, value, % GDP: 8.42<br>GERD financed by business, %: 46.72<br>ICT use*: 83.16<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 7.45<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.45<br>Inbound mobility rate, both sexes (%): 3.81<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "MN": {
     "name": "Mongolia",
-    "description": "Global Innovation Index: 28.69<br>IN.2.3.1: 5.24<br>Percentage of teachers in tertiary education who are female (%): 58.73<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.92<br>Inbound mobility rate, both sexes (%): 0.74<br>",
+    "description": "Global Innovation Index: 28.69<br>VC received, value, % GDP: 6.91<br>GERD financed by business, %: 10.01<br>ICT use*: 82.21<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 5.24<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.92<br>Inbound mobility rate, both sexes (%): 0.74<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "MZ": {
     "name": "Mozambique",
-    "description": "Global Innovation Index: 13.11<br>IN.2.3.1: 0.3<br>Percentage of teachers in tertiary education who are female (%): 25.64<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 8.95<br>Inbound mobility rate, both sexes (%): 0.34<br>",
+    "description": "Global Innovation Index: 13.11<br>VC received, value, % GDP: 2.13<br>GERD financed by business, %: 0.58<br>ICT use*: 7.96<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.3<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 8.95<br>Inbound mobility rate, both sexes (%): 0.34<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "MR": {
     "name": "Mauritania",
-    "description": "Global Innovation Index: 13.21<br>IN.2.3.1: 2.69<br>Percentage of teachers in tertiary education who are female (%): 6.86<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 25.21<br>Inbound mobility rate, both sexes (%): 1.61<br>",
+    "description": "Global Innovation Index: 13.21<br>VC received, value, % GDP: 2.2<br>GERD financed by business, %: 0.0<br>ICT use*: 47.85<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 2.69<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 25.21<br>Inbound mobility rate, both sexes (%): 1.61<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
@@ -802,98 +802,98 @@ var simplemaps_worldmap_mapdata={
   },
   "MY": {
     "name": "Malaysia",
-    "description": "Global Innovation Index: 40.48<br>IN.2.3.1: 7.18<br>Percentage of teachers in tertiary education who are female (%): 53.04<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 37.25<br>Inbound mobility rate, both sexes (%): 7.37<br>",
+    "description": "Global Innovation Index: 40.48<br>VC received, value, % GDP: 16.26<br>GERD financed by business, %: 47.27<br>ICT use*: 89.57<br>QS university ranking, top 3*: 57.93<br>Global corporate R&D investors, top 3, mn USD: 43.17<br>Researchers, FTE/mn pop.: 7.18<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 37.25<br>Inbound mobility rate, both sexes (%): 7.37<br>",
     "color": "#E8A360",
     "hover_color": "#E9A25B",
     "url": ""
   },
   "NA": {
     "name": "Namibia",
-    "description": "Global Innovation Index: 19.96<br>IN.2.3.1: 1.4<br>Percentage of teachers in tertiary education who are female (%): 44.26<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 14.79<br>Inbound mobility rate, both sexes (%): 7.62<br>",
+    "description": "Global Innovation Index: 19.96<br>VC received, value, % GDP: 16.2<br>GERD financed by business, %: 13.73<br>ICT use*: 55.26<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 1.4<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 14.79<br>Inbound mobility rate, both sexes (%): 7.62<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "NE": {
     "name": "Niger (the)",
-    "description": "Global Innovation Index: 11.23<br>IN.2.3.1: 0.15<br>Percentage of teachers in tertiary education who are female (%): 10.42<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 13.02<br>Inbound mobility rate, both sexes (%): 5.23<br>",
+    "description": "Global Innovation Index: 11.23<br>VC received, value, % GDP: 0.13<br>GERD financed by business, %: 6.08<br>ICT use*: 27.91<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.15<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 13.02<br>Inbound mobility rate, both sexes (%): 5.23<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "NG": {
     "name": "Nigeria",
-    "description": "Global Innovation Index: 17.11<br>IN.2.3.1: 0.08<br>Percentage of teachers in tertiary education who are female (%): 19.55<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 19.88<br>Inbound mobility rate, both sexes (%): 3.26<br>",
+    "description": "Global Innovation Index: 17.11<br>VC received, value, % GDP: 15.47<br>GERD financed by business, %: 10.08<br>ICT use*: 26.61<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.08<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 19.88<br>Inbound mobility rate, both sexes (%): 3.26<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "NI": {
     "name": "Nicaragua",
-    "description": "Global Innovation Index: 13.99<br>IN.2.3.1: 0.63<br>Percentage of teachers in tertiary education who are female (%): 25.61<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 17.24<br>Inbound mobility rate, both sexes (%): 1.92<br>",
+    "description": "Global Innovation Index: 13.99<br>VC received, value, % GDP: 0.88<br>GERD financed by business, %: 19.26<br>ICT use*: 52.79<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.63<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 17.24<br>Inbound mobility rate, both sexes (%): 1.92<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "NL": {
     "name": "Netherlands (Kingdom of the)",
-    "description": "Global Innovation Index: 58.83<br>IN.2.3.1: 65.74<br>Percentage of teachers in tertiary education who are female (%): 42.92<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 15.23<br>Inbound mobility rate, both sexes (%): 8.59<br>",
+    "description": "Global Innovation Index: 58.83<br>VC received, value, % GDP: 41.96<br>GERD financed by business, %: 69.92<br>ICT use*: 84.55<br>QS university ranking, top 3*: 70.31<br>Global corporate R&D investors, top 3, mn USD: 81.12<br>Researchers, FTE/mn pop.: 65.74<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 15.23<br>Inbound mobility rate, both sexes (%): 8.59<br>",
     "color": "#E78B30",
     "hover_color": "#E88B2D",
     "url": ""
   },
   "NO": {
     "name": "Norway",
-    "description": "Global Innovation Index: 49.06<br>IN.2.3.1: 74.0<br>Percentage of teachers in tertiary education who are female (%): 45.3<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 19.49<br>Inbound mobility rate, both sexes (%): 4.89<br>",
+    "description": "Global Innovation Index: 49.06<br>VC received, value, % GDP: 18.55<br>GERD financed by business, %: 53.75<br>ICT use*: 85.58<br>QS university ranking, top 3*: 43.59<br>Global corporate R&D investors, top 3, mn USD: 54.93<br>Researchers, FTE/mn pop.: 74.0<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 19.49<br>Inbound mobility rate, both sexes (%): 4.89<br>",
     "color": "#E8A360",
     "hover_color": "#E9A25B",
     "url": ""
   },
   "NP": {
     "name": "Nepal",
-    "description": "Global Innovation Index: 18.06<br>IN.2.3.1: 0.53<br>Percentage of teachers in tertiary education who are female (%): 18.65<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 19.54<br>Inbound mobility rate, both sexes (%): 0.03<br>",
+    "description": "Global Innovation Index: 18.06<br>VC received, value, % GDP: 0.16<br>GERD financed by business, %: 16.31<br>ICT use*: 38.78<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.53<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 19.54<br>Inbound mobility rate, both sexes (%): 0.03<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "NZ": {
     "name": "New Zealand",
-    "description": "Global Innovation Index: 45.86<br>IN.2.3.1: 51.14<br>Percentage of teachers in tertiary education who are female (%): 49.16<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.26<br>Inbound mobility rate, both sexes (%): 19.19<br>",
+    "description": "Global Innovation Index: 45.86<br>VC received, value, % GDP: 12.97<br>GERD financed by business, %: 62.02<br>ICT use*: 79.77<br>QS university ranking, top 3*: 51.82<br>Global corporate R&D investors, top 3, mn USD: 48.94<br>Researchers, FTE/mn pop.: 51.14<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.26<br>Inbound mobility rate, both sexes (%): 19.19<br>",
     "color": "#E8A360",
     "hover_color": "#E9A25B",
     "url": ""
   },
   "OM": {
     "name": "Oman",
-    "description": "Global Innovation Index: 27.13<br>IN.2.3.1: 3.7<br>Percentage of teachers in tertiary education who are female (%): 35.95<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 43.87<br>Inbound mobility rate, both sexes (%): 2.62<br>",
+    "description": "Global Innovation Index: 27.13<br>VC received, value, % GDP: 0.23<br>GERD financed by business, %: 39.33<br>ICT use*: 80.7<br>QS university ranking, top 3*: 8.5<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 3.7<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 43.87<br>Inbound mobility rate, both sexes (%): 2.62<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "PK": {
     "name": "Pakistan",
-    "description": "Global Innovation Index: 22.01<br>IN.2.3.1: 4.04<br>Percentage of teachers in tertiary education who are female (%): 28.63<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 17.09<br>Inbound mobility rate, both sexes (%): 3.02<br>",
+    "description": "Global Innovation Index: 22.01<br>VC received, value, % GDP: 7.64<br>GERD financed by business, %: 21.21<br>ICT use*: 61.65<br>QS university ranking, top 3*: 28.81<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 4.04<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 17.09<br>Inbound mobility rate, both sexes (%): 3.02<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "PA": {
     "name": "Panama",
-    "description": "Global Innovation Index: 24.74<br>IN.2.3.1: 1.29<br>Percentage of teachers in tertiary education who are female (%): 47.21<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 18.26<br>Inbound mobility rate, both sexes (%): 1.85<br>",
+    "description": "Global Innovation Index: 24.74<br>VC received, value, % GDP: 4.35<br>GERD financed by business, %: 27.1<br>ICT use*: 73.29<br>QS university ranking, top 3*: 3.61<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 1.29<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 18.26<br>Inbound mobility rate, both sexes (%): 1.85<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "PE": {
     "name": "Peru",
-    "description": "Global Innovation Index: 26.7<br>IN.2.3.1: 4.2<br>Percentage of teachers in tertiary education who are female (%): 33.41<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 26.56<br>Inbound mobility rate, both sexes (%): 1.09<br>",
+    "description": "Global Innovation Index: 26.7<br>VC received, value, % GDP: 1.51<br>GERD financed by business, %: 38.43<br>ICT use*: 77.36<br>QS university ranking, top 3*: 18.56<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 4.2<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 26.56<br>Inbound mobility rate, both sexes (%): 1.09<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "PH": {
     "name": "Philippines (the)",
-    "description": "Global Innovation Index: 31.13<br>IN.2.3.1: 1.59<br>Percentage of teachers in tertiary education who are female (%): 51.86<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 28.74<br>Inbound mobility rate, both sexes (%): 1.66<br>",
+    "description": "Global Innovation Index: 31.13<br>VC received, value, % GDP: 17.49<br>GERD financed by business, %: 46.96<br>ICT use*: 62.45<br>QS university ranking, top 3*: 22.13<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 1.59<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 28.74<br>Inbound mobility rate, both sexes (%): 1.66<br>",
     "color": "#E8BC90",
     "hover_color": "#EBBA88",
     "url": ""
@@ -907,7 +907,7 @@ var simplemaps_worldmap_mapdata={
   },
   "PL": {
     "name": "Poland",
-    "description": "Global Innovation Index: 37.0<br>IN.2.3.1: 37.69<br>Percentage of teachers in tertiary education who are female (%): 43.79<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.59<br>Inbound mobility rate, both sexes (%): 2.25<br>",
+    "description": "Global Innovation Index: 37.0<br>VC received, value, % GDP: 2.46<br>GERD financed by business, %: 63.05<br>ICT use*: 92.22<br>QS university ranking, top 3*: 31.41<br>Global corporate R&D investors, top 3, mn USD: 44.86<br>Researchers, FTE/mn pop.: 37.69<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.59<br>Inbound mobility rate, both sexes (%): 2.25<br>",
     "color": "#E8BC90",
     "hover_color": "#EBBA88",
     "url": ""
@@ -921,14 +921,14 @@ var simplemaps_worldmap_mapdata={
   },
   "PT": {
     "name": "Portugal",
-    "description": "Global Innovation Index: 43.66<br>IN.2.3.1: 57.79<br>Percentage of teachers in tertiary education who are female (%): 44.11<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 27.52<br>Inbound mobility rate, both sexes (%): 4.79<br>",
+    "description": "Global Innovation Index: 43.66<br>VC received, value, % GDP: 11.68<br>GERD financed by business, %: 69.97<br>ICT use*: 79.99<br>QS university ranking, top 3*: 36.54<br>Global corporate R&D investors, top 3, mn USD: 46.73<br>Researchers, FTE/mn pop.: 57.79<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 27.52<br>Inbound mobility rate, both sexes (%): 4.79<br>",
     "color": "#E8A360",
     "hover_color": "#E9A25B",
     "url": ""
   },
   "PY": {
     "name": "Paraguay",
-    "description": "Global Innovation Index: 21.85<br>IN.2.3.1: 1.29<br>Percentage of teachers in tertiary education who are female (%): 41.79<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 17.67<br>Inbound mobility rate, both sexes (%): 2.56<br>",
+    "description": "Global Innovation Index: 21.85<br>VC received, value, % GDP: 1.22<br>GERD financed by business, %: 0.24<br>ICT use*: 68.48<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 1.29<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 17.67<br>Inbound mobility rate, both sexes (%): 2.56<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
@@ -942,28 +942,28 @@ var simplemaps_worldmap_mapdata={
   },
   "QA": {
     "name": "Qatar",
-    "description": "Global Innovation Index: 32.89<br>IN.2.3.1: 9.76<br>Percentage of teachers in tertiary education who are female (%): 36.18<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 26.69<br>Inbound mobility rate, both sexes (%): 38.19<br>",
+    "description": "Global Innovation Index: 32.89<br>VC received, value, % GDP: 0.38<br>GERD financed by business, %: 11.45<br>ICT use*: 93.59<br>QS university ranking, top 3*: 27.83<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 9.76<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 26.69<br>Inbound mobility rate, both sexes (%): 38.19<br>",
     "color": "#E8BC90",
     "hover_color": "#EBBA88",
     "url": ""
   },
   "RO": {
     "name": "Romania",
-    "description": "Global Innovation Index: 33.4<br>IN.2.3.1: 9.99<br>Percentage of teachers in tertiary education who are female (%): 48.88<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 25.14<br>Inbound mobility rate, both sexes (%): 3.65<br>",
+    "description": "Global Innovation Index: 33.4<br>VC received, value, % GDP: 1.77<br>GERD financed by business, %: 68.25<br>ICT use*: 79.8<br>QS university ranking, top 3*: 9.18<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 9.99<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 25.14<br>Inbound mobility rate, both sexes (%): 3.65<br>",
     "color": "#E8BC90",
     "hover_color": "#EBBA88",
     "url": ""
   },
   "RU": {
     "name": "Russian Federation (the)",
-    "description": "Global Innovation Index: 29.73<br>IN.2.3.1: 27.06<br>Percentage of teachers in tertiary education who are female (%): 58.42<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 29.6<br>Inbound mobility rate, both sexes (%): 3.33<br>",
+    "description": "Global Innovation Index: 29.73<br>VC received, value, % GDP: 3.21<br>GERD financed by business, %: 36.15<br>ICT use*: 86.08<br>QS university ranking, top 3*: 43.45<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 27.06<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 29.6<br>Inbound mobility rate, both sexes (%): 3.33<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "RW": {
     "name": "Rwanda",
-    "description": "Global Innovation Index: 19.69<br>IN.2.3.1: 0.44<br>Percentage of teachers in tertiary education who are female (%): 18.97<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 14.33<br>Inbound mobility rate, both sexes (%): 1.72<br>",
+    "description": "Global Innovation Index: 19.69<br>VC received, value, % GDP: 9.44<br>GERD financed by business, %: 0.78<br>ICT use*: 35.21<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.44<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 14.33<br>Inbound mobility rate, both sexes (%): 1.72<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
@@ -977,7 +977,7 @@ var simplemaps_worldmap_mapdata={
   },
   "SA": {
     "name": "Saudi Arabia",
-    "description": "Global Innovation Index: 33.93<br>IN.2.3.1: 8.27<br>Percentage of teachers in tertiary education who are female (%): 39.56<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 26.45<br>Inbound mobility rate, both sexes (%): 4.3<br>",
+    "description": "Global Innovation Index: 33.93<br>VC received, value, % GDP: 37.29<br>GERD financed by business, %: 48.73<br>ICT use*: 91.22<br>QS university ranking, top 3*: 48.99<br>Global corporate R&D investors, top 3, mn USD: 67.85<br>Researchers, FTE/mn pop.: 8.27<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 26.45<br>Inbound mobility rate, both sexes (%): 4.3<br>",
     "color": "#E8BC90",
     "hover_color": "#EBBA88",
     "url": ""
@@ -998,7 +998,7 @@ var simplemaps_worldmap_mapdata={
   },
   "SN": {
     "name": "Senegal",
-    "description": "Global Innovation Index: 21.97<br>IN.2.3.1: 5.71<br>Percentage of teachers in tertiary education who are female (%): 10.82<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 18.94<br>Inbound mobility rate, both sexes (%): 10.52<br>",
+    "description": "Global Innovation Index: 21.97<br>VC received, value, % GDP: 40.53<br>GERD financed by business, %: 2.58<br>ICT use*: 56.15<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 5.71<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 18.94<br>Inbound mobility rate, both sexes (%): 10.52<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
@@ -1012,14 +1012,14 @@ var simplemaps_worldmap_mapdata={
   },
   "SV": {
     "name": "El Salvador",
-    "description": "Global Innovation Index: 20.61<br>IN.2.3.1: 0.51<br>Percentage of teachers in tertiary education who are female (%): 37.02<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 22.75<br>Inbound mobility rate, both sexes (%): 0.43<br>",
+    "description": "Global Innovation Index: 20.61<br>VC received, value, % GDP: 8.85<br>GERD financed by business, %: 38.95<br>ICT use*: 63.27<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.51<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 22.75<br>Inbound mobility rate, both sexes (%): 0.43<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "RS": {
     "name": "Serbia",
-    "description": "Global Innovation Index: 32.25<br>IN.2.3.1: 23.55<br>Percentage of teachers in tertiary education who are female (%): 45.74<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 26.47<br>Inbound mobility rate, both sexes (%): 4.09<br>",
+    "description": "Global Innovation Index: 32.25<br>VC received, value, % GDP: 9.13<br>GERD financed by business, %: 1.55<br>ICT use*: 82.0<br>QS university ranking, top 3*: 5.47<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 23.55<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 26.47<br>Inbound mobility rate, both sexes (%): 4.09<br>",
     "color": "#E8BC90",
     "hover_color": "#EBBA88",
     "url": ""
@@ -1033,21 +1033,21 @@ var simplemaps_worldmap_mapdata={
   },
   "SK": {
     "name": "Slovakia",
-    "description": "Global Innovation Index: 34.31<br>IN.2.3.1: 33.99<br>Percentage of teachers in tertiary education who are female (%): 44.95<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 21.16<br>Inbound mobility rate, both sexes (%): 5.41<br>",
+    "description": "Global Innovation Index: 34.31<br>VC received, value, % GDP: 2.16<br>GERD financed by business, %: 56.54<br>ICT use*: 78.02<br>QS university ranking, top 3*: 9.31<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 33.99<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 21.16<br>Inbound mobility rate, both sexes (%): 5.41<br>",
     "color": "#E8BC90",
     "hover_color": "#EBBA88",
     "url": ""
   },
   "SI": {
     "name": "Slovenia",
-    "description": "Global Innovation Index: 40.17<br>IN.2.3.1: 54.46<br>Percentage of teachers in tertiary education who are female (%): 40.03<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 25.65<br>Inbound mobility rate, both sexes (%): 2.84<br>",
+    "description": "Global Innovation Index: 40.17<br>VC received, value, % GDP: 3.58<br>GERD financed by business, %: 60.28<br>ICT use*: 85.66<br>QS university ranking, top 3*: 10.86<br>Global corporate R&D investors, top 3, mn USD: 49.48<br>Researchers, FTE/mn pop.: 54.46<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 25.65<br>Inbound mobility rate, both sexes (%): 2.84<br>",
     "color": "#E8A360",
     "hover_color": "#E9A25B",
     "url": ""
   },
   "SE": {
     "name": "Sweden",
-    "description": "Global Innovation Index: 64.52<br>IN.2.3.1: 100.0<br>Percentage of teachers in tertiary education who are female (%): 43.95<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 26.45<br>Inbound mobility rate, both sexes (%): 6.62<br>",
+    "description": "Global Innovation Index: 64.52<br>VC received, value, % GDP: 82.86<br>GERD financed by business, %: 75.03<br>ICT use*: 91.86<br>QS university ranking, top 3*: 63.63<br>Global corporate R&D investors, top 3, mn USD: 76.73<br>Researchers, FTE/mn pop.: 100.0<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 26.45<br>Inbound mobility rate, both sexes (%): 6.62<br>",
     "color": "#E67300",
     "hover_color": "#E67300",
     "url": ""
@@ -1075,21 +1075,21 @@ var simplemaps_worldmap_mapdata={
   },
   "TG": {
     "name": "Togo",
-    "description": "Global Innovation Index: 15.62<br>IN.2.3.1: 0.3<br>Percentage of teachers in tertiary education who are female (%): 5.99<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 16.9<br>Inbound mobility rate, both sexes (%): 3.2<br>",
+    "description": "Global Innovation Index: 15.62<br>VC received, value, % GDP: 5.26<br>GERD financed by business, %: 11.24<br>ICT use*: 18.4<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.3<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 16.9<br>Inbound mobility rate, both sexes (%): 3.2<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "TH": {
     "name": "Thailand",
-    "description": "Global Innovation Index: 36.89<br>IN.2.3.1: 16.99<br>Percentage of teachers in tertiary education who are female (%): 61.97<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 27.31<br>Inbound mobility rate, both sexes (%): 0.93<br>",
+    "description": "Global Innovation Index: 36.89<br>VC received, value, % GDP: 15.89<br>GERD financed by business, %: 100.0<br>ICT use*: 85.93<br>QS university ranking, top 3*: 31.71<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 16.99<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 27.31<br>Inbound mobility rate, both sexes (%): 0.93<br>",
     "color": "#E8BC90",
     "hover_color": "#EBBA88",
     "url": ""
   },
   "TJ": {
     "name": "Tajikistan",
-    "description": "Global Innovation Index: 18.6<br>IN.2.3.1: 0.83<br>Percentage of teachers in tertiary education who are female (%): 35.98<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 21.74<br>Inbound mobility rate, both sexes (%): 1.11<br>",
+    "description": "Global Innovation Index: 18.6<br>VC received, value, % GDP: 2.54<br>GERD financed by business, %: 16.77<br>ICT use*: 39.32<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.83<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 21.74<br>Inbound mobility rate, both sexes (%): 1.11<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
@@ -1110,14 +1110,14 @@ var simplemaps_worldmap_mapdata={
   },
   "TN": {
     "name": "Tunisia",
-    "description": "Global Innovation Index: 25.35<br>IN.2.3.1: 16.72<br>Percentage of teachers in tertiary education who are female (%): 46.52<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 43.79<br>Inbound mobility rate, both sexes (%): 1.52<br>",
+    "description": "Global Innovation Index: 25.35<br>VC received, value, % GDP: 1.05<br>GERD financed by business, %: 23.44<br>ICT use*: 75.87<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 16.72<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 43.79<br>Inbound mobility rate, both sexes (%): 1.52<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "TR": {
     "name": "Türkiye",
-    "description": "Global Innovation Index: 39.0<br>IN.2.3.1: 25.43<br>Percentage of teachers in tertiary education who are female (%): 42.35<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.82<br>Inbound mobility rate, both sexes (%): 1.12<br>",
+    "description": "Global Innovation Index: 39.0<br>VC received, value, % GDP: 21.61<br>GERD financed by business, %: 62.05<br>ICT use*: 80.05<br>QS university ranking, top 3*: 29.01<br>Global corporate R&D investors, top 3, mn USD: 51.02<br>Researchers, FTE/mn pop.: 25.43<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 20.82<br>Inbound mobility rate, both sexes (%): 1.12<br>",
     "color": "#E8BC90",
     "hover_color": "#EBBA88",
     "url": ""
@@ -1131,42 +1131,42 @@ var simplemaps_worldmap_mapdata={
   },
   "TZ": {
     "name": "Tanzania, the United Republic of",
-    "description": "Global Innovation Index: 15.33<br>IN.2.3.1: 1.89<br>Percentage of teachers in tertiary education who are female (%): 28.08<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 9.5<br>Inbound mobility rate, both sexes (%): 3.31<br>",
+    "description": "Global Innovation Index: 15.33<br>VC received, value, % GDP: 4.3<br>GERD financed by business, %: 6.17<br>ICT use*: 26.46<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 1.89<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 9.5<br>Inbound mobility rate, both sexes (%): 3.31<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "UG": {
     "name": "Uganda",
-    "description": "Global Innovation Index: 14.94<br>IN.2.3.1: 0.14<br>Percentage of teachers in tertiary education who are female (%): 23.42<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 14.97<br>Inbound mobility rate, both sexes (%): 10.73<br>",
+    "description": "Global Innovation Index: 14.94<br>VC received, value, % GDP: 5.56<br>GERD financed by business, %: 4.21<br>ICT use*: 23.7<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.14<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 14.97<br>Inbound mobility rate, both sexes (%): 10.73<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "UA": {
     "name": "Ukraine",
-    "description": "Global Innovation Index: 29.5<br>IN.2.3.1: 5.71<br>Percentage of teachers in tertiary education who are female (%): 59.41<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 25.83<br>Inbound mobility rate, both sexes (%): 2.6<br>",
+    "description": "Global Innovation Index: 29.5<br>VC received, value, % GDP: 1.51<br>GERD financed by business, %: 37.74<br>ICT use*: 78.58<br>QS university ranking, top 3*: 16.87<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 5.71<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 25.83<br>Inbound mobility rate, both sexes (%): 2.6<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "UY": {
     "name": "Uruguay",
-    "description": "Global Innovation Index: 29.13<br>IN.2.3.1: 8.31<br>Percentage of teachers in tertiary education who are female (%): 51.98<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 16.53<br>Inbound mobility rate, both sexes (%): 2.61<br>",
+    "description": "Global Innovation Index: 29.13<br>VC received, value, % GDP: 12.88<br>GERD financed by business, %: 5.2<br>ICT use*: 82.16<br>QS university ranking, top 3*: 15.89<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 8.31<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 16.53<br>Inbound mobility rate, both sexes (%): 2.61<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "US": {
     "name": "United States of America (the)",
-    "description": "Global Innovation Index: 62.38<br>IN.2.3.1: 49.6<br>Percentage of teachers in tertiary education who are female (%): 49.26<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 16.44<br>Inbound mobility rate, both sexes (%): 4.28<br>",
+    "description": "Global Innovation Index: 62.38<br>VC received, value, % GDP: 97.03<br>GERD financed by business, %: 86.63<br>ICT use*: 92.41<br>QS university ranking, top 3*: 100.0<br>Global corporate R&D investors, top 3, mn USD: 100.0<br>Researchers, FTE/mn pop.: 49.6<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 16.44<br>Inbound mobility rate, both sexes (%): 4.28<br>",
     "color": "#E67300",
     "hover_color": "#E67300",
     "url": ""
   },
   "UZ": {
     "name": "Uzbekistan",
-    "description": "Global Innovation Index: 24.7<br>IN.2.3.1: 5.38<br>Percentage of teachers in tertiary education who are female (%): 40.75<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 33.31<br>Inbound mobility rate, both sexes (%): 0.22<br>",
+    "description": "Global Innovation Index: 24.7<br>VC received, value, % GDP: 1.07<br>GERD financed by business, %: 52.48<br>ICT use*: 74.18<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 5.38<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 33.31<br>Inbound mobility rate, both sexes (%): 0.22<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
@@ -1180,7 +1180,7 @@ var simplemaps_worldmap_mapdata={
   },
   "VN": {
     "name": "Viet Nam",
-    "description": "Global Innovation Index: 36.18<br>IN.2.3.1: 7.71<br>Percentage of teachers in tertiary education who are female (%): 48.42<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 21.73<br>Inbound mobility rate, both sexes (%): 0.19<br>",
+    "description": "Global Innovation Index: 36.18<br>VC received, value, % GDP: 14.14<br>GERD financed by business, %: 79.32<br>ICT use*: 81.27<br>QS university ranking, top 3*: 16.97<br>Global corporate R&D investors, top 3, mn USD: 45.2<br>Researchers, FTE/mn pop.: 7.71<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 21.73<br>Inbound mobility rate, both sexes (%): 0.19<br>",
     "color": "#E8BC90",
     "hover_color": "#EBBA88",
     "url": ""
@@ -1201,21 +1201,21 @@ var simplemaps_worldmap_mapdata={
   },
   "ZA": {
     "name": "South Africa",
-    "description": "Global Innovation Index: 28.34<br>IN.2.3.1: 4.65<br>Percentage of teachers in tertiary education who are female (%): 38.64<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 18.9<br>Inbound mobility rate, both sexes (%): 4.07<br>",
+    "description": "Global Innovation Index: 28.34<br>VC received, value, % GDP: 12.86<br>GERD financed by business, %: 33.32<br>ICT use*: 77.66<br>QS university ranking, top 3*: 41.53<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 4.65<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 18.9<br>Inbound mobility rate, both sexes (%): 4.07<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
   },
   "ZM": {
     "name": "Zambia",
-    "description": "Global Innovation Index: 15.66<br>IN.2.3.1: 1.2<br>Percentage of teachers in tertiary education who are female (%): 29.27<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 17.17<br>Inbound mobility rate, both sexes (%): 3.69<br>",
+    "description": "Global Innovation Index: 15.66<br>VC received, value, % GDP: 3.35<br>GERD financed by business, %: 6.09<br>ICT use*: 28.57<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 1.2<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 17.17<br>Inbound mobility rate, both sexes (%): 3.69<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
   },
   "ZW": {
     "name": "Zimbabwe",
-    "description": "Global Innovation Index: 15.57<br>IN.2.3.1: 0.29<br>Percentage of teachers in tertiary education who are female (%): 31.51<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 25.98<br>Inbound mobility rate, both sexes (%): 0.62<br>",
+    "description": "Global Innovation Index: 15.57<br>VC received, value, % GDP: 0.58<br>GERD financed by business, %: 5.92<br>ICT use*: 30.9<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 0.29<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 25.98<br>Inbound mobility rate, both sexes (%): 0.62<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
@@ -1236,14 +1236,14 @@ var simplemaps_worldmap_mapdata={
   },
   "FR": {
     "name": "France",
-    "description": "Global Innovation Index: 55.41<br>IN.2.3.1: 51.15<br>Percentage of teachers in tertiary education who are female (%): 37.16<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 24.9<br>Inbound mobility rate, both sexes (%): 10.4<br>",
+    "description": "Global Innovation Index: 55.41<br>VC received, value, % GDP: 45.96<br>GERD financed by business, %: 68.57<br>ICT use*: 84.91<br>QS university ranking, top 3*: 79.96<br>Global corporate R&D investors, top 3, mn USD: 79.41<br>Researchers, FTE/mn pop.: 51.15<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 24.9<br>Inbound mobility rate, both sexes (%): 10.4<br>",
     "color": "#E78B30",
     "hover_color": "#E88B2D",
     "url": ""
   },
   "ES": {
     "name": "Spain",
-    "description": "Global Innovation Index: 44.93<br>IN.2.3.1: 34.25<br>Percentage of teachers in tertiary education who are female (%): 41.61<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 24.48<br>Inbound mobility rate, both sexes (%): 3.02<br>",
+    "description": "Global Innovation Index: 44.93<br>VC received, value, % GDP: 21.04<br>GERD financed by business, %: 62.15<br>ICT use*: 84.1<br>QS university ranking, top 3*: 50.67<br>Global corporate R&D investors, top 3, mn USD: 68.24<br>Researchers, FTE/mn pop.: 34.25<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 24.48<br>Inbound mobility rate, both sexes (%): 3.02<br>",
     "color": "#E8A360",
     "hover_color": "#E9A25B",
     "url": ""
@@ -1292,7 +1292,7 @@ var simplemaps_worldmap_mapdata={
   },
   "BB": {
     "name": "Barbados",
-    "description": "Global Innovation Index: 26.05<br>IN.2.3.1: 6.96<br>Percentage of teachers in tertiary education who are female (%): 50.29<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 19.27<br>Inbound mobility rate, both sexes (%): 13.38<br>",
+    "description": "Global Innovation Index: 26.05<br>VC received, value, % GDP: 0.0<br>GERD financed by business, %: 29.95<br>ICT use*: 62.5<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 6.96<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 19.27<br>Inbound mobility rate, both sexes (%): 13.38<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
@@ -1306,7 +1306,7 @@ var simplemaps_worldmap_mapdata={
   },
   "CV": {
     "name": "Cabo Verde",
-    "description": "Global Innovation Index: 22.29<br>IN.2.3.1: 1.04<br>Percentage of teachers in tertiary education who are female (%): 39.38<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 14.66<br>Inbound mobility rate, both sexes (%): 1.17<br>",
+    "description": "Global Innovation Index: 22.29<br>VC received, value, % GDP: 14.29<br>GERD financed by business, %: 22.84<br>ICT use*: 48.71<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 1.04<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 14.66<br>Inbound mobility rate, both sexes (%): 1.17<br>",
     "color": "#E9D4C0",
     "hover_color": "#ECD1B6",
     "url": ""
@@ -1348,7 +1348,7 @@ var simplemaps_worldmap_mapdata={
   },
   "HK": {
     "name": "Hong Kong",
-    "description": "Global Innovation Index: 50.14<br>IN.2.3.1: 48.36<br>Percentage of teachers in tertiary education who are female (%): 47.59<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 23.23<br>Inbound mobility rate, both sexes (%): 9.67<br>",
+    "description": "Global Innovation Index: 50.14<br>VC received, value, % GDP: 65.04<br>GERD financed by business, %: 60.91<br>ICT use*: 92.22<br>QS university ranking, top 3*: 78.21<br>Global corporate R&D investors, top 3, mn USD: 58.86<br>Researchers, FTE/mn pop.: 48.36<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 23.23<br>Inbound mobility rate, both sexes (%): 9.67<br>",
     "color": "#E78B30",
     "hover_color": "#E88B2D",
     "url": ""
@@ -1390,7 +1390,7 @@ var simplemaps_worldmap_mapdata={
   },
   "MT": {
     "name": "Malta",
-    "description": "Global Innovation Index: 44.83<br>IN.2.3.1: 24.31<br>Percentage of teachers in tertiary education who are female (%): 33.17<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 21.7<br>Inbound mobility rate, both sexes (%): 6.59<br>",
+    "description": "Global Innovation Index: 44.83<br>VC received, value, % GDP: 58.95<br>GERD financed by business, %: 75.83<br>ICT use*: 87.11<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 42.99<br>Researchers, FTE/mn pop.: 24.31<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 21.7<br>Inbound mobility rate, both sexes (%): 6.59<br>",
     "color": "#E8A360",
     "hover_color": "#E9A25B",
     "url": ""
@@ -1404,7 +1404,7 @@ var simplemaps_worldmap_mapdata={
   },
   "MU": {
     "name": "Mauritius",
-    "description": "Global Innovation Index: 30.56<br>IN.2.3.1: 5.59<br>Percentage of teachers in tertiary education who are female (%): 48.62<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 23.31<br>Inbound mobility rate, both sexes (%): 3.31<br>",
+    "description": "Global Innovation Index: 30.56<br>VC received, value, % GDP: 100.0<br>GERD financed by business, %: 5.07<br>ICT use*: 81.51<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 5.59<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 23.31<br>Inbound mobility rate, both sexes (%): 3.31<br>",
     "color": "#E8BC90",
     "hover_color": "#EBBA88",
     "url": ""
@@ -1446,7 +1446,7 @@ var simplemaps_worldmap_mapdata={
   },
   "SG": {
     "name": "Singapore",
-    "description": "Global Innovation Index: 61.18<br>IN.2.3.1: 75.38<br>Percentage of teachers in tertiary education who are female (%): 36.55<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 34.3<br>Inbound mobility rate, both sexes (%): 20.38<br>",
+    "description": "Global Innovation Index: 61.18<br>VC received, value, % GDP: 100.0<br>GERD financed by business, %: 72.11<br>ICT use*: 91.46<br>QS university ranking, top 3*: 68.66<br>Global corporate R&D investors, top 3, mn USD: 62.43<br>Researchers, FTE/mn pop.: 75.38<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 34.3<br>Inbound mobility rate, both sexes (%): 20.38<br>",
     "color": "#E67300",
     "hover_color": "#E67300",
     "url": ""
@@ -1459,7 +1459,7 @@ var simplemaps_worldmap_mapdata={
     "url": ""
   },
   "ST": {
-    "name": "S\\u00e3o Tom\\u00e9 and Principe",
+    "name": "S\\\\\\\\\\\\\\\\u00e3o Tom\\\\\\\\\\\\\\\\u00e9 and Principe",
     "description": "No data available",
     "color": "#808080",
     "hover_color": "#C0C0C0",
@@ -1495,7 +1495,7 @@ var simplemaps_worldmap_mapdata={
   },
   "TT": {
     "name": "Trinidad and Tobago",
-    "description": "Global Innovation Index: 18.41<br>IN.2.3.1: 5.15<br>Percentage of teachers in tertiary education who are female (%): 49.04<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 24.36<br>Inbound mobility rate, both sexes (%): 1.87<br>",
+    "description": "Global Innovation Index: 18.41<br>VC received, value, % GDP: 2.73<br>GERD financed by business, %: 5.69<br>ICT use*: 71.43<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 5.15<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 24.36<br>Inbound mobility rate, both sexes (%): 1.87<br>",
     "color": "#EAECF0",
     "hover_color": "#EEE9E3",
     "url": ""
@@ -1523,7 +1523,7 @@ var simplemaps_worldmap_mapdata={
   },
   "CY": {
     "name": "Cyprus",
-    "description": "Global Innovation Index: 45.07<br>IN.2.3.1: 17.69<br>Percentage of teachers in tertiary education who are female (%): 40.54<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 16.87<br>Inbound mobility rate, both sexes (%): 21.81<br>",
+    "description": "Global Innovation Index: 45.07<br>VC received, value, % GDP: 24.78<br>GERD financed by business, %: 44.11<br>ICT use*: 79.37<br>QS university ranking, top 3*: 0.0<br>Global corporate R&D investors, top 3, mn USD: 0.0<br>Researchers, FTE/mn pop.: 17.69<br>Percentage of graduates from Science, Technology, Engineering and Mathematics programmes in tertiary education, both sexes (%): 16.87<br>Inbound mobility rate, both sexes (%): 21.81<br>",
     "color": "#E8A360",
     "hover_color": "#E9A25B",
     "url": ""
@@ -1557,7 +1557,7 @@ var simplemaps_worldmap_mapdata={
     "url": ""
   },
   "CW": {
-    "name": "Cura\\u00e7ao",
+    "name": "Cura\\\\\\\\\\\\\\\\u00e7ao",
     "description": "No data available",
     "color": "#808080",
     "hover_color": "#C0C0C0",
@@ -1571,6 +1571,9 @@ var simplemaps_worldmap_mapdata={
     "url": ""
   }
 }
+
+
+
 ,
   locations: {
     // "0": {
