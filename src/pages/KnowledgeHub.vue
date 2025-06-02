@@ -1,3 +1,4 @@
+<!-- Knowledge Hub contains all the resources used ont he website -->
 <template>
   <div class="max-w-5xl mx-auto px-6 py-32 text-gray-800">
     <!-- Title -->

@@ -5,8 +5,6 @@
       <Hero />
     </section>
 
-    <!-- Other sections -->
-
     <!-- Website Introduction Section -->
     <section id="website-introduction">
       <WebsiteIntroduction />
@@ -27,7 +25,7 @@
       <RoadmapIntro />
     </section>
 
-    <!-- Something menu -->
+    <!-- Get inspired menu -->
     <section id="photoscroll">
       <Photoscroll />
     </section>
@@ -35,7 +33,7 @@
 </template>
 
 <script>
-// Import components here
+// com
 import Hero from "../components/main/Hero.vue";
 import Photoscroll from "../components/main/Photoscroll.vue";
 import ImageGrid from "../components/main/ImageGrid.vue";
@@ -47,7 +45,6 @@ import GetPersonalReport from "../components/main/GetPersonalReport.vue";
 export default {
   name: "LandingPage",
   components: {
-    //Add components here
     Hero,
     Photoscroll,
     ImageGrid,
@@ -59,14 +56,3 @@ export default {
 };
 </script>
 
-<style>
-/* Global styles */
-/* @import './assets/styles/style.css';  Adjust the path as needed */
-
-.wave-container {
-  position: relative;
-  width: 100%;
-  margin: -2rem 0; /* Negative margin to remove gaps */
-  z-index: 1;
-}
-</style>

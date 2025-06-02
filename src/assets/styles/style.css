@@ -1,7 +1,7 @@
 /* Import Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap");
 
-/* Global Styles */
+/* Global Styles based on the SURF System Design */
 body {
   font-family: "Source Sans Pro", sans-serif;
   background-color: #f4f6f8;

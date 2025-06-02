@@ -1,3 +1,4 @@
+ <!-- Website Hero section -->
 <template>
   <section
     class="relative min-h-screen bg-transparent flex items-center justify-center"
@@ -12,10 +13,12 @@
         >
       </div>
 
+       <!-- Main Title -->
       <div class="text-4xl md:text-5xl lg:text-6xl font-extrabold custom-font mb-6 transition-all duration-700 opacity-100 translate-y-0 delay-100">
         Your Roadmap  <span class="text-blue-700 ">into the Future</span>
       </div>
 
+      <!-- Subtitle -->
       <p
         class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto transition-all duration-700 opacity-100 translate-y-0 delay-200"
       >
@@ -26,21 +29,27 @@
       <div
         class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 transition-all duration-700 opacity-100 translate-y-0 delay-300"
       >
+      
+       <!-- Buttons leading to other pages -->
+         <!-- Survey page -->
         <router-link
           to="/survey"
           class="bg-blue-700 hover:bg-blue-600 text-white py-3 px-8 rounded-lg flex items-center transition-colors duration-300"
         >
           Personalize your Report
         </router-link>
+
+        <!-- Roadmap page -->
         <router-link
           to="/roadmap"
           class="border-blue-700 text-blue-700 hover:bg-blue-100 py-3 px-8 rounded-lg flex items-center transition-colors duration-300 border-2"
         >
           Explore the Roadmap
         </router-link>
-        <!-- <button class="">See Success Stories</button> -->
+
       </div>
 
+      <!-- Transition button -->
       <div class="transition-all duration-700 delay-500 opacity-100">
         <a href="#website-introduction" class="inline-flex bubble">
           <span class="mr-2">Discover the process</span>

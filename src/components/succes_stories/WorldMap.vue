@@ -1,3 +1,4 @@
+ <!-- World map component -->
 <template>
     <!-- Title section -->
     <section class="py-16 px-4 max-w-7xl mx-auto">

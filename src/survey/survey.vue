@@ -1,3 +1,4 @@
+<!-- Survey page -->
 <template>
   <div class="max-w-3xl mx-auto py-32">
     <div class="bg-white shadow-xl rounded-xl p-8 space-y-6 border">

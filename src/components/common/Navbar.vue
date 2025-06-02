@@ -1,3 +1,4 @@
+<!-- Responsive sticky navigation bar -->
 <template>
   <header
     :class="[
@@ -36,11 +37,6 @@
             class="font-medium hover:text-primary transition-colors link-underline"
             >Success Stories</a
           >
-          <!-- <a
-            href="#features"
-            class="font-medium hover:text-primary transition-colors link-underline"
-            >Features</a
-          > -->
           <a
             href="/roadmap"
             class="font-medium hover:text-primary transition-colors"
@@ -93,27 +89,26 @@
         class="md:hidden mt-4 p-4 bg-white rounded-lg shadow-md space-y-4 animate-fade-in"
       >
         <a
-          href="#technologies"
+          href="/survey"
           class="block py-2 font-medium hover:text-primary transition-colors"
           @click="closeMobileMenu"
         >
-          Technologies
+          Personalized Report
         </a>
         <a
-          href="#stories"
+          href="/success-stories"
           class="block py-2 font-medium hover:text-primary transition-colors"
           @click="closeMobileMenu"
         >
           Success Stories
         </a>
         <a
-          href="#features"
+          href="/roadmap"
           class="block py-2 font-medium hover:text-primary transition-colors"
           @click="closeMobileMenu"
         >
-          Features
+          <button class="w-full btn">Explore Roadmap</button>
         </a>
-        <button class="w-full btn">Get Started</button>
       </div>
     </div>
   </header>

@@ -1,3 +1,4 @@
+<!-- Survey results page -->
 <template>
   <div class="max-w-3xl mx-auto py-32 px-4 md:px-6">
     <div class="space-y-8">
@@ -15,7 +16,7 @@
         </p>
       </div>
 
-      <!-- Results Card -->
+      <!-- Results summary card -->
       <div
         class="bg-white shadow border border-gray-200 rounded-lg overflow-hidden"
       >
@@ -26,7 +27,7 @@
         </div>
 
         <div class="p-6 space-y-6">
-          <!-- Size and Priority -->
+          <!-- Timeline and values -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div
               class="flex items-center p-4 rounded-lg bg-gray-50 border border-blue-600 shadow-lg"

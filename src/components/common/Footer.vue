@@ -1,7 +1,8 @@
+<!-- Website footer with social links, contact info, and other links -->
 <template>
   <footer class="bg-gray-50 text-gray-700 py-12 px-6 md:px-16">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-      <!-- Branding Section -->
+      <!-- Main container -->
       <div>
         <div class="flex items-center">
           <!-- Logo Section -->
@@ -136,7 +137,7 @@
         </ul>
       </div>
 
-        <!-- Quick Links -->
+        <!-- Other Links -->
         <div>
           <h4 class="text-gray-900 font-semibold mb-4">Quick Links</h4>
             <ul class="space-y-2 text-sm">
