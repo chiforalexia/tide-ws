@@ -426,7 +426,7 @@ const phases = ref([
     url: 'https://medium.com/swlh/how-futurists-cope-with-uncertainty-a4fbdff4b8c6',
     time: '45–60 min',
     people: 'Team (3–5 people)',
-    exampleimage: '/public/phases_resources/images/axes_uncertainty.png',
+    exampleimage: '/public/phases_resources/images/axes.jpg',
     citation: 'Webb, A. (2020, March 16). How Futurists Cope With Uncertainty. The Startup. https://medium.com/swlh/how-futurists-cope-with-uncertainty-a4fbdff4b8c6; Schwartz, P. (1997). The Art of the Long View. Doubleday/Currency.'
   },
   {
@@ -438,7 +438,7 @@ const phases = ref([
     url: 'https://millennium-project.org/publications/futures-research-methodology-version-3-0-2/',
     time: '1.5–2 hours',
     people: 'Team (3–5 people)',
-    exampleimage: '/public/phases_resources/images/scenario_building.png',
+    exampleimage: "",
     citation: 'SchSchwartz, P. (1997). The Art of the Long View. Doubleday/Currency.wartz, P. (1996). The Art of the Long View: Planning for the Future in an Uncertain World. Currency); Jerome C.  Glenn, & Gordon, T. J. (2009). Futures Research Methodology (3.0). The Millennium Project. https://millennium-project.org/publications/futures-research-methodology-version-3-0-2/',
   },
   {
@@ -452,7 +452,7 @@ const phases = ref([
     url: 'https://www.awolimburg.nl/userfiles/files/meetinstrumenten/2024-07-18-mira-instrument.pdf',
     time: '2–3 hours',
     people: 'Team (3–5 people)',
-    exampleimage: '/public/phases_resources/images/readiness_assessment.png',
+    exampleimage: '',
     citation: 'Maastricht University. (2024). Maastricht Innovation Readiness Aanpak (MIRA). https://www.awolimburg.nl/nl/projecten/innovation-readiness'
   },
     ],
@@ -571,7 +571,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
     url: 'https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf',
     time: '30–60 min',
     people: 'Team activity',
-    exampleimage: '',
+    exampleimage: '/public/phases_resources/images/white_spots.png',
     citation: 'Carleton, T., Cockayne, W., & Tahvanainen, A.-J. (2013). Playbook for Strategic Foresight and Innovation, p.45. https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf'
   },
   {
@@ -602,7 +602,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
     url: 'https://scott-smith-f83k.squarespace.com/s/Scenario-Readiness-Canvas-A4.pdf',
     time: '',
     people: 'Team activity',
-    exampleimage: '',
+    exampleimage: '/public/phases_resources/images/scenario_readiness_canvas.png',
     citation: 'Smith, S., & Ashby, M. (2020). How To Future: Leading and Sense-making in an Age of Hyperchange. Kogan Page Inspire. https://www.howtofuture.com'
   },
   {
@@ -618,7 +618,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
     url: 'https://www.businessmodelinnovatie.nl/vision-canvas/',
     time: '1 hour',
     people: 'Team activity',
-    exampleimage: '',
+    exampleimage: '/public/phases_resources/images/five_bold_steps.png',
     citation: 'The Grove Consultants International. (2024). Strategic Visioning Process Outline. https://www.thegrove.com/sv-process-overview-download; Fransen, R. (2020, July 15). Vision Canvas | Business Model Innovatie | Five Bold Steps Canvas. https://www.businessmodelinnovatie.nl/vision-canvas/'
   },
   {
@@ -662,7 +662,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
     url: 'https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf',
     time: '1–2 hours',
     people: 'Team activity',
-    exampleimage: '',
+    exampleimage: '/public/phases_resources/images/crowd_clovers.png',
     citation: 'Carleton, T., Cockayne, W., & Tahvanainen, A.-J. (2013). Playbook for Strategic Foresight and Innovation. https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf'
   },
   {
@@ -677,7 +677,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
     url: 'https://link.springer.com/chapter/10.1007/978-3-658-25074-4_7',
     time: '1–2 hours',
     people: 'Team activity (5–8 people)',
-    exampleimage: '',
+    exampleimage: '/public/phases_resources/images/SWOT.png',
     citation: 'Van der Heijden, K. (2005). Scenarios: The Art of Strategic Conversation. Wiley; Luoto, L., & Lonkila, A. (2018). The Use of SWOT Analysis for Future Scenarios: A Case Study of Privacy and Emerging Technologies. In *Envisioning Uncertain Futures* (pp. 105–131). Springer VS, Wiesbaden. https://doi.org/10.1007/978-3-658-25074-4_7'
   },
   {
@@ -708,7 +708,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
     url: 'https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf',
     time: '30–60 min',
     people: 'Team activity',
-    exampleimage: '',
+    exampleimage: '/public/phases_resources/images/voice_stars.png',
     citation: 'Carleton, T., Cockayne, W., & Tahvanainen, A.-J. (2013). *Playbook for Strategic Foresight and Innovation*. https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf'
   },
   {
@@ -759,7 +759,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
   url: 'https://www.undp.org/sites/g/files/zskgke326/files/2022-07/UNDP-RBAP-Foresight-Playbook-Appendix-2022_0.pdf',
   time: '2–3 hours',
   people: 'Team activity (up to 20)',
-  exampleimage: 'yes',
+  exampleimage: '/public/phases_resources/images/wind_tunneling.png',
   citation: 'UNDP. (2022). *UNDP RBAP: Foresight Playbook* (p. 47). https://www.undp.org/sites/g/files/zskgke326/files/2022-07/UNDP-RBAP-Foresight-Playbook-Appendix-2022_0.pdf'
 },
 {
@@ -776,7 +776,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
   url: 'https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf',
   time: '15 min',
   people: 'Team activity',
-  exampleimage: '',
+  exampleimage: '/public/phases_resources/images/buddy_checks.png',
   citation: 'Carleton, T., Cockayne, W., & Tahvanainen, A.-J. (2013). Playbook for Strategic Foresight and Innovation. https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf'
 },
 {
@@ -793,7 +793,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
   url: 'https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf',
   time: '30 min',
   people: 'Team activity',
-  exampleimage: '',
+  exampleimage: '/public/phases_resources/images/change_paths.png',
   citation: 'Carleton, T., Cockayne, W., & Tahvanainen, A.-J. (2013). Playbook for Strategic Foresight and Innovation. https://web.stanford.edu/group/archaeolog/cgi-bin/archaeolog/wp-content/uploads/2020/05/Playbook-for-Strategic-Foresight-and-Innovation-US-Stanford.pdf'
 }
 ],

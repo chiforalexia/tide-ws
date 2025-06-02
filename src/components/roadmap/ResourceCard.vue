@@ -48,7 +48,12 @@
   
             <!-- Example image -->
             <div>
-              <img :src="resource.exampleimage" alt="Example usage" class="rounded-lg shadow-md w-full object-cover max-h-64" />
+              <img 
+              :src="resource.exampleimage" 
+              alt="Example usage" 
+              class="rounded-lg shadow-md mx-auto object-contain"
+              :style="{ maxHeight: '400px', maxWidth: '100%' }"
+            />
             </div>
           </div>
   
