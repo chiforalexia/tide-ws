@@ -10,8 +10,14 @@
 
       <section id="features">
         <!-- Add your features section content here -->
+        <WorldMap />
+      </section>
+
+      <section id="features">
+        <!-- Add your features section content here -->
         <Roadmap-template />
       </section>
+
     </div>
   </div>
 </template>
@@ -22,6 +28,7 @@ import Navbar from "../components/common/Navbar.vue";
 import Footer from "../components/common/Footer.vue";
 import SuccessStories from "../components/succes_stories/SuccessStories.vue";
 import RoadmapTemplate from "../components/succes_stories/RoadmapTemplate.vue";
+import WorldMap from "../components/succes_stories/WorldMap.vue";
 
 export default {
   name: "SuccessStoriesPage",
@@ -31,7 +38,8 @@ export default {
     Footer,
     SuccessStories,
     RoadmapTemplate,
-  },
+    WorldMap,
+  }
 };
 </script>
 
