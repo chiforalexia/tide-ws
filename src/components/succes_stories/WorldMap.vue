@@ -21,20 +21,14 @@
 import { ref, watch, onMounted } from "vue";
 
 const activeTab = ref("map1");
-const mapLoaded = {
-  map1: false,
-  map2: false,
-};
 
-let mapdata1 = null;
-let mapdata2 = null;
+let cachedMapdata1 = null;
+let cachedMapdata2 = null;
 
 const loadScript = (src) => {
   return new Promise((resolve, reject) => {
     const existing = document.querySelector(`script[src="${src}"]`);
-    if (existing) {
-      existing.remove(); // Force re-injection
-    }
+    if (existing) return resolve(); // skip if already loaded
     const s = document.createElement("script");
     s.src = src;
     s.onload = resolve;
@@ -43,61 +37,59 @@ const loadScript = (src) => {
   });
 };
 
-const loadEngineOnce = (() => {
-  let loaded = false;
-  return async () => {
-    if (!loaded) {
-      await loadScript("/simplemaps/worldmap.js");
-      loaded = true;
-    }
-  };
-})();
+const preloadMapdata = async (src) => {
+  await loadScript(src);
+  const data = window.simplemaps_worldmap_mapdata;
+  if (!data || typeof data !== "object") throw new Error("Invalid mapdata");
+  return structuredClone
+    ? structuredClone(data)
+    : JSON.parse(JSON.stringify(data));
+};
+
+const replaceObjectProperties = (target, source) => {
+  for (const key in target) delete target[key];
+  for (const key in source) target[key] = source[key];
+};
 
 const loadMap = async (mapId) => {
   const container = document.getElementById(mapId);
   if (container) container.innerHTML = "";
 
-  const mapdataSrc =
-    mapId === "map1"
-      ? "/simplemaps/mapdata.js"
-      : "/simplemaps/mapdata_clustering.js";
+  const rawConfig =
+    mapId === "map1" ? cachedMapdata1 : cachedMapdata2;
 
-  // Remove old engine script ONLY
-  document.querySelectorAll('script[src*="worldmap.js"]').forEach(s => s.remove());
-  // DO NOT delete global variables — overwrite them instead
+  const config = structuredClone
+    ? structuredClone(rawConfig)
+    : JSON.parse(JSON.stringify(rawConfig));
 
-  // Load the appropriate mapdata first
-  await loadScript(mapdataSrc);
+  config.main_settings.div = mapId;
+  config.main_settings.auto_load = "no";
 
-  // Set correct target div and disable auto-load
-  const mapdata = window.simplemaps_worldmap_mapdata;
-  if (!mapdata || typeof mapdata !== "object") {
-    console.error("Mapdata not loaded or malformed");
-    return;
-  }
-
-  mapdata.main_settings.div = mapId;
-  mapdata.main_settings.auto_load = "no";
-
-  // Load the map engine after the config is prepared
-  await loadScript("/simplemaps/worldmap.js");
-
-  // Force reload
+  replaceObjectProperties(window.simplemaps_worldmap_mapdata, config);
   window.simplemaps_worldmap.html_id = mapId;
   window.simplemaps_worldmap.load();
-
-  mapLoaded[mapId] = true;
 };
 
+onMounted(async () => {
+  cachedMapdata1 = await preloadMapdata("/simplemaps/mapdata.js");
+  cachedMapdata2 = await preloadMapdata("/simplemaps/mapdata_clustering.js");
 
-watch(activeTab, async (newTab) => {
-  await loadEngineOnce();
-  await loadMap(newTab);
+  // Set initial mapdata before loading engine
+  window.simplemaps_worldmap_mapdata = structuredClone
+    ? structuredClone(cachedMapdata1)
+    : JSON.parse(JSON.stringify(cachedMapdata1));
+
+  window.simplemaps_worldmap_mapdata.main_settings.div = "map1";
+  window.simplemaps_worldmap_mapdata.main_settings.auto_load = "no";
+
+  await loadScript("/simplemaps/worldmap.js");
+
+  window.simplemaps_worldmap.html_id = "map1";
+  window.simplemaps_worldmap.load();
 });
 
-onMounted(async () => {
-  await loadEngineOnce();
-  await loadMap(activeTab.value);
+watch(activeTab, async (newTab) => {
+  await loadMap(newTab);
 });
 
 const tabClass = (id) => {
