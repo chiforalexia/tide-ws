@@ -1,7 +1,11 @@
 <template>
   <section class="py-16 px-4 max-w-7xl mx-auto">
     <div class="text-center mb-8">
-      <h2 class="text-4xl font-bold mb-4">Innovation around the World</h2>
+    <!-- Badge -->
+      <div class="text-center">
+        <div class="bubble">World Map</div>
+      </div>
+      <h2 class="text-4xl font-bold mb-4">Innovation around the<span class="text-blue-700"> World</span></h2>
       <p class="text-gray-600 text-xl max-w-2xl mx-auto">
         Discover and compare innovation stats from each country.
       </p>
@@ -12,8 +16,8 @@
       <button @click="activeTab = 'map2'" :class="tabClass('map2')">Innovation Map 2</button>
     </div>
 
-    <div v-show="activeTab === 'map1'" id="map1" class="map-container w-full h-[500px]"></div>
-    <div v-show="activeTab === 'map2'" id="map2" class="map-container w-full h-[500px]"></div>
+    <div v-show="activeTab === 'map1'" id="map1" class="map-container w-full h-[300px]"></div>
+    <div v-show="activeTab === 'map2'" id="map2" class="map-container w-full h-[300px]"></div>
   </section>
 </template>
 
@@ -96,8 +100,8 @@ const tabClass = (id) => {
   return [
     "px-6 py-2 rounded-full border font-medium",
     activeTab.value === id
-      ? "bg-blue-600 text-white border-blue-600"
-      : "bg-white text-blue-600 border-blue-600 hover:bg-blue-50",
+      ? "btn-blue"
+      : "btn-white",
   ].join(" ");
 };
 </script>

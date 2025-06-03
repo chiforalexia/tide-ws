@@ -1,23 +1,6 @@
- <!-- Roadmap content page -->
+<!-- Roadmap content page -->
 <template>
   <div class="bg-white">
-    <!-- Header
-    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center m-2 text-blue-700 custom-font">
-      Integration Roadmap
-    </h1>
-
-    <p class=" sm:text-lg md:text-xl text-gray-600 max-w-3xl m-4 text-center mx-auto">
-      With the SURF Tech Trends Report in hand, you’ve taken the first step: 
-      <span class="font-bold">
-        gaining insight into the signals shaping the future of education and research.
-      </span> 
-      These aren’t instructions but an invitation to reflect, translate, and act.
-    </p>
-
-    <div class="text-sm sm:text-base md:text-lg text-blue-600 m-8 text-center">
-      You’re not expected to follow a fixed path, but to create one, using these phases as support.
-    </div>-->
-
     <div class="min-h-screen sidebar-bg flex">
       <!-- Sidebar -->
       <div
@@ -103,10 +86,18 @@
 
                     <div class="flex flex-col md:flex-row justify-between items-start gap-6">
                     <!-- Text -->
-                    <div class="w-full text-gray-800 text-base leading-relaxed">
+                    <div class="md:w-2/3 text-gray-800 text-base leading-relaxed">
                       <div v-html="phases[activePhase].justification"></div>
                     </div>
 
+                    <!-- Image -->
+                    <div v-if="phases[activePhase].justificationImage" class="md:w-1/3 flex-shrink-0">
+                      <img
+                        :src="phases[activePhase].justificationImage"
+                        alt="Justification Image"
+                        class="w-full max-w-xs rounded-lg shadow-md"
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -164,7 +155,7 @@
 
 
                           <!-- Tools (if available) -->
-                          <div v-if="activity.tools && activity.tools.length" class="pl-16 mt-3">
+                          <div v-if="activity.tools?.length" class="pl-16 mt-3">
                             <h4 class="font-semibold text-gray-600 mb-1">Tools:</h4>
                             <ul class="list-disc space-y-1 text-gray-500 text-sm pl-4">
                               <li v-for="(tool, k) in activity.tools" :key="k">
@@ -229,7 +220,6 @@
                     </div>
                     </div>
 
-
                   <!-- Resources -->
                   <div class="bg-gray-50 p-6 rounded-xl shadow-lg border border-surf-blue-200 h-fit">
                     <div class="flex items-center gap-2 mb-6">
@@ -273,6 +263,26 @@ const showJustification = ref(false);
 
 const toggleSidebar = () => {
   collapsed.value = !collapsed.value;
+};
+
+// Defining content types of the phases and resources
+type Activity = {
+  activity: string;
+  details: string[];
+  tools?: string[];
+};
+
+type Phase = {
+  title: string;
+  subtitle?: string;
+  description: string;
+  note?: string;
+  activities: Activity[];
+  indicators: string[];
+  stakeholderEngagement: string | string[];
+  resources: any[];
+  justification?: string;
+  justificationImage?: string;
 };
 
 const phases = ref([
@@ -418,7 +428,7 @@ const phases = ref([
     url: 'https://medium.com/swlh/how-futurists-cope-with-uncertainty-a4fbdff4b8c6',
     time: '45–60 min',
     people: 'Team (3–5 people)',
-    exampleimage: '/public/phases_resources/images/axes.jpg',
+    exampleimage: '/public/phases_resources/images/axes_uncertainty.png',
     citation: 'Webb, A. (2020, March 16). How Futurists Cope With Uncertainty. The Startup. https://medium.com/swlh/how-futurists-cope-with-uncertainty-a4fbdff4b8c6; Schwartz, P. (1997). The Art of the Long View. Doubleday/Currency.'
   },
   {
@@ -430,7 +440,7 @@ const phases = ref([
     url: 'https://millennium-project.org/publications/futures-research-methodology-version-3-0-2/',
     time: '1.5–2 hours',
     people: 'Team (3–5 people)',
-    exampleimage: "",
+    exampleimage: '/public/phases_resources/images/scenario_building.png',
     citation: 'SchSchwartz, P. (1997). The Art of the Long View. Doubleday/Currency.wartz, P. (1996). The Art of the Long View: Planning for the Future in an Uncertain World. Currency); Jerome C.  Glenn, & Gordon, T. J. (2009). Futures Research Methodology (3.0). The Millennium Project. https://millennium-project.org/publications/futures-research-methodology-version-3-0-2/',
   },
   {
@@ -444,7 +454,7 @@ const phases = ref([
     url: 'https://www.awolimburg.nl/userfiles/files/meetinstrumenten/2024-07-18-mira-instrument.pdf',
     time: '2–3 hours',
     people: 'Team (3–5 people)',
-    exampleimage: '',
+    exampleimage: '/public/phases_resources/images/readiness_assessment.png',
     citation: 'Maastricht University. (2024). Maastricht Innovation Readiness Aanpak (MIRA). https://www.awolimburg.nl/nl/projecten/innovation-readiness'
   },
     ],
@@ -668,8 +678,8 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
     ],
     url: 'https://link.springer.com/chapter/10.1007/978-3-658-25074-4_7',
     time: '1–2 hours',
-    people: 'Team activity',
-    exampleimage: '/public/phases_resources/images/SWOT.jpg',
+    people: 'Team activity (5–8 people)',
+    exampleimage: '',
     citation: 'Van der Heijden, K. (2005). Scenarios: The Art of Strategic Conversation. Wiley; Luoto, L., & Lonkila, A. (2018). The Use of SWOT Analysis for Future Scenarios: A Case Study of Privacy and Emerging Technologies. In *Envisioning Uncertain Futures* (pp. 105–131). Springer VS, Wiesbaden. https://doi.org/10.1007/978-3-658-25074-4_7'
   },
   {
@@ -751,7 +761,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
   url: 'https://www.undp.org/sites/g/files/zskgke326/files/2022-07/UNDP-RBAP-Foresight-Playbook-Appendix-2022_0.pdf',
   time: '2–3 hours',
   people: 'Team activity (up to 20)',
-  exampleimage: '',
+  exampleimage: 'yes',
   citation: 'UNDP. (2022). *UNDP RBAP: Foresight Playbook* (p. 47). https://www.undp.org/sites/g/files/zskgke326/files/2022-07/UNDP-RBAP-Foresight-Playbook-Appendix-2022_0.pdf'
 },
 {
@@ -954,7 +964,7 @@ note: "While this roadmap provides a useful starting point, every institution ha
   url: 'https://whatfix.com/blog/user-guides/',
   time: '1 hour',
   people: 'Individual or team',
-  exampleimage: '',
+  exampleimage: 'no pic',
   citation: 'Olmstead, L. (2023, August 2). How to Create a User Guide (Examples, Tips, Tools). The Whatfix Blog | Drive Digital Adoption. https://whatfix.com/blog/user-guides/'
 }
   ],
@@ -1016,7 +1026,7 @@ note: "While this roadmap provides a useful starting point, every institution ha
   url: 'https://hbr.org/2023/01/a-better-approach-to-after-action-reviews',
   time: '30 - 60 min',
   people: 'Team',
-  exampleimage: '',
+  exampleimage: 'no pic',
   citation: 'Baškarada, S., McKay, T., & McKenna, T. (2013). Technology deployment process model. *Operations Management Research, 6*(3–4), 105–118. https://doi.org/10.1007/s12063-013-0082-5'
 }
   ],

@@ -72,6 +72,21 @@ button:hover {
   background-color: #2563eb; /* blue-600 */
 }
 
+.btn-white {
+  display: flex;
+  align-items: center;
+  background-color: white; /* blue-700 */
+  color: #1d4ed8;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border-color: #1d4ed8;
+  transition: background-color 0.3s ease;
+}
+
+.btn-white:hover {
+  background-color:  #dff4ff ;
+}
+
 /*Green download button*/
 .download-btn {
   background-color: #17a95d;

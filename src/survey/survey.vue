@@ -5,7 +5,7 @@
       <h1 class="text-3xl font-extrabold text-gray-800 mb-4"> 
         <span class="primary-text">Personalize</span> your Tech Trends Report</h1>
       <form @submit.prevent="submitForm" class="space-y-8">
-        <!-- Institution Size -->
+        <!-- Timeline question -->
         <div>
           <label class="block text-lg font-semibold text-gray-700 mb-2">
             How far ahead into the future are you planning?<br />
@@ -23,24 +23,25 @@
             <option value="3-5">3-5 years</option>
             <option value="5+">5+ years</option>
           </select>
+
+          <!-- Warning -->
           <p v-if="showError && !size" class="text-red-600 text-sm mt-1">
             Please select a timeline.
           </p>
         </div>
 
-        <!-- Values and Subvalues -->
+        <!-- Values and Subvalues  question-->
         <div>
           <label class="block text-lg font-semibold text-gray-700 mb-3"
             >Which values are most important to your institution?
             <span class="text-sm text-gray-500">(Select up to 3)</span></label
           >
-
-          <!-- Value Section Template -->
           <div
             v-for="category in Object.keys(subvalues)"
             :key="category"
             class="mb-4"
           >
+          <!-- Values + info boxes -->
             <div class="flex items-center mb-1">
               <h3
                 :class="
