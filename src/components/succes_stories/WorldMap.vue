@@ -11,10 +11,21 @@
       </p>
     </div>
 
-    <div class="flex justify-center mb-8 space-x-4">
-      <button @click="activeTab = 'map1'" :class="tabClass('map1')">Innovation Map 1</button>
-      <button @click="activeTab = 'map2'" :class="tabClass('map2')">Innovation Map 2</button>
-    </div>
+<div class="flex justify-center mb-8 space-x-8">
+  <div class="flex flex-col items-center space-y-1">
+    <button @click="activeTab = 'map1'" :class="tabClass('map1')">Innovation Map 1</button>
+    <p class="text-sm text-gray-600 text-center max-w-xs">
+      Based on overall Global Innovation Index performance.
+    </p>
+  </div>
+  
+  <div class="flex flex-col items-center space-y-1">
+    <button @click="activeTab = 'map2'" :class="tabClass('map2')">Innovation Map 2</button>
+    <p class="text-sm text-gray-600 text-center max-w-xs">
+      Based on clustered innovation levels.
+    </p>
+  </div>
+</div>
 
     <div v-show="activeTab === 'map1'" id="map1" class="map-container w-full h-[300px]"></div>
     <div v-show="activeTab === 'map2'" id="map2" class="map-container w-full h-[300px]"></div>

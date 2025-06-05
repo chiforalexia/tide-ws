@@ -1,7 +1,7 @@
  <!-- Website introduction section -->
 <template>
   <section
-    class="relative bg-transparent flex items-center justify-center flex-col px-6"
+    class="relative bg-transparent flex items-center justify-center flex-col px-6 pt-10"
   >
     <div
       class="max-w-6xl w-full flex flex-col lg:flex-row items-center justify-between gap-12"
@@ -10,7 +10,7 @@
       <div class="flex-1 max-w-xl text-left lg:text-left space-y-6">
         <h1 class="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
           From Insight to Implementation:
-          <span class="block primary-text"
+          <span class="block text-blue-700"
             >Bridging Innovation and Adoption</span
           >
         </h1>

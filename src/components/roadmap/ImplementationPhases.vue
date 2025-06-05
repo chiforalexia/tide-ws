@@ -28,7 +28,7 @@
               @click="activePhase = index"
               :class="[
                 'transition-all duration-300 flex items-center px-3 py-3 rounded-xl cursor-pointer shadow-md border w-full hover:scale-[1.02] hover:shadow-lg',
-                activePhase === index ? 'surf-blue-100-background border-blue-500 ring-5 ring-surf-blue-200' : 'bg-white border-gray-200',
+                activePhase === index ? 'surf-blue-100-background border-blue-500 rign-5 ring-surf-blue-200' : 'bg-white border-gray-200',
                 collapsed ? 'justify-center w-10 h-10 p-0 rounded-full' : ''
               ]"
             >
@@ -86,18 +86,10 @@
 
                     <div class="flex flex-col md:flex-row justify-between items-start gap-6">
                     <!-- Text -->
-                    <div class="md:w-2/3 text-gray-800 text-base leading-relaxed">
+                    <div class="text-gray-800 text-base leading-relaxed">
                       <div v-html="phases[activePhase].justification"></div>
                     </div>
 
-                    <!-- Image -->
-                    <div v-if="phases[activePhase].justificationImage" class="md:w-1/3 flex-shrink-0">
-                      <img
-                        :src="phases[activePhase].justificationImage"
-                        alt="Justification Image"
-                        class="w-full max-w-xs rounded-lg shadow-md"
-                      />
-                    </div>
                   </div>
                 </div>
 
@@ -155,14 +147,14 @@
 
 
                           <!-- Tools (if available) -->
-                          <div v-if="activity.tools?.length" class="pl-16 mt-3">
-                            <h4 class="font-semibold text-gray-600 mb-1">Tools:</h4>
-                            <ul class="list-disc space-y-1 text-gray-500 text-sm pl-4">
-                              <li v-for="(tool, k) in activity.tools" :key="k">
-                                {{ tool }}
-                              </li>
-                            </ul>
-                          </div>
+                        <div v-if="activity.tools?.length" class="pl-16 mt-3">
+                          <h4 class="font-semibold text-gray-600 mb-1">Tools:</h4>
+                          <ul class="list-disc space-y-1 text-gray-500 text-sm pl-4">
+                            <li v-for="(tool, k) in activity.tools" :key="k">
+                              {{ tool }}
+                            </li>
+                          </ul>
+                        </div>
                         </li>
                       </ul>
                     </div>
@@ -252,7 +244,6 @@
 </template>
 
 <script setup lang="ts">
-import HeroRdm from './HeroRdm.vue';
 import { ref, computed} from 'vue';
 import ResourceCard from './ResourceCard.vue';
 
@@ -282,10 +273,9 @@ type Phase = {
   stakeholderEngagement: string | string[];
   resources: any[];
   justification?: string;
-  justificationImage?: string;
 };
 
-const phases = ref([
+const phases = ref<Phase[]>([
   {
     title: 'Exploration',
     subtitle: "Making Sense of Emerging Trends",
@@ -428,7 +418,7 @@ const phases = ref([
     url: 'https://medium.com/swlh/how-futurists-cope-with-uncertainty-a4fbdff4b8c6',
     time: '45–60 min',
     people: 'Team (3–5 people)',
-    exampleimage: '/public/phases_resources/images/axes_uncertainty.png',
+    exampleimage: '/public/phases_resources/images/axes.jpg',
     citation: 'Webb, A. (2020, March 16). How Futurists Cope With Uncertainty. The Startup. https://medium.com/swlh/how-futurists-cope-with-uncertainty-a4fbdff4b8c6; Schwartz, P. (1997). The Art of the Long View. Doubleday/Currency.'
   },
   {
@@ -440,7 +430,7 @@ const phases = ref([
     url: 'https://millennium-project.org/publications/futures-research-methodology-version-3-0-2/',
     time: '1.5–2 hours',
     people: 'Team (3–5 people)',
-    exampleimage: '/public/phases_resources/images/scenario_building.png',
+    exampleimage: '',
     citation: 'SchSchwartz, P. (1997). The Art of the Long View. Doubleday/Currency.wartz, P. (1996). The Art of the Long View: Planning for the Future in an Uncertain World. Currency); Jerome C.  Glenn, & Gordon, T. J. (2009). Futures Research Methodology (3.0). The Millennium Project. https://millennium-project.org/publications/futures-research-methodology-version-3-0-2/',
   },
   {
@@ -454,12 +444,11 @@ const phases = ref([
     url: 'https://www.awolimburg.nl/userfiles/files/meetinstrumenten/2024-07-18-mira-instrument.pdf',
     time: '2–3 hours',
     people: 'Team (3–5 people)',
-    exampleimage: '/public/phases_resources/images/readiness_assessment.png',
+    exampleimage: '',
     citation: 'Maastricht University. (2024). Maastricht Innovation Readiness Aanpak (MIRA). https://www.awolimburg.nl/nl/projecten/innovation-readiness'
   },
     ],
     justification: "This phase marks the shift from simply noticing trends to actively making sense of them. Starting here moves your organization from awareness to actionable foresight. It’s about exploring how signals of change intersect with your institution’s mission, culture, and operational realities. Through this process you will uncover opportunities and tensions worth addressing. This roadmap will help you create a foundation for informed, future-ready decisions.",
-justificationImage: "",
   },
 
   {
@@ -679,7 +668,7 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
     url: 'https://link.springer.com/chapter/10.1007/978-3-658-25074-4_7',
     time: '1–2 hours',
     people: 'Team activity (5–8 people)',
-    exampleimage: '',
+    exampleimage: '/public/phases_resources/images/SWOT.jpg',
     citation: 'Van der Heijden, K. (2005). Scenarios: The Art of Strategic Conversation. Wiley; Luoto, L., & Lonkila, A. (2018). The Use of SWOT Analysis for Future Scenarios: A Case Study of Privacy and Emerging Technologies. In *Envisioning Uncertain Futures* (pp. 105–131). Springer VS, Wiesbaden. https://doi.org/10.1007/978-3-658-25074-4_7'
   },
   {
@@ -885,7 +874,6 @@ note: "These keys steps are intended as conversation starters, not rigid steps. 
   citation: ' Excel Gantt Chart Template. (n.d.). Retrieved May 23, 2025, from https://www.teamgantt.com/downloads/excel-gantt-chart-template'
 }
   ],
-    justificationImage: "",
 },
 
 {
@@ -968,7 +956,6 @@ note: "While this roadmap provides a useful starting point, every institution ha
   citation: 'Olmstead, L. (2023, August 2). How to Create a User Guide (Examples, Tips, Tools). The Whatfix Blog | Drive Digital Adoption. https://whatfix.com/blog/user-guides/'
 }
   ],
-    justificationImage: '/phases_resources/images/forecasting_funnel.png',
 },
 {
   title: 'Evaluation & Optimization',
@@ -1052,11 +1039,11 @@ note: "While this roadmap provides a useful starting point, every institution ha
 
 .sidebar {
   transition: width 0.7s ease;
-  background-color: #EAECF0
+  background-color: #DBDAD9;
 }
 
 .sidebar-bg {
-  background-color: #EAECF0
+  background-color: #DBDAD9;
 }
 
 .sidebar:hover {

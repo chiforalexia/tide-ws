@@ -5,7 +5,7 @@
     <div class="wave-wrapper relative w-full">
       <svg
         class="wave-svg absolute left-0 right-0 top-0 w-full"
-        viewBox="0 90 1150 110"
+        viewBox="0 90 1200 100"
         preserveAspectRatio="none"
       >
         <defs>
@@ -23,7 +23,7 @@
           fill="#1D4ED8"
           font-size="38"
           font-family="'Special Gothic Expanded One', sans-serif"
-          font-weight="bold"
+          font-weight=""
         >
           <textPath href="#road-path-final" startOffset="10%">
             Implementation Roadmap
@@ -42,8 +42,9 @@
 }
 
 .road-bg {
-  fill: #000000;
+  fill: #DBDAD9;
 }
+
 
 .wave-wrapper {
   width: 100%;

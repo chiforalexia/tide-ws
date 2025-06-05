@@ -5,7 +5,7 @@
         <div class="bubble">
           Success Stories
         </div>
-        <h2 class="text-4xl font-bold mb-4"> <span class = "primary-text">Real Results</span> from SURF Members</h2>
+        <h2 class="text-4xl font-bold mb-4"> <span class = "text-blue-700">Real Results</span> from SURF Members</h2>
         <p class="text-gray-600 text-xl max-w-2xl mx-auto">
           Get inspired and see how other institutions successfully implement new technologies.
         </p>
@@ -157,23 +157,7 @@
       link: 'https://newmediacentre.tudelft.nl/xr/',
     },
     {
-      id: 3,
-      institution: 'VISTA College',
-      subtitle: 'XR Lab',
-      image: 'VR.jpg',
-      imageAlt: 'VISTA College XR Lab',
-      outcomes: [
-        'Developed a dedicated XR Lab as a central initiative',
-        'Built a scalable framework for integrating XR into educational practice',
-        "Positioned the XR Lab as a key pillar in VISTA's new Center of Teaching and Learning",
-        'Strengthened regional collaboration with partners',
-      ],
-      quote: '',
-      author: '',
-      link: 'https://mbodigitaal.nl/2023/10/trots-op-xr-als-bestendigd-onderdeel-van-het-curriculum-xr-is-geen-uitstapje/',
-    },
-    {
-        id: 4,
+        id: 3,
         institution: 'Delft University of Technology',
         subtitle: 'Mondai | House of AI',
         image: '/mondai.jpg',

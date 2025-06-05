@@ -2,19 +2,14 @@
   <div>
     <!-- Main Content Section -->
     <div class="min-h-screen">
-
-      <!-- Sections -->
-      <section class="pt-40">
-        <SuccessStories />
-      </section>
-
-      <section id="features">
-        <!-- Add your features section content here -->
+      <section class="pt-36">
         <WorldMap />
       </section>
-
-      <section id="features">
-        <!-- Add your features section content here -->
+      <!-- Sections -->
+      <section>
+        <SuccessStories />
+      </section>
+      <section>
         <Roadmap-template />
       </section>
 

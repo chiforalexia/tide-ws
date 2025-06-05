@@ -108,12 +108,12 @@ onMounted(() => {
 
 <style scoped>
 .active_phases_bubble {
-  background-color: #17a95d;
-  color: #dff4ff;
+  background-color: #e67300;
+  color: white;
 }
 
 .inactive_phases_bubble {
-  background-color: #006731;
-  color: #dff4ff;
+  background-color: #c15500;
+  color: white;
 }
 </style>
