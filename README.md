@@ -1,9 +1,9 @@
 # Bridging Innovation and Adoption: A Digital Transformation of the SURF Tech Trends Report for Implementation in Academia.
 
 ## Project Overview
-This project investigates the adoption and implementation of emerging technologies within Dutch higher education and research institutions. Conducted in collaboration with **SURF**, the study leverages both **micro** and **meso-level theoretical frameworks** to analyse technology integration challenges and opportunities.
+This project investigates the adoption and implementation of emerging technologies within Dutch higher education and research institutions. Conducted in collaboration with SURF, the study leverages both micro and meso-level theoretical frameworks to analyse technology integration challenges and opportunities.
 
-At the micro level, the **Unified Theory of Acceptance and Use of Technology (UTAUT)** was employed to understand individual decision-making. At the meso level, frameworks such as **Strategic Foresight**, **institutional isomorphism**, and **Rational Actor Theory** provided insight into organisational behaviour.
+At the micro level, the Unified Theory of Acceptance and Use of Technology (UTAUT) was employed to understand individual decision-making. At the meso level, frameworks such as Strategic Foresight, institutional isomorphism, and Rational Actor Theory provided insight into organisational behaviour.
 
 
 ### Methodology
