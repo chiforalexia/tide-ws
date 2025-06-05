@@ -1051,7 +1051,7 @@ note: "While this roadmap provides a useful starting point, every institution ha
 }
 
 .space-y-6 {
-  padding-top: 4rem; /* Adjust this to lower the menu */
+  padding-top: 4rem;
 }
 
 /*SURF specific colors*/

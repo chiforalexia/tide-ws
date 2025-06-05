@@ -358,13 +358,13 @@ export default {
 <style scoped>
 .container {
   font-family: "Inter", sans-serif;
-  color: #1f2937; /* Tailwind's gray-800 */
+  color: #1f2937;
 }
 
 h1,
 h2,
 h3 {
-  color: #1e40af; /* Tailwind's blue-800 */
+  color: #1e40af;
 }
 
 .card {
@@ -380,13 +380,13 @@ h3 {
 }
 
 .card h3 {
-  font-size: 1rem; /* smaller heading */
-  color: #334155; /* Tailwind slate-700 */
+  font-size: 1rem;
+  color: #334155;
 }
 
 .card p {
   font-size: 0.875rem;
-  color: #475569; /* Tailwind slate-600 */
+  color: #475569;
 }
 
 .list-disc li {

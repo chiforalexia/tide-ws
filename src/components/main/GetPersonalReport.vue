@@ -55,6 +55,7 @@
         </button>
       </router-link>
 
+      <!-- Subtitle -->
       <p class="text-xs text-white italic text-white/90 text-center py-1">
         in less than 5 minutes to your own report
       </p>

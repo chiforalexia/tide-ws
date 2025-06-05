@@ -85,13 +85,13 @@
             d="M0,100 C200,50 400,150 600,100 S1000,50 1200,100"
           />
 
-          <!-- Top evenly wide blue wave background -->
+          <!-- Blue wave background -->
           <path
             id="road-path"
             d="M0,100 C200,50 400,150 600,100 S1000,50 1200,100 L1200,250 L0,250 Z"
           />
 
-          <!-- Bottom white wave (moved slightly more up) -->
+          <!-- Bottom white wave (covering blue part to make blue wave into a rope) -->
           <path
             id="lower-road-path"
             d="M0,123 C200,73 400,173 600,123 S1000,73 1200,123 L1200,250 L0,250 Z"
@@ -160,21 +160,20 @@ onMounted(() => {
 
 .wave-wrapper {
   position: absolute;
-  bottom: -50px; /* Adjust to raise wave higher or lower */
+  bottom: -50px;
   left: 50%;
-  transform: translateX(-50%) rotate(-10deg); /* Center the wave and rotate */
+  transform: translateX(-50%) rotate(-10deg);
   width: 100%;
-  max-width: 1400px; /* Make sure wave doesn't stretch too wide */
-  height: 425px; /* Adjust height for the wave */
+  max-width: 1400px;
+  height: 425px;
   z-index: -1;
-  /* overflow: hidden; /* Prevent horizontal scrolling */
   mask-image: linear-gradient(
     to right,
     transparent 0%,
     black 128px,
     black calc(100% - 200px),
     transparent 100%
-  ); /* Smooth fade */
+  );
 }
 
 .mask-container {
@@ -189,7 +188,7 @@ onMounted(() => {
 
 .wave-svg {
   width: 100%;
-  height: 100%; /* Match container */
+  height: 100%;
 }
 
 .wave-text {

@@ -78,7 +78,7 @@ onMounted(() => {
 
 .wave-wrapper {
   position: absolute;
-  bottom: -50px; /* Adjust this value as needed */
+  bottom: -50px;
   left: 0;
   width: 100%;
   height: 250px;
@@ -88,7 +88,7 @@ onMounted(() => {
 .wave-svg {
   width: 100%;
   height: 100%;
-  transform: rotate(10deg); /* Optional: Tilt the wave */
+  transform: rotate(10deg);
 }
 
 .road-bg {

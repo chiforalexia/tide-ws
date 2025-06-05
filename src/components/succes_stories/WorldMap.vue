@@ -89,7 +89,6 @@ onMounted(async () => {
   cachedMapdata1 = await preloadMapdata("/simplemaps/mapdata.js");
   cachedMapdata2 = await preloadMapdata("/simplemaps/mapdata_clustering.js");
 
-  // Set initial mapdata before loading engine
   window.simplemaps_worldmap_mapdata = structuredClone
     ? structuredClone(cachedMapdata1)
     : JSON.parse(JSON.stringify(cachedMapdata1));

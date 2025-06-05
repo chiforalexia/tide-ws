@@ -104,8 +104,6 @@
           </span>
         </div>
   
-       
-  
         <div class="flex justify-end mt-2">
           <button
             @click.stop="showLearnMore = true"

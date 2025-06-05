@@ -458,6 +458,6 @@ const phases = ref([
 }
 
 .space-y-6 {
-  padding-top: 4rem; /* Adjust this to lower the menu */
+  padding-top: 4rem;
 }
 </style>

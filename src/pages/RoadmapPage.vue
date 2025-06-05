@@ -18,7 +18,6 @@
   import Footer from '../components/common/Footer.vue';
   import ImplementationPhases from '../components/roadmap/ImplementationPhases.vue'
   import HeroRdm from '../components/roadmap/HeroRdm.vue';
-  //import heror from '..heror.vue';
   
   export default {
     name: 'RoadmapPage',

@@ -165,6 +165,7 @@
   </script>
   
   <style scoped>
+  
   /* Custom styles for the Footer section */
   .hero {
     background: #f9fafa;

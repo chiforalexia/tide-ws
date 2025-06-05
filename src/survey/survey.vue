@@ -30,7 +30,7 @@
           </p>
         </div>
 
-        <!-- Values and Subvalues  question-->
+        <!-- Values and Subvalues question-->
         <div>
           <label class="block text-lg font-semibold text-gray-700 mb-3"
             >Which values are most important to your institution?

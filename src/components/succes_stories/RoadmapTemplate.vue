@@ -145,6 +145,7 @@
         </div>
       </div>
 
+      <!-- Status Bubble -->
       <div class="status-legend">
         <h3>Status Legend</h3>
         <div class="legend-items">
