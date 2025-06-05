@@ -90,13 +90,13 @@ The MIT license.
 # Clone the repository
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
-```
+
 # Install dependencies
 npm install
 
 # Start development server
 npm run dev
-
+```
 # Contributing
 If you would like to contribute to this project, please submit a pull request or contact the project maintainers.
 
