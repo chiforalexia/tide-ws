@@ -40,19 +40,19 @@ Visuals representing partner institutions (e.g., TU Delft, Erasmus), planning di
 Contains all the source code for the Vue.js web application.
 
 - assets/:
-Static media assets (e.g., icons, logos) used throughout the UI.
+CSS styles.
 
 - components/:
-Reusable Vue components used to build the app's interface (e.g., cards, navbars, layout blocks).
+Reusable Vue components used to build the app's interface.
 
 - pages/:
-Main page views for the site (e.g., landing page, report section, roadmap view, success stories).
+Main page views for the site.
 
 - survey/:
-Survey-specific frontend components and logic for collecting user feedback and engagement data.
+Survey-specific frontend components and logic for generating the personalised report.
 
 - index.vue:
-Root Vue component where the app layout is initialised.
+Root Vue component where the app layout is created.
 
 - main.js:
 Application entry point where Vue, Tailwind, and router are set up.
@@ -76,6 +76,9 @@ Lists all dependencies, build scripts, and metadata for the project.
 - README.md:
 Documentation and project overview (this file).
 
+- LICENSE.txt
+The MIT license.
+
 
 ## Setup and Usage
 ### Prerequisites
@@ -83,7 +86,7 @@ Documentation and project overview (this file).
 - npm (Node package manager)
 
 ### Install & Run Locally
-```bash
+``` bash
 # Clone the repository
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
