@@ -109,4 +109,4 @@ As outlined within the course manual and consulted with the core lecturer, this 
 - Open AI. (2025). ChatGPT (Version April 29) [Computer software]. https://chat.openai.com/chat
 - StackBlitz. (2025). Bolt.new (Version March 2025) [Computer software]. https://bolt.new/
   
-These tools were utilised to create templates for some specific, hihgly technical components and later heavily adapted by the project team to meet the requirements of the digital intervention and the project partner's expectations.
+These tools were utilised to create templates for some specific, highly technical components and later heavily adapted by the project team to meet the requirements of the digital intervention and the project partner's expectations.
