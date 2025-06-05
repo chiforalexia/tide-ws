@@ -11,7 +11,7 @@ At the micro level, the Unified Theory of Acceptance and Use of Technology (UTAU
 - **Qualitative**: 3 exploratory interviews and a focus group with university staff and innovation managers.
 - **Quantitative**: Machine learning methods (e.g., Recursive Feature Elimination, Lasso Regression) were applied to macro-level datasets from the Global Innovation Index (WIPO, 2024) and World Bank EdStats.
 
-Initial findings revealed a disconnect between **bottom-up innovation initiatives** (e.g., AI, XR) and **top-down strategic decisions**. As a result, the project evolved from merely diagnosing implementation issues to **developing an intervention** that supports strategic foresight and institutional innovation planning.
+Initial findings revealed a disconnect between bottom-up innovation initiatives and top-down strategic decisions. As a result, the project evolved from merely diagnosing implementation issues to developing an intervention that supports strategic foresight and institutional innovation planning.
 
 ### Intervention Purpose
 This website offers a tailored toolkit for SURF member institutions, including:
