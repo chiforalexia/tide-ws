@@ -1,6 +1,7 @@
 MIT License
 
-Copyright (c) 2024 Alicja Dorobis, Hielke Teertstra, Jelle Blankendaal and Sari Parvillers
+Copyright (c) 2024 Alicja Dorobis, Alexia Chifor, Alicja Dorobis, Teun Heerze, Máté Köves, Ella Sartory, Hielke Teertstra
+
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
