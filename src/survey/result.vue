@@ -140,7 +140,7 @@ const selectedSubvalues = computed(() => {
   return route.query.values ? route.query.values.split(", ") : [];
 });
 
-// unique chapters from selected pages
+// unique chapters based on the selected pages
 const selectedChapters = computed(() => {
   const chapterSet = new Set();
   trends.forEach((trend) => {

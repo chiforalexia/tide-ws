@@ -3,7 +3,7 @@
     <!-- Navbar Component -->
     <Navbar />
 
-    <!-- This is where Vue Router will load pages -->
+    <!-- This is where Vue Router loads pages -->
     <main class="min-h-screen">
       <router-view />
     </main>
@@ -24,7 +24,3 @@ export default {
   },
 };
 </script>
-
-<style>
-/* Global styles */
-</style>
